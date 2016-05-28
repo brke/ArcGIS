@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://developers.arcgis.com/building-apps/ -->
+<html class="logged-out dj_quirks dj_webkit dj_chrome dj_contentbox"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Title/Description -->
+    <title>Scripting and Automation | ArcGIS for Developers</title>
+    <meta name="description" content="Perform visualization and analysis, data management, map automation and production and portal content and org administration with Python">
+
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <!--[if lt IE 9]>
+      <script src="//js.arcgis.com/3.14/"></script>
+      <script src="/assets/js/libs/html5shiv.js"></script>
+      <script src="/assets/js/libs/json2.js"></script>
+      <script src="/assets/js/libs/selectivizr.js"></script>
+    <![endif]-->
+
+    <!-- <IE9 is unsupported, but give users a fighting chance -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.polyfill.io/v1/polyfill.min.js"></script>
+    <![endif]-->
+
+    <!-- Social -->
+    <!-- Twitter Card -->
+      <meta name="twitter:card" value="summary">
+      <meta name="twitter:title" content="Scripting and Automation | ArcGIS for Developers">
+      <meta name="twitter:site" content="@Esri">
+      <meta name="twitter:creator" content="@Esri">
+      <meta name="twitter:description" content="Perform visualization and analysis, data management, map automation and production and portal content and org administration with Python">
+      <!-- Facebook Open Graph -->
+      <meta property="og:title" content="Scripting and Automation | ArcGIS for Developers">
+      <meta property="og:description" content="Perform visualization and analysis, data management, map automation and production and portal content and org administration with Python">
+      <meta property="og:url" content="https://developers.arcgis.com/building-apps/">
+      
+
+    <!-- Critical JavaScript  -->
+    <script src="./scripting_files/8609.js" async="" type="text/javascript"></script><script type="text/javascript" async="" src="./scripting_files/analytics.js"></script><script async="" src="./scripting_files/gtm.js"></script><script async="" src="./scripting_files/analytics.js"></script><script type="text/javascript" charset="utf-8" src="./scripting_files/jsapi_en-us.js"></script><script type="text/javascript" charset="utf-8" src="./scripting_files/main.js"></script><script type="text/javascript" charset="utf-8" src="./scripting_files/calcite-web.js"></script><script type="text/javascript" charset="utf-8" src="./scripting_files/download.js"></script><script type="text/javascript" charset="utf-8" src="./scripting_files/blog.js"></script><script type="text/javascript" charset="utf-8" src="./scripting_files/NodeList-manipulate.js"></script><script type="text/javascript" charset="utf-8" src="./scripting_files/NodeList-traverse.js"></script><script type="text/javascript" charset="utf-8" src="./scripting_files/svg.js"></script><script type="text/javascript" charset="utf-8" src="./scripting_files/main(1).js"></script><script type="text/javascript" charset="utf-8" src="./scripting_files/jsonp.js"></script><script src="./scripting_files/config.js"></script>
+    <script src="./scripting_files/preparse.js"></script>
+
+    <!-- PingBack / Favicon -->
+    <link rel="pingback" href="http://pingback.me/esri/xmlrpc">
+    <link rel="shortcut icon" href="https://developers.arcgis.com/favicon.ico">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="./scripting_files/claro.css">
+    <link rel="stylesheet" href="./scripting_files/esri.css">
+    <link rel="stylesheet" href="./scripting_files/screen.css">
+
+    <link rel="stylesheet" href="./scripting_files/homepage.css">
+    <link rel="stylesheet" href="./scripting_files/community.css">
+    </head>
+
+  <body class="claro">
+    <!-- Off-screen Drawers -->
+    <!-- top navigation collapses to drawer on mobile -->
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
+      <nav class="drawer-nav">
+        <aside class="side-nav">
+          <h2 class="side-nav-title">Arc<span class="avenir-demi">GIS</span> for Developers</h2>
+          <form class="gutter-left-half gutter-right-half leader-half trailer-half" method="GET" action="https://developers.arcgis.com/search/">
+            <input type="search" name="q" value="" placeholder="Search" class="trailer-0">
+            </form>
+          <a class="side-nav-link" href="https://developers.arcgis.com/">Home</a>
+          <a class="side-nav-link" href="https://developers.arcgis.com/features/">Features</a>
+          <a class="side-nav-link" href="https://developers.arcgis.com/plans/">Plans</a>
+          <a class="side-nav-link" href="https://developers.arcgis.com/documentation/">Documentation</a>
+          <a class="side-nav-link" href="https://developers.arcgis.com/community/">Community</a>
+        </aside>
+      </nav>
+    </div>
+
+    <!-- user navigation collapses to drawer on mobile -->
+    <div class="drawer drawer-right js-drawer" data-drawer="user-nav">
+      <nav class="drawer-nav">
+        <aside class="side-nav">
+          <h4 class="side-nav-title padding-leader-half padding-trailer-half" data-full-name=""></h4>
+          <h6 class="side-nav-title font-size--2" data-username=""></h6>
+          <a class="side-nav-link hide-if-public-account icon-ui-applications" href="https://developers.arcgis.com/applications/">Applications</a>
+          <a class="side-nav-link hide-if-public-account icon-ui-layers" href="https://developers.arcgis.com/layers/">Layers</a>
+          <a class="side-nav-link hide-if-public-account icon-ui-chart" href="https://developers.arcgis.com/usage-summary/">Usage Summary</a>
+          <a class="side-nav-link icon-ui-download" href="https://developers.arcgis.com/downloads/">Downloads</a>
+          <a class="side-nav-link hide js-account-settings" href="https://developers.arcgis.com/account/modify-plan/">Change Plan</a>
+          <a class="side-nav-link hide-if-public-account" href="https://developers.arcgis.com/redeem-voucher/">Redeem Voucher</a>
+          <a class="side-nav-link" href="https://developers.arcgis.com/feedback/">Feedback</a>
+          <a class="side-nav-link hide js-account-settings" href="https://developers.arcgis.com/account/profile/">Account Settings</a>
+          <a class="side-nav-link icon-support" href="https://developers.arcgis.com/support/">Support</a>
+          <a class="side-nav-link icon-ui-sign-out js-log-out" href="https://www.arcgis.com/sharing/rest/oauth2/signout?redirect_uri=https://developers.arcgis.com">Sign Out</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="wrapper">
+      <!-- Header -->
+      <header class="top-nav">
+        <a class="skip-to-content" href="https://developers.arcgis.com/building-apps/#skip-to-content">Skip To Content</a>
+        <div class="grid-container">
+          <div class="column-24">
+            <a href="https://developers.arcgis.com/" class="top-nav-title tablet-hide">ArcGIS for Developers</a>
+            <a href="https://developers.arcgis.com/" class="icon-ui-menu top-nav-title js-drawer-toggle tablet-show" data-drawer="top-nav">ArcGIS for Developers</a>
+
+            <nav class="top-nav-list left tablet-hide" role="navigation">
+              <a href="https://developers.arcgis.com/features/" class="top-nav-link ">Features</a>
+              <a href="https://developers.arcgis.com/plans/" class="top-nav-link right hide-if-logged-in ">Plans</a>
+              <a href="https://developers.arcgis.com/documentation/" class="top-nav-link ">Documentation</a>
+              <a href="https://developers.arcgis.com/community/" class="top-nav-link ">Community</a>
+            </nav>
+
+            <div class="gutter-left-1 top-nav-list right hide-if-logged-in">
+              <a href="https://developers.arcgis.com/building-apps/#" class="icon-ui-search js-expand-toggle top-nav-link" data-expand="search">Search</a>
+              <a id="login-link" class="icon-ui-user top-nav-link link-blue" href="https://developers.arcgis.com/sign-in">Sign In</a>
+            </div>
+
+            <nav class="gutter-left-1 top-nav-list right hide-if-logged-out">
+              <a href="https://developers.arcgis.com/building-apps/#" class="icon-ui-search js-expand-toggle top-nav-link" data-expand="search">Search</a>
+
+              <a href="https://developers.arcgis.com/applications/" class="tooltip top-nav-link hide-if-public-account phone-hide " aria-label="Applications">
+                <span class="icon-ui-flush font-size-1 icon-ui-applications"></span>
+              </a>
+              <a href="https://developers.arcgis.com/layers/" class="tooltip top-nav-link hide-if-public-account phone-hide " aria-label="Layers">
+                <span class="icon-ui-flush font-size-1 icon-ui-layers"></span>
+              </a>
+              <a href="https://developers.arcgis.com/usage-summary/" class="tooltip top-nav-link hide-unless-admin hide-if-public-account phone-hide " aria-label="Usage Summary">
+                <span class="icon-ui-flush font-size-1 icon-ui-chart"></span>
+              </a>
+              <a href="https://developers.arcgis.com/downloads/" class="tooltip top-nav-link phone-hide " aria-label="Downloads">
+                <span class="icon-ui-flush font-size-1 icon-ui-download"></span>
+              </a>
+
+              <div class="dropdown js-dropdown right">
+                <div class="tablet-show top-nav-link">
+                  <img alt="User Avatar" class="user-nav-image js-drawer-toggle" data-drawer="user-nav" data-user-avatar="">
+                  <a href="https://developers.arcgis.com/building-apps/#" data-drawer="user-nav" class="js-drawer-toggle" data-first-name=""></a>
+                </div>
+
+                <div class="tablet-hide top-nav-link js-dropdown-toggle">
+                  <img alt="User Avatar" class="user-nav-image js-drawer-toggle" data-drawer="user-nav" data-user-avatar="">
+                  <a class="user-nav-name top-nav-dropdown dropdown-btn" data-first-name="">&nbsp;</a>
+                </div>
+
+                <nav class="dropdown-menu dropdown-right">
+                  <div class="user-name dropdown-link">
+                    <p class="trailer-0" data-full-name=""></p>
+                    <small data-username=""></small>
+                  </div>
+                  <a href="https://developers.arcgis.com/account/profile/" class="dropdown-link hide js-account-settings">Password and Profile</a>
+                  <a href="https://developers.arcgis.com/account/profile/" class="dropdown-link hide js-account-settings">Change Plan</a>
+                  <a href="https://developers.arcgis.com/redeem-voucher/" class="dropdown-link hide-if-public-account">Redeem Voucher</a>
+                  <a href="https://developers.arcgis.com/support/" class="dropdown-link">Support</a>
+                  <a href="https://developers.arcgis.com/feedback/" class="dropdown-link">Feedback</a>
+                  <a href="https://www.arcgis.com/sharing/rest/oauth2/signout?redirect_uri=https://developers.arcgis.com" class="dropdown-link js-log-out">Sign Out</a>
+                </nav>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <section class="expand js-expand  panel panel-no-padding" data-expand="search">
+        <div class="grid-container padding-trailer-half padding-leader-1 padding-trailer-1">
+          <form method="GET" action="https://developers.arcgis.com/search/" class="column-24">
+            <label>Search ArcGIS for Developers
+              <a href="https://developers.arcgis.com/building-apps/#" class="icon-ui-close js-expand-toggle right" data-expand="search"></a>
+              <div class="search-bar">
+                <input type="search" name="q" placeholder="Search">
+                
+                <button type="submit" class="search-submit icon-ui-search"></button>
+              </div>
+            </label>
+          </form>
+        </div>
+      </section>
+
+      <!-- Page Content -->
+      <div id="skip-to-content">
+        <section class="panel panel-dark-blue padding-leader-3 padding-trailer-3 webapi-banner">
+  <div class="grid-container">
+    <div class="column-16 pre-4 post-4 text-white text-center">
+      <h1 class="font-size-7">Scripting and Automation</h1>
+      <p class="font-size-1">Analysis, visualization, data management, map automation and production, portal content and organization management tasks can be scripted and automated with Python, the scripting language of choice for the ArcGIS platform.
+</p>
+      <p>
+        <a href="https://developers.arcgis.com/sign-up" class="btn btn-clear-white icon-ui-user link-white hide-if-logged-in" id="sign-up-button">Sign Up for Free</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="padding-leader-2 padding-trailer-2">
+  <div class="grid-container">
+    <div class="column-24">
+      <div class="column-14 pre-5 post-5 text-center">
+        <h2 class="font-size-6">Why script ArcGIS with Python?</h2>
+        <p class="font-size-1 trailer-0">Python is a widely used, free, cross-platform, open-source programming language that is both powerful and easy to learn. Esri has fully embraced Python for ArcGIS and sees Python as the language that fulfills the needs of our user community. Here are just some of the advantages of scripting ArcGIS with Python:</p>
+      </div>
+    </div>
+
+    <div class="column-24">
+      <div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
+        <div class="block leader-1 text-center">
+          <img src="https://developers.arcgis.com/assets/img/icon-discs/icon-disc-scaleable-2.png">
+          <h3 class="trailer-half leader-1">Scalable</h3>
+          <p class="leader-half trailer-0">Highly scalable, suitable for large projects or small ad-hoc tasks.</p>
+        </div>
+        <div class="block leader-1 text-center">
+          <img src="https://developers.arcgis.com/assets/img/icon-discs/icon-disc-curated.png">
+          <h3 class="trailer-half leader-1">Easy to use</h3>
+          <p class="leader-half trailer-0">Simple and intuitive for beginners, rich coverage for experts.</p>
+        </div>
+        <div class="block leader-1 text-center">
+          <img src="./scripting_files/icon-disc-capable.png">
+          <h3 class="trailer-half leader-1">Capable</h3>
+          <p class="leader-half trailer-0">Leverage the rich Python ecosystem and integrate ArcGIS with the SciPy stack for scientific computing.</p>
+        </div>
+        <div class="block leader-1 text-center">
+          <img src="./scripting_files/icon-disc-mature.png">
+          <h3 class="trailer-half leader-1">Modern</h3>
+          <p class="leader-half trailer-0">Utilizes modern techniques and optimized practices to exploit capabilities of the ArcGIS platform.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="panel padding-leader-2 padding-trailer-2">
+  <div class="grid-container">
+    <div class="column-10 pre-1">
+      <img src="https://developers.arcgis.com/assets/img/features/geocoding/reverse.png">
+    </div>
+    <div class="column-10">
+      <h2>What are my options for scripting ArcGIS with Python?</h2>
+      <p>The ArcGIS platform provides diverse technology choices for scripting and automation:</p>
+      <ul class="text-left">
+        <li><a href="http://esri.github.io/geosaurus-docs/">ArcGIS Python API</a></li>
+        <li><a href="http://pro.arcgis.com/en/pro-app/arcpy/get-started/what-is-arcpy-.htm">ArcPy</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="apis-sdks" class="grid-container trailer-2 leader-2">
+  <div class="column-10 tablet-column-12 trailer-1">
+    <h2><a href="http://esri.github.io/geosaurus-docs/">ArcGIS Python API</a></h2>
+      <p><a href="http://esri.github.io/geosaurus-docs/">ArcGIS Python API</a> is a powerful, modern and easy to use Python SDK for Web GIS.</p>The SDK consists of
+        <ul class="pre-0">
+          <li><a href="http://esri.github.io/geosaurus-docs/apidoc/html/">Pythonic GIS API</a></li>
+          <li><a href="http://esri.github.io/geosaurus-docs/index.html#getting-started">python packages delivered via Conda</a></li>
+          <li><a href="http://esri.github.io/geosaurus-docs/index.html#reference-documentation">interactive documentation</a> and <a href="http://esri.github.io/geosaurus-docs/index.html#samples">samples</a></li>
+            that run both within the Jupyter Notebook environment as well as in a batch processing environment using scripts.</ul>
+      
+      <footer class="flexible-block-group-item-footer">
+          <a href="/extending-the-platform/" class="btn btn-clear ">Get ArcGIS Python API Beta</a>
+        </footer>
+  </div>
+
+  <div class="column-14">
+    <div class="column-10">
+      <h2><a href="https://developers.arcgis.com/arcgis-runtime/">ArcPy</a></h2>
+      <p>ArcPy is a Python site package that provides a useful and productive way to perform geographic data analysis, data conversion, data management, and map automation with Python.</p>
+        
+        <ul class="pre-0">
+          <li><a href="http://pro.arcgis.com/en/pro-app/help/analysis/geoprocessing/basics/what-is-geoprocessing-.htm" alt="What is geoprocessing?">Leverage</a> geoprocessing tools throughout ArcGIS for Desktop.</li>
+          <li><a href="http://pro.arcgis.com/en/pro-app/arcpy/get-started/what-is-arcpy-.htm" alt="What is ArcPy?">Script</a> with ArcPy to automate powerful geoprocessing functions.</li>
+          <li><a href="https://pro.arcgis.com/en/pro-app/arcpy/geoprocessing_and_python/a-quick-tour-of-creating-tools-in-python.htm" alt="A quick tour of creating tools in Python">Write</a> routines with Python to access all the powerful features in <a href="http://desktop.arcgis.com/en/analytics/python/">Python</a>.</li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer leader-0 link-dark-gray" role="contentinfo">
+      <div class="grid-container">
+
+        <nav class="column-6">
+          <h6>ArcGIS for Developers</h6>
+          <ul class="list-plain">
+            <li><a href="https://developers.arcgis.com/">Home</a></li>
+            <li><a href="https://developers.arcgis.com/features">Features</a></li>
+            <li><a href="https://developers.arcgis.com/documentation">Documentation</a></li>
+            <li><a href="https://developers.arcgis.com/startups">Startups</a></li>
+            <li><a href="https://blogs.esri.com/esri/arcgis/category/developer/">Blog</a></li>
+          </ul>
+        </nav>
+
+        <nav class="column-6">
+          <h6>ArcGIS Platform</h6>
+          <ul class="list-plain">
+            <li><a href="http://arcgis.com/">ArcGIS Online</a></li>
+            <li><a href="http://desktop.arcgis.com/">ArcGIS for Desktop</a></li>
+            <li><a href="http://server.arcgis.com/">ArcGIS for Server</a></li>
+            <li><a href="http://developers.arcgis.com/">ArcGIS for Developers</a></li>
+            <li><a href="http://solutions.arcgis.com/">ArcGIS Solutions</a></li>
+            <li><a href="http://marketplace.arcgis.com/">ArcGIS Marketplace</a></li>
+          </ul>
+        </nav>
+
+        <nav class="column-6">
+          <h6>About Esri</h6>
+          <ul class="list-plain">
+            <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+            <li><a href="http://www.esri.com/careers/">Careers</a></li>
+            <li><a href="https://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+            <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+            <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+          </ul>
+        </nav>
+
+        <nav class="column-6">
+          <a class="esri-logo" href="http://esri.com/" aria-label="Esri Home"></a>
+          <section class="footer-social-nav leader-1">
+            <a class="icon-social-twitter" aria-label="Esri on Twitter" href="https://twitter.com/Esri/"></a>
+            <a class="icon-social-facebook" aria-label="Esri on Facebook" href="https://www.facebook.com/esrigis/"></a>
+            <a class="icon-social-github" aria-label="Esri on GitHub" href="http://esri.github.com/"></a>
+            <a class="icon-social-contact" aria-label="Contact Esri" href="http://www.esri.com/about-esri/contact/"></a>
+          </section>
+        </nav>
+
+        <div class="column-24 leader-1">
+          <p><small><a href="http://www.esri.com/legal/copyright-trademarks">Copyright © 2016 Esri</a>. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="https://developers.arcgis.com/terms/faq/">Terms of use</a></small></p>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Javascript -->
+
+    <!--[if gt IE 8]><!-->
+      <script type="text/javascript" src="./scripting_files/saved_resource"></script>
+    <!--<![endif]-->
+
+    <script src="./scripting_files/main(2).js"></script>
+
+    
+
+    <!-- Google Analytics -->
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-215788-63', 'arcgis.com');
+    ga('send', 'pageview');
+    </script>
+    <script>
+        ga('create', 'UA-215788-4', 'arcgis.com', {'name': 'extraTracker'});
+        ga('extraTracker.send', 'pageview');
+      </script>
+    <!-- Google Tag Manager -->
+    <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-NJGGV5"
+    height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NJGGV5');</script>
+
+  
+
+<div id="techsmith-snagitchrome-extension"></div><script type="text/javascript" id="">setTimeout(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0006/8609.js?"+Math.floor((new Date).getTime()/36E5);a.async=!0;a.type="text/javascript";b.parentNode.insertBefore(a,b)},1);</script></body></html>
