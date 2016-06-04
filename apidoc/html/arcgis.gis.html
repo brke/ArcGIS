@@ -1,144 +1,137 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>arcgis.gis module &mdash; arcgis 0.1 documentation</title>
-  
 
-  
-  
 
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-    <link rel="top" title="arcgis 0.1 documentation" href="index.html"/>
-        <link rel="up" title="arcgis package" href="arcgis.html"/>
-        <link rel="next" title="arcgis.lyr module" href="arcgis.lyr.html"/>
-        <link rel="prev" title="arcgis package" href="arcgis.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+    <title>arcgis.gis module &mdash; arcgis 0.1 documentation</title>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.3.6/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="http://esri.github.io/calcite-bootstrap/assets/css/calcite-bootstrap-open.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="arcgis 0.1 documentation" href="index.html" />
+    <link rel="up" title="arcgis package" href="arcgis.html" />
+    <link rel="next" title="arcgis.lyr module" href="arcgis.lyr.html" />
+    <link rel="prev" title="arcgis package" href="arcgis.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
 
-        
-          <a href="index.html" class="icon icon-home"> arcgis
-        
+  </head>
+  <body>
 
-        
-        </a>
-
-        
-          
-          
-            <div class="version">
-              0.1
-            </div>
-          
-        
-
-        
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-        
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          arcgis</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
-          
-          
-              <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="arcgis.html">arcgis package</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="arcgis.html#submodules">Submodules</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">arcgis.gis module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.lyr.html">arcgis.lyr module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.tools.html">arcgis.tools module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.viz.html">arcgis.viz module</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#module-contents">Module contents</a></li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      </div>
-      &nbsp;
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">arcgis</a>
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-          <li><a href="arcgis.html">arcgis package</a> &raquo;</li>
-      
-    <li>arcgis.gis module</li>
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="_sources/arcgis.gis.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
             
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="arcgis.html">arcgis package</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">arcgis.gis module</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="arcgis.html" title="Previous Chapter: arcgis package"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; arcgis package</span>
+    </a>
+  </li>
+  <li>
+    <a href="arcgis.lyr.html" title="Next Chapter: arcgis.lyr module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">arcgis.lyr mo... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/arcgis.gis.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
   <div class="section" id="module-arcgis.gis">
 <span id="arcgis-gis-module"></span><h1>arcgis.gis module<a class="headerlink" href="#module-arcgis.gis" title="Permalink to this headline">¶</a></h1>
 <p>The <strong>gis</strong> module provides an information model for GIS hosted 
@@ -147,14 +140,14 @@ within ArcGIS Online or an ArcGIS Portal. This module provides functionality to 
 is the most important and provides the entry point into the GIS.</p>
 <dl class="class">
 <dt id="arcgis.gis.ContentManager">
-<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">ContentManager</tt><big>(</big><em>portal</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#ContentManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.ContentManager" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">ContentManager</tt><big>(</big><em>portal</em><big>)</big><a class="headerlink" href="#arcgis.gis.ContentManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <p>Manager class for manipulating GIS content. This class is not created by users directly.
 An instance of this class, called &#8216;content&#8217;, is available as a property of the Gis object.
 Users call methods on this &#8216;content&#8217; object to manipulate (create, get, search...) items.</p>
 <dl class="method">
 <dt id="arcgis.gis.ContentManager.add">
-<tt class="descname">add</tt><big>(</big><em>item_properties</em>, <em>data=None</em>, <em>thumbnail=None</em>, <em>metadata=None</em>, <em>owner=None</em>, <em>folder=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#ContentManager.add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.ContentManager.add" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">add</tt><big>(</big><em>item_properties</em>, <em>data=None</em>, <em>thumbnail=None</em>, <em>metadata=None</em>, <em>owner=None</em>, <em>folder=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.ContentManager.add" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds content to a Portal by creating an item.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -266,7 +259,7 @@ values</td>
 
 <dl class="method">
 <dt id="arcgis.gis.ContentManager.create_folder">
-<tt class="descname">create_folder</tt><big>(</big><em>owner</em>, <em>folder</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#ContentManager.create_folder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.ContentManager.create_folder" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">create_folder</tt><big>(</big><em>owner</em>, <em>folder</em><big>)</big><a class="headerlink" href="#arcgis.gis.ContentManager.create_folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a folder for the given user with the given title. Does nothing if the
 folder already exists.</p>
 <table border="1" class="docutils">
@@ -299,7 +292,7 @@ folder already exists.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.ContentManager.create_service">
-<tt class="descname">create_service</tt><big>(</big><em>name</em>, <em>service_description=''</em>, <em>has_static_data=False</em>, <em>max_record_count=1000</em>, <em>supported_query_formats='JSON'</em>, <em>capabilities='Image</em>, <em>Catalog</em>, <em>Metadata</em>, <em>Download</em>, <em>Pixels</em>, <em>Edit</em>, <em>Mensuration</em>, <em>Uploads'</em>, <em>description=''</em>, <em>copyright_text=''</em>, <em>wkid=102100</em>, <em>service_type='imageService'</em>, <em>owner=None</em>, <em>folder=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#ContentManager.create_service"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.ContentManager.create_service" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">create_service</tt><big>(</big><em>name</em>, <em>service_description=''</em>, <em>has_static_data=False</em>, <em>max_record_count=1000</em>, <em>supported_query_formats='JSON'</em>, <em>capabilities='Image</em>, <em>Catalog</em>, <em>Metadata</em>, <em>Download</em>, <em>Pixels</em>, <em>Edit</em>, <em>Mensuration</em>, <em>Uploads'</em>, <em>description=''</em>, <em>copyright_text=''</em>, <em>wkid=102100</em>, <em>service_type='imageService'</em>, <em>owner=None</em>, <em>folder=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.ContentManager.create_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a service in the Portal</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -313,7 +306,7 @@ folder already exists.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.ContentManager.delete_folder">
-<tt class="descname">delete_folder</tt><big>(</big><em>owner</em>, <em>folder</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#ContentManager.delete_folder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.ContentManager.delete_folder" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">delete_folder</tt><big>(</big><em>owner</em>, <em>folder</em><big>)</big><a class="headerlink" href="#arcgis.gis.ContentManager.delete_folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a folder for the given user with the given folder name.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -344,7 +337,7 @@ folder already exists.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.ContentManager.get">
-<tt class="descname">get</tt><big>(</big><em>itemid</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#ContentManager.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.ContentManager.get" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get</tt><big>(</big><em>itemid</em><big>)</big><a class="headerlink" href="#arcgis.gis.ContentManager.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the item object for the specified itemid.</p>
 <dl class="docutils">
 <dt>Arguments</dt>
@@ -362,7 +355,7 @@ folder already exists.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.ContentManager.import_data">
-<tt class="descname">import_data</tt><big>(</big><em>df</em>, <em>address_fields=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#ContentManager.import_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.ContentManager.import_data" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">import_data</tt><big>(</big><em>df</em>, <em>address_fields=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.ContentManager.import_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Imports a Pandas data frame, that has an address column,
 to a feature collection</p>
 <p>df : pandas dataframe
@@ -372,7 +365,7 @@ address_fields : dict containing mapping of df columns to address fields, eg: { 
 
 <dl class="method">
 <dt id="arcgis.gis.ContentManager.search">
-<tt class="descname">search</tt><big>(</big><em>query</em>, <em>item_type=None</em>, <em>sort_field='numViews'</em>, <em>sort_order='desc'</em>, <em>max_items=10</em>, <em>add_org=False</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#ContentManager.search"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.ContentManager.search" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">search</tt><big>(</big><em>query</em>, <em>item_type=None</em>, <em>sort_field='numViews'</em>, <em>sort_order='desc'</em>, <em>max_items=10</em>, <em>add_org=False</em><big>)</big><a class="headerlink" href="#arcgis.gis.ContentManager.search" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searches for portal items.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -443,74 +436,255 @@ avgRating, numRatings, numComments, and numViews.</td>
 </dd></dl>
 
 <dl class="class">
+<dt id="arcgis.gis.DatastoreItem">
+<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">DatastoreItem</tt><big>(</big><em>datastore</em>, <em>path</em><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.dict</span></tt></p>
+<p>Represents a datastore item (folder, database or bigdata fileshare) within the GIS&#8217;s data store</p>
+<dl class="method">
+<dt id="arcgis.gis.DatastoreItem.delete">
+<tt class="descname">delete</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreItem.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unregisters this data item from the data store</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.DatastoreItem.list_datasets">
+<tt class="descname">list_datasets</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreItem.list_datasets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the datasets in a big data file share.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.gis.DatastoreItem.manifest">
+<tt class="descname">manifest</tt><a class="headerlink" href="#arcgis.gis.DatastoreItem.manifest" title="Permalink to this definition">¶</a></dt>
+<dd><p>The manifest resource for bigdata fileshares,</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.gis.DatastoreItem.ref_count">
+<tt class="descname">ref_count</tt><a class="headerlink" href="#arcgis.gis.DatastoreItem.ref_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The total number of references to this data item that exist on the server. You can use this property to determine if this data item can be safely deleted (or taken down for maintenance).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.DatastoreItem.update">
+<tt class="descname">update</tt><big>(</big><em>item</em><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreItem.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edits this data item to update its connection information.</p>
+<dl class="docutils">
+<dt>Input</dt>
+<dd>item - the dict representation of the updated item</dd>
+<dt>Output:</dt>
+<dd>True if successful</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.DatastoreItem.validate">
+<tt class="descname">validate</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreItem.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates that this data item&#8217;s path (for file shares) or connection string (for databases) 
+is accessible to every server node in the site</p>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>True if successful</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="arcgis.gis.DatastoreManager">
-<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">DatastoreManager</tt><big>(</big><em>gis</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#DatastoreManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.DatastoreManager" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">DatastoreManager</tt><big>(</big><em>gis</em>, <em>admin_url=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
-<p>Manager class for managing the GIS data stores. This class is not created by users directly.
+<p>Manager class for managing the GIS data stores in on-premises ArcGIS Portals.
+This class is not created by users directly.
 An instance of this class, called &#8216;datastores&#8217;, is available as a property of the GIS object.
 Users call methods on this &#8216;datastores&#8217; object to manage the data stores.</p>
 <dl class="method">
-<dt id="arcgis.gis.DatastoreManager.list">
-<tt class="descname">list</tt><big>(</big><em>server_path</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#DatastoreManager.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.DatastoreManager.list" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="arcgis.gis.DatastoreManager.add">
+<tt class="descname">add</tt><big>(</big><em>item</em><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreManager.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers a new data item with the data store.
+Input</p>
+<blockquote>
+<div>item - The disct representing the data item.                    
+See <a class="reference external" href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000001s9000000">http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000001s9000000</a></div></blockquote>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>True if the data item is registered successfully, False otherwise</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
-<dt id="arcgis.gis.DatastoreManager.register">
-<tt class="descname">register</tt><big>(</big><em>server_path</em>, <em>fileshare_path</em>, <em>local_path</em>, <em>admin_url=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#DatastoreManager.register"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.DatastoreManager.register" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="arcgis.gis.DatastoreManager.add_bigdata">
+<tt class="descname">add_bigdata</tt><big>(</big><em>name</em>, <em>server_path=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreManager.add_bigdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers a bigdata fileshare with the data store.
+Input</p>
+<blockquote>
+<div>name - unique bigdata fileshare name on the server
+server_path - the path to the folder from the server</div></blockquote>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>the data item if registered successfully, None otherwise</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.DatastoreManager.add_database">
+<tt class="descname">add_database</tt><big>(</big><em>name</em>, <em>conn_str</em>, <em>client_conn_str=None</em>, <em>conn_type='shared'</em><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreManager.add_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers a database with the data store.
+Input</p>
+<blockquote>
+<div>name - unique database name on the server
+conn_str - the path to the folder from the server (and client, if shared or serverOnly database)
+client_conn_str: connection string for client to connect to replicated enterprise database&gt;
+conn_type - &#8220;&lt;shared|replicated|serverOnly&gt;&#8221;</div></blockquote>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>the data item is registered successfully, None otherwise</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.DatastoreManager.add_folder">
+<tt class="descname">add_folder</tt><big>(</big><em>name</em>, <em>server_path</em>, <em>client_path=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreManager.add_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers a folder with the data store.
+Input</p>
+<blockquote>
+<div>name - unique fileshare name on the server
+server_path - the path to the folder from the server (and client, if shared path)
+client_path - if folder is replicated, the path to the folder from the client
+if folder is shared, don&#8217;t set this parameter</div></blockquote>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>the data item is registered successfully, None otherwise</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.gis.DatastoreManager.config">
+<tt class="descname">config</tt><a class="headerlink" href="#arcgis.gis.DatastoreManager.config" title="Permalink to this definition">¶</a></dt>
+<dd><p>The data store configuration properties affect the behavior of the data holdings of the server. The properties include:
+blockDataCopy—When this property is False, or not set at all, copying data to the site when publishing services from a client application is allowed. This is the default behavior. 
+When this property is True, the client application is not allowed to copy data to the site when publishing. Rather, the publisher is required to register data items through which the service being published can reference data. Values: True | False
+Note:
+If you specify the property as True, users will not be able to publish geoprocessing services and geocode services from composite locators. These service types require data to be copied to the server. As a workaround, you can temporarily set the property to False, publish the service, and then set the property back to True.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.DatastoreManager.get">
+<tt class="descname">get</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreManager.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the data item object at the given path</p>
+<dl class="docutils">
+<dt>Arguments</dt>
+<dd>path        required string, the data item path</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None if the data item is not found at that path and the data item object if its found</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.DatastoreManager.list">
+<tt class="descname">list</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreManager.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all registered data items</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.DatastoreManager.search">
+<tt class="descname">search</tt><big>(</big><em>parent_path=None</em>, <em>ancestor_path=None</em>, <em>types=None</em>, <em>id=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreManager.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>You can use this operation to search through the various data
+items registered in the server&#8217;s data store.
+Inputs:</p>
+<blockquote>
+<div><blockquote>
+<div><p>parentPath - The path of the parent under which to find items. To get the root data items, pass &#8216;/&#8217;
+ancestorPath - The path of the ancestor under which to find</p>
+<blockquote>
+<div>items.</div></blockquote>
+<p>types - A comma separated filter for the type of the items. Types include folder, egdb, bigDataFileShare, datadir
+id - A filter to search by the ID of the item</p>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a list of data items matching the specified query</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.DatastoreManager.validate">
+<tt class="descname">validate</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.DatastoreManager.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates all items in the datastore and returns True if validated.</p>
+<p>In order for a data item to be registered and used successfully within the GIS&#8217;s data store,
+you need to make sure that the path (for file shares) or connection string (for databases)
+is accessible to every server node in the site. To validate all registered data items all
+at once, you can invoke this operation.</p>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="arcgis.gis.GIS">
-<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">GIS</tt><big>(</big><em>url=None</em>, <em>username=None</em>, <em>password=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#GIS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.GIS" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">GIS</tt><big>(</big><em>url=None</em>, <em>username=None</em>, <em>password=None</em>, <em>key_file=None</em>, <em>cert_file=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.GIS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <p>A GIS is representative of ArcGIS Online or an ArcGIS Portal
 site. The GIS object provides helper objects to manage (search, create, retrieve) GIS resources:
 * users
 * groups
 * content
-* datastores
+* datastore
 * tools - including geometry, geocoder, analysis, rasters, geoanalytics</p>
 <p>Additionally, the GIS object has properties and methods to query it&#8217;s state:
 * properties
 * usage()</p>
 <dl class="attribute">
 <dt id="arcgis.gis.GIS.content">
-<tt class="descname">content</tt><a class="reference internal" href="_modules/arcgis/gis.html#GIS.content"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.GIS.content" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">content</tt><a class="headerlink" href="#arcgis.gis.GIS.content" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.gis.GIS.datastore">
+<tt class="descname">datastore</tt><a class="headerlink" href="#arcgis.gis.GIS.datastore" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="arcgis.gis.GIS.groups">
-<tt class="descname">groups</tt><a class="reference internal" href="_modules/arcgis/gis.html#GIS.groups"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.GIS.groups" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">groups</tt><a class="headerlink" href="#arcgis.gis.GIS.groups" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.GIS.map">
-<tt class="descname">map</tt><big>(</big><em>location=None</em>, <em>zoomlevel=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#GIS.map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.GIS.map" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">map</tt><big>(</big><em>location=None</em>, <em>zoomlevel=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.GIS.map" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a map widget centered at the location (Address or (lat, long) tuple) with the specified zoom-level(integer)</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="arcgis.gis.GIS.properties">
-<tt class="descname">properties</tt><a class="reference internal" href="_modules/arcgis/gis.html#GIS.properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.GIS.properties" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">properties</tt><a class="headerlink" href="#arcgis.gis.GIS.properties" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="arcgis.gis.GIS.users">
-<tt class="descname">users</tt><a class="reference internal" href="_modules/arcgis/gis.html#GIS.users"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.GIS.users" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">users</tt><a class="headerlink" href="#arcgis.gis.GIS.users" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="arcgis.gis.Group">
-<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">Group</tt><big>(</big><em>portal</em>, <em>groupid</em>, <em>groupdict=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Group" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">Group</tt><big>(</big><em>portal</em>, <em>groupid</em>, <em>groupdict=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.dict</span></tt></p>
 <p>Represents a group (for example, San Bernardino Fires) within the GIS (ArcGIS Online or Portal for ArcGIS)</p>
 <dl class="method">
 <dt id="arcgis.gis.Group.add_users">
-<tt class="descname">add_users</tt><big>(</big><em>usernames</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Group.add_users"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Group.add_users" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">add_users</tt><big>(</big><em>usernames</em><big>)</big><a class="headerlink" href="#arcgis.gis.Group.add_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds users to this group.
 .. note:</p>
 <div class="highlight-python"><div class="highlight"><pre>This method will only work if the user for the
@@ -545,13 +719,13 @@ added to the group.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.Group.content">
-<tt class="descname">content</tt><big>(</big><em>max_items=1000</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Group.content"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Group.content" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">content</tt><big>(</big><em>max_items=1000</em><big>)</big><a class="headerlink" href="#arcgis.gis.Group.content" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a list of items shared with this group.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.Group.delete">
-<tt class="descname">delete</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Group.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Group.delete" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">delete</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.Group.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes this group.</p>
 <dl class="docutils">
 <dt>Returns</dt>
@@ -561,13 +735,13 @@ added to the group.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.Group.download_thumbnail">
-<tt class="descname">download_thumbnail</tt><big>(</big><em>dir=None</em>, <em>thumbnail_file=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Group.download_thumbnail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Group.download_thumbnail" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">download_thumbnail</tt><big>(</big><em>dir=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.Group.download_thumbnail" title="Permalink to this definition">¶</a></dt>
 <dd><p>Downloads the group thumbnail for this group, returns file path.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.Group.get_members">
-<tt class="descname">get_members</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Group.get_members"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Group.get_members" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_members</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.Group.get_members" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns members of this group.</p>
 <dl class="docutils">
 <dt>Arguments</dt>
@@ -606,7 +780,7 @@ added to the group.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.Group.get_thumbnail">
-<tt class="descname">get_thumbnail</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Group.get_thumbnail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Group.get_thumbnail" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_thumbnail</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.Group.get_thumbnail" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the bytes that make up the thumbnail for this group.</p>
 <dl class="docutils">
 <dt>Arguments</dt>
@@ -624,13 +798,13 @@ added to the group.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.Group.get_thumbnail_link">
-<tt class="descname">get_thumbnail_link</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Group.get_thumbnail_link"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Group.get_thumbnail_link" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_thumbnail_link</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.Group.get_thumbnail_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL to the thumbnail image</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.Group.invite_users">
-<tt class="descname">invite_users</tt><big>(</big><em>usernames</em>, <em>role='group_member'</em>, <em>expiration=10080</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Group.invite_users"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Group.invite_users" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">invite_users</tt><big>(</big><em>usernames</em>, <em>role='group_member'</em>, <em>expiration=10080</em><big>)</big><a class="headerlink" href="#arcgis.gis.Group.invite_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>Invites users to this group.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -675,7 +849,7 @@ valid for in minutes.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.Group.leave">
-<tt class="descname">leave</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Group.leave"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Group.leave" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">leave</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.Group.leave" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes the logged in user from the specified group.</p>
 <dl class="docutils">
 <dt>Requires:</dt>
@@ -695,7 +869,7 @@ valid for in minutes.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.Group.reassign_to">
-<tt class="descname">reassign_to</tt><big>(</big><em>target_owner</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Group.reassign_to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Group.reassign_to" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">reassign_to</tt><big>(</big><em>target_owner</em><big>)</big><a class="headerlink" href="#arcgis.gis.Group.reassign_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reassigns this group to another owner.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -723,7 +897,7 @@ valid for in minutes.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.Group.remove_users">
-<tt class="descname">remove_users</tt><big>(</big><em>usernames</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Group.remove_users"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Group.remove_users" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">remove_users</tt><big>(</big><em>usernames</em><big>)</big><a class="headerlink" href="#arcgis.gis.Group.remove_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove users from this group.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -751,7 +925,7 @@ valid for in minutes.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.Group.update">
-<tt class="descname">update</tt><big>(</big><em>title=None</em>, <em>tags=None</em>, <em>description=None</em>, <em>snippet=None</em>, <em>access=None</em>, <em>is_invitation_only=None</em>, <em>sort_field=None</em>, <em>sort_order=None</em>, <em>is_view_only=None</em>, <em>thumbnail=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Group.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Group.update" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">update</tt><big>(</big><em>title=None</em>, <em>tags=None</em>, <em>description=None</em>, <em>snippet=None</em>, <em>access=None</em>, <em>is_invitation_only=None</em>, <em>sort_field=None</em>, <em>sort_order=None</em>, <em>is_view_only=None</em>, <em>thumbnail=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.Group.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates this group.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -814,14 +988,14 @@ group are sorted.</td>
 
 <dl class="class">
 <dt id="arcgis.gis.GroupManager">
-<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">GroupManager</tt><big>(</big><em>portal</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#GroupManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.GroupManager" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">GroupManager</tt><big>(</big><em>portal</em><big>)</big><a class="headerlink" href="#arcgis.gis.GroupManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <p>Manager class for manipulating GIS groups. This class is not created by users directly.
 An instance of this class, called &#8216;groups&#8217;, is available as a property of the Gis object.
 Users call methods on this &#8216;groups&#8217; object to manipulate (create, get, search...) users.</p>
 <dl class="method">
 <dt id="arcgis.gis.GroupManager.create">
-<tt class="descname">create</tt><big>(</big><em>title</em>, <em>tags</em>, <em>description=None</em>, <em>snippet=None</em>, <em>access='public'</em>, <em>thumbnail=None</em>, <em>is_invitation_only=False</em>, <em>sort_field='avgRating'</em>, <em>sort_order='desc'</em>, <em>is_view_only=False</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#GroupManager.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.GroupManager.create" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">create</tt><big>(</big><em>title</em>, <em>tags</em>, <em>description=None</em>, <em>snippet=None</em>, <em>access='public'</em>, <em>thumbnail=None</em>, <em>is_invitation_only=False</em>, <em>sort_field='avgRating'</em>, <em>sort_order='desc'</em>, <em>is_view_only=False</em><big>)</big><a class="headerlink" href="#arcgis.gis.GroupManager.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a group and returns it if successful.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -835,7 +1009,7 @@ Users call methods on this &#8216;groups&#8217; object to manipulate (create, ge
 
 <dl class="method">
 <dt id="arcgis.gis.GroupManager.create_from_dict">
-<tt class="descname">create_from_dict</tt><big>(</big><em>dict</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#GroupManager.create_from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.GroupManager.create_from_dict" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">create_from_dict</tt><big>(</big><em>dict</em><big>)</big><a class="headerlink" href="#arcgis.gis.GroupManager.create_from_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a group with parameters specified in the dict
 See help of create() method for parameters
 :return:</p>
@@ -845,7 +1019,7 @@ See help of create() method for parameters
 
 <dl class="method">
 <dt id="arcgis.gis.GroupManager.get">
-<tt class="descname">get</tt><big>(</big><em>groupid</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#GroupManager.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.GroupManager.get" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get</tt><big>(</big><em>groupid</em><big>)</big><a class="headerlink" href="#arcgis.gis.GroupManager.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the group object for the specified groupid.</p>
 <dl class="docutils">
 <dt>Arguments</dt>
@@ -855,7 +1029,7 @@ See help of create() method for parameters
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None if the user is not found and returns a user object if the user is found</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None if the group is not found and returns a group object if the group is found</td>
 </tr>
 </tbody>
 </table>
@@ -863,7 +1037,7 @@ See help of create() method for parameters
 
 <dl class="method">
 <dt id="arcgis.gis.GroupManager.list">
-<tt class="descname">list</tt><big>(</big><em>max_groups=1000</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#GroupManager.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.GroupManager.list" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">list</tt><big>(</big><em>max_groups=1000</em><big>)</big><a class="headerlink" href="#arcgis.gis.GroupManager.list" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>Return the list of groups in your organization</dt>
 <dd><dl class="first last docutils">
@@ -884,7 +1058,7 @@ See help of create() method for parameters
 
 <dl class="method">
 <dt id="arcgis.gis.GroupManager.search">
-<tt class="descname">search</tt><big>(</big><em>query=''</em>, <em>sort_field='title'</em>, <em>sort_order='asc'</em>, <em>max_groups=1000</em>, <em>add_org=True</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#GroupManager.search"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.GroupManager.search" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">search</tt><big>(</big><em>query=''</em>, <em>sort_field='title'</em>, <em>sort_order='asc'</em>, <em>max_groups=1000</em>, <em>add_org=True</em><big>)</big><a class="headerlink" href="#arcgis.gis.GroupManager.search" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searches for portal groups.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -954,7 +1128,7 @@ your org</td>
 
 <dl class="class">
 <dt id="arcgis.gis.Item">
-<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">Item</tt><big>(</big><em>portal</em>, <em>itemid</em>, <em>itemdict=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">Item</tt><big>(</big><em>portal</em>, <em>itemid</em>, <em>itemdict=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.Item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.dict</span></tt></p>
 <p>An item (a unit of content) in the GIS. Each item has a unique identifier and a well
 known URL that is independent of the user owning the item.
@@ -963,7 +1137,7 @@ For example, an item of type Map Package returns the actual bits corresponding t
 map package via the item data resource.</p>
 <dl class="method">
 <dt id="arcgis.gis.Item.add_relationship">
-<tt class="descname">add_relationship</tt><big>(</big><em>rel_item</em>, <em>rel_type</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.add_relationship"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.add_relationship" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">add_relationship</tt><big>(</big><em>rel_item</em>, <em>rel_type</em><big>)</big><a class="headerlink" href="#arcgis.gis.Item.add_relationship" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a relationship from this item to rel_item.
 Relationships are not tied to an item. They are directional links from an origin item 
 to a destination item and have a type. The type defines the valid origin and destination
@@ -979,7 +1153,7 @@ Returns True if the relationship was added</p>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.delete">
-<tt class="descname">delete</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.delete" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">delete</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.Item.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an item.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -993,7 +1167,7 @@ Returns True if the relationship was added</p>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.delete_relationship">
-<tt class="descname">delete_relationship</tt><big>(</big><em>rel_item</em>, <em>rel_type</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.delete_relationship"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.delete_relationship" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">delete_relationship</tt><big>(</big><em>rel_item</em>, <em>rel_type</em><big>)</big><a class="headerlink" href="#arcgis.gis.Item.delete_relationship" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a relationship between this item and the rel_item. 
 rel_item is the related item
 rel_type is one of [&#8216;Map2Service&#8217;, &#8216;WMA2Code&#8217;, &#8216;Map2FeatureCollection&#8217;, &#8216;MobileApp2Code&#8217;, &#8216;Service2Data&#8217;, &#8216;Service2Service&#8217;]
@@ -1002,36 +1176,36 @@ Returns True if the relationship was deleted</p>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.dependent_to">
-<tt class="descname">dependent_to</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.dependent_to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.dependent_to" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">dependent_to</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.Item.dependent_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns items and urls, etc dependend upon this item.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.dependent_upon">
-<tt class="descname">dependent_upon</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.dependent_upon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.dependent_upon" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">dependent_upon</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.Item.dependent_upon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns items and urls, etc that this items depends upon</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.download">
-<tt class="descname">download</tt><big>(</big><em>dir</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.download"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.download" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">download</tt><big>(</big><em>dir</em><big>)</big><a class="headerlink" href="#arcgis.gis.Item.download" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.download_metadata">
-<tt class="descname">download_metadata</tt><big>(</big><em>dir=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.download_metadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.download_metadata" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">download_metadata</tt><big>(</big><em>dir=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.Item.download_metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Downloads the item metadata for the specified item id, returns file path.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.download_thumbnail">
-<tt class="descname">download_thumbnail</tt><big>(</big><em>dir=None</em>, <em>thumbnail_file=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.download_thumbnail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.download_thumbnail" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">download_thumbnail</tt><big>(</big><em>dir=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.Item.download_thumbnail" title="Permalink to this definition">¶</a></dt>
 <dd><p>Downloads the item thumbnail for this item, returns file path.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.get_data">
-<tt class="descname">get_data</tt><big>(</big><em>try_json=True</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.get_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.get_data" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_data</tt><big>(</big><em>try_json=True</em><big>)</big><a class="headerlink" href="#arcgis.gis.Item.get_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the data for the item. Returns a dict if try_json is True. To convert this 
 dict to string using json.dumps(data). Else, returns the data
 as a byte array, that can be converted to string using data.decode(&#8216;utf-8&#8217;)</p>
@@ -1039,13 +1213,13 @@ as a byte array, that can be converted to string using data.decode(&#8216;utf-8&
 
 <dl class="method">
 <dt id="arcgis.gis.Item.get_metadata">
-<tt class="descname">get_metadata</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.get_metadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.get_metadata" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_metadata</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.Item.get_metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the item metadata for the specified item id.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.get_thumbnail">
-<tt class="descname">get_thumbnail</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.get_thumbnail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.get_thumbnail" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_thumbnail</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.Item.get_thumbnail" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the bytes that make up the thumbnail for this item.</p>
 <dl class="docutils">
 <dt>Arguments</dt>
@@ -1063,13 +1237,13 @@ as a byte array, that can be converted to string using data.decode(&#8216;utf-8&
 
 <dl class="method">
 <dt id="arcgis.gis.Item.get_thumbnail_link">
-<tt class="descname">get_thumbnail_link</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.get_thumbnail_link"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.get_thumbnail_link" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_thumbnail_link</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.Item.get_thumbnail_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL to the thumbnail image</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.publish">
-<tt class="descname">publish</tt><big>(</big><em>publish_parameters=None</em>, <em>address_fields=None</em>, <em>output_type=None</em>, <em>overwrite=False</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.publish"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.publish" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">publish</tt><big>(</big><em>publish_parameters=None</em>, <em>address_fields=None</em>, <em>output_type=None</em>, <em>overwrite=False</em><big>)</big><a class="headerlink" href="#arcgis.gis.Item.publish" title="Permalink to this definition">¶</a></dt>
 <dd><p>Publishes a hosted service based on an existing source item (this item).
 Publishers can create feature services as well as tiled map services.
 Feature services can be created using input files of type csv, shapefile, serviceDefinition, featureCollection, and fileGeodatabase.
@@ -1077,13 +1251,12 @@ CSV files that contain location fields, (ie.address fields or X, Y fields) are s
 Shapefiles and file geodatabases should be packaged as <em>.zip files.
 Tiled map services can be created from service definition (</em>.sd) files, tile packages, and existing feature services.
 Service definitions are authored in ArcGIS for Desktop and contain both the cartographic definition for a map as well as its packaged data together with the definition of the geo-service to be created.
-Use the Analyze operation to generate the default publishing parameters for CSVs.
 address_fields : dict containing mapping of df columns to address fields, eg: { &#8220;CountryCode&#8221; : &#8220;Country&#8221;} or { &#8220;Address&#8221; : &#8220;Address&#8221; }</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.reassign_to">
-<tt class="descname">reassign_to</tt><big>(</big><em>target_owner</em>, <em>target_folder=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.reassign_to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.reassign_to" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">reassign_to</tt><big>(</big><em>target_owner</em>, <em>target_folder=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.Item.reassign_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows the administrator to reassign a single item from one user to another.</p>
 <blockquote>
 <div><div class="admonition note">
@@ -1124,7 +1297,7 @@ user.reassign_to() method.  This method only moves one item at a time.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.related_items">
-<tt class="descname">related_items</tt><big>(</big><em>rel_type</em>, <em>direction='forward'</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.related_items"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.related_items" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">related_items</tt><big>(</big><em>rel_type</em>, <em>direction='forward'</em><big>)</big><a class="headerlink" href="#arcgis.gis.Item.related_items" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns items related to this item. Relationsships can be added and deleted using item.add_relationship() and item.delete_relationship() respectively.
 rel_type is one of [&#8216;Map2Service&#8217;, &#8216;WMA2Code&#8217;, &#8216;Map2FeatureCollection&#8217;, &#8216;MobileApp2Code&#8217;, &#8216;Service2Data&#8217;, &#8216;Service2Service&#8217;]
 direction is one of [&#8216;forward&#8217;, &#8216;reverse&#8217;]</p>
@@ -1132,7 +1305,7 @@ direction is one of [&#8216;forward&#8217;, &#8216;reverse&#8217;]</p>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.share">
-<tt class="descname">share</tt><big>(</big><em>everyone=False</em>, <em>org=False</em>, <em>groups=''</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.share"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.share" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">share</tt><big>(</big><em>everyone=False</em>, <em>org=False</em>, <em>groups=''</em><big>)</big><a class="headerlink" href="#arcgis.gis.Item.share" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shares an item with the specified list of groups</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1167,7 +1340,7 @@ comma-separated list of group IDs with which the item will be shared.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.unshare">
-<tt class="descname">unshare</tt><big>(</big><em>groups</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.unshare"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.unshare" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">unshare</tt><big>(</big><em>groups</em><big>)</big><a class="headerlink" href="#arcgis.gis.Item.unshare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops sharing the item with the specified list of groups</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1196,7 +1369,7 @@ comma-separated list of group IDs with which the item will be unshared.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.update">
-<tt class="descname">update</tt><big>(</big><em>item_properties=None</em>, <em>data=None</em>, <em>thumbnail=None</em>, <em>metadata=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Item.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Item.update" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">update</tt><big>(</big><em>item_properties=None</em>, <em>data=None</em>, <em>thumbnail=None</em>, <em>metadata=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.Item.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates an item in a Portal.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -1225,7 +1398,7 @@ the description argument in item_properties.</p>
 
 <dl class="class">
 <dt id="arcgis.gis.Tools">
-<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">Tools</tt><big>(</big><em>gis</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#Tools"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Tools" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">Tools</tt><big>(</big><em>gis</em><big>)</big><a class="headerlink" href="#arcgis.gis.Tools" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <p>Collection of GIS tools. This class holds references to the helper services and tools available 
 in the GIS. This class is not created by users directly.
@@ -1234,31 +1407,31 @@ Users access the GIS tools, such as the geocoder, spatial analysis tools, geoana
 geoanalysis tools, etc through the gis.tools object</p>
 <dl class="attribute">
 <dt id="arcgis.gis.Tools.analysis">
-<tt class="descname">analysis</tt><a class="reference internal" href="_modules/arcgis/gis.html#Tools.analysis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Tools.analysis" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">analysis</tt><a class="headerlink" href="#arcgis.gis.Tools.analysis" title="Permalink to this definition">¶</a></dt>
 <dd><p>the portal&#8217;s spatial analysis tools, if available and configured</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.gis.Tools.geoanalytics">
-<tt class="descname">geoanalytics</tt><a class="reference internal" href="_modules/arcgis/gis.html#Tools.geoanalytics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Tools.geoanalytics" title="Permalink to this definition">¶</a></dt>
-<dd><p>the portal&#8217;s geoanalytics tools, if available and configured</p>
+<dt id="arcgis.gis.Tools.bigdata">
+<tt class="descname">bigdata</tt><a class="headerlink" href="#arcgis.gis.Tools.bigdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>the portal&#8217;s bigdata analytics tools, if available and configured</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="arcgis.gis.Tools.geocoder">
-<tt class="descname">geocoder</tt><a class="reference internal" href="_modules/arcgis/gis.html#Tools.geocoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Tools.geocoder" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">geocoder</tt><a class="headerlink" href="#arcgis.gis.Tools.geocoder" title="Permalink to this definition">¶</a></dt>
 <dd><p>the geocoder, if available and configured</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="arcgis.gis.Tools.geometry">
-<tt class="descname">geometry</tt><a class="reference internal" href="_modules/arcgis/gis.html#Tools.geometry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Tools.geometry" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">geometry</tt><a class="headerlink" href="#arcgis.gis.Tools.geometry" title="Permalink to this definition">¶</a></dt>
 <dd><p>the portal&#8217;s geometry  tools, if available and configured</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="arcgis.gis.Tools.rasteranalytics">
-<tt class="descname">rasteranalytics</tt><a class="reference internal" href="_modules/arcgis/gis.html#Tools.rasteranalytics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.Tools.rasteranalytics" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">rasteranalytics</tt><a class="headerlink" href="#arcgis.gis.Tools.rasteranalytics" title="Permalink to this definition">¶</a></dt>
 <dd><p>the portal&#8217;s raster analysis tools, if available and configured</p>
 </dd></dl>
 
@@ -1266,19 +1439,19 @@ geoanalysis tools, etc through the gis.tools object</p>
 
 <dl class="class">
 <dt id="arcgis.gis.User">
-<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">User</tt><big>(</big><em>portal</em>, <em>username</em>, <em>userdict=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#User"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.User" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">User</tt><big>(</big><em>portal</em>, <em>username</em>, <em>userdict=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.dict</span></tt></p>
 <p>Represents a registered user of the GIS (ArcGIS Online, or Portal for ArcGIS).</p>
 <dl class="method">
 <dt id="arcgis.gis.User.content">
-<tt class="descname">content</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#User.content"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.User.content" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">content</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.User.content" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a dict of user items. The keys of the dict being the users folders, &#8216;/&#8217; being the root folder,
 and the values being a list of items in that folder.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.User.delete">
-<tt class="descname">delete</tt><big>(</big><em>reassign_to=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#User.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.User.delete" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">delete</tt><big>(</big><em>reassign_to=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.User.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes this user from the portal, optionally deleting or reassigning groups and items.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -1313,13 +1486,13 @@ will fail if the user has items or groups that need to be reassigned.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.User.download_thumbnail">
-<tt class="descname">download_thumbnail</tt><big>(</big><em>dir=None</em>, <em>thumbnail_file=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#User.download_thumbnail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.User.download_thumbnail" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">download_thumbnail</tt><big>(</big><em>dir=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.User.download_thumbnail" title="Permalink to this definition">¶</a></dt>
 <dd><p>Downloads the item thumbnail for this user, returns file path.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.User.get_thumbnail">
-<tt class="descname">get_thumbnail</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#User.get_thumbnail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.User.get_thumbnail" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_thumbnail</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.User.get_thumbnail" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the bytes that make up the thumbnail for this user.</p>
 <dl class="docutils">
 <dt>Arguments</dt>
@@ -1337,13 +1510,13 @@ will fail if the user has items or groups that need to be reassigned.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.User.get_thumbnail_link">
-<tt class="descname">get_thumbnail_link</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#User.get_thumbnail_link"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.User.get_thumbnail_link" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_thumbnail_link</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.User.get_thumbnail_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL to the thumbnail image</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.User.reassign_to">
-<tt class="descname">reassign_to</tt><big>(</big><em>target_username</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#User.reassign_to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.User.reassign_to" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">reassign_to</tt><big>(</big><em>target_username</em><big>)</big><a class="headerlink" href="#arcgis.gis.User.reassign_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reassigns all of this user&#8217;s items and groups to another user.</p>
 <p>Items are transferred to the target user into a folder named
 &lt;user&gt;_&lt;folder&gt; where user corresponds to the user whose items were
@@ -1379,7 +1552,7 @@ can not be undone.  The changes are immediately made and permanent.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.User.reset">
-<tt class="descname">reset</tt><big>(</big><em>password</em>, <em>new_password=None</em>, <em>new_security_question=None</em>, <em>new_security_answer=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#User.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.User.reset" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">reset</tt><big>(</big><em>password</em>, <em>new_password=None</em>, <em>new_security_question=None</em>, <em>new_security_answer=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.User.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets a user&#8217;s password, security question, and/or security answer.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -1424,7 +1597,7 @@ be provided.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.User.update">
-<tt class="descname">update</tt><big>(</big><em>access=None</em>, <em>preferred_view=None</em>, <em>description=None</em>, <em>tags=None</em>, <em>thumbnail=None</em>, <em>fullname=None</em>, <em>email=None</em>, <em>culture=None</em>, <em>region=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#User.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.User.update" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">update</tt><big>(</big><em>access=None</em>, <em>preferred_view=None</em>, <em>description=None</em>, <em>tags=None</em>, <em>thumbnail=None</em>, <em>fullname=None</em>, <em>email=None</em>, <em>culture=None</em>, <em>region=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.User.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates this user&#8217;s properties.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -1484,7 +1657,7 @@ JPEG, max size 1 MB</td>
 
 <dl class="method">
 <dt id="arcgis.gis.User.update_role">
-<tt class="descname">update_role</tt><big>(</big><em>role</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#User.update_role"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.User.update_role" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">update_role</tt><big>(</big><em>role</em><big>)</big><a class="headerlink" href="#arcgis.gis.User.update_role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates this user&#8217;s role to org_user, org_publisher, org_admin</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -1522,14 +1695,14 @@ org_publisher, org_admin</td>
 
 <dl class="class">
 <dt id="arcgis.gis.UserManager">
-<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">UserManager</tt><big>(</big><em>portal</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#UserManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.UserManager" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.gis.</tt><tt class="descname">UserManager</tt><big>(</big><em>portal</em><big>)</big><a class="headerlink" href="#arcgis.gis.UserManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <p>Manager class for managing GIS users. This class is not created by users directly.
 An instance of this class, called &#8216;users&#8217;, is available as a property of the Gis object.
 Users call methods on this &#8216;users&#8217; object to manipulate (create, get, search...) users.</p>
 <dl class="method">
 <dt id="arcgis.gis.UserManager.create">
-<tt class="descname">create</tt><big>(</big><em>username</em>, <em>password</em>, <em>firstname</em>, <em>lastname</em>, <em>email</em>, <em>description=None</em>, <em>role='org_user'</em>, <em>provider='arcgis'</em>, <em>idpUsername=None</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#UserManager.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.UserManager.create" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">create</tt><big>(</big><em>username</em>, <em>password</em>, <em>firstname</em>, <em>lastname</em>, <em>email</em>, <em>description=None</em>, <em>role='org_user'</em>, <em>provider='arcgis'</em>, <em>idpUsername=None</em><big>)</big><a class="headerlink" href="#arcgis.gis.UserManager.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation is used to pre-create built-in or enterprise accounts within the portal. 
 The provider parameter is used to indicate the type of user account. Only an administrator
 can call this method.</p>
@@ -1588,7 +1761,7 @@ only required if the provider parameter is enterprise.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.UserManager.get">
-<tt class="descname">get</tt><big>(</big><em>username</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#UserManager.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.UserManager.get" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get</tt><big>(</big><em>username</em><big>)</big><a class="headerlink" href="#arcgis.gis.UserManager.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the user object for the specified username.</p>
 <dl class="docutils">
 <dt>Arguments</dt>
@@ -1606,7 +1779,7 @@ only required if the provider parameter is enterprise.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.UserManager.list">
-<tt class="descname">list</tt><big>(</big><em>max_users=1000</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#UserManager.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.UserManager.list" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">list</tt><big>(</big><em>max_users=1000</em><big>)</big><a class="headerlink" href="#arcgis.gis.UserManager.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the list of users in your organization. This method does not work with 
 ArcGIS Online, only with Portal for ArcGIS.</p>
 <blockquote>
@@ -1627,13 +1800,13 @@ ArcGIS Online, only with Portal for ArcGIS.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.UserManager.logged_in_user">
-<tt class="descname">logged_in_user</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#UserManager.logged_in_user"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.UserManager.logged_in_user" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">logged_in_user</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.gis.UserManager.logged_in_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the logged in user</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.gis.UserManager.search">
-<tt class="descname">search</tt><big>(</big><em>query</em>, <em>sort_field='username'</em>, <em>sort_order='asc'</em>, <em>max_users=100</em>, <em>add_org=True</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#UserManager.search"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.UserManager.search" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">search</tt><big>(</big><em>query</em>, <em>sort_field='username'</em>, <em>sort_order='asc'</em>, <em>max_users=100</em>, <em>add_org=True</em><big>)</big><a class="headerlink" href="#arcgis.gis.UserManager.search" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searches portal users.</p>
 <p>Returns a list of users matching the specified query</p>
 <div class="admonition note">
@@ -1693,7 +1866,7 @@ org (default is True)</td>
 
 <dl class="method">
 <dt id="arcgis.gis.UserManager.signup">
-<tt class="descname">signup</tt><big>(</big><em>username</em>, <em>password</em>, <em>fullname</em>, <em>email</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#UserManager.signup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.UserManager.signup" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">signup</tt><big>(</big><em>username</em>, <em>password</em>, <em>fullname</em>, <em>email</em><big>)</big><a class="headerlink" href="#arcgis.gis.UserManager.signup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Signs up users to an instance of Portal for ArcGIS.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1733,77 +1906,27 @@ org (default is True)</td>
 
 <dl class="function">
 <dt id="arcgis.gis.rot13">
-<tt class="descclassname">arcgis.gis.</tt><tt class="descname">rot13</tt><big>(</big><em>s</em><big>)</big><a class="reference internal" href="_modules/arcgis/gis.html#rot13"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#arcgis.gis.rot13" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">arcgis.gis.</tt><tt class="descname">rot13</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#arcgis.gis.rot13" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
 
 
-           </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="arcgis.lyr.html" class="btn btn-neutral float-right" title="arcgis.lyr module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="arcgis.html" class="btn btn-neutral" title="arcgis package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
     </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
     <p>
-        &copy; Copyright 2016, Esri.
-
+        &copy; Copyright 2016, Esri.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.<br/>
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-
 </footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'0.1',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+  </body>
 </html>
