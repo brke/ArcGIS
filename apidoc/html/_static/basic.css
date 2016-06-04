@@ -11,6 +11,10 @@
 
 /* -- main layout ----------------------------------------------------------- */
 
+div.container {
+    padding-top: 20px;
+}
+
 div.clearer {
     clear: both;
 }
