@@ -140,12 +140,12 @@ Raster Analysis tools, Geoprocessing tools, Geocoders and Geometry Utility servi
 These tools primarily operate on items and layers from the GIS.</p>
 <dl class="class">
 <dt id="arcgis.tools.BigDataTools">
-<em class="property">class </em><tt class="descclassname">arcgis.tools.</tt><tt class="descname">BigDataTools</tt><big>(</big><em>url</em>, <em>gis</em>, <em>secure=True</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.tools.</tt><tt class="descname">BigDataTools</tt><big>(</big><em>url</em>, <em>gis</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">arcgis.tools._AsyncService</span></tt></p>
 <p>Exposes the BigData Tools from the GeoAnalyticsTools service. The GeoAnalyticsTools service is provided for distributed analysis of large datasets.</p>
 <dl class="method">
 <dt id="arcgis.tools.BigDataTools.aggregate_points">
-<tt class="descname">aggregate_points</tt><big>(</big><em>point_layer</em>, <em>output_name</em>, <em>distance_interval=None</em>, <em>distance_interval_unit=None</em>, <em>bin_type='SQUARE'</em>, <em>polygon_layer=None</em>, <em>time_interval=None</em>, <em>time_interval_unit=None</em>, <em>time_repeat=None</em>, <em>time_repeat_unit=None</em>, <em>time_reference=None</em>, <em>summary_fields=None</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.aggregate_points" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">aggregate_points</tt><big>(</big><em>point_layer</em>, <em>output_name</em>, <em>distance_interval=None</em>, <em>distance_interval_unit=None</em>, <em>bin_type='SQUARE'</em>, <em>polygon_layer=None</em>, <em>time_interval=None</em>, <em>time_interval_unit=None</em>, <em>time_repeat=None</em>, <em>time_repeat_unit=None</em>, <em>time_reference=None</em>, <em>summary_fields=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.aggregate_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>point_layer : Required FeatureSet</p>
 <p>distance_interval : Optional float</p>
 <dl class="docutils">
@@ -168,19 +168,19 @@ These tools primarily operate on items and layers from the GIS.</p>
 <p>time_reference : Optional datetime.date</p>
 <p>summary_fields : Optional string</p>
 <p>output_name : Required string</p>
-<p>out_sr : Optional string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
 <p>out_extent : Optional string</p>
 <dl class="docutils">
 <dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
 <dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
 </dl>
-<p>context : Optional string</p>
 <p>output : layer (Feature Service item)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.tools.BigDataTools.calculate_density">
-<tt class="descname">calculate_density</tt><big>(</big><em>input_layer</em>, <em>bin_size</em>, <em>bin_size_unit</em>, <em>radius</em>, <em>radius_unit</em>, <em>output_name</em>, <em>fields=None</em>, <em>weight='UNIFORM'</em>, <em>bin_type='SQUARE'</em>, <em>time_interval=None</em>, <em>time_interval_unit=None</em>, <em>time_repeat=None</em>, <em>time_repeat_unit=None</em>, <em>time_reference=None</em>, <em>area_units=None</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.calculate_density" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">calculate_density</tt><big>(</big><em>input_layer</em>, <em>bin_size</em>, <em>bin_size_unit</em>, <em>radius</em>, <em>radius_unit</em>, <em>output_name</em>, <em>fields=None</em>, <em>weight='UNIFORM'</em>, <em>bin_type='SQUARE'</em>, <em>time_interval=None</em>, <em>time_interval_unit=None</em>, <em>time_repeat=None</em>, <em>time_repeat_unit=None</em>, <em>time_reference=None</em>, <em>area_units=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.calculate_density" title="Permalink to this definition">¶</a></dt>
 <dd><p>input_layer : Required FeatureSet</p>
 <p>fields : Optional string</p>
 <dl class="docutils">
@@ -213,13 +213,13 @@ These tools primarily operate on items and layers from the GIS.</p>
 <dd>One of the following: [&#8216;ACRES&#8217;, &#8216;SQUARE_KILOMETERS&#8217;, &#8216;SQUARE_INCHES&#8217;, &#8216;SQUARE_FEET&#8217;, &#8216;SQUARE_YARDS&#8217;, &#8216;SQUARE_MAP_UNITS&#8217;, &#8216;SQUARE_METERS&#8217;, &#8216;SQUARE_MILES&#8217;, &#8216;HECTARES&#8217;]</dd>
 </dl>
 <p>output_name : Required string</p>
-<p>out_sr : Optional string</p>
-<p>out_extent : Optional string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
+<p>out_extent : Optional int</p>
 <dl class="docutils">
 <dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
 <dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
 </dl>
-<p>context : Optional string</p>
 <p>output : layer (Feature Service item)</p>
 </dd></dl>
 
@@ -240,7 +240,7 @@ These tools primarily operate on items and layers from the GIS.</p>
 
 <dl class="method">
 <dt id="arcgis.tools.BigDataTools.create_buffers">
-<tt class="descname">create_buffers</tt><big>(</big><em>input_layer</em>, <em>output_name</em>, <em>distance=None</em>, <em>distance_unit=None</em>, <em>field=None</em>, <em>method='PLANAR'</em>, <em>dissolve_option='NONE'</em>, <em>dissolve_fields=None</em>, <em>summary_fields=None</em>, <em>multipart=False</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.create_buffers" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">create_buffers</tt><big>(</big><em>input_layer</em>, <em>output_name</em>, <em>distance=None</em>, <em>distance_unit=None</em>, <em>field=None</em>, <em>method='PLANAR'</em>, <em>dissolve_option='NONE'</em>, <em>dissolve_fields=None</em>, <em>summary_fields=None</em>, <em>multipart=False</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.create_buffers" title="Permalink to this definition">¶</a></dt>
 <dd><p>input_layer : Required FeatureSet</p>
 <p>distance : Optional float</p>
 <dl class="docutils">
@@ -258,13 +258,13 @@ These tools primarily operate on items and layers from the GIS.</p>
 <p>summary_fields : Optional string</p>
 <p>multipart : Optional bool</p>
 <p>output_name : Required string</p>
-<p>out_sr : Optional string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
 <p>out_extent : Optional string</p>
 <dl class="docutils">
 <dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
 <dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
 </dl>
-<p>context : Optional string</p>
 <p>output : layer (Feature Service item)</p>
 </dd></dl>
 
@@ -323,7 +323,7 @@ These tools primarily operate on items and layers from the GIS.</p>
 
 <dl class="method">
 <dt id="arcgis.tools.BigDataTools.create_space_time_cube">
-<tt class="descname">create_space_time_cube</tt><big>(</big><em>point_layer</em>, <em>distance_interval</em>, <em>distance_interval_unit</em>, <em>time_interval</em>, <em>time_interval_unit</em>, <em>output_name</em>, <em>time_interval_alignment=None</em>, <em>reference_time=None</em>, <em>summary_fields=None</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.create_space_time_cube" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">create_space_time_cube</tt><big>(</big><em>point_layer</em>, <em>distance_interval</em>, <em>distance_interval_unit</em>, <em>time_interval</em>, <em>time_interval_unit</em>, <em>output_name</em>, <em>time_interval_alignment=None</em>, <em>reference_time=None</em>, <em>summary_fields=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.create_space_time_cube" title="Permalink to this definition">¶</a></dt>
 <dd><p>point_layer : Required FeatureSet</p>
 <p>distance_interval : Required float</p>
 <dl class="docutils">
@@ -340,13 +340,13 @@ These tools primarily operate on items and layers from the GIS.</p>
 <p>reference_time : Optional datetime.date</p>
 <p>summary_fields : Optional string</p>
 <p>output_name : Required string</p>
-<p>out_sr : Optional string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
 <p>out_extent : Optional string</p>
 <dl class="docutils">
 <dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
 <dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
 </dl>
-<p>context : Optional string</p>
 <p>output_cube : layer (Feature Service item)</p>
 </dd></dl>
 
@@ -366,7 +366,7 @@ These tools primarily operate on items and layers from the GIS.</p>
 
 <dl class="method">
 <dt id="arcgis.tools.BigDataTools.find_hot_spots">
-<tt class="descname">find_hot_spots</tt><big>(</big><em>point_layer</em>, <em>bin_size</em>, <em>bin_size_unit</em>, <em>output_name</em>, <em>time_step_interval=None</em>, <em>time_step_interval_unit=None</em>, <em>time_step_alignment=None</em>, <em>referencetime=None</em>, <em>neighborhood_distance=None</em>, <em>neighborhood_distance_unit=None</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.find_hot_spots" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">find_hot_spots</tt><big>(</big><em>point_layer</em>, <em>bin_size</em>, <em>bin_size_unit</em>, <em>output_name</em>, <em>time_step_interval=None</em>, <em>time_step_interval_unit=None</em>, <em>time_step_alignment=None</em>, <em>referencetime=None</em>, <em>neighborhood_distance=None</em>, <em>neighborhood_distance_unit=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.find_hot_spots" title="Permalink to this definition">¶</a></dt>
 <dd><p>point_layer : Required FeatureSet</p>
 <p>bin_size : Required float</p>
 <dl class="docutils">
@@ -387,20 +387,15 @@ These tools primarily operate on items and layers from the GIS.</p>
 <dd>One of the following: [&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;Nautical Miles&#8217;]</dd>
 </dl>
 <p>output_name : Required string</p>
-<p>out_sr : Optional string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
 <p>out_extent : Optional string</p>
 <dl class="docutils">
 <dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
 <dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
 </dl>
-<p>context : Optional string</p>
 <p>output : layer (Feature Service item)</p>
 </dd></dl>
-
-<dl class="method">
-<dt id="arcgis.tools.BigDataTools.find_similar_locations">
-<tt class="descname">find_similar_locations</tt><big>(</big><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.find_similar_locations" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 <dl class="method">
 <dt id="arcgis.tools.BigDataTools.generate_manifest">
@@ -419,7 +414,7 @@ These tools primarily operate on items and layers from the GIS.</p>
 
 <dl class="method">
 <dt id="arcgis.tools.BigDataTools.join_features">
-<tt class="descname">join_features</tt><big>(</big><em>target_layer</em>, <em>join_layer</em>, <em>output_name</em>, <em>join_operation='Join one to one'</em>, <em>join_fields=None</em>, <em>summary_fields=None</em>, <em>spatial_relationship=None</em>, <em>spatial_near_distance=None</em>, <em>spatial_near_distance_unit=None</em>, <em>temporal_relationship=None</em>, <em>temporal_near_distance=None</em>, <em>temporal_near_distance_unit=None</em>, <em>attribute_relationship=None</em>, <em>join_condition=None</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.join_features" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">join_features</tt><big>(</big><em>target_layer</em>, <em>join_layer</em>, <em>output_name</em>, <em>join_operation='Join one to one'</em>, <em>join_fields=None</em>, <em>summary_fields=None</em>, <em>spatial_relationship=None</em>, <em>spatial_near_distance=None</em>, <em>spatial_near_distance_unit=None</em>, <em>temporal_relationship=None</em>, <em>temporal_near_distance=None</em>, <em>temporal_near_distance_unit=None</em>, <em>attribute_relationship=None</em>, <em>join_condition=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.join_features" title="Permalink to this definition">¶</a></dt>
 <dd><p>target_layer : Required FeatureSet</p>
 <p>join_layer : Required FeatureSet</p>
 <dl class="docutils">
@@ -447,19 +442,19 @@ These tools primarily operate on items and layers from the GIS.</p>
 <p>attribute_relationship : Optional string</p>
 <p>join_condition : Optional string</p>
 <p>output_name : Required string</p>
-<p>out_sr : Optional string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
 <p>out_extent : Optional string</p>
 <dl class="docutils">
 <dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
 <dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
 </dl>
-<p>context : Optional string</p>
 <p>output : layer (Feature Service item)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.tools.BigDataTools.reconstruct_tracks">
-<tt class="descname">reconstruct_tracks</tt><big>(</big><em>input_layer</em>, <em>track_fields</em>, <em>output_name</em>, <em>method='PLANAR'</em>, <em>buffer_field=None</em>, <em>summary_fields=None</em>, <em>time_split=None</em>, <em>time_split_unit=None</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.reconstruct_tracks" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">reconstruct_tracks</tt><big>(</big><em>input_layer</em>, <em>track_fields</em>, <em>output_name</em>, <em>method='PLANAR'</em>, <em>buffer_field=None</em>, <em>summary_fields=None</em>, <em>time_split=None</em>, <em>time_split_unit=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.reconstruct_tracks" title="Permalink to this definition">¶</a></dt>
 <dd><p>input_layer : Required FeatureSet</p>
 <p>track_fields : Required string</p>
 <dl class="docutils">
@@ -474,36 +469,36 @@ These tools primarily operate on items and layers from the GIS.</p>
 <dd>One of the following: [&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
 </dl>
 <p>output_name : Required string</p>
-<p>out_sr : Optional string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
 <p>out_extent : Optional string</p>
 <dl class="docutils">
 <dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
 <dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
 </dl>
-<p>context : Optional string</p>
 <p>output : layer (Feature Service item)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.tools.BigDataTools.summarize_attributes">
-<tt class="descname">summarize_attributes</tt><big>(</big><em>input_layer</em>, <em>fields</em>, <em>output_name</em>, <em>summary_fields=None</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.summarize_attributes" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">summarize_attributes</tt><big>(</big><em>input_layer</em>, <em>fields</em>, <em>output_name</em>, <em>summary_fields=None</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.summarize_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>input_layer : Required FeatureSet</p>
 <p>fields : Required string</p>
 <p>summary_fields : Optional string</p>
 <p>output_name : Required string</p>
-<p>out_sr : Optional string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
 <p>out_extent : Optional string</p>
 <dl class="docutils">
 <dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
 <dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
 </dl>
-<p>context : Optional string</p>
 <p>output : layer (Feature Service item)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="arcgis.tools.BigDataTools.summarize_within">
-<tt class="descname">summarize_within</tt><big>(</big><em>summary_layer</em>, <em>output_name</em>, <em>bin_size=None</em>, <em>bin_size_unit=None</em>, <em>bin_type='SQUARE'</em>, <em>sum_within_layer=None</em>, <em>time_interval=None</em>, <em>time_interval_unit=None</em>, <em>time_repeat=None</em>, <em>time_repeat_unit=None</em>, <em>time_reference=None</em>, <em>summary_fields=None</em>, <em>proportional_weighting=False</em>, <em>out_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em>, <em>context=None</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.summarize_within" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">summarize_within</tt><big>(</big><em>summary_layer</em>, <em>output_name</em>, <em>bin_size=None</em>, <em>bin_size_unit=None</em>, <em>bin_type='SQUARE'</em>, <em>sum_within_layer=None</em>, <em>time_interval=None</em>, <em>time_interval_unit=None</em>, <em>time_repeat=None</em>, <em>time_repeat_unit=None</em>, <em>time_reference=None</em>, <em>summary_fields=None</em>, <em>proportional_weighting=False</em>, <em>out_sr=None</em>, <em>process_sr=None</em>, <em>out_extent=None</em>, <em>datastore='GDB'</em><big>)</big><a class="headerlink" href="#arcgis.tools.BigDataTools.summarize_within" title="Permalink to this definition">¶</a></dt>
 <dd><p>summary_layer : Required FeatureSet</p>
 <p>bin_size : Optional float</p>
 <dl class="docutils">
@@ -527,13 +522,13 @@ These tools primarily operate on items and layers from the GIS.</p>
 <p>summary_fields : Optional string</p>
 <p>proportional_weighting : Optional bool</p>
 <p>output_name : Required string</p>
-<p>out_sr : Optional string</p>
+<p>out_sr : Optional int</p>
+<p>process_sr : Optional int</p>
 <p>out_extent : Optional string</p>
 <dl class="docutils">
 <dt>datastore <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
 <dd>One of the following: [&#8216;BDS&#8217;, &#8216;GDB&#8217;]</dd>
 </dl>
-<p>context : Optional string</p>
 <p>output : layer (Feature Service item)</p>
 </dd></dl>
 
@@ -625,7 +620,7 @@ Input:</p>
 
 <dl class="class">
 <dt id="arcgis.tools.FeatureAnalysisTools">
-<em class="property">class </em><tt class="descclassname">arcgis.tools.</tt><tt class="descname">FeatureAnalysisTools</tt><big>(</big><em>url</em>, <em>gis</em>, <em>secure=True</em><big>)</big><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.tools.</tt><tt class="descname">FeatureAnalysisTools</tt><big>(</big><em>url</em>, <em>gis</em><big>)</big><a class="headerlink" href="#arcgis.tools.FeatureAnalysisTools" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">arcgis.tools._AsyncService</span></tt></p>
 <p>Provides feature analysis tools from the Spatial Analysis service. The SpatialAnalysis service is used for supporting Spatial analysis capability in Portal for ArcGIS and ArcGIS Online.</p>
 <dl class="method">
@@ -1317,7 +1312,7 @@ outName - name of the table the data will be saved to</p>
 
 <dl class="class">
 <dt id="arcgis.tools.Geocoder">
-<em class="property">class </em><tt class="descclassname">arcgis.tools.</tt><tt class="descname">Geocoder</tt><big>(</big><em>url</em>, <em>gis=None</em>, <em>dictdata=None</em>, <em>secure=True</em><big>)</big><a class="headerlink" href="#arcgis.tools.Geocoder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.tools.</tt><tt class="descname">Geocoder</tt><big>(</big><em>url</em>, <em>gis=None</em>, <em>dictdata=None</em><big>)</big><a class="headerlink" href="#arcgis.tools.Geocoder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="arcgis.lyr.html#arcgis.lyr.GISService" title="arcgis.lyr.GISService"><tt class="xref py py-class docutils literal"><span class="pre">arcgis.lyr.GISService</span></tt></a></p>
 <p>Geocoder represents a geocode service resource exposed by the GIS.
 It can find point locations of addresses, business names, and so on.
@@ -1540,7 +1535,7 @@ resulting candidates based on their distance from a location.</dd>
 
 <dl class="class">
 <dt id="arcgis.tools.GeometryService">
-<em class="property">class </em><tt class="descclassname">arcgis.tools.</tt><tt class="descname">GeometryService</tt><big>(</big><em>url</em>, <em>gis=None</em>, <em>dictdata=None</em><big>)</big><a class="headerlink" href="#arcgis.tools.GeometryService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.tools.</tt><tt class="descname">GeometryService</tt><big>(</big><em>url</em>, <em>gis=None</em><big>)</big><a class="headerlink" href="#arcgis.tools.GeometryService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="arcgis.lyr.html#arcgis.lyr.GISService" title="arcgis.lyr.GISService"><tt class="xref py py-class docutils literal"><span class="pre">arcgis.lyr.GISService</span></tt></a></p>
 <p>A geometry service contains utility methods that provide access to
 sophisticated and frequently used geometric operations. An ArcGIS
@@ -2352,7 +2347,7 @@ sr - The well-known ID of the spatial reference or a spatial</p>
 
 <dl class="class">
 <dt id="arcgis.tools.RasterAnalysisTools">
-<em class="property">class </em><tt class="descclassname">arcgis.tools.</tt><tt class="descname">RasterAnalysisTools</tt><big>(</big><em>url</em>, <em>gis</em>, <em>secure=True</em><big>)</big><a class="headerlink" href="#arcgis.tools.RasterAnalysisTools" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">arcgis.tools.</tt><tt class="descname">RasterAnalysisTools</tt><big>(</big><em>url</em>, <em>gis</em><big>)</big><a class="headerlink" href="#arcgis.tools.RasterAnalysisTools" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">arcgis.tools._AsyncService</span></tt></p>
 <p>Exposes the Raster Analysis Tools. The RasterAnalysisTools service is used by ArcGIS Server to provide distributed raster analysis.</p>
 <dl class="method">
