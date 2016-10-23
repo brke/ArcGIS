@@ -241,8 +241,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arcgis-features-module">
-<h1>arcgis.features module<a class="headerlink" href="#arcgis-features-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-arcgis.features.__init__">
+<span id="arcgis-features-module"></span><h1>arcgis.features module<a class="headerlink" href="#module-arcgis.features.__init__" title="Permalink to this headline">¶</a></h1>
+<p>Module for working with features and feature layers in the GIS.</p>
+<p>In the GIS, entities located in space with a set of properties can be represented as features.  Features are stored as
+feature classes, which represent a set of features located using a single spatial type (point, line, polygon) and a
+common set of properties.  This is the geographic extension of the classic tabular or relational representation for
+entities - a set of entities is modelled as rows in a table.  Tables represent entity classes with uniform
+properties.  In addition to working with “entities with location” as features, the system can also work with
+non-spatial entities as rows in tables.  The system can also model relationships between entities using properties
+which act as primary and foreign keys.  A collection of feature classes and tables, with the associated
+relationships among the entities, is a feature dataset. FeatureDatasets are one of the dataset types contained
+in a Datastore.  Finally, features are not simply entities in a dataset.  Features have a visual representation
+and user experience - on a map, in a 3D scene, as entities with a property sheet or popups.</p>
 <div class="section" id="arcgis-features-feature">
 <h2>arcgis.features.Feature<a class="headerlink" href="#arcgis-features-feature" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
