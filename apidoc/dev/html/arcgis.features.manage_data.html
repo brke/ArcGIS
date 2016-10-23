@@ -1,0 +1,402 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>arcgis.features.manage_data module &mdash; arcgis 0.3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="arcgis 0.3 documentation" href="index.html"/>
+        <link rel="next" title="arcgis.features.summarize_data module" href="arcgis.features.summarize_data.html"/>
+        <link rel="prev" title="arcgis.features.find_locations module" href="arcgis.features.find_locations.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> arcgis
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">arcgis</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="arcgis.gis.html">arcgis.gis module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-gis">arcgis.gis.GIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-contentmanager">arcgis.gis.ContentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-item">arcgis.gis.Item</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-groupmanager">arcgis.gis.GroupManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-group">arcgis.gis.Group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-usermanager">arcgis.gis.UserManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-user">arcgis.gis.User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-datastoremanager">arcgis.gis.DatastoreManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-datastore">arcgis.gis.Datastore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-tools">arcgis.gis.Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.html">arcgis.features module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.html#arcgis-features-feature">arcgis.features.Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.html#arcgis-features-featurelayer">arcgis.features.FeatureLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.html#arcgis-features-table">arcgis.features.Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.html#arcgis-features-featuredataset">arcgis.features.FeatureDataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.html#arcgis-features-featureset">arcgis.features.FeatureSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.html#arcgis-features-featurecollection">arcgis.features.FeatureCollection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#arcgis-features-managers-attachmentmanager">arcgis.features.managers.AttachmentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#arcgis-features-managers-replicamanager">arcgis.features.managers.ReplicaManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#arcgis-features-managers-featuredatasetmanager">arcgis.features.managers.FeatureDatasetManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#arcgis-features-managers-featurelayermanager">arcgis.features.managers.FeatureLayerManager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.enrich_data.html#arcgis-features-enrich-data">arcgis.features.enrich_data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#arcgis-features-find-locations">arcgis.features.find_locations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.features.manage_data module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#arcgis-features-manage-data">arcgis.features.manage_data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data">arcgis.features.summarize_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data-aggregate-points">arcgis.features.summarize_data.aggregate_points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data-summarize-nearby">arcgis.features.summarize_data.summarize_nearby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data-summarize-within">arcgis.features.summarize_data.summarize_within</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.lyr.html">arcgis.lyr module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-mapservice">arcgis.lyr.MapService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-adminmapservice">arcgis.lyr.AdminMapService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-featureservice">arcgis.lyr.FeatureService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-adminfeatureservice">arcgis.lyr.AdminFeatureService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-adminfeatureservicelayer">arcgis.lyr.AdminFeatureServiceLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-replicamanager">arcgis.lyr.ReplicaManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-attachmentmanager">arcgis.lyr.AttachmentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-featurelayer">arcgis.lyr.FeatureLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-featurecollection">arcgis.lyr.FeatureCollection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-vectortilelayer">arcgis.lyr.VectorTileLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-imagelayer">arcgis.lyr.ImageLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-networkservice">arcgis.lyr.NetworkService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-networklayer">arcgis.lyr.NetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-routenetworklayer">arcgis.lyr.RouteNetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-serviceareanetworklayer">arcgis.lyr.ServiceAreaNetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-closestfacilitynetworklayer">arcgis.lyr.ClosestFacilityNetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#arcgis-lyr-schematicsservice">arcgis.lyr.SchematicsService</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.viz.html">arcgis.viz module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-webmap">arcgis.viz.WebMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-webscene">arcgis.viz.WebScene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-mapview">arcgis.viz.MapView</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.tools.html">arcgis.tools module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-featureanalysistools">arcgis.tools.FeatureAnalysisTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-bigdatatools">arcgis.tools.BigDataTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-rasteranalysistools">arcgis.tools.RasterAnalysisTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-geocoder">arcgis.tools.Geocoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-geoprocessingtool">arcgis.tools.GeoprocessingTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-geometryservice">arcgis.tools.GeometryService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-feature">arcgis.tools.Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-featureset">arcgis.tools.FeatureSet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geom.html">arcgis.geom module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-point">arcgis.geom.Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-multipoint">arcgis.geom.MultiPoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-polyline">arcgis.geom.PolyLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-polygon">arcgis.geom.Polygon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-envelope">arcgis.geom.Envelope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-spatialreference">arcgis.geom.SpatialReference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-geometryfactory">arcgis.geom.GeometryFactory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-geometry">arcgis.geom.Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-basegeometry">arcgis.geom.BaseGeometry</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">arcgis</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>arcgis.features.manage_data module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/arcgis.features.manage_data.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="arcgis-features-manage-data-module">
+<h1>arcgis.features.manage_data module<a class="headerlink" href="#arcgis-features-manage-data-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="arcgis-features-manage-data">
+<h2>arcgis.features.manage_data<a class="headerlink" href="#arcgis-features-manage-data" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-arcgis.features.manage_data"></span><p>These tools are used for both the day-to-day management of geographic data and for combining data prior to analysis.</p>
+<p>dissolve_boundaries merges together areas that share a common boundary and a common attribute value.
+extract_data creates new datasets by extracting features from your existing data.
+merge_layers copies all the features from two or more existing layers into a new layer.
+overlay_layers combines two or more layers into one single layer. You can think of overlay as peering through a stack of
+maps and creating a single map containing all the information found in the stack.</p>
+<dl class="function">
+<dt id="arcgis.features.manage_data.dissolve_boundaries">
+<code class="descclassname">arcgis.features.manage_data.</code><code class="descname">dissolve_boundaries</code><span class="sig-paren">(</span><em>input_layer</em>, <em>dissolve_fields=[]</em>, <em>summary_fields=[]</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.dissolve_boundaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dissolve features based on specified fields.</p>
+<dl class="docutils">
+<dt>input_layer</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span><dd>The layer containing polygon features that will be dissolved.</dd>
+<dt>dissolve_fields</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span><dd>One or more fields from the input that control which polygons are merged. If no fields are supplied, all
+polygons that overlap or shared a common border will be dissolved into one polygon.</dd>
+<dt>summary_fields</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span><dd>A list of field names and statistical types that will be used to summarize the output. Supported statistics
+include: Sum, Mean, Min, Max, and Stddev.</dd>
+<dt>output_name</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional properties such as output feature service name.</dd>
+<dt>context</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>dissolved_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arcgis.features.manage_data.extract_data">
+<code class="descclassname">arcgis.features.manage_data.</code><code class="descname">extract_data</code><span class="sig-paren">(</span><em>input_layers=[]</em>, <em>extent=None</em>, <em>clip=False</em>, <em>data_format=None</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.extract_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select and download data for a specified area of interest. Layers that you select will be added to a zip file or
+layer package.</p>
+<dl class="docutils">
+<dt>input_layers</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Required list of strings</span><dd>The layers from which you can extract features.</dd>
+<dt>extent</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>The area that defines which features will be included in the output zip file or layer package.</dd>
+<dt>clip</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span><dd>Select features that intersect the extent or clip features within the extent.</dd>
+<dt>data_format</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Format of the data that will be extracted and downloaded.  Layer packages will always include file geodatabases.</dd>
+<dt>output_name</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional properties such as output feature service name.</dd>
+<dt>context</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>content_id : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arcgis.features.manage_data.merge_layers">
+<code class="descclassname">arcgis.features.manage_data.</code><code class="descname">merge_layers</code><span class="sig-paren">(</span><em>input_layer</em>, <em>merge_layer</em>, <em>merging_attributes=[]</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.merge_layers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combines two inputs of the same feature data type into a new output.</p>
+<dl class="docutils">
+<dt>input_layer</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span><dd>The point, line, or polygon  features to merge with the mergeLayer.</dd>
+<dt>merge_layer</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span><dd>The point, line or polygon features to merge with inputLayer.  mergeLayer must contain the same feature type
+point, line, or polygon) as the inputLayer.</dd>
+<dt>merging_attributes</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span><dd>An array of values that describe how fields from the mergeLayer are to be modified.  By default all fields from
+both inputs will be carried across to the output.</dd>
+<dt>output_name</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional properties such as output feature service name.</dd>
+<dt>context</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>merged_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arcgis.features.manage_data.overlay_layers">
+<code class="descclassname">arcgis.features.manage_data.</code><code class="descname">overlay_layers</code><span class="sig-paren">(</span><em>input_layer</em>, <em>overlay_layer</em>, <em>overlay_type='Intersect'</em>, <em>snap_to_input=False</em>, <em>output_type='Input'</em>, <em>tolerance=None</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.overlay_layers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overlays the input layer with the overlay layer. Overlay operations supported are Intersect, Union, and Erase.</p>
+<dl class="docutils">
+<dt>input_layer</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span><dd>The input analysis layer.</dd>
+<dt>overlay_layer</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span><dd>The layer to be overlaid with the analysis layer.</dd>
+<dt>overlay_type</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>The overlay type (INTERSECT, UNION, or ERASE) defines how the analysis layer and the overlay layer are combined.</dd>
+<dt>snap_to_input</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span><dd>When the distance between features is less than the tolerance, the features in the overlay layer will snap to
+the features in the input layer.</dd>
+<dt>output_type</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>The type of intersection (INPUT, LINE, POINT).</dd>
+<dt>tolerance</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional float</span><dd>The minimum distance separating all feature coordinates (nodes and vertices) as well as the distance a
+coordinate can move in X or Y (or both).</dd>
+<dt>output_name</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional properties such as output feature service name.</dd>
+<dt>context</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>output_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arcgis.features.summarize_data.html" class="btn btn-neutral float-right" title="arcgis.features.summarize_data module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="arcgis.features.find_locations.html" class="btn btn-neutral" title="arcgis.features.find_locations module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Esri.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
