@@ -1,8 +1,24 @@
 arcgis.features.use_proximity module
 ====================================
 
-arcgis.features.use_proximity
+.. automodule:: arcgis.features.use_proximity
+
+connect_origins_to_destinations
+-------------------------------
+.. automethod:: arcgis.features.use_proximity.connect_origins_to_destinations
+    
+create_buffers
 --------------
-.. autoclass:: arcgis.features.use_proximity
-    :members:
-    :undoc-members:
+.. automethod:: arcgis.features.use_proximity.create_buffers
+
+create_drive_time_areas
+-----------------------
+.. automethod:: arcgis.features.use_proximity.create_drive_time_areas
+
+find_nearest
+------------
+.. automethod:: arcgis.features.use_proximity.find_nearest
+    
+plan_routes
+-----------
+.. automethod:: arcgis.features.use_proximity.plan_routes

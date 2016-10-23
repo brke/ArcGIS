@@ -115,23 +115,37 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#arcgis-features-managers-featurelayermanager">arcgis.features.managers.FeatureLayerManager</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#interpolate-points">interpolate_points</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.enrich_data.html#arcgis-features-enrich-data">arcgis.features.enrich_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.enrich_data.html#enrich-layer">enrich_layer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#arcgis-features-find-locations">arcgis.features.find_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#find-existing-locations">find_existing_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#derive-new-locations">derive_new_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#find-similar-locations">find_similar_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#choose-best-facilities">choose_best_facilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#create-viewshed">create_viewshed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#create-watersheds">create_watersheds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#trace-downstream">trace_downstream</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.features.manage_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-features-manage-data">arcgis.features.manage_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dissolve-boundaries">dissolve_boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extract-data">extract_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merge-layers">merge_layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overlay-layers">overlay_layers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data">arcgis.features.summarize_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data-aggregate-points">arcgis.features.summarize_data.aggregate_points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data-summarize-nearby">arcgis.features.summarize_data.summarize_nearby</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data-summarize-within">arcgis.features.summarize_data.summarize_within</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#aggregate-points">aggregate_points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-nearby">summarize_nearby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.lyr.html">arcgis.lyr module</a><ul>
@@ -227,19 +241,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arcgis-features-manage-data-module">
-<h1>arcgis.features.manage_data module<a class="headerlink" href="#arcgis-features-manage-data-module" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="arcgis-features-manage-data">
-<h2>arcgis.features.manage_data<a class="headerlink" href="#arcgis-features-manage-data" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-arcgis.features.manage_data"></span><p>These tools are used for both the day-to-day management of geographic data and for combining data prior to analysis.</p>
+  <div class="section" id="module-arcgis.features.manage_data">
+<span id="arcgis-features-manage-data-module"></span><h1>arcgis.features.manage_data module<a class="headerlink" href="#module-arcgis.features.manage_data" title="Permalink to this headline">¶</a></h1>
+<p>These tools are used for both the day-to-day management of geographic data and for combining data prior to analysis.</p>
 <p>dissolve_boundaries merges together areas that share a common boundary and a common attribute value.
 extract_data creates new datasets by extracting features from your existing data.
 merge_layers copies all the features from two or more existing layers into a new layer.
 overlay_layers combines two or more layers into one single layer. You can think of overlay as peering through a stack of
 maps and creating a single map containing all the information found in the stack.</p>
-<dl class="function">
+<div class="section" id="dissolve-boundaries">
+<h2>dissolve_boundaries<a class="headerlink" href="#dissolve-boundaries" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
 <dt id="arcgis.features.manage_data.dissolve_boundaries">
-<code class="descclassname">arcgis.features.manage_data.</code><code class="descname">dissolve_boundaries</code><span class="sig-paren">(</span><em>input_layer</em>, <em>dissolve_fields=[]</em>, <em>summary_fields=[]</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.dissolve_boundaries" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">manage_data.</code><code class="descname">dissolve_boundaries</code><span class="sig-paren">(</span><em>input_layer</em>, <em>dissolve_fields=[]</em>, <em>summary_fields=[]</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.dissolve_boundaries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dissolve features based on specified fields.</p>
 <dl class="docutils">
 <dt>input_layer</dt>
@@ -258,9 +272,12 @@ include: Sum, Mean, Min, Max, and Stddev.</dd>
 <p>dissolved_layer : layer (FeatureCollection)</p>
 </dd></dl>
 
-<dl class="function">
+</div>
+<div class="section" id="extract-data">
+<h2>extract_data<a class="headerlink" href="#extract-data" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
 <dt id="arcgis.features.manage_data.extract_data">
-<code class="descclassname">arcgis.features.manage_data.</code><code class="descname">extract_data</code><span class="sig-paren">(</span><em>input_layers=[]</em>, <em>extent=None</em>, <em>clip=False</em>, <em>data_format=None</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.extract_data" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">manage_data.</code><code class="descname">extract_data</code><span class="sig-paren">(</span><em>input_layers=[]</em>, <em>extent=None</em>, <em>clip=False</em>, <em>data_format=None</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.extract_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Select and download data for a specified area of interest. Layers that you select will be added to a zip file or
 layer package.</p>
 <dl class="docutils">
@@ -280,9 +297,12 @@ layer package.</p>
 <p>content_id : layer (FeatureCollection)</p>
 </dd></dl>
 
-<dl class="function">
+</div>
+<div class="section" id="merge-layers">
+<h2>merge_layers<a class="headerlink" href="#merge-layers" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
 <dt id="arcgis.features.manage_data.merge_layers">
-<code class="descclassname">arcgis.features.manage_data.</code><code class="descname">merge_layers</code><span class="sig-paren">(</span><em>input_layer</em>, <em>merge_layer</em>, <em>merging_attributes=[]</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.merge_layers" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">manage_data.</code><code class="descname">merge_layers</code><span class="sig-paren">(</span><em>input_layer</em>, <em>merge_layer</em>, <em>merging_attributes=[]</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.merge_layers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Combines two inputs of the same feature data type into a new output.</p>
 <dl class="docutils">
 <dt>input_layer</dt>
@@ -301,9 +321,12 @@ both inputs will be carried across to the output.</dd>
 <p>merged_layer : layer (FeatureCollection)</p>
 </dd></dl>
 
-<dl class="function">
+</div>
+<div class="section" id="overlay-layers">
+<h2>overlay_layers<a class="headerlink" href="#overlay-layers" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
 <dt id="arcgis.features.manage_data.overlay_layers">
-<code class="descclassname">arcgis.features.manage_data.</code><code class="descname">overlay_layers</code><span class="sig-paren">(</span><em>input_layer</em>, <em>overlay_layer</em>, <em>overlay_type='Intersect'</em>, <em>snap_to_input=False</em>, <em>output_type='Input'</em>, <em>tolerance=None</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.overlay_layers" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">manage_data.</code><code class="descname">overlay_layers</code><span class="sig-paren">(</span><em>input_layer</em>, <em>overlay_layer</em>, <em>overlay_type='Intersect'</em>, <em>snap_to_input=False</em>, <em>output_type='Input'</em>, <em>tolerance=None</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.overlay_layers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overlays the input layer with the overlay layer. Overlay operations supported are Intersect, Union, and Erase.</p>
 <dl class="docutils">
 <dt>input_layer</dt>

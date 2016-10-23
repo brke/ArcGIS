@@ -34,7 +34,7 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="arcgis 0.3 documentation" href="index.html"/>
-        <link rel="next" title="arcgis.features.enrich_data module" href="arcgis.features.enrich_data.html"/>
+        <link rel="next" title="arcgis.features.analyze_patterns module" href="arcgis.features.analyze_patterns.html"/>
         <link rel="prev" title="arcgis.features module" href="arcgis.features.html"/> 
 
   
@@ -115,23 +115,37 @@
 <li class="toctree-l2"><a class="reference internal" href="#arcgis-features-managers-featurelayermanager">arcgis.features.managers.FeatureLayerManager</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#interpolate-points">interpolate_points</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.enrich_data.html#arcgis-features-enrich-data">arcgis.features.enrich_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.enrich_data.html#enrich-layer">enrich_layer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#arcgis-features-find-locations">arcgis.features.find_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#find-existing-locations">find_existing_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#derive-new-locations">derive_new_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#find-similar-locations">find_similar_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#choose-best-facilities">choose_best_facilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#create-viewshed">create_viewshed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#create-watersheds">create_watersheds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#trace-downstream">trace_downstream</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.manage_data.html">arcgis.features.manage_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#arcgis-features-manage-data">arcgis.features.manage_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#dissolve-boundaries">dissolve_boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#extract-data">extract_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#merge-layers">merge_layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#overlay-layers">overlay_layers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data">arcgis.features.summarize_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data-aggregate-points">arcgis.features.summarize_data.aggregate_points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data-summarize-nearby">arcgis.features.summarize_data.summarize_nearby</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data-summarize-within">arcgis.features.summarize_data.summarize_within</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#aggregate-points">aggregate_points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-nearby">summarize_nearby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.lyr.html">arcgis.lyr module</a><ul>
@@ -227,8 +241,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arcgis-features-managers-module">
-<h1>arcgis.features.managers module<a class="headerlink" href="#arcgis-features-managers-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-arcgis.features.managers">
+<span id="arcgis-features-managers-module"></span><h1>arcgis.features.managers module<a class="headerlink" href="#module-arcgis.features.managers" title="Permalink to this headline">¶</a></h1>
+<p>Helper classes for managing feature layers and datasets.</p>
 <div class="section" id="arcgis-features-managers-attachmentmanager">
 <h2>arcgis.features.managers.AttachmentManager<a class="headerlink" href="#arcgis-features-managers-attachmentmanager" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
@@ -640,7 +655,7 @@ individual feature service layer object.</dd>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="arcgis.features.enrich_data.html" class="btn btn-neutral float-right" title="arcgis.features.enrich_data module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="arcgis.features.analyze_patterns.html" class="btn btn-neutral float-right" title="arcgis.features.analyze_patterns module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="arcgis.features.html" class="btn btn-neutral" title="arcgis.features module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

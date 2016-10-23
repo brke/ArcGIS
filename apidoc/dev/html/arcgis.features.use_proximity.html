@@ -113,23 +113,37 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#arcgis-features-managers-featurelayermanager">arcgis.features.managers.FeatureLayerManager</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#interpolate-points">interpolate_points</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.enrich_data.html#arcgis-features-enrich-data">arcgis.features.enrich_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.enrich_data.html#enrich-layer">enrich_layer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#arcgis-features-find-locations">arcgis.features.find_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#find-existing-locations">find_existing_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#derive-new-locations">derive_new_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#find-similar-locations">find_similar_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#choose-best-facilities">choose_best_facilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#create-viewshed">create_viewshed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#create-watersheds">create_watersheds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#trace-downstream">trace_downstream</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.manage_data.html">arcgis.features.manage_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#arcgis-features-manage-data">arcgis.features.manage_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#dissolve-boundaries">dissolve_boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#extract-data">extract_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#merge-layers">merge_layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#overlay-layers">overlay_layers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data">arcgis.features.summarize_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data-aggregate-points">arcgis.features.summarize_data.aggregate_points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data-summarize-nearby">arcgis.features.summarize_data.summarize_nearby</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#arcgis-features-summarize-data-summarize-within">arcgis.features.summarize_data.summarize_within</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#aggregate-points">aggregate_points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-nearby">summarize_nearby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.lyr.html">arcgis.lyr module</a><ul>
@@ -225,10 +239,178 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arcgis-features-use-proximity-module">
-<h1>arcgis.features.use_proximity module<a class="headerlink" href="#arcgis-features-use-proximity-module" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="arcgis-features-use-proximity">
-<h2>arcgis.features.use_proximity<a class="headerlink" href="#arcgis-features-use-proximity" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="module-arcgis.features.use_proximity">
+<span id="arcgis-features-use-proximity-module"></span><h1>arcgis.features.use_proximity module<a class="headerlink" href="#module-arcgis.features.use_proximity" title="Permalink to this headline">¶</a></h1>
+<p>These tools help you answer one of the most common questions posed in spatial analysis: &#8220;What is near what?&#8221;</p>
+<p>connect_origins_to_destinations measures the travel time or distance between pairs of points.
+create_buffers create areas of equal distance from features.
+create_drive_time_areas finds areas around locations that can be reached within a time period.
+find_nearest identifies those places that are the closest to known locations.
+plan_routes determines the best way to route a fleet of vehicles to visit many stops.</p>
+<div class="section" id="connect-origins-to-destinations">
+<h2>connect_origins_to_destinations<a class="headerlink" href="#connect-origins-to-destinations" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.features.use_proximity.connect_origins_to_destinations">
+<code class="descclassname">use_proximity.</code><code class="descname">connect_origins_to_destinations</code><span class="sig-paren">(</span><em>origins_layer</em>, <em>destinations_layer</em>, <em>measurement_type='DrivingTime'</em>, <em>origins_layer_route_id_field=None</em>, <em>destinations_layer_route_id_field=None</em>, <em>time_of_day=None</em>, <em>time_zone_for_time_of_day='GeoLocal'</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.use_proximity.connect_origins_to_destinations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates routes between pairs of points.</p>
+<dl class="docutils">
+<dt>origins_layer</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span><dd>The routes start from points in the origins layer.</dd>
+<dt>destinations_layer</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span><dd>The routes end at points in the destinations layer.</dd>
+<dt>measurement_type</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span><dd>The routes can be determined by measuring travel distance or travel time along street network using different
+travel modes or by measuring straight line distance.</dd>
+<dt>origins_layer_route_id_field</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>The field in the origins layer containing the IDs that are used to match an origin with a destination.</dd>
+<dt>destinations_layer_route_id_field</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>The field in the destinations layer containing the IDs that are used to match an origin with a destination.</dd>
+<dt>time_of_day</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional datetime.date</span><dd>When measurementType is DrivingTime, this value specifies the time of day to be used for driving time
+calculations based on traffic. WalkingTime and TruckingTime measurementType do not support calculations
+based on traffic.</dd>
+<dt>time_zone_for_time_of_day</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Determines if the value specified for timeOfDay is specified in UTC or in a time zone that is local to the
+location of the origins.</dd>
+<dt>output_name</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional properties such as output feature service name.</dd>
+<dt>context</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<dl class="docutils">
+<dt>dict with the following keys:</dt>
+<dd>&#8220;routes_layer&#8221; : layer (FeatureCollection)
+&#8220;unassigned_origins_layer&#8221; : layer (FeatureCollection)
+&#8220;unassigned_destinations_layer&#8221; : layer (FeatureCollection)</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="create-buffers">
+<h2>create_buffers<a class="headerlink" href="#create-buffers" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.features.use_proximity.create_buffers">
+<code class="descclassname">use_proximity.</code><code class="descname">create_buffers</code><span class="sig-paren">(</span><em>input_layer</em>, <em>distances=[]</em>, <em>field=None</em>, <em>units='Meters'</em>, <em>dissolve_type='None'</em>, <em>ring_type='Disks'</em>, <em>side_type='Full'</em>, <em>end_type='Round'</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.use_proximity.create_buffers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates buffer polygon(s) around input features.</p>
+<dl class="docutils">
+<dt>input_layer</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span><dd>The input to be buffered.</dd>
+<dt>distances</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of floats</span><dd>The distance(s) that will be buffered.</dd>
+<dt>field</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Buffers will be created using field values.</dd>
+<dt>units</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>The linear unit to be used with the distance value(s).</dd>
+<dt>dissolve_type</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Specifies the dissolve to be performed to remove buffer overlap.</dd>
+<dt>ring_type</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>The ring type.</dd>
+<dt>side_type</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>The side(s) of the input that will be buffered.</dd>
+<dt>end_type</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>The shape of the buffer at the end of buffered line features.</dd>
+<dt>output_name</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional properties such as output feature service name.</dd>
+<dt>context</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>buffer_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="create-drive-time-areas">
+<h2>create_drive_time_areas<a class="headerlink" href="#create-drive-time-areas" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.features.use_proximity.create_drive_time_areas">
+<code class="descclassname">use_proximity.</code><code class="descname">create_drive_time_areas</code><span class="sig-paren">(</span><em>input_layer, break_values=[5, 10, 15], break_units='Minutes', travel_mode='Driving', overlap_policy='Overlap', time_of_day=None, time_zone_for_time_of_day='GeoLocal', output_name=None, context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.use_proximity.create_drive_time_areas" title="Permalink to this definition">¶</a></dt>
+<dd><p>input_layer : Required layer (see Feature Input in documentation)</p>
+<p>break_values : Optional list of floats</p>
+<p>break_units : Optional string</p>
+<p>travel_mode : Optional string</p>
+<p>overlap_policy : Optional string</p>
+<p>time_of_day : Optional datetime.date</p>
+<p>time_zone_for_time_of_day : Optional string</p>
+<dl class="docutils">
+<dt>output_name</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional properties such as output feature service name.</dd>
+<dt>context</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional settings such as processing extent and output spatial reference.</dd>
+</dl>
+<p>drive_time_areas_layer : layer (FeatureCollection)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="find-nearest">
+<h2>find_nearest<a class="headerlink" href="#find-nearest" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.features.use_proximity.find_nearest">
+<code class="descclassname">use_proximity.</code><code class="descname">find_nearest</code><span class="sig-paren">(</span><em>analysis_layer</em>, <em>near_layer</em>, <em>measurement_type='StraightLine'</em>, <em>max_count=100</em>, <em>search_cutoff=2147483647</em>, <em>search_cutoff_units=None</em>, <em>time_of_day=None</em>, <em>time_zone_for_time_of_day='GeoLocal'</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.use_proximity.find_nearest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measures the straight-line distance, driving distance, or driving time from features in the analysis layer to
+features in the near layer, and copies the nearest features in the near layer to a new layer. Returns a layer
+containing the nearest features and a line layer that links the start locations to their nearest locations.</p>
+<dl class="docutils">
+<dt>analysis_layer</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span><dd>For each feature in this layer, the task finds the nearest features from the nearLayer.</dd>
+<dt>near_layer</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span><dd>The features from which the nearest locations are found.</dd>
+<dt>measurement_type</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span><dd>The nearest locations can be determined by measuring straight-line distance, driving distance, or driving time</dd>
+<dt>max_count</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional int</span><dd>The maximum number of near locations to find for each feature in analysisLayer.</dd>
+<dt>search_cutoff</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional float</span><dd>Limits the search range to this value</dd>
+<dt>search_cutoff_units</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>The units for the value specified as searchCutoff</dd>
+<dt>time_of_day</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional datetime.date</span><dd>When measurementType is DrivingTime, this value specifies the time of day to be used for driving time
+calculations based on traffic.</dd>
+</dl>
+<p>time_zone_for_time_of_day : Optional string</p>
+<dl class="docutils">
+<dt>output_name</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional properties such as output feature service name</dd>
+<dt>context</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional settings such as processing extent and output spatial reference</dd>
+</dl>
+<dl class="docutils">
+<dt>dict with the following keys:</dt>
+<dd>&#8220;nearest_layer&#8221; : layer (FeatureCollection)
+&#8220;connecting_lines_layer&#8221; : layer (FeatureCollection)</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="plan-routes">
+<h2>plan_routes<a class="headerlink" href="#plan-routes" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.features.use_proximity.plan_routes">
+<code class="descclassname">use_proximity.</code><code class="descname">plan_routes</code><span class="sig-paren">(</span><em>stops_layer</em>, <em>route_count</em>, <em>max_stops_per_route</em>, <em>route_start_time</em>, <em>start_layer</em>, <em>start_layer_route_id_field=None</em>, <em>return_to_start=True</em>, <em>end_layer=None</em>, <em>end_layer_route_id_field=None</em>, <em>travel_mode='Driving'</em>, <em>stop_service_time=0</em>, <em>max_route_time=525600</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.use_proximity.plan_routes" title="Permalink to this definition">¶</a></dt>
+<dd><p>You provide a set of stops and the number of vehicles available to visit the stops, and Plan Routes determines how
+to efficiently assign the stops to the vehicles and route the vehicles to the stops.</p>
+<p>Use this tool to plan work for a mobile team of inspectors, appraisers, in-home support service providers, and
+others; deliver or pick up items from remote locations; or offer transportation services to people.</p>
+<p>stops_layer : Required layer (see Feature Input in documentation)</p>
+<p>route_count : Required int</p>
+<p>max_stops_per_route : Required int</p>
+<p>route_start_time : Required datetime.date</p>
+<p>start_layer : Required layer (see Feature Input in documentation)</p>
+<p>start_layer_route_id_field : Optional string</p>
+<p>return_to_start : Optional bool</p>
+<p>end_layer : Optional layer (see Feature Input in documentation)</p>
+<p>end_layer_route_id_field : Optional string</p>
+<p>travel_mode : Optional string</p>
+<p>stop_service_time : Optional float</p>
+<p>max_route_time : Optional float</p>
+<p>output_name : Optional string</p>
+<p>context : Optional string</p>
+<dl class="docutils">
+<dt>dict with the following keys:</dt>
+<dd>&#8220;routes_layer&#8221; : layer (FeatureCollection)
+&#8220;assigned_stops_layer&#8221; : layer (FeatureCollection)
+&#8220;unassigned_stops_layer&#8221; : layer (FeatureCollection)</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 

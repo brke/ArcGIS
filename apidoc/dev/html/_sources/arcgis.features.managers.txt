@@ -1,6 +1,8 @@
 arcgis.features.managers module
 ===============================
 
+.. automodule:: arcgis.features.managers
+
 arcgis.features.managers.AttachmentManager
 --------------
 .. autoclass:: arcgis.features.managers.AttachmentManager

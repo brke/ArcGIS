@@ -31,6 +31,9 @@ arcgis.features.manage_data module
 arcgis.features.summarize_data module
 ------------------
 
+arcgis.features.use_proximity module
+------------------
+
 arcgis.lyr module
 -----------------
 

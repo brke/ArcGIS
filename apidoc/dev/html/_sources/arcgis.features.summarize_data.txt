@@ -1,24 +1,16 @@
 arcgis.features.summarize_data module
 =====================================
 
-arcgis.features.summarize_data
---------------
 .. automodule:: arcgis.features.summarize_data
-    :members:
-    :undoc-members:
 
-arcgis.features.summarize_data.aggregate_points
+aggregate_points
 --------------
 .. automethod:: arcgis.features.summarize_data.aggregate_points
     
-arcgis.features.summarize_data.summarize_nearby
+summarize_nearby
 --------------
-.. autofunction:: arcgis.features.summarize_data.summarize_nearby
-    :members:
-    :undoc-members:
+.. automethod:: arcgis.features.summarize_data.summarize_nearby
 
-arcgis.features.summarize_data.summarize_within
+summarize_within
 --------------
-.. autofunction:: arcgis.features.summarize_data.summarize_within
-    :members:
-    :undoc-members:
+.. automethod:: arcgis.features.summarize_data.summarize_within

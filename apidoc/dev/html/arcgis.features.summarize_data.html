@@ -115,23 +115,37 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#arcgis-features-managers-featurelayermanager">arcgis.features.managers.FeatureLayerManager</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#interpolate-points">interpolate_points</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.enrich_data.html#arcgis-features-enrich-data">arcgis.features.enrich_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.enrich_data.html#enrich-layer">enrich_layer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#arcgis-features-find-locations">arcgis.features.find_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#find-existing-locations">find_existing_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#derive-new-locations">derive_new_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#find-similar-locations">find_similar_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#choose-best-facilities">choose_best_facilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#create-viewshed">create_viewshed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#create-watersheds">create_watersheds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#trace-downstream">trace_downstream</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.manage_data.html">arcgis.features.manage_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#arcgis-features-manage-data">arcgis.features.manage_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#dissolve-boundaries">dissolve_boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#extract-data">extract_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#merge-layers">merge_layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#overlay-layers">overlay_layers</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.features.summarize_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-features-summarize-data">arcgis.features.summarize_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-features-summarize-data-aggregate-points">arcgis.features.summarize_data.aggregate_points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-features-summarize-data-summarize-nearby">arcgis.features.summarize_data.summarize_nearby</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-features-summarize-data-summarize-within">arcgis.features.summarize_data.summarize_within</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aggregate-points">aggregate_points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summarize-nearby">summarize_nearby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summarize-within">summarize_within</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.lyr.html">arcgis.lyr module</a><ul>
@@ -227,18 +241,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arcgis-features-summarize-data-module">
-<h1>arcgis.features.summarize_data module<a class="headerlink" href="#arcgis-features-summarize-data-module" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="arcgis-features-summarize-data">
-<h2>arcgis.features.summarize_data<a class="headerlink" href="#arcgis-features-summarize-data" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-arcgis.features.summarize_data"></span><p>These tools calculate total counts, lengths, areas, and basic descriptive statistics of features and their attributes
+  <div class="section" id="module-arcgis.features.summarize_data">
+<span id="arcgis-features-summarize-data-module"></span><h1>arcgis.features.summarize_data module<a class="headerlink" href="#module-arcgis.features.summarize_data" title="Permalink to this headline">¶</a></h1>
+<p>These tools calculate total counts, lengths, areas, and basic descriptive statistics of features and their attributes
 within areas or near other features.</p>
 <p>aggregate_points calculates statistics about points that fall within specified areas.
 summarize_nearby calculates statistics for features and their attributes that are within a specified distance.
 summarize_within calculates statistics for area features and attributes that overlap each other.</p>
-<dl class="function">
+<div class="section" id="aggregate-points">
+<h2>aggregate_points<a class="headerlink" href="#aggregate-points" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
 <dt id="arcgis.features.summarize_data.aggregate_points">
-<code class="descclassname">arcgis.features.summarize_data.</code><code class="descname">aggregate_points</code><span class="sig-paren">(</span><em>point_layer</em>, <em>polygon_layer</em>, <em>keep_boundaries_with_no_points=True</em>, <em>summary_fields=[]</em>, <em>group_by_field=None</em>, <em>minority_majority=False</em>, <em>percent_points=False</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.summarize_data.aggregate_points" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">summarize_data.</code><code class="descname">aggregate_points</code><span class="sig-paren">(</span><em>point_layer</em>, <em>polygon_layer</em>, <em>keep_boundaries_with_no_points=True</em>, <em>summary_fields=[]</em>, <em>group_by_field=None</em>, <em>minority_majority=False</em>, <em>percent_points=False</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.summarize_data.aggregate_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Aggregate points task allows you to aggregate or count the total number of points that are distributed within
 specified areas or boundaries (polygons). You can also summarize Sum, Mean, Min, Max and Standard deviation
 calculations for attributes of the point layer to understand the general characteristics of aggregated points.</p>
@@ -272,9 +286,12 @@ of points for each unique groupByField value is calculated.</dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
+</div>
+<div class="section" id="summarize-nearby">
+<h2>summarize_nearby<a class="headerlink" href="#summarize-nearby" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
 <dt id="arcgis.features.summarize_data.summarize_nearby">
-<code class="descclassname">arcgis.features.summarize_data.</code><code class="descname">summarize_nearby</code><span class="sig-paren">(</span><em>sum_nearby_layer</em>, <em>summary_layer</em>, <em>near_type='StraightLine'</em>, <em>distances=[]</em>, <em>units='Meters'</em>, <em>time_of_day=None</em>, <em>time_zone_for_time_of_day='GeoLocal'</em>, <em>return_boundaries=True</em>, <em>sum_shape=True</em>, <em>shape_units=None</em>, <em>summary_fields=[]</em>, <em>group_by_field=None</em>, <em>minority_majority=False</em>, <em>percent_shape=False</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.summarize_data.summarize_nearby" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">summarize_data.</code><code class="descname">summarize_nearby</code><span class="sig-paren">(</span><em>sum_nearby_layer</em>, <em>summary_layer</em>, <em>near_type='StraightLine'</em>, <em>distances=[]</em>, <em>units='Meters'</em>, <em>time_of_day=None</em>, <em>time_zone_for_time_of_day='GeoLocal'</em>, <em>return_boundaries=True</em>, <em>sum_shape=True</em>, <em>shape_units=None</em>, <em>summary_fields=[]</em>, <em>group_by_field=None</em>, <em>minority_majority=False</em>, <em>percent_shape=False</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.summarize_data.summarize_nearby" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SummarizeNearby task finds features that are within a specified distance of features in the input layer.
 Distance can be measured as a straight-line distance, a drive-time distance (for example, within 10 minutes), or a
 drive distance (within 5 kilometers). Statistics are then calculated for the nearby features. For example:Calculate
@@ -337,9 +354,12 @@ shape (eg. length for lines) for each unique groupByField value is calculated.</
 </dl>
 </dd></dl>
 
-<dl class="function">
+</div>
+<div class="section" id="summarize-within">
+<h2>summarize_within<a class="headerlink" href="#summarize-within" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
 <dt id="arcgis.features.summarize_data.summarize_within">
-<code class="descclassname">arcgis.features.summarize_data.</code><code class="descname">summarize_within</code><span class="sig-paren">(</span><em>sum_within_layer</em>, <em>summary_layer</em>, <em>sum_shape=True</em>, <em>shape_units=None</em>, <em>summary_fields=[]</em>, <em>group_by_field=None</em>, <em>minority_majority=False</em>, <em>percent_shape=False</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.summarize_data.summarize_within" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">summarize_data.</code><code class="descname">summarize_within</code><span class="sig-paren">(</span><em>sum_within_layer</em>, <em>summary_layer</em>, <em>sum_shape=True</em>, <em>shape_units=None</em>, <em>summary_fields=[]</em>, <em>group_by_field=None</em>, <em>minority_majority=False</em>, <em>percent_shape=False</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.summarize_data.summarize_within" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SummarizeWithin task helps you to summarize and find statistics on the point, line, or polygon features (or
 portions of these features) that are within the boundaries of polygons in another layer. For example:Given a layer
 of watershed boundaries and a layer of land-use boundaries by land-use type, calculate total acreage of land-use
@@ -383,51 +403,6 @@ shape (eg. length for lines) for each unique groupByField value is calculated.</
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="arcgis-features-summarize-data-aggregate-points">
-<h2>arcgis.features.summarize_data.aggregate_points<a class="headerlink" href="#arcgis-features-summarize-data-aggregate-points" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt>
-<code class="descclassname">summarize_data.</code><code class="descname">aggregate_points</code><span class="sig-paren">(</span><em>point_layer</em>, <em>polygon_layer</em>, <em>keep_boundaries_with_no_points=True</em>, <em>summary_fields=[]</em>, <em>group_by_field=None</em>, <em>minority_majority=False</em>, <em>percent_points=False</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span></dt>
-<dd><p>Aggregate points task allows you to aggregate or count the total number of points that are distributed within
-specified areas or boundaries (polygons). You can also summarize Sum, Mean, Min, Max and Standard deviation
-calculations for attributes of the point layer to understand the general characteristics of aggregated points.</p>
-<dl class="docutils">
-<dt>point_layer</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span><dd>Point layer to be aggregated</dd>
-<dt>polygon_layer</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span><dd>Polygon layer to which the points should be aggregated.</dd>
-<dt>keep_boundaries_with_no_points</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span><dd>Specify whether the polygons without any points should be returned in the output.</dd>
-<dt>summary_fields</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span><dd>A list of field names and summary type. Example [fieldName1 summaryType1,fieldName2 summaryType2].</dd>
-<dt>group_by_field</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>A field name from PointLayer based on which the points will be grouped.</dd>
-<dt>minority_majority</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span><dd>This boolean parameter is applicable only when a groupByField is specified. If true, the minority
-(least dominant) or the majority (most dominant) attribute values within each group, within each boundary will
-be calculated.</dd>
-<dt>percent_points</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional bool</span><dd>This boolean parameter is applicable only when a groupByField is specified. If set to true, the percentage count
-of points for each unique groupByField value is calculated.</dd>
-<dt>output_name</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional properties such as output feature service name.</dd>
-<dt>context</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional settings such as processing extent and output spatial reference.</dd>
-</dl>
-<dl class="docutils">
-<dt>dict with the following keys:</dt>
-<dd>&#8220;aggregated_layer&#8221; : layer (FeatureCollection)
-&#8220;group_summary&#8221; : layer (FeatureCollection)</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="arcgis-features-summarize-data-summarize-nearby">
-<h2>arcgis.features.summarize_data.summarize_nearby<a class="headerlink" href="#arcgis-features-summarize-data-summarize-nearby" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="arcgis-features-summarize-data-summarize-within">
-<h2>arcgis.features.summarize_data.summarize_within<a class="headerlink" href="#arcgis-features-summarize-data-summarize-within" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

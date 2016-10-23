@@ -1,8 +1,8 @@
 arcgis.features.enrich_data module
 ==================================
 
-arcgis.features.enrich_data
---------------
 .. automodule:: arcgis.features.enrich_data
-    :members:
-    :undoc-members:
+
+enrich_layer
+--------------
+.. automethod:: arcgis.features.enrich_data.enrich_layer
