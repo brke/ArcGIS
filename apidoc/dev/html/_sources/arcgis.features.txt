@@ -1,7 +1,7 @@
 arcgis.features module
 ======================
 
-.. automodule:: arcgis.features.__init__
+.. automodule:: arcgis.features
 
 arcgis.features.Feature
 --------------

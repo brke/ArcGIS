@@ -2435,14 +2435,15 @@ sr - The well-known ID of the spatial reference or a spatial</p>
 <em class="property">class </em><code class="descclassname">arcgis.tools.</code><code class="descname">FeatureSet</code><span class="sig-paren">(</span><em>features</em>, <em>fields=None</em>, <em>has_z=False</em>, <em>has_m=False</em>, <em>geometry_type=None</em>, <em>spatial_reference=None</em>, <em>display_field_name=None</em>, <em>object_id_field_name=None</em>, <em>global_id_field_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.tools.FeatureSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>A FeatureSet is a collection of Features.</p>
 <p>FeatureSets are commonly used as input/output with several Geoprocessing
-Tools, and can be the obtained through the query() methods of feature layers.</p>
+Tools, and can be the obtained through the query() methods of feature layers.
+A FeatureSet can be combined with a layer definition to compose a FeatureCollection.</p>
 <p>FeatureSet contains Feature objects, including the values for the
 fields requested by the user. For layers, if you request geometry
 information, the geometry of each feature is also returned in the
-FeatureSet. For tables, the FeatureSet does not include geometries.
-If a Spatial Reference is not specified at the FeatureSet level, the
-FeatureSet will assume the Spatial Reference of its first feature. If
-the SpatialR eference of the first feature is also not specified, the
+FeatureSet. For tables, the FeatureSet does not include geometries.</p>
+<p>If a Spatial Reference is not specified at the FeatureSet level, the
+FeatureSet will assume the SpatialReference of its first feature. If
+the SpatialReference of the first feature is also not specified, the
 spatial reference will be UnknownCoordinateSystem.</p>
 <dl class="attribute">
 <dt id="arcgis.tools.FeatureSet.display_field_name">

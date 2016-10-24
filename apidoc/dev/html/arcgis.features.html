@@ -241,8 +241,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-arcgis.features.__init__">
-<span id="arcgis-features-module"></span><h1>arcgis.features module<a class="headerlink" href="#module-arcgis.features.__init__" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-arcgis.features">
+<span id="arcgis-features-module"></span><h1>arcgis.features module<a class="headerlink" href="#module-arcgis.features" title="Permalink to this headline">¶</a></h1>
 <p>Module for working with features and feature layers in the GIS.</p>
 <p>In the GIS, entities located in space with a set of properties can be represented as features.  Features are stored as
 feature classes, which represent a set of features located using a single spatial type (point, line, polygon) and a
@@ -291,7 +291,7 @@ returns a list of fields and the row object</div></blockquote>
 <dl class="classmethod">
 <dt id="arcgis.features.Feature.from_dict">
 <em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>feature</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.Feature.from_dict" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns a featureset from a dict</p>
+<dd><p>returns a feature from a dict</p>
 </dd></dl>
 
 <dl class="classmethod">
@@ -1122,14 +1122,15 @@ not returned. The default is false.</dd>
 <em class="property">class </em><code class="descclassname">arcgis.features.</code><code class="descname">FeatureSet</code><span class="sig-paren">(</span><em>features</em>, <em>fields=None</em>, <em>has_z=False</em>, <em>has_m=False</em>, <em>geometry_type=None</em>, <em>spatial_reference=None</em>, <em>display_field_name=None</em>, <em>object_id_field_name=None</em>, <em>global_id_field_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.FeatureSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>A FeatureSet is a collection of Features.</p>
 <p>FeatureSets are commonly used as input/output with several Geoprocessing
-Tools, and can be the obtained through the query() methods of feature layers.</p>
+Tools, and can be the obtained through the query() methods of feature layers.
+A FeatureSet can be combined with a layer definition to compose a FeatureCollection.</p>
 <p>FeatureSet contains Feature objects, including the values for the
 fields requested by the user. For layers, if you request geometry
 information, the geometry of each feature is also returned in the
-FeatureSet. For tables, the FeatureSet does not include geometries.
-If a Spatial Reference is not specified at the FeatureSet level, the
-FeatureSet will assume the Spatial Reference of its first feature. If
-the SpatialR eference of the first feature is also not specified, the
+FeatureSet. For tables, the FeatureSet does not include geometries.</p>
+<p>If a Spatial Reference is not specified at the FeatureSet level, the
+FeatureSet will assume the SpatialReference of its first feature. If
+the SpatialReference of the first feature is also not specified, the
 spatial reference will be UnknownCoordinateSystem.</p>
 <dl class="attribute">
 <dt id="arcgis.features.FeatureSet.display_field_name">
@@ -1240,6 +1241,10 @@ outName - name of the table the data will be saved to</p>
 <dt id="arcgis.features.FeatureCollection">
 <em class="property">class </em><code class="descclassname">arcgis.features.</code><code class="descname">FeatureCollection</code><span class="sig-paren">(</span><em>dictdata</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.FeatureCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>FeatureCollection is an object with a layer definition and a feature set.</p>
+<p>It is an in-memopry collection of features with rendering information.</p>
+<p>Feature Collections can be stored as Items in the GIS, added as layers to a map or scene,
+passed as inputs to feature analysis tools, and returned as results from feature analysis tools
+if an output name for a feature layer is not specified when calling the tool.</p>
 <dl class="method">
 <dt id="arcgis.features.FeatureCollection.query">
 <code class="descname">query</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.FeatureCollection.query" title="Permalink to this definition">¶</a></dt>
