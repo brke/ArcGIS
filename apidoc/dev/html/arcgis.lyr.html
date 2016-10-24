@@ -35,7 +35,7 @@
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="arcgis 0.3 documentation" href="index.html"/>
         <link rel="next" title="arcgis.viz module" href="arcgis.viz.html"/>
-        <link rel="prev" title="arcgis.features.summarize_data module" href="arcgis.features.summarize_data.html"/> 
+        <link rel="prev" title="arcgis.geometry module" href="arcgis.geometry.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -87,114 +87,160 @@
                 <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.html">arcgis.gis module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-gis">arcgis.gis.GIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-contentmanager">arcgis.gis.ContentManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-item">arcgis.gis.Item</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-groupmanager">arcgis.gis.GroupManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-group">arcgis.gis.Group</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-usermanager">arcgis.gis.UserManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-user">arcgis.gis.User</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-datastoremanager">arcgis.gis.DatastoreManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-datastore">arcgis.gis.Datastore</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#arcgis-gis-tools">arcgis.gis.Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#gis">GIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#item">Item</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#user">User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#group">Group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#datastore">Datastore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#contentmanager">ContentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#usermanager">UserManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#groupmanager">GroupManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#datastoremanager">DatastoreManager</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.features.html">arcgis.features module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.html#arcgis-features-feature">arcgis.features.Feature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.html#arcgis-features-featurelayer">arcgis.features.FeatureLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.html#arcgis-features-table">arcgis.features.Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.html#arcgis-features-featuredataset">arcgis.features.FeatureDataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.html#arcgis-features-featureset">arcgis.features.FeatureSet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.html#arcgis-features-featurecollection">arcgis.features.FeatureCollection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#feature">Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featurelayer">FeatureLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#table">Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featuredataset">FeatureDataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featureset">FeatureSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featurecollection">FeatureCollection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#replicamanager">ReplicaManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featuredatasetmanager">FeatureDatasetManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayermanager">FeatureLayerManager</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#arcgis-features-managers-attachmentmanager">arcgis.features.managers.AttachmentManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#arcgis-features-managers-replicamanager">arcgis.features.managers.ReplicaManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#arcgis-features-managers-featuredatasetmanager">arcgis.features.managers.FeatureDatasetManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#arcgis-features-managers-featurelayermanager">arcgis.features.managers.FeatureLayerManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#interpolate-points">interpolate_points</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#interpolate-points">interpolate_points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.enrich_data.html#enrich-layer">enrich_layer</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.enrich_data.html#enrich-layer">enrich_layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#find-existing-locations">find_existing_locations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#derive-new-locations">derive_new_locations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#find-similar-locations">find_similar_locations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#choose-best-facilities">choose_best_facilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#create-viewshed">create_viewshed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#create-watersheds">create_watersheds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#trace-downstream">trace_downstream</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#find-existing-locations">find_existing_locations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#derive-new-locations">derive_new_locations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#find-similar-locations">find_similar_locations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#choose-best-facilities">choose_best_facilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#create-viewshed">create_viewshed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#create-watersheds">create_watersheds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#trace-downstream">trace_downstream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.manage_data.html">arcgis.features.manage_data module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.manage_data.html#dissolve-boundaries">dissolve_boundaries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.manage_data.html#extract-data">extract_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.manage_data.html#merge-layers">merge_layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.manage_data.html#overlay-layers">overlay_layers</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.features.manage_data.html">arcgis.features.manage_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#dissolve-boundaries">dissolve_boundaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#extract-data">extract_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#merge-layers">merge_layers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#overlay-layers">overlay_layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#aggregate-points">aggregate_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-nearby">summarize_nearby</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#aggregate-points">aggregate_points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-nearby">summarize_nearby</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.raster.html">arcgis.raster module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#imagelayer">ImageLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#generate-raster">generate_raster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#rasterize">rasterize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#interpolate">interpolate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#summarize-raster-within">summarize_raster_within</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#density">density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#classify">classify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#segment-mean-shift">segment_mean_shift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#train-classifier">train_classifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#convert-raster-to-feature">convert_raster_to_feature</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.network.html">arcgis.network module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#networklayer">NetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#routelayer">RouteLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#servicearealayer">ServiceAreaLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#closestfacilitylayer">ClosestFacilityLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#networkdataset">NetworkDataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.html">arcgis.geoanalytics module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#aggregate-points">aggregate_points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#describe-dataset">describe_dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#join-features">join_features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#create-buffers">create_buffers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#calculate-density">calculate_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#reconstruct-tracks">reconstruct_tracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#create-space-time-cube">create_space_time_cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#create-panel-data">create_panel_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#copy-to-data-store">copy_to_data_store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#summarize-attributes">summarize_attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#summarize-within">summarize_within</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#find-hot-spots">find_hot_spots</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geocoding.html">arcgis.geocoding module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#geocode">geocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#reverse-geocode">reverse_geocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#batch-geocode">batch_geocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#find-best-match">find_best_match</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#suggest">suggest</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#point">Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#multipoint">MultiPoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#polyline">PolyLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#polygon">Polygon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#envelope">Envelope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#spatialreference">SpatialReference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#geometry">Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#areas-and-lengths">areas_and_lengths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#auto-complete">auto_complete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#buffer">buffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#convex-hull">convex_hull</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#cut">cut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#density">density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#difference">difference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#distance">distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#find-transformation">find_transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#from-geo-coordinate-string">from_geo_coordinate_string</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#generalize">generalize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#intersect">intersect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#label-points">label_points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#lengths">lengths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#offset">offset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#project">project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#relation">relation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#reshape">reshape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#to-geo-coordinate-string">to_geo_coordinate_string</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#trim-extend">trim_extend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.lyr module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-mapservice">arcgis.lyr.MapService</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-adminmapservice">arcgis.lyr.AdminMapService</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-featureservice">arcgis.lyr.FeatureService</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-adminfeatureservice">arcgis.lyr.AdminFeatureService</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-adminfeatureservicelayer">arcgis.lyr.AdminFeatureServiceLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-replicamanager">arcgis.lyr.ReplicaManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-attachmentmanager">arcgis.lyr.AttachmentManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-featurelayer">arcgis.lyr.FeatureLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-featurecollection">arcgis.lyr.FeatureCollection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-vectortilelayer">arcgis.lyr.VectorTileLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-imagelayer">arcgis.lyr.ImageLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-networkservice">arcgis.lyr.NetworkService</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-networklayer">arcgis.lyr.NetworkLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-routenetworklayer">arcgis.lyr.RouteNetworkLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-serviceareanetworklayer">arcgis.lyr.ServiceAreaNetworkLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-closestfacilitynetworklayer">arcgis.lyr.ClosestFacilityNetworkLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-lyr-schematicsservice">arcgis.lyr.SchematicsService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layer">Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamicmaplayer">DynamicMapLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamicmaplayermanager">DynamicMapLayerManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vectortilelayer">VectorTileLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#schematicslayer">SchematicsLayer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.viz.html">arcgis.viz module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-webmap">arcgis.viz.WebMap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-webscene">arcgis.viz.WebScene</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#arcgis-viz-mapview">arcgis.viz.MapView</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.tools.html">arcgis.tools module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-featureanalysistools">arcgis.tools.FeatureAnalysisTools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-bigdatatools">arcgis.tools.BigDataTools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-rasteranalysistools">arcgis.tools.RasterAnalysisTools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-geocoder">arcgis.tools.Geocoder</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-geoprocessingtool">arcgis.tools.GeoprocessingTool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-geometryservice">arcgis.tools.GeometryService</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-feature">arcgis.tools.Feature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.tools.html#arcgis-tools-featureset">arcgis.tools.FeatureSet</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.geom.html">arcgis.geom module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-point">arcgis.geom.Point</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-multipoint">arcgis.geom.MultiPoint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-polyline">arcgis.geom.PolyLine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-polygon">arcgis.geom.Polygon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-envelope">arcgis.geom.Envelope</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-spatialreference">arcgis.geom.SpatialReference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-geometryfactory">arcgis.geom.GeometryFactory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-geometry">arcgis.geom.Geometry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geom.html#arcgis-geom-basegeometry">arcgis.geom.BaseGeometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#webmap">WebMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#webscene">WebScene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#mapview">MapView</a></li>
 </ul>
 </li>
 </ul>
@@ -241,22 +287,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arcgis-lyr-module">
-<h1>arcgis.lyr module<a class="headerlink" href="#arcgis-lyr-module" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="arcgis-lyr-mapservice">
-<h2>arcgis.lyr.MapService<a class="headerlink" href="#arcgis-lyr-mapservice" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="module-arcgis.lyr">
+<span id="arcgis-lyr-module"></span><h1>arcgis.lyr module<a class="headerlink" href="#module-arcgis.lyr" title="Permalink to this headline">¶</a></h1>
+<p>The arcgis.lyr module is used for accessing layers exposed from ArcGIS Online
+or Portal.</p>
+<div class="section" id="layer">
+<h2>Layer<a class="headerlink" href="#layer" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="arcgis.lyr.MapService">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">MapService</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService" title="Permalink to this definition">¶</a></dt>
-<dd><p>allows use and administration (if access permits) of a feature service</p>
-<dl class="attribute">
-<dt id="arcgis.lyr.MapService.admin">
-<code class="descname">admin</code><a class="headerlink" href="#arcgis.lyr.MapService.admin" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<dt id="arcgis.lyr.Layer">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">Layer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.Layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>a GIS layer</p>
 <dl class="method">
-<dt id="arcgis.lyr.MapService.estimate_export_tiles_size">
-<code class="descname">estimate_export_tiles_size</code><span class="sig-paren">(</span><em>exportBy</em>, <em>levels</em>, <em>tilePackage=False</em>, <em>exportExtent='DEFAULTEXTENT'</em>, <em>areaOfInterest=None</em>, <em>async=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.estimate_export_tiles_size" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.Layer.invoke">
+<code class="descname">invoke</code><span class="sig-paren">(</span><em>method</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.Layer.invoke" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes the specified method on this service passing in parameters from the kwargs name-value pairs</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.lyr.Layer.properties">
+<code class="descname">properties</code><a class="headerlink" href="#arcgis.lyr.Layer.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the properties of this layer. The properties are returned using a mutable mapping that allows attribute
+access as well as dict-style access. It can be converted to a dict using dict(properties) if required.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="dynamicmaplayer">
+<h2>DynamicMapLayer<a class="headerlink" href="#dynamicmaplayer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.lyr.DynamicMapLayer">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">DynamicMapLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>a dynamic map layer</p>
+<dl class="method">
+<dt id="arcgis.lyr.DynamicMapLayer.estimate_export_tiles_size">
+<code class="descname">estimate_export_tiles_size</code><span class="sig-paren">(</span><em>exportBy</em>, <em>levels</em>, <em>tilePackage=False</em>, <em>exportExtent='DEFAULTEXTENT'</em>, <em>areaOfInterest=None</em>, <em>async=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.estimate_export_tiles_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The estimateExportTilesSize operation is an asynchronous task that
 allows estimation of the size of the tile package or the cache data
 set that you download using the Export Tiles operation. This
@@ -316,8 +381,8 @@ is set to False, the function will wait until the task completes.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.MapService.export_map">
-<code class="descname">export_map</code><span class="sig-paren">(</span><em>bbox</em>, <em>bboxSR=None</em>, <em>size='600</em>, <em>550'</em>, <em>dpi=200</em>, <em>imageSR=None</em>, <em>image_format='png'</em>, <em>layerDefFilter=None</em>, <em>layers=None</em>, <em>transparent=False</em>, <em>timeFilter=None</em>, <em>layerTimeOptions=None</em>, <em>dynamicLayers=None</em>, <em>mapScale=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.export_map" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayer.export_map">
+<code class="descname">export_map</code><span class="sig-paren">(</span><em>bbox</em>, <em>bboxSR=None</em>, <em>size='600</em>, <em>550'</em>, <em>dpi=200</em>, <em>imageSR=None</em>, <em>image_format='png'</em>, <em>layerDefFilter=None</em>, <em>layers=None</em>, <em>transparent=False</em>, <em>timeFilter=None</em>, <em>layerTimeOptions=None</em>, <em>dynamicLayers=None</em>, <em>mapScale=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.export_map" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><p>The export operation is performed on a map service resource.
 The result of this operation is a map image resource. This
@@ -403,8 +468,8 @@ specified bounding box (bbox).</dd>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.MapService.export_tiles">
-<code class="descname">export_tiles</code><span class="sig-paren">(</span><em>levels</em>, <em>exportBy='LevelID'</em>, <em>tilePackage=False</em>, <em>exportExtent='DEFAULT'</em>, <em>optimizeTilesForSize=True</em>, <em>compressionQuality=0</em>, <em>areaOfInterest=None</em>, <em>async=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.export_tiles" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayer.export_tiles">
+<code class="descname">export_tiles</code><span class="sig-paren">(</span><em>levels</em>, <em>exportBy='LevelID'</em>, <em>tilePackage=False</em>, <em>exportExtent='DEFAULT'</em>, <em>optimizeTilesForSize=True</em>, <em>compressionQuality=0</em>, <em>areaOfInterest=None</em>, <em>async=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.export_tiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>The exportTiles operation is performed as an asynchronous task and
 allows client applications to download map tiles from a server for
 offline use. This operation is performed on a Map Service that
@@ -498,14 +563,14 @@ manually.</dd>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.MapService.find">
-<code class="descname">find</code><span class="sig-paren">(</span><em>searchText</em>, <em>layers</em>, <em>contains=True</em>, <em>searchFields=''</em>, <em>sr=''</em>, <em>layerDefs=''</em>, <em>returnGeometry=True</em>, <em>maxAllowableOffset=''</em>, <em>geometryPrecision=''</em>, <em>dynamicLayers=''</em>, <em>returnZ=False</em>, <em>returnM=False</em>, <em>gdbVersion=''</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.find" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayer.find">
+<code class="descname">find</code><span class="sig-paren">(</span><em>searchText</em>, <em>layers</em>, <em>contains=True</em>, <em>searchFields=''</em>, <em>sr=''</em>, <em>layerDefs=''</em>, <em>returnGeometry=True</em>, <em>maxAllowableOffset=''</em>, <em>geometryPrecision=''</em>, <em>dynamicLayers=''</em>, <em>returnZ=False</em>, <em>returnM=False</em>, <em>gdbVersion=''</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.find" title="Permalink to this definition">¶</a></dt>
 <dd><p>performs the map service find operation</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.MapService.generate_kml">
-<code class="descname">generate_kml</code><span class="sig-paren">(</span><em>save_location</em>, <em>docName</em>, <em>layers</em>, <em>layerOptions='composite'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.generate_kml" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayer.generate_kml">
+<code class="descname">generate_kml</code><span class="sig-paren">(</span><em>save_location</em>, <em>docName</em>, <em>layers</em>, <em>layerOptions='composite'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.generate_kml" title="Permalink to this definition">¶</a></dt>
 <dd><p>The generateKml operation is performed on a map service resource.
 The result of this operation is a KML document wrapped in a KMZ
 file. The document contains a network link to the KML Service
@@ -537,8 +602,8 @@ values: composite | separateImage |</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.MapService.identify">
-<code class="descname">identify</code><span class="sig-paren">(</span><em>geometry</em>, <em>mapExtent</em>, <em>imageDisplay</em>, <em>tolerance</em>, <em>geometryType='esriGeometryPoint'</em>, <em>sr=None</em>, <em>layerDefs=None</em>, <em>time_value=None</em>, <em>layerTimeOptions=None</em>, <em>layers='top'</em>, <em>returnGeometry=True</em>, <em>maxAllowableOffset=None</em>, <em>geometryPrecision=None</em>, <em>dynamicLayers=None</em>, <em>returnZ=False</em>, <em>returnM=False</em>, <em>gdbVersion=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.identify" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayer.identify">
+<code class="descname">identify</code><span class="sig-paren">(</span><em>geometry</em>, <em>mapExtent</em>, <em>imageDisplay</em>, <em>tolerance</em>, <em>geometryType='esriGeometryPoint'</em>, <em>sr=None</em>, <em>layerDefs=None</em>, <em>time_value=None</em>, <em>layerTimeOptions=None</em>, <em>layers='top'</em>, <em>returnGeometry=True</em>, <em>maxAllowableOffset=None</em>, <em>geometryPrecision=None</em>, <em>dynamicLayers=None</em>, <em>returnZ=False</em>, <em>returnM=False</em>, <em>gdbVersion=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.identify" title="Permalink to this definition">¶</a></dt>
 <dd><p>The identify operation is performed on a map service resource
 to discover features at a geographic location. The result of this
 operation is an identify results resource. Each identified result
@@ -637,35 +702,40 @@ This parameter only applies if returnGeometry=true.</dd>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.lyr.MapService.itemInfo">
-<code class="descname">itemInfo</code><a class="headerlink" href="#arcgis.lyr.MapService.itemInfo" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayer.itemInfo">
+<code class="descname">itemInfo</code><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.itemInfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the service&#8217;s item&#8217;s infomation</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.lyr.MapService.kml">
-<code class="descname">kml</code><a class="headerlink" href="#arcgis.lyr.MapService.kml" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayer.kml">
+<code class="descname">kml</code><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.kml" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.lyr.MapService.metadata">
-<code class="descname">metadata</code><a class="headerlink" href="#arcgis.lyr.MapService.metadata" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayer.manager">
+<code class="descname">manager</code><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.manager" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.lyr.DynamicMapLayer.metadata">
+<code class="descname">metadata</code><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the service&#8217;s XML metadata file</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.MapService.thumbnail">
-<code class="descname">thumbnail</code><span class="sig-paren">(</span><em>out_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.MapService.thumbnail" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayer.thumbnail">
+<code class="descname">thumbnail</code><span class="sig-paren">(</span><em>out_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.thumbnail" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 </div>
-<div class="section" id="arcgis-lyr-adminmapservice">
-<h2>arcgis.lyr.AdminMapService<a class="headerlink" href="#arcgis-lyr-adminmapservice" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dynamicmaplayermanager">
+<h2>DynamicMapLayerManager<a class="headerlink" href="#dynamicmaplayermanager" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="arcgis.lyr.AdminMapService">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">AdminMapService</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em>, <em>ms=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminMapService" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayerManager">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">DynamicMapLayerManager</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em>, <em>ms=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayerManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>allows administration (if access permits) of an ArcGIS Online hosted map service 
 A map service offer access to map and layer content.</p>
 <blockquote>
@@ -676,8 +746,8 @@ not, its spatial reference, initial and full extents, etc...  The
 administrative map service resource maintains a set of operations
 that manage the state and contents of the service.</div></blockquote>
 <dl class="method">
-<dt id="arcgis.lyr.AdminMapService.cancel_job">
-<code class="descname">cancel_job</code><span class="sig-paren">(</span><em>jobId</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminMapService.cancel_job" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayerManager.cancel_job">
+<code class="descname">cancel_job</code><span class="sig-paren">(</span><em>jobId</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayerManager.cancel_job" title="Permalink to this definition">¶</a></dt>
 <dd><p>The cancel job operation supports cancelling a job while update
 tiles is running from a hosted feature service. The result of this
 operation is a response indicating success or failure with error
@@ -689,8 +759,8 @@ code and description.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.AdminMapService.edit_tile_service">
-<code class="descname">edit_tile_service</code><span class="sig-paren">(</span><em>serviceDefinition=None</em>, <em>minScale=None</em>, <em>maxScale=None</em>, <em>sourceItemId=None</em>, <em>exportTilesAllowed=False</em>, <em>maxExportTileCount=100000</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminMapService.edit_tile_service" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayerManager.edit_tile_service">
+<code class="descname">edit_tile_service</code><span class="sig-paren">(</span><em>serviceDefinition=None</em>, <em>minScale=None</em>, <em>maxScale=None</em>, <em>sourceItemId=None</em>, <em>exportTilesAllowed=False</em>, <em>maxExportTileCount=100000</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayerManager.edit_tile_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation updates a Tile Service&#8217;s properties</p>
 <dl class="docutils">
 <dt>Inputs:</dt>
@@ -707,14 +777,14 @@ maxExportTileCount - sets the maximum amount of tiles to be exported</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.AdminMapService.job_statistics">
-<code class="descname">job_statistics</code><span class="sig-paren">(</span><em>jobId</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminMapService.job_statistics" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayerManager.job_statistics">
+<code class="descname">job_statistics</code><span class="sig-paren">(</span><em>jobId</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayerManager.job_statistics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the job statistics for the given jobId</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.AdminMapService.refresh">
-<code class="descname">refresh</code><span class="sig-paren">(</span><em>serviceDefinition=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.AdminMapService.refresh" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.DynamicMapLayerManager.refresh">
+<code class="descname">refresh</code><span class="sig-paren">(</span><em>serviceDefinition=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayerManager.refresh" title="Permalink to this definition">¶</a></dt>
 <dd><p>The refresh operation refreshes a service, which clears the web
 server cache for the service.</p>
 </dd></dl>
@@ -722,29 +792,8 @@ server cache for the service.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="arcgis-lyr-featureservice">
-<h2>arcgis.lyr.FeatureService<a class="headerlink" href="#arcgis-lyr-featureservice" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="arcgis-lyr-adminfeatureservice">
-<h2>arcgis.lyr.AdminFeatureService<a class="headerlink" href="#arcgis-lyr-adminfeatureservice" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="arcgis-lyr-adminfeatureservicelayer">
-<h2>arcgis.lyr.AdminFeatureServiceLayer<a class="headerlink" href="#arcgis-lyr-adminfeatureservicelayer" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="arcgis-lyr-replicamanager">
-<h2>arcgis.lyr.ReplicaManager<a class="headerlink" href="#arcgis-lyr-replicamanager" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="arcgis-lyr-attachmentmanager">
-<h2>arcgis.lyr.AttachmentManager<a class="headerlink" href="#arcgis-lyr-attachmentmanager" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="arcgis-lyr-featurelayer">
-<h2>arcgis.lyr.FeatureLayer<a class="headerlink" href="#arcgis-lyr-featurelayer" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="arcgis-lyr-featurecollection">
-<h2>arcgis.lyr.FeatureCollection<a class="headerlink" href="#arcgis-lyr-featurecollection" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="arcgis-lyr-vectortilelayer">
-<h2>arcgis.lyr.VectorTileLayer<a class="headerlink" href="#arcgis-lyr-vectortilelayer" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vectortilelayer">
+<h2>VectorTileLayer<a class="headerlink" href="#vectortilelayer" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="arcgis.lyr.VectorTileLayer">
 <em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">VectorTileLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.VectorTileLayer" title="Permalink to this definition">¶</a></dt>
@@ -788,825 +837,22 @@ returned in PBF format. If a tile is not found, an error is returned.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="arcgis-lyr-imagelayer">
-<h2>arcgis.lyr.ImageLayer<a class="headerlink" href="#arcgis-lyr-imagelayer" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="schematicslayer">
+<h2>SchematicsLayer<a class="headerlink" href="#schematicslayer" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="arcgis.lyr.ImageLayer">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">ImageLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ImageLayer" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
-<dt id="arcgis.lyr.ImageLayer.add_rasters">
-<code class="descname">add_rasters</code><span class="sig-paren">(</span><em>rasterType</em>, <em>itemIds=None</em>, <em>serviceUrl=None</em>, <em>computeStatistics=False</em>, <em>buildPyramids=False</em>, <em>buildThumbnail=False</em>, <em>minimumCellSizeFactor=None</em>, <em>maximumCellSizeFactor=None</em>, <em>attributes=None</em>, <em>geodataTransforms=None</em>, <em>geodataTransformApplyMethod='esriGeodataTransformApplyAppend'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ImageLayer.add_rasters" title="Permalink to this definition">¶</a></dt>
-<dd><p>This operation is supported at 10.1 and later.
-The Add Rasters operation is performed on an image service resource.
-The Add Rasters operation adds new rasters to an image service
-(POST only).
-The added rasters can either be uploaded items, using the itemIds
-parameter, or published services, using the serviceUrl parameter.
-If itemIds is specified, uploaded rasters are copied to the image
-service&#8217;s dynamic image workspace location; if the serviceUrl is
-specified, the image service adds the URL to the mosaic dataset no
-raster files are copied. The serviceUrl is required input for the
-following raster types: Image Service, Map Service, WCS, and WMS.</p>
-<p>Inputs:</p>
-<dl class="docutils">
-<dt>itemIds - The upload items (raster files) to be added. Either</dt>
-<dd><dl class="first last docutils">
-<dt>itemIds or serviceUrl is needed to perform this operation.</dt>
-<dd><p class="first">Syntax: itemIds=&lt;itemId1&gt;,&lt;itemId2&gt;
-Example: itemIds=ib740c7bb-e5d0-4156-9cea-12fa7d3a472c,</p>
-<blockquote class="last">
-<div>ib740c7bb-e2d0-4106-9fea-12fa7d3a482c</div></blockquote>
-</dd>
-</dl>
-</dd>
-<dt>serviceUrl - The URL of the service to be added. The image service</dt>
-<dd><p class="first">will add this URL to the mosaic dataset. Either itemIds or
-serviceUrl is needed to perform this operation. The service URL is
-required for the following raster types: Image Service, Map
-Service, WCS, and WMS.</p>
-<blockquote class="last">
-<div>Example: serviceUrl=http://myserver/arcgis/services/Portland/ImageServer</div></blockquote>
-</dd>
-<dt>rasterType - The type of raster files being added. Raster types</dt>
-<dd><p class="first">define the metadata and processing template for raster files to be
-added. Allowed values are listed in image service resource.</p>
-<blockquote class="last">
-<div>Example: Raster Dataset | CADRG/ECRG | CIB | DTED | Image Service | Map Service | NITF | WCS | WMS</div></blockquote>
-</dd>
-<dt>computeStatistics - If true, statistics for the rasters will be</dt>
-<dd><dl class="first last docutils">
-<dt>computed. The default is false.</dt>
-<dd>Values: false | true</dd>
-</dl>
-</dd>
-<dt>buildPyramids - If true, builds pyramids for the rasters. The</dt>
-<dd><dl class="first last docutils">
-<dt>default is false.</dt>
-<dd>Values: false | true</dd>
-</dl>
-</dd>
-<dt>buildThumbnail   - If true, generates a thumbnail for the rasters.</dt>
-<dd><dl class="first last docutils">
-<dt>The default is false.</dt>
-<dd>Values: false | true</dd>
-</dl>
-</dd>
-<dt>minimumCellSizeFactor - The factor (times raster resolution) used</dt>
-<dd><p class="first">to populate the MinPS field (maximum cell size above which the
-raster is visible).</p>
-<blockquote class="last">
-<div>Syntax: minimumCellSizeFactor=&lt;minimumCellSizeFactor&gt;
-Example: minimumCellSizeFactor=0.1</div></blockquote>
-</dd>
-<dt>maximumCellSizeFactor - The factor (times raster resolution) used</dt>
-<dd><p class="first">to populate MaxPS field (maximum cell size below which raster is
-visible).</p>
-<blockquote class="last">
-<div>Syntax: maximumCellSizeFactor=&lt;maximumCellSizeFactor&gt;
-Example: maximumCellSizeFactor=10</div></blockquote>
-</dd>
-<dt>attributes - Any attribute for the added rasters.</dt>
-<dd><p class="first">Syntax:
-{</p>
-<blockquote>
-<div>&#8220;&lt;name1&gt;&#8221; : &lt;value1&gt;,
-&#8220;&lt;name2&gt;&#8221; : &lt;value2&gt;</div></blockquote>
-<p>}
-Example:
-{</p>
-<blockquote>
-<div>&#8220;MinPS&#8221;: 0,
-&#8220;MaxPS&#8221;: 20;
-&#8220;Year&#8221; : 2002,
-&#8220;State&#8221; : &#8220;Florida&#8221;</div></blockquote>
-<p class="last">}</p>
-</dd>
-<dt>geodataTransforms - The geodata transformations applied on the</dt>
-<dd><p class="first">added rasters. A geodata transformation is a mathematical model
-that performs a geometric transformation on a raster; it defines
-how the pixels will be transformed when displayed or accessed.
-Polynomial, projective, identity, and other transformations are
-available. The geodata transformations are applied to the dataset
-that is added.</p>
-<blockquote>
-<div><p>Syntax:
-[
-{</p>
-<blockquote>
-<div>&#8220;geodataTransform&#8221; : &#8220;&lt;geodataTransformName1&gt;&#8221;,
-&#8220;geodataTransformArguments&#8221; : {&lt;geodataTransformArguments1&gt;}
-},
-{
-&#8220;geodataTransform&#8221; : &#8220;&lt;geodataTransformName2&gt;&#8221;,
-&#8220;geodataTransformArguments&#8221; : {&lt;geodataTransformArguments2&gt;}
-}</div></blockquote>
-<p>]</p>
-</div></blockquote>
-<p class="last">The syntax of the geodataTransformArguments property varies based
-on the specified geodataTransform name. See Geodata Transformations
-documentation for more details.</p>
-</dd>
-<dt>geodataTransformApplyMethod - This parameter defines how to apply</dt>
-<dd><p class="first">the provided geodataTransform. The default is
-esriGeodataTransformApplyAppend.</p>
-<blockquote class="last">
-<div>Values: esriGeodataTransformApplyAppend |
-esriGeodataTransformApplyReplace |
-esriGeodataTransformApplyOverwrite</div></blockquote>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="arcgis.lyr.ImageLayer.colormap">
-<code class="descname">colormap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ImageLayer.colormap" title="Permalink to this definition">¶</a></dt>
-<dd><p>The colormap resource returns RGB color representation of pixel
-values. This resource is supported if the hasColormap property of
-the service is true.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="arcgis.lyr.ImageLayer.export_image">
-<code class="descname">export_image</code><span class="sig-paren">(</span><em>bbox</em>, <em>imageSR</em>, <em>bboxSR</em>, <em>size=None</em>, <em>time=None</em>, <em>export_format='jpgpng'</em>, <em>pixelType='UNKNOWN'</em>, <em>noData=None</em>, <em>noDataInterpretation='esriNoDataMatchAny'</em>, <em>interpolation=None</em>, <em>compression=None</em>, <em>compressionQuality=75</em>, <em>bandIds=None</em>, <em>moasiacRule=None</em>, <em>renderingRule=''</em>, <em>f='json'</em>, <em>saveFolder=None</em>, <em>saveFile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ImageLayer.export_image" title="Permalink to this definition">¶</a></dt>
-<dd><p>The exportImage operation is performed on an image service resource
-The result of this operation is an image resource. This resource
-provides information about the exported image, such as its URL,
-extent, width, and height.
-In addition to the usual response formats of HTML and JSON, you can
-also request the image format while performing this operation. When
-you perform an export with the image format , the server responds
-by directly streaming the image bytes to the client. With this
-approach, you don&#8217;t get any information associated with the
-exported image other than the image itself.</p>
-<dl class="docutils">
-<dt>Inputs:</dt>
-<dd><dl class="first docutils">
-<dt>bbox - The extent (bounding box) of the exported image. Unless</dt>
-<dd>the bboxSR parameter has been specified, the bbox is
-assumed to be in the spatial reference of the image
-service.</dd>
-</dl>
-<p>imageSR - The spatial reference of the exported image.
-bboxSR - The spatial reference of the bbox.
-size - The size (width * height) of the exported image in</p>
-<blockquote>
-<div>pixels. If size is not specified, an image with a default
-size of 400 * 400 will be exported.</div></blockquote>
-<p>time - The time instant or the time extent of the exported image.
-export_format - The format of the exported image. The default format is</p>
-<blockquote>
-<div><p>jpgpng.
-Values: jpgpng | png | png8 | png24 | jpg | bmp | gif |</p>
-<blockquote>
-<div>tiff | png32</div></blockquote>
-</div></blockquote>
-<dl class="docutils">
-<dt>pixelType - The pixel type, also known as data type, pertains to</dt>
-<dd>the type of values stored in the raster, such as
-signed integer, unsigned integer, or floating point.
-Integers are whole numbers, whereas floating points
-have decimals.</dd>
-</dl>
-<p>noDate - The pixel value representing no information.
-noDataInterpretation - Interpretation of the noData setting. The</p>
-<blockquote>
-<div>default is esriNoDataMatchAny when noData is
-a number, and esriNoDataMatchAll when noData
-is a comma-delimited string:
-esriNoDataMatchAny | esriNoDataMatchAll.</div></blockquote>
-<dl class="last docutils">
-<dt>interpolation - The resampling process of extrapolating the</dt>
-<dd>pixel values while transforming the raster
-dataset when it undergoes warping or when it
-changes coordinate space.</dd>
-<dt>compression - Controls how to compress the image when exporting</dt>
-<dd>to TIFF format: None, JPEG, LZ77. It does not
-control compression on other formats.</dd>
-<dt>compressionQuality - Controls how much loss the image will be</dt>
-<dd>subjected to by the compression algorithm.
-Valid value ranges of compression quality
-are from 0 to 100.</dd>
-<dt>bandIds - If there are multiple bands, you can specify a single</dt>
-<dd>band to export, or you can change the band combination
-(red, green, blue) by specifying the band number. Band
-number is 0 based.</dd>
-<dt>mosaicRule - Specifies the mosaic rule when defining how</dt>
-<dd>individual images should be mosaicked. When a mosaic
-rule is not specified, the default mosaic rule of
-the image service will be used (as advertised in
-the root resource: defaultMosaicMethod,
-mosaicOperator, sortField, sortValue).</dd>
-<dt>renderingRule - Specifies the rendering rule for how the</dt>
-<dd>requested image should be rendered.</dd>
-<dt>f - The response format.  default is json</dt>
-<dd>Values: json | image | kmz</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="arcgis.lyr.ImageLayer.fromitem">
-<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ImageLayer.fromitem" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="arcgis.lyr.ImageLayer.query">
-<code class="descname">query</code><span class="sig-paren">(</span><em>where='1=1'</em>, <em>out_fields='*'</em>, <em>timeFilter=None</em>, <em>geometryFilter=None</em>, <em>returnGeometry=True</em>, <em>returnIdsOnly=False</em>, <em>returnCountOnly=False</em>, <em>pixelSize=None</em>, <em>orderByFields=None</em>, <em>returnDistinctValues=True</em>, <em>outStatistics=None</em>, <em>groupByFieldsForStatistics=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ImageLayer.query" title="Permalink to this definition">¶</a></dt>
-<dd><p>queries a feature service based on a sql statement
-Inputs:</p>
-<blockquote>
-<div><p>where - the selection sql statement
-out_fields - the attribute fields to return
-timeFilter - a TimeFilter object where either the start time</p>
-<blockquote>
-<div>or start and end time are defined to limit the
-search results for a given time.  The values in
-the timeFilter should be as UTC timestampes in
-milliseconds.  No checking occurs to see if they
-are in the right format.</div></blockquote>
-<dl class="docutils">
-<dt>geometryFilter - a GeometryFilter object to parse down a given</dt>
-<dd>query by another spatial dataset.</dd>
-<dt>returnGeometry - true means a geometry will be returned,</dt>
-<dd>else just the attributes</dd>
-<dt>returnIdsOnly - false is default.  True means only OBJECTIDs</dt>
-<dd>will be returned</dd>
-<dt>returnCountOnly - if True, then an integer is returned only</dt>
-<dd>based on the sql statement</dd>
-<dt>pixelSize-Query visible rasters at a given pixel size. If</dt>
-<dd>pixelSize is not specified, rasters at all
-resolutions can be queried.</dd>
-<dt>orderByFields-Order results by one or more field names. Use</dt>
-<dd>ASC or DESC for ascending or descending order,
-respectively</dd>
-<dt>returnDistinctValues-  If true, returns distinct values</dt>
-<dd>based on the fields specified in
-outFields. This parameter applies only
-if the supportsAdvancedQueries property
-of the image service is true.</dd>
-<dt>outStatistics- the definitions for one or more field-based</dt>
-<dd>statistics to be calculated.</dd>
-<dt>groupByFieldsForStatistics-One or more field names using the</dt>
-<dd>values that need to be grouped for
-calculating the statistics.</dd>
-</dl>
-</div></blockquote>
-<dl class="docutils">
-<dt>Output:</dt>
-<dd>A list of Feature Objects (default) or a path to the output featureclass if
-returnFeatureClass is set to True.</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="arcgis-lyr-networkservice">
-<h2>arcgis.lyr.NetworkService<a class="headerlink" href="#arcgis-lyr-networkservice" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="arcgis.lyr.NetworkService">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">NetworkService</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.NetworkService" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.SchematicsLayer">
+<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">SchematicsLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.SchematicsLayer" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="attribute">
-<dt id="arcgis.lyr.NetworkService.closest_facility_layers">
-<code class="descname">closest_facility_layers</code><a class="headerlink" href="#arcgis.lyr.NetworkService.closest_facility_layers" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="classmethod">
-<dt id="arcgis.lyr.NetworkService.fromitem">
-<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.NetworkService.fromitem" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.lyr.NetworkService.route_layers">
-<code class="descname">route_layers</code><a class="headerlink" href="#arcgis.lyr.NetworkService.route_layers" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.lyr.NetworkService.service_area_layers">
-<code class="descname">service_area_layers</code><a class="headerlink" href="#arcgis.lyr.NetworkService.service_area_layers" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="arcgis-lyr-networklayer">
-<h2>arcgis.lyr.NetworkLayer<a class="headerlink" href="#arcgis-lyr-networklayer" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="arcgis.lyr.NetworkLayer">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">NetworkLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.NetworkLayer" title="Permalink to this definition">¶</a></dt>
-<dd><p>The network layer resource represents a single network layer in
-a network analysis service published by ArcGIS Server. It provides basic
-information about the network layer such as its name, type, and network
-classes. Additionally, depending on the layer type, it provides different
-pieces of information.</p>
-<p>It is a base class for RouteNetworkLayer, ServiceAreaNetworkLayer, and
-ClosestFacilityNetworkLayer.</p>
-<dl class="method">
-<dt id="arcgis.lyr.NetworkLayer.retrieve_travel_modes">
-<code class="descname">retrieve_travel_modes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.NetworkLayer.retrieve_travel_modes" title="Permalink to this definition">¶</a></dt>
-<dd><p>identify all the valid travel modes that have been defined on the
-network dataset or in the portal if the GIS server is federated</p>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="arcgis-lyr-routenetworklayer">
-<h2>arcgis.lyr.RouteNetworkLayer<a class="headerlink" href="#arcgis-lyr-routenetworklayer" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="arcgis.lyr.RouteNetworkLayer">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">RouteNetworkLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.RouteNetworkLayer" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Route Network Layer which has common properties of Network Layer
-as well as some attributes unique to Route Network Layer only.</p>
-<dl class="method">
-<dt id="arcgis.lyr.RouteNetworkLayer.solve">
-<code class="descname">solve</code><span class="sig-paren">(</span><em>stops</em>, <em>barriers=None</em>, <em>polylineBarriers=None</em>, <em>polygonBarriers=None</em>, <em>travelMode=None</em>, <em>attributeParameterValues=None</em>, <em>returnDirections=None</em>, <em>returnRoutes=True</em>, <em>returnStops=False</em>, <em>returnBarriers=False</em>, <em>returnPolylineBarriers=True</em>, <em>returnPolygonBarriers=True</em>, <em>outSR=None</em>, <em>ignoreInvalidLocations=True</em>, <em>outputLines=None</em>, <em>findBestSequence=False</em>, <em>preserveFirstStop=True</em>, <em>preserveLastStop=True</em>, <em>useTimeWindows=False</em>, <em>startTime=None</em>, <em>startTimeIsUTC=False</em>, <em>accumulateAttributeNames=None</em>, <em>impedanceAttributeName=None</em>, <em>restrictionAttributeNames=None</em>, <em>restrictUTurns=None</em>, <em>useHierarchy=True</em>, <em>directionsLanguage=None</em>, <em>directionsOutputType=None</em>, <em>directionsStyleName=None</em>, <em>directionsLengthUnits=None</em>, <em>directionsTimeAttributeName=None</em>, <em>outputGeometryPrecision=None</em>, <em>outputGeometryPrecisionUnits=None</em>, <em>returnZ=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.RouteNetworkLayer.solve" title="Permalink to this definition">¶</a></dt>
-<dd><p>The solve operation is performed on a network layer resource.
-The solve operation is supported on a network layer whose layerType
-is esriNAServerRouteLayer. You can provide arguments to the solve
-route operation as query parameters.
-Inputs:</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>stops - The set of stops loaded as network locations during analysis.</dt>
-<dd>Stops can be specified using a simple comma / semi-colon
-based syntax or as a JSON structure. If stops are not
-specified, preloaded stops from the map document are used in
-the analysis.</dd>
-<dt>barriers - The set of barriers loaded as network locations during</dt>
-<dd>analysis. Barriers can be specified using a simple comma
-/ semi-colon based syntax or as a JSON structure. If
-barriers are not specified, preloaded barriers from the
-map document are used in the analysis. If an empty json
-object is passed (&#8216;{}&#8217;) preloaded barriers are ignored.</dd>
-<dt>polylineBarriers - The set of polyline barriers loaded as network</dt>
-<dd>locations during analysis. If polyline barriers
-are not specified, preloaded polyline barriers
-from the map document are used in the analysis.
-If an empty json object is passed (&#8216;{}&#8217;)
-preloaded polyline barriers are ignored.</dd>
-<dt>polygonBarriers - The set of polygon barriers loaded as network</dt>
-<dd>locations during analysis. If polygon barriers
-are not specified, preloaded polygon barriers
-from the map document are used in the analysis.
-If an empty json object is passed (&#8216;{}&#8217;) preloaded
-polygon barriers are ignored.</dd>
-<dt>travelMode - Travel modes provide override values that help you</dt>
-<dd>quickly and consistently model a vehicle or mode of
-transportation. The chosen travel mode must be
-preconfigured on the network dataset that the routing
-service references.</dd>
-<dt>attributeParameterValues - A set of attribute parameter values that</dt>
-<dd>can be parameterized to determine which
-network elements can be used by a vehicle.</dd>
-<dt>returnDirections - If true, directions will be generated and returned</dt>
-<dd>with the analysis results. Default is true.</dd>
-<dt>returnRoutes - If true, routes will be returned with the analysis</dt>
-<dd>results. Default is true.</dd>
-<dt>returnStops -  If true, stops will be returned with the analysis</dt>
-<dd>results. Default is false.</dd>
-<dt>returnBarriers -  If true, barriers will be returned with the analysis</dt>
-<dd>results. Default is false.</dd>
-<dt>returnPolylineBarriers -  If true, polyline barriers will be returned</dt>
-<dd>with the analysis results. Default is false.</dd>
-<dt>returnPolygonBarriers - If true, polygon barriers will be returned with</dt>
-<dd>the analysis results. Default is false.</dd>
-<dt>outSR - The spatial reference of the geometries returned with the</dt>
-<dd>analysis results.</dd>
-<dt>ignoreInvalidLocations - If true, the solver will ignore invalid</dt>
-<dd>locations. Otherwise, it will raise an error.
-The default is as defined in the network layer.</dd>
-<dt>outputLines - The type of output lines to be generated in the result.</dt>
-<dd>The default is as defined in the network layer.</dd>
-<dt>findBestSequence - If true, the solver should re-sequence the route in</dt>
-<dd>the optimal order. The default is as defined in the
-network layer.</dd>
-<dt>preserveFirstStop - If true, the solver should keep the first stop</dt>
-<dd>fixed in the sequence. The default is as defined
-in the network layer.</dd>
-<dt>preserveLastStop - If true, the solver should keep the last stop fixed</dt>
-<dd>in the sequence. The default is as defined in the
-network layer.</dd>
-<dt>useTimeWindows - If true, the solver should consider time windows.</dt>
-<dd>The default is as defined in the network layer.</dd>
-<dt>startTime - The time the route begins. If not specified, the solver</dt>
-<dd>will use the default as defined in the network layer.</dd>
-</dl>
-<p>startTimeIsUTC - The time zone of the startTime parameter.
-accumulateAttributeNames - The list of network attribute names to be</p>
-<blockquote>
-<div>accumulated with the analysis. The default is
-as defined in the network layer. The value
-should be specified as a comma separated list
-of attribute names. You can also specify a
-value of none to indicate that no network
-attributes should be accumulated.</div></blockquote>
-<dl class="docutils">
-<dt>impedanceAttributeName - The network attribute name to be used as the</dt>
-<dd>impedance attribute in analysis. The default is
-as defined in the network layer.</dd>
-<dt>restrictionAttributeNames -The list of network attribute names to be</dt>
-<dd>used as restrictions with the analysis. The
-default is as defined in the network layer.
-The value should be specified as a comma
-separated list of attribute names. You can
-also specify a value of none to indicate that
-no network attributes should be used as
-restrictions.</dd>
-<dt>restrictUTurns -  Specifies how U-Turns should be restricted in the</dt>
-<dd>analysis. The default is as defined in the network
-layer. Values: esriNFSBAllowBacktrack |
-esriNFSBAtDeadEndsOnly | esriNFSBNoBacktrack |
-esriNFSBAtDeadEndsAndIntersections</dd>
-<dt>useHierarchy -  If true, the hierarchy attribute for the network should</dt>
-<dd>be used in analysis. The default is as defined in the
-network layer.</dd>
-<dt>directionsLanguage - The language to be used when computing directions.</dt>
-<dd>The default is as defined in the network layer. The
-list of supported languages can be found in REST
-layer description.</dd>
-<dt>directionsOutputType -  Defines content, verbosity of returned</dt>
-<dd>directions. The default is esriDOTStandard.
-Values: esriDOTComplete | esriDOTCompleteNoEvents
-| esriDOTInstructionsOnly | esriDOTStandard |
-esriDOTSummaryOnly</dd>
-<dt>directionsStyleName - The style to be used when returning the directions.</dt>
-<dd>The default is as defined in the network layer. The
-list of supported styles can be found in REST
-layer description.</dd>
-<dt>directionsLengthUnits - The length units to use when computing directions.</dt>
-<dd>The default is as defined in the network layer.
-Values: esriNAUFeet | esriNAUKilometers |
-esriNAUMeters | esriNAUMiles |
-esriNAUNauticalMiles | esriNAUYards |
-esriNAUUnknown</dd>
-<dt>directionsTimeAttributeName - The name of network attribute to use for</dt>
-<dd>the drive time when computing directions.
-The default is as defined in the network
-layer.</dd>
-<dt>outputGeometryPrecision -  The precision of the output geometry after</dt>
-<dd>generalization. If 0, no generalization of
-output geometry is performed. The default is
-as defined in the network service
-configuration.</dd>
-<dt>outputGeometryPrecisionUnits - The units of the output geometry</dt>
-<dd>precision. The default value is
-esriUnknownUnits. Values: esriUnknownUnits
-| esriCentimeters | esriDecimalDegrees |
-esriDecimeters | esriFeet | esriInches |
-esriKilometers | esriMeters | esriMiles |
-esriMillimeters | esriNauticalMiles |
-esriPoints | esriYards</dd>
-<dt>returnZ - If true, Z values will be included in the returned routes and</dt>
-<dd>compressed geometry if the network dataset is Z-aware.
-The default is false.</dd>
-</dl>
-</div></blockquote>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="arcgis-lyr-serviceareanetworklayer">
-<h2>arcgis.lyr.ServiceAreaNetworkLayer<a class="headerlink" href="#arcgis-lyr-serviceareanetworklayer" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="arcgis.lyr.ServiceAreaNetworkLayer">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">ServiceAreaNetworkLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ServiceAreaNetworkLayer" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Service Area Network Layer which has common properties of Network
-Layer as well as some attributes unique to Service Area Network Layer
-only.</p>
-<dl class="method">
-<dt id="arcgis.lyr.ServiceAreaNetworkLayer.solve_service_area">
-<code class="descname">solve_service_area</code><span class="sig-paren">(</span><em>facilities</em>, <em>barriers=None</em>, <em>polylineBarriers=None</em>, <em>polygonBarriers=None</em>, <em>travelMode=None</em>, <em>attributeParameterValues=None</em>, <em>defaultBreaks=None</em>, <em>excludeSourcesFromPolygons=None</em>, <em>mergeSimilarPolygonRanges=None</em>, <em>outputLines=None</em>, <em>outputPolygons=None</em>, <em>overlapLines=None</em>, <em>overlapPolygons=None</em>, <em>splitLinesAtBreaks=None</em>, <em>splitPolygonsAtBreaks=None</em>, <em>trimOuterPolygon=None</em>, <em>trimPolygonDistance=None</em>, <em>trimPolygonDistanceUnits=None</em>, <em>returnFacilities=False</em>, <em>returnBarriers=False</em>, <em>returnPolylineBarriers=False</em>, <em>returnPolygonBarriers=False</em>, <em>outSR=None</em>, <em>accumulateAttributeNames=None</em>, <em>impedanceAttributeName=None</em>, <em>restrictionAttributeNames=None</em>, <em>restrictUTurns=None</em>, <em>outputGeometryPrecision=None</em>, <em>outputGeometryPrecisionUnits='esriUnknownUnits'</em>, <em>useHierarchy=None</em>, <em>timeOfDay=None</em>, <em>timeOfDayIsUTC=None</em>, <em>travelDirection=None</em>, <em>returnZ=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ServiceAreaNetworkLayer.solve_service_area" title="Permalink to this definition">¶</a></dt>
-<dd><p>The solve service area operation is performed on a network layer
-resource of type service area (layerType is esriNAServerServiceArea).
-You can provide arguments to the solve service area operation as
-query parameters.
-Inputs:</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>facilities - The set of facilities loaded as network locations</dt>
-<dd>during analysis. Facilities can be specified using
-a simple comma / semi-colon based syntax or as a
-JSON structure. If facilities are not specified,
-preloaded facilities from the map document are used
-in the analysis. If an empty json object is passed
-(&#8216;{}&#8217;) preloaded facilities are ignored.</dd>
-<dt>barriers - The set of barriers loaded as network locations during</dt>
-<dd>analysis. Barriers can be specified using a simple
-comma/semicolon-based syntax or as a JSON structure.
-If barriers are not specified, preloaded barriers from
-the map document are used in the analysis. If an empty
-json object is passed (&#8216;{}&#8217;), preloaded barriers are
-ignored.</dd>
-<dt>polylineBarriers - The set of polyline barriers loaded as network</dt>
-<dd>locations during analysis. If polyline barriers
-are not specified, preloaded polyline barriers
-from the map document are used in the analysis.
-If an empty json object is passed (&#8216;{}&#8217;),
-preloaded polyline barriers are ignored.</dd>
-<dt>polygonBarriers - The set of polygon barriers loaded as network</dt>
-<dd>locations during analysis. If polygon barriers
-are not specified, preloaded polygon barriers
-from the map document are used in the analysis.
-If an empty json object is passed (&#8216;{}&#8217;),
-preloaded polygon barriers are ignored.</dd>
-<dt>travelMode - Travel modes provide override values that help you</dt>
-<dd>quickly and consistently model a vehicle or mode of
-transportation. The chosen travel mode must be
-preconfigured on the network dataset that the
-service area service references.</dd>
-<dt>attributeParameterValues - A set of attribute parameter values that</dt>
-<dd>can be parameterized to determine which
-network elements can be used by a vehicle.</dd>
-<dt>defaultBreaks - A comma-separated list of doubles. The default is</dt>
-<dd>defined in the network analysis layer.</dd>
-<dt>excludeSourcesFromPolygons - A comma-separated list of string names.</dt>
-<dd>The default is defined in the network
-analysis layer.</dd>
-<dt>mergeSimilarPolygonRanges - If true, similar ranges will be merged</dt>
-<dd>in the result polygons. The default is
-defined in the network analysis layer.</dd>
-<dt>outputLines - The type of lines(s) generated. The default is as</dt>
-<dd>defined in the network analysis layer.</dd>
-<dt>outputPolygons - The type of polygon(s) generated. The default is</dt>
-<dd>as defined in the network analysis layer.</dd>
-<dt>overlapLines - Indicates if the lines should overlap from multiple</dt>
-<dd>facilities. The default is defined in the network
-analysis layer.</dd>
-<dt>overlapPolygons - Indicates if the polygons for all facilities</dt>
-<dd>should overlap. The default is defined in the
-network analysis layer.</dd>
-<dt>splitLinesAtBreaks - If true, lines will be split at breaks. The</dt>
-<dd>default is defined in the network analysis
-layer.</dd>
-<dt>splitPolygonsAtBreaks - If true, polygons will be split at breaks.</dt>
-<dd>The default is defined in the network
-analysis layer.</dd>
-<dt>trimOuterPolygon -  If true, the outermost polygon (at the maximum</dt>
-<dd>break value) will be trimmed. The default is
-defined in the network analysis layer.</dd>
-<dt>trimPolygonDistance -  If polygons are being trimmed, provides the</dt>
-<dd>distance to trim. The default is defined in
-the network analysis layer.</dd>
-<dt>trimPolygonDistanceUnits - If polygons are being trimmed, specifies</dt>
-<dd>the units of the trimPolygonDistance. The
-default is defined in the network analysis
-layer.</dd>
-<dt>returnFacilities - If true, facilities will be returned with the</dt>
-<dd>analysis results. Default is false.</dd>
-<dt>returnBarriers - If true, barriers will be returned with the analysis</dt>
-<dd>results. Default is false.</dd>
-<dt>returnPolylineBarriers - If true, polyline barriers will be returned</dt>
-<dd>with the analysis results. Default is false.</dd>
-<dt>returnPolygonBarriers - If true, polygon barriers will be returned</dt>
-<dd>with the analysis results. Default is false.</dd>
-<dt>outSR - The well-known ID of the spatial reference for the geometries</dt>
-<dd>returned with the analysis results. If outSR is not specified,
-the geometries are returned in the spatial reference of the map.</dd>
-<dt>accumulateAttributeNames - The list of network attribute names to be</dt>
-<dd>accumulated with the analysis. The default
-is as defined in the network analysis layer.
-The value should be specified as a comma
-separated list of attribute names. You can
-also specify a value of none to indicate that
-no network attributes should be accumulated.</dd>
-<dt>impedanceAttributeName - The network attribute name to be used as the</dt>
-<dd>impedance attribute in analysis. The default
-is as defined in the network analysis layer.</dd>
-<dt>restrictionAttributeNames - The list of network attribute names to be</dt>
-<dd>used as restrictions with the analysis. The
-default is as defined in the network analysis
-layer. The value should be specified as a
-comma separated list of attribute names.
-You can also specify a value of none to
-indicate that no network attributes should
-be used as restrictions.</dd>
-<dt>restrictUTurns - Specifies how U-Turns should be restricted in the</dt>
-<dd>analysis. The default is as defined in the network
-analysis layer. Values: esriNFSBAllowBacktrack |
-esriNFSBAtDeadEndsOnly | esriNFSBNoBacktrack |
-esriNFSBAtDeadEndsAndIntersections</dd>
-<dt>outputGeometryPrecision - The precision of the output geometry after</dt>
-<dd>generalization. If 0, no generalization of
-output geometry is performed. The default is
-as defined in the network service configuration.</dd>
-<dt>outputGeometryPrecisionUnits - The units of the output geometry precision.</dt>
-<dd>The default value is esriUnknownUnits.
-Values: esriUnknownUnits | esriCentimeters |
-esriDecimalDegrees | esriDecimeters |
-esriFeet | esriInches | esriKilometers |
-esriMeters | esriMiles | esriMillimeters |
-esriNauticalMiles | esriPoints | esriYards</dd>
-<dt>useHierarchy - If true, the hierarchy attribute for the network should be</dt>
-<dd>used in analysis. The default is as defined in the network
-layer. This cannot be used in conjunction with outputLines.</dd>
-<dt>timeOfDay - The date and time at the facility. If travelDirection is set</dt>
-<dd>to esriNATravelDirectionToFacility, the timeOfDay value
-specifies the arrival time at the facility. if travelDirection
-is set to esriNATravelDirectionFromFacility, the timeOfDay
-value is the departure time from the facility. The time zone
-for timeOfDay is specified by timeOfDayIsUTC.</dd>
-<dt>timeOfDayIsUTC - The time zone or zones of the timeOfDay parameter. When</dt>
-<dd>set to false, which is the default value, the timeOfDay
-parameter refers to the time zone or zones in which the
-facilities are located. Therefore, the start or end times
-of the service areas are staggered by time zone.</dd>
-<dt>travelDirection - Options for traveling to or from the facility. The</dt>
-<dd>default is defined in the network analysis layer.</dd>
-<dt>returnZ - If true, Z values will be included in saPolygons and saPolylines</dt>
-<dd>geometry if the network dataset is Z-aware.</dd>
-</dl>
-</div></blockquote>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="arcgis-lyr-closestfacilitynetworklayer">
-<h2>arcgis.lyr.ClosestFacilityNetworkLayer<a class="headerlink" href="#arcgis-lyr-closestfacilitynetworklayer" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="arcgis.lyr.ClosestFacilityNetworkLayer">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">ClosestFacilityNetworkLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ClosestFacilityNetworkLayer" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Closest Facility Network Layer which has common properties of Network
-Layer as well as some attributes unique to Closest Facility Network Layer
-only.</p>
-<dl class="method">
-<dt id="arcgis.lyr.ClosestFacilityNetworkLayer.solve_closest_facility">
-<code class="descname">solve_closest_facility</code><span class="sig-paren">(</span><em>incidents</em>, <em>facilities</em>, <em>barriers=None</em>, <em>polylineBarriers=None</em>, <em>polygonBarriers=None</em>, <em>travelMode=None</em>, <em>attributeParameterValues=None</em>, <em>returnDirections=None</em>, <em>directionsLanguage=None</em>, <em>directionsStyleName=None</em>, <em>directionsLengthUnits=None</em>, <em>directionsTimeAttributeName=None</em>, <em>returnCFRoutes=True</em>, <em>returnFacilities=False</em>, <em>returnIncidents=False</em>, <em>returnBarriers=False</em>, <em>returnPolylineBarriers=False</em>, <em>returnPolygonBarriers=False</em>, <em>outputLines=None</em>, <em>defaultCutoff=None</em>, <em>defaultTargetFacilityCount=None</em>, <em>travelDirection=None</em>, <em>outSR=None</em>, <em>accumulateAttributeNames=None</em>, <em>impedanceAttributeName=None</em>, <em>restrictionAttributeNames=None</em>, <em>restrictUTurns=None</em>, <em>useHierarchy=True</em>, <em>outputGeometryPrecision=None</em>, <em>outputGeometryPrecisionUnits=None</em>, <em>timeOfDay=None</em>, <em>timeOfDayIsUTC=None</em>, <em>timeOfDayUsage=None</em>, <em>returnZ=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.ClosestFacilityNetworkLayer.solve_closest_facility" title="Permalink to this definition">¶</a></dt>
-<dd><p>The solve operation is performed on a network layer resource of
-type closest facility (layerType is esriNAServerClosestFacilityLayer).
-You can provide arguments to the solve route operation as query
-parameters.
-Inputs:</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>facilities  - The set of facilities loaded as network locations</dt>
-<dd>during analysis. Facilities can be specified using
-a simple comma / semi-colon based syntax or as a
-JSON structure. If facilities are not specified,
-preloaded facilities from the map document are used
-in the analysis.</dd>
-<dt>incidents - The set of incidents loaded as network locations</dt>
-<dd>during analysis. Incidents can be specified using
-a simple comma / semi-colon based syntax or as a
-JSON structure. If incidents are not specified,
-preloaded incidents from the map document are used
-in the analysis.</dd>
-<dt>barriers - The set of barriers loaded as network locations during</dt>
-<dd>analysis. Barriers can be specified using a simple comma
-/ semi-colon based syntax or as a JSON structure. If
-barriers are not specified, preloaded barriers from the
-map document are used in the analysis. If an empty json
-object is passed (&#8216;{}&#8217;) preloaded barriers are ignored.</dd>
-<dt>polylineBarriers - The set of polyline barriers loaded as network</dt>
-<dd>locations during analysis. If polyline barriers
-are not specified, preloaded polyline barriers
-from the map document are used in the analysis.
-If an empty json object is passed (&#8216;{}&#8217;)
-preloaded polyline barriers are ignored.</dd>
-<dt>polygonBarriers - The set of polygon barriers loaded as network</dt>
-<dd>locations during analysis. If polygon barriers
-are not specified, preloaded polygon barriers
-from the map document are used in the analysis.
-If an empty json object is passed (&#8216;{}&#8217;) preloaded
-polygon barriers are ignored.</dd>
-<dt>travelMode - Travel modes provide override values that help you</dt>
-<dd>quickly and consistently model a vehicle or mode of
-transportation. The chosen travel mode must be
-preconfigured on the network dataset that the routing
-service references.</dd>
-<dt>attributeParameterValues - A set of attribute parameter values that</dt>
-<dd>can be parameterized to determine which
-network elements can be used by a vehicle.</dd>
-<dt>returnDirections - If true, directions will be generated and returned</dt>
-<dd>with the analysis results. Default is true.</dd>
-<dt>directionsLanguage - The language to be used when computing directions.</dt>
-<dd>The default is as defined in the network layer. The
-list of supported languages can be found in REST
-layer description.</dd>
-<dt>directionsOutputType -  Defines content, verbosity of returned</dt>
-<dd>directions. The default is esriDOTStandard.
-Values: esriDOTComplete | esriDOTCompleteNoEvents
-| esriDOTInstructionsOnly | esriDOTStandard |
-esriDOTSummaryOnly</dd>
-<dt>directionsStyleName - The style to be used when returning the directions.</dt>
-<dd>The default is as defined in the network layer. The
-list of supported styles can be found in REST
-layer description.</dd>
-<dt>directionsLengthUnits - The length units to use when computing directions.</dt>
-<dd>The default is as defined in the network layer.
-Values: esriNAUFeet | esriNAUKilometers |
-esriNAUMeters | esriNAUMiles |
-esriNAUNauticalMiles | esriNAUYards |
-esriNAUUnknown</dd>
-<dt>directionsTimeAttributeName - The name of network attribute to use for</dt>
-<dd>the drive time when computing directions.
-The default is as defined in the network
-layer.</dd>
-<dt>returnCFRoutes - If true, closest facilities routes will be returned</dt>
-<dd>with the analysis results. Default is true.</dd>
-<dt>returnFacilities -  If true, facilities  will be returned with the</dt>
-<dd>analysis results. Default is false.</dd>
-<dt>returnIncidents - If true, incidents will be returned with the</dt>
-<dd>analysis results. Default is false.</dd>
-<dt>returnBarriers -  If true, barriers will be returned with the analysis</dt>
-<dd>results. Default is false.</dd>
-<dt>returnPolylineBarriers -  If true, polyline barriers will be returned</dt>
-<dd>with the analysis results. Default is false.</dd>
-<dt>returnPolygonBarriers - If true, polygon barriers will be returned with</dt>
-<dd>the analysis results. Default is false.</dd>
-<dt>outputLines - The type of output lines to be generated in the result.</dt>
-<dd>The default is as defined in the network layer.</dd>
-</dl>
-<p>defaultCutoff - The default cutoff value to stop traversing.
-defaultTargetFacilityCount - The default number of facilities to find.
-travelDirection - Options for traveling to or from the facility.</p>
-<blockquote>
-<div>The default is defined in the network layer.
-Values: esriNATravelDirectionFromFacility |
-esriNATravelDirectionToFacility</div></blockquote>
-<dl class="docutils">
-<dt>outSR - The spatial reference of the geometries returned with the</dt>
-<dd>analysis results.</dd>
-<dt>accumulateAttributeNames - The list of network attribute names to be</dt>
-<dd>accumulated with the analysis. The default is
-as defined in the network layer. The value
-should be specified as a comma separated list
-of attribute names. You can also specify a
-value of none to indicate that no network
-attributes should be accumulated.</dd>
-<dt>impedanceAttributeName - The network attribute name to be used as the</dt>
-<dd>impedance attribute in analysis. The default is
-as defined in the network layer.</dd>
-<dt>restrictionAttributeNames -The list of network attribute names to be</dt>
-<dd>used as restrictions with the analysis. The
-default is as defined in the network layer.
-The value should be specified as a comma
-separated list of attribute names. You can
-also specify a value of none to indicate that
-no network attributes should be used as
-restrictions.</dd>
-<dt>restrictUTurns -  Specifies how U-Turns should be restricted in the</dt>
-<dd>analysis. The default is as defined in the network
-layer. Values: esriNFSBAllowBacktrack |
-esriNFSBAtDeadEndsOnly | esriNFSBNoBacktrack |
-esriNFSBAtDeadEndsAndIntersections</dd>
-<dt>useHierarchy -  If true, the hierarchy attribute for the network should</dt>
-<dd>be used in analysis. The default is as defined in the
-network layer.</dd>
-<dt>outputGeometryPrecision -  The precision of the output geometry after</dt>
-<dd>generalization. If 0, no generalization of
-output geometry is performed. The default is
-as defined in the network service
-configuration.</dd>
-<dt>outputGeometryPrecisionUnits - The units of the output geometry</dt>
-<dd>precision. The default value is
-esriUnknownUnits. Values: esriUnknownUnits
-| esriCentimeters | esriDecimalDegrees |
-esriDecimeters | esriFeet | esriInches |
-esriKilometers | esriMeters | esriMiles |
-esriMillimeters | esriNauticalMiles |
-esriPoints | esriYards</dd>
-<dt>timeOfDay - Arrival or departure date and time. Values: specified by</dt>
-<dd>number of milliseconds since midnight Jan 1st, 1970, UTC.</dd>
-<dt>timeOfDayIsUTC - The time zone of the timeOfDay parameter. By setting</dt>
-<dd>timeOfDayIsUTC to true, the timeOfDay parameter refers
-to Coordinated Universal Time (UTC). Choose this option
-if you want to find what&#8217;s nearest for a specific time,
-such as now, but aren&#8217;t certain in which time zone the
-facilities or incidents will be located.</dd>
-<dt>timeOfDayUsage - Defines the way timeOfDay value is used. The default</dt>
-<dd>is as defined in the network layer.
-Values: esriNATimeOfDayUseAsStartTime |
-esriNATimeOfDayUseAsEndTime</dd>
-<dt>returnZ - If true, Z values will be included in the returned routes and</dt>
-<dd>compressed geometry if the network dataset is Z-aware.
-The default is false.</dd>
-</dl>
-</div></blockquote>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="arcgis-lyr-schematicsservice">
-<h2>arcgis.lyr.SchematicsService<a class="headerlink" href="#arcgis-lyr-schematicsservice" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="arcgis.lyr.SchematicsService">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">SchematicsService</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.SchematicsService" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
-<dt id="arcgis.lyr.SchematicsService.diagrams">
-<code class="descname">diagrams</code><a class="headerlink" href="#arcgis.lyr.SchematicsService.diagrams" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.SchematicsLayer.diagrams">
+<code class="descname">diagrams</code><a class="headerlink" href="#arcgis.lyr.SchematicsLayer.diagrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Schematic Diagrams resource represents all the schematic diagrams
 under a schematic service. It is returned as an array of Schematic
 Diagram resource by the REST API.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.lyr.SchematicsService.folders">
-<code class="descname">folders</code><a class="headerlink" href="#arcgis.lyr.SchematicsService.folders" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.SchematicsLayer.folders">
+<code class="descname">folders</code><a class="headerlink" href="#arcgis.lyr.SchematicsLayer.folders" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Schematic Folders resource represents the set of schematic folders
 in the schematic dataset(s) related to the schematic layers under a
 schematic service. It is returned as an array of &lt;Schematic Folder Object&gt;
@@ -1614,16 +860,16 @@ by the REST API.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.lyr.SchematicsService.schematic_layers">
-<code class="descname">schematic_layers</code><a class="headerlink" href="#arcgis.lyr.SchematicsService.schematic_layers" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.SchematicsLayer.layers">
+<code class="descname">layers</code><a class="headerlink" href="#arcgis.lyr.SchematicsLayer.layers" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Schematic Layers resource represents all the schematic layers
 under a schematic service published by ArcGIS Server. It is returned
 as an array of Schematic Layer resources by the REST API.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.SchematicsService.search_diagrams">
-<code class="descname">search_diagrams</code><span class="sig-paren">(</span><em>whereClause=None</em>, <em>relatedObjects=None</em>, <em>relatedSchematicObjects=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.SchematicsService.search_diagrams" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.SchematicsLayer.search_diagrams">
+<code class="descname">search_diagrams</code><span class="sig-paren">(</span><em>whereClause=None</em>, <em>relatedObjects=None</em>, <em>relatedSchematicObjects=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.SchematicsLayer.search_diagrams" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Schematic Search Diagrams operation is performed on the schematic
 service resource. The result of this operation is an array of Schematic
 Diagram Information Object.</p>
@@ -1663,8 +909,8 @@ feature class.</dd>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.lyr.SchematicsService.templates">
-<code class="descname">templates</code><a class="headerlink" href="#arcgis.lyr.SchematicsService.templates" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.lyr.SchematicsLayer.templates">
+<code class="descname">templates</code><a class="headerlink" href="#arcgis.lyr.SchematicsLayer.templates" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Schematic Diagram Templates represents all the schematic diagram
 templates related to the published schematic layers under a schematic
 service. It is returned as an array of Schematic Diagram Template
@@ -1686,7 +932,7 @@ resources by the REST API.</p>
         <a href="arcgis.viz.html" class="btn btn-neutral float-right" title="arcgis.viz module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="arcgis.features.summarize_data.html" class="btn btn-neutral" title="arcgis.features.summarize_data module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="arcgis.geometry.html" class="btn btn-neutral" title="arcgis.geometry module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -33,7 +33,9 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 0.3 documentation" href="index.html"/> 
+    <link rel="top" title="arcgis 0.3 documentation" href="index.html"/>
+        <link rel="next" title="arcgis.features.managers module" href="arcgis.features.managers.html"/>
+        <link rel="prev" title="arcgis.gis module" href="arcgis.gis.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -83,7 +85,7 @@
             
             
                 <p class="caption"><span class="caption-text">arcgis</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.html">arcgis.gis module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#gis">GIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#item">Item</a></li>
@@ -96,14 +98,14 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#datastoremanager">DatastoreManager</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#feature">Feature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featurelayer">FeatureLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#table">Table</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featuredataset">FeatureDataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featureset">FeatureSet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featurecollection">FeatureCollection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#submodules">Submodules</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.features module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#feature">Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#featurelayer">FeatureLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table">Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#featuredataset">FeatureDataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#featureset">FeatureSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#featurecollection">FeatureCollection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#replicamanager">ReplicaManager</a></li>
@@ -275,7 +277,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/arcgis.features.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/arcgis.features.toc.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -298,8 +300,8 @@ which act as primary and foreign keys.  A collection of feature classes and tabl
 relationships among the entities, is a feature dataset. FeatureDatasets are one of the dataset types contained
 in a Datastore.  Finally, features are not simply entities in a dataset.  Features have a visual representation
 and user experience - on a map, in a 3D scene, as entities with a property sheet or popups.</p>
-<div class="section" id="arcgis-features-feature">
-<h2>arcgis.features.Feature<a class="headerlink" href="#arcgis-features-feature" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="feature">
+<h2>Feature<a class="headerlink" href="#feature" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="arcgis.features.Feature">
 <em class="property">class </em><code class="descclassname">arcgis.features.</code><code class="descname">Feature</code><span class="sig-paren">(</span><em>geometry=None</em>, <em>attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.Feature" title="Permalink to this definition">¶</a></dt>
@@ -371,8 +373,8 @@ returns a list of fields and the row object</div></blockquote>
 </dd></dl>
 
 </div>
-<div class="section" id="arcgis-features-featurelayer">
-<h2>arcgis.features.FeatureLayer<a class="headerlink" href="#arcgis-features-featurelayer" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="featurelayer">
+<h2>FeatureLayer<a class="headerlink" href="#featurelayer" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="arcgis.features.FeatureLayer">
 <em class="property">class </em><code class="descclassname">arcgis.features.</code><code class="descname">FeatureLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em>, <em>storage=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.FeatureLayer" title="Permalink to this definition">¶</a></dt>
@@ -720,8 +722,8 @@ not returned. The default is false.</dd>
 </dd></dl>
 
 </div>
-<div class="section" id="arcgis-features-table">
-<h2>arcgis.features.Table<a class="headerlink" href="#arcgis-features-table" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="table">
+<h2>Table<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="arcgis.features.Table">
 <em class="property">class </em><code class="descclassname">arcgis.features.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em>, <em>storage=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.Table" title="Permalink to this definition">¶</a></dt>
@@ -1067,8 +1069,8 @@ not returned. The default is false.</dd>
 </dd></dl>
 
 </div>
-<div class="section" id="arcgis-features-featuredataset">
-<h2>arcgis.features.FeatureDataset<a class="headerlink" href="#arcgis-features-featuredataset" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="featuredataset">
+<h2>FeatureDataset<a class="headerlink" href="#featuredataset" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="arcgis.features.FeatureDataset">
 <em class="property">class </em><code class="descclassname">arcgis.features.</code><code class="descname">FeatureDataset</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.FeatureDataset" title="Permalink to this definition">¶</a></dt>
@@ -1170,8 +1172,8 @@ not returned. The default is false.</dd>
 </dd></dl>
 
 </div>
-<div class="section" id="arcgis-features-featureset">
-<h2>arcgis.features.FeatureSet<a class="headerlink" href="#arcgis-features-featureset" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="featureset">
+<h2>FeatureSet<a class="headerlink" href="#featureset" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="arcgis.features.FeatureSet">
 <em class="property">class </em><code class="descclassname">arcgis.features.</code><code class="descname">FeatureSet</code><span class="sig-paren">(</span><em>features</em>, <em>fields=None</em>, <em>has_z=False</em>, <em>has_m=False</em>, <em>geometry_type=None</em>, <em>spatial_reference=None</em>, <em>display_field_name=None</em>, <em>object_id_field_name=None</em>, <em>global_id_field_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.FeatureSet" title="Permalink to this definition">¶</a></dt>
@@ -1290,8 +1292,8 @@ outName - name of the table the data will be saved to</p>
 </dd></dl>
 
 </div>
-<div class="section" id="arcgis-features-featurecollection">
-<h2>arcgis.features.FeatureCollection<a class="headerlink" href="#arcgis-features-featurecollection" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="featurecollection">
+<h2>FeatureCollection<a class="headerlink" href="#featurecollection" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="arcgis.features.FeatureCollection">
 <em class="property">class </em><code class="descclassname">arcgis.features.</code><code class="descname">FeatureCollection</code><span class="sig-paren">(</span><em>dictdata</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.FeatureCollection" title="Permalink to this definition">¶</a></dt>
@@ -1309,12 +1311,69 @@ if an output name for a feature layer is not specified when calling the tool.</p
 </dd></dl>
 
 </div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound" id="arcgis-features">
+<p class="caption"><span class="caption-text">arcgis.features</span><a class="headerlink" href="#arcgis-features" title="Permalink to this toctree">¶</a></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#replicamanager">ReplicaManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#featuredatasetmanager">FeatureDatasetManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#featurelayermanager">FeatureLayerManager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#interpolate-points">interpolate_points</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.enrich_data.html#enrich-layer">enrich_layer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#find-existing-locations">find_existing_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#derive-new-locations">derive_new_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#find-similar-locations">find_similar_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#choose-best-facilities">choose_best_facilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#create-viewshed">create_viewshed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#create-watersheds">create_watersheds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.find_locations.html#trace-downstream">trace_downstream</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.manage_data.html">arcgis.features.manage_data module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#dissolve-boundaries">dissolve_boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#extract-data">extract_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#merge-layers">merge_layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.manage_data.html#overlay-layers">overlay_layers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#aggregate-points">aggregate_points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-nearby">summarize_nearby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 </div>
 
 
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arcgis.features.managers.html" class="btn btn-neutral float-right" title="arcgis.features.managers module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="arcgis.gis.html" class="btn btn-neutral" title="arcgis.gis module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

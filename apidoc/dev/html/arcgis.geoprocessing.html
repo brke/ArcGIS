@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.features.find_locations module &mdash; arcgis 0.3 documentation</title>
+  <title>arcgis.geoprocessing module &mdash; arcgis 0.3 documentation</title>
   
 
   
@@ -34,9 +34,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="arcgis 0.3 documentation" href="index.html"/>
-        <link rel="up" title="arcgis.features module" href="arcgis.features.toc.html"/>
-        <link rel="next" title="arcgis.features.manage_data module" href="arcgis.features.manage_data.html"/>
-        <link rel="prev" title="arcgis.features.enrich_data module" href="arcgis.features.enrich_data.html"/> 
+        <link rel="next" title="arcgis.geometry module" href="arcgis.geometry.html"/>
+        <link rel="prev" title="arcgis.geocoding module" href="arcgis.geocoding.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -99,14 +98,14 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#datastoremanager">DatastoreManager</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#feature">Feature</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featurelayer">FeatureLayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#table">Table</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featuredataset">FeatureDataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featureset">FeatureSet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featurecollection">FeatureCollection</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="arcgis.features.toc.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#replicamanager">ReplicaManager</a></li>
@@ -124,14 +123,14 @@
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.enrich_data.html#enrich-layer">enrich_layer</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.features.find_locations module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#find-existing-locations">find_existing_locations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#derive-new-locations">derive_new_locations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#find-similar-locations">find_similar_locations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#choose-best-facilities">choose_best_facilities</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-viewshed">create_viewshed</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-watersheds">create_watersheds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#trace-downstream">trace_downstream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#find-existing-locations">find_existing_locations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#derive-new-locations">derive_new_locations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#find-similar-locations">find_similar_locations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#choose-best-facilities">choose_best_facilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#create-viewshed">create_viewshed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#create-watersheds">create_watersheds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#trace-downstream">trace_downstream</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.manage_data.html">arcgis.features.manage_data module</a><ul>
@@ -195,8 +194,8 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#suggest">suggest</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.geoprocessing module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#geoprocessingtool">GeoprocessingTool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a><ul>
@@ -274,13 +273,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-          <li><a href="arcgis.features.toc.html">arcgis.features module</a> &raquo;</li>
-      
-    <li>arcgis.features.find_locations module</li>
+    <li>arcgis.geoprocessing module</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/arcgis.features.find_locations.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/arcgis.geoprocessing.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -290,166 +287,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-arcgis.features.find_locations">
-<span id="arcgis-features-find-locations-module"></span><h1>arcgis.features.find_locations module<a class="headerlink" href="#module-arcgis.features.find_locations" title="Permalink to this headline">¶</a></h1>
-<p>These tools are used to identify areas that meet a number of different criteria you specify. These criteria can be based
-upon attribute queries (for example, parcels that are vacant) and spatial queries (for example, within 1 kilometer of a
-river). The areas that are found can be selected from existing features (such as existing land parcels) or new features
-can be created where all the requirements are met.</p>
-<p>find_existing_locations searches for existing areas in a layer that meet a series of criteria.
-derive_new_locations creates new areas from locations in your study area that meet a series of criteria.
-find_similar_locations finds locations most similar to one or more reference locations based on criteria you specify.
-choose_best_facilities choose the best locations for facilities by allocating locations that have demand for these
-facilities in a way that satisfies a given goal.
-create_viewshed creates areas that are visible based on locations you specify.
-create_watersheds creates catchment areas based on locations you specify.
-trace_downstream determines the flow paths in a downstream direction from the locations you specify</p>
-<div class="section" id="find-existing-locations">
-<h2>find_existing_locations<a class="headerlink" href="#find-existing-locations" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="module-arcgis.geoprocessing">
+<span id="arcgis-geoprocessing-module"></span><h1>arcgis.geoprocessing module<a class="headerlink" href="#module-arcgis.geoprocessing" title="Permalink to this headline">¶</a></h1>
+<p>Allows invocation of Geoprocessing tools in the GIS</p>
+<div class="section" id="geoprocessingtool">
+<h2>GeoprocessingTool<a class="headerlink" href="#geoprocessingtool" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geoprocessing.GeoprocessingTool">
+<em class="property">class </em><code class="descclassname">arcgis.geoprocessing.</code><code class="descname">GeoprocessingTool</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GeoprocessingTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>A geoprocessing tool.</p>
 <dl class="method">
-<dt id="arcgis.features.find_locations.find_existing_locations">
-<code class="descclassname">find_locations.</code><code class="descname">find_existing_locations</code><span class="sig-paren">(</span><em>input_layers=[]</em>, <em>expressions=[]</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.find_locations.find_existing_locations" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Find Existing Locations task selects features in the input layer that meet a query you specify.
-A query is made up of one or more expressions. There are two types of expressions: attribute and spatial.
-An example of an attribute expression is that a parcel must be vacant, which is an attribute of the Parcels layer
-(where STATUS = &#8216;VACANT&#8217;). An example of a spatial expression is that the parcel must also be within a certain
-distance of a river (Parcels within a distance of 0.75 Miles from Rivers).</p>
-<dl class="docutils">
-<dt>input_layers</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Required list of strings</span><dd>A list of layers that will be used in the expressions parameter.</dd>
-<dt>expressions</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span><dd>Specify a list of expressions. Please refer documentation at <a class="reference external" href="http://developers.arcgis.com">http://developers.arcgis.com</a> for more information
-on creating expressions.</dd>
-<dt>output_name</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional properties such as output feature service name.</dd>
-<dt>context</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional settings such as processing extent and output spatial reference.</dd>
-</dl>
-<p>result_layer : layer (FeatureCollection)</p>
-</dd></dl>
+<dt id="arcgis.geoprocessing.GeoprocessingTool.execute">
+<code class="descname">execute</code><span class="sig-paren">(</span><em>task</em>, <em>input</em>, <em>outSR=None</em>, <em>processSR=None</em>, <em>returnZ=False</em>, <em>returnM=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GeoprocessingTool.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
-</div>
-<div class="section" id="derive-new-locations">
-<h2>derive_new_locations<a class="headerlink" href="#derive-new-locations" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.features.find_locations.derive_new_locations">
-<code class="descclassname">find_locations.</code><code class="descname">derive_new_locations</code><span class="sig-paren">(</span><em>input_layers=[]</em>, <em>expressions=[]</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.find_locations.derive_new_locations" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Derive New Locations task derives new features from the input layers that meet a query you specify. A query is
-made up of one or more expressions. There are two types of expressions: attribute and spatial. An example of an
-attribute expression is that a parcel must be vacant, which is an attribute of the Parcels layer
-(where STATUS = &#8216;VACANT&#8217;). An example of a spatial expression is that the parcel must also be within a certain
-distance of a river (Parcels within a distance of 0.75 Miles from Rivers).The Derive New Locations task is very
-similar to the Find Existing Locations task, the main difference is that the result of Derive New Locations can
-contain partial features.In both tasks, the attribute expression  where and the spatial relationships within and
-contains return the same result. This is because these relationships return entire features.When intersects or
-withinDistance is used, Derive New Locations creates new features in the result. For example, when intersecting a
-parcel feature and a flood zone area that partially overlap each other, Find Existing Locations will return the
-entire parcel whereas Derive New Locations will return just the portion of the parcel that is within the flood zone.</p>
-<dl class="docutils">
-<dt>input_layers</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Required list of strings</span><dd>A list of layers that will be used in the expressions parameter.</dd>
-<dt>expressions</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Required string</span><dd>Specify a list of expressions. Please refer documentation at <a class="reference external" href="http://developers.arcgis.com">http://developers.arcgis.com</a> for more information
-on expressions.</dd>
-<dt>output_name</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional properties such as output feature service name.</dd>
-<dt>context</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>Additional settings such as processing extent and output spatial reference.</dd>
-</dl>
-<p>result_layer : layer (FeatureCollection)</p>
-</dd></dl>
-
-</div>
-<div class="section" id="find-similar-locations">
-<h2>find_similar_locations<a class="headerlink" href="#find-similar-locations" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.features.find_locations.find_similar_locations">
-<code class="descclassname">find_locations.</code><code class="descname">find_similar_locations</code><span class="sig-paren">(</span><em>input_layer</em>, <em>search_layer</em>, <em>analysis_fields=[]</em>, <em>input_query=None</em>, <em>number_of_results=0</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.find_locations.find_similar_locations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Finds the locations that are most similar to one or more reference locations based on criteria that you specify.</p>
-<p>input_layer : Required layer (see Feature Input in documentation)</p>
-<p>search_layer : Required layer (see Feature Input in documentation)</p>
-<p>analysis_fields : Required list of strings</p>
-<p>input_query : Optional string</p>
-<p>number_of_results : Optional int</p>
-<p>output_name : Optional string</p>
-<p>context : Optional string</p>
-<dl class="docutils">
-<dt>dict with the following keys:</dt>
-<dd>&#8220;similar_result_layer&#8221; : layer (FeatureCollection)
-&#8220;process_info&#8221; : layer (FeatureCollection)</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="choose-best-facilities">
-<h2>choose_best_facilities<a class="headerlink" href="#choose-best-facilities" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.features.find_locations.choose_best_facilities">
-<code class="descclassname">find_locations.</code><code class="descname">choose_best_facilities</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.find_locations.choose_best_facilities" title="Permalink to this definition">¶</a></dt>
-<dd><p>Choose the best locations for facilities by allocating locations that have demand for these facilities in a way that
-satisfies a given goal.</p>
-</dd></dl>
-
-</div>
-<div class="section" id="create-viewshed">
-<h2>create_viewshed<a class="headerlink" href="#create-viewshed" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.features.find_locations.create_viewshed">
-<code class="descclassname">find_locations.</code><code class="descname">create_viewshed</code><span class="sig-paren">(</span><em>input_layer</em>, <em>dem_resolution='Finest'</em>, <em>maximum_distance=None</em>, <em>max_distance_units='Meters'</em>, <em>observer_height=None</em>, <em>observer_height_units='Meters'</em>, <em>target_height=None</em>, <em>target_height_units='Meters'</em>, <em>generalize=True</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.find_locations.create_viewshed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates areas that are visible based on locations you specify.</p>
-<p>input_layer : Required layer (see Feature Input in documentation)</p>
-<p>dem_resolution : Optional string</p>
-<p>maximum_distance : Optional float</p>
-<p>max_distance_units : Optional string</p>
-<p>observer_height : Optional float</p>
-<p>observer_height_units : Optional string</p>
-<p>target_height : Optional float</p>
-<p>target_height_units : Optional string</p>
-<p>generalize : Optional bool</p>
-<p>output_name : Optional string</p>
-<p>context : Optional string</p>
-<p>viewshed_layer : layer (FeatureCollection)</p>
-</dd></dl>
-
-</div>
-<div class="section" id="create-watersheds">
-<h2>create_watersheds<a class="headerlink" href="#create-watersheds" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.features.find_locations.create_watersheds">
-<code class="descclassname">find_locations.</code><code class="descname">create_watersheds</code><span class="sig-paren">(</span><em>input_layer</em>, <em>search_distance=None</em>, <em>search_units='Meters'</em>, <em>source_database='FINEST'</em>, <em>generalize=True</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.find_locations.create_watersheds" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates catchment areas based on locations you specify.</p>
-<p>input_layer : Required layer (see Feature Input in documentation)</p>
-<p>search_distance : Optional float</p>
-<p>search_units : Optional string</p>
-<p>source_database : Optional string</p>
-<p>generalize : Optional bool</p>
-<p>output_name : Optional string</p>
-<p>context : Optional string</p>
-<dl class="docutils">
-<dt>dict with the following keys:</dt>
-<dd>&#8220;snap_pour_pts_layer&#8221; : layer (FeatureCollection)
-&#8220;watershed_layer&#8221; : layer (FeatureCollection)</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="trace-downstream">
-<h2>trace_downstream<a class="headerlink" href="#trace-downstream" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.features.find_locations.trace_downstream">
-<code class="descclassname">find_locations.</code><code class="descname">trace_downstream</code><span class="sig-paren">(</span><em>input_layer</em>, <em>split_distance=None</em>, <em>split_units='Kilometers'</em>, <em>max_distance=None</em>, <em>max_distance_units='Kilometers'</em>, <em>bounding_polygon_layer=None</em>, <em>source_database=None</em>, <em>generalize=True</em>, <em>output_name=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.find_locations.trace_downstream" title="Permalink to this definition">¶</a></dt>
-<dd><p>Determine the flow paths in a downstream direction from the locations you specify.</p>
-<p>input_layer : Required layer (see Feature Input in documentation)</p>
-<p>split_distance : Optional float</p>
-<p>split_units : Optional string</p>
-<p>max_distance : Optional float</p>
-<p>max_distance_units : Optional string</p>
-<p>bounding_polygon_layer : Optional layer (see Feature Input in documentation)</p>
-<p>source_database : Optional string</p>
-<p>generalize : Optional bool</p>
-<p>output_name : Optional string</p>
-<p>context : Optional string</p>
-<p>trace_layer : layer (FeatureCollection)</p>
 </dd></dl>
 
 </div>
@@ -462,10 +313,10 @@ satisfies a given goal.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="arcgis.features.manage_data.html" class="btn btn-neutral float-right" title="arcgis.features.manage_data module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="arcgis.geometry.html" class="btn btn-neutral float-right" title="arcgis.geometry module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="arcgis.features.enrich_data.html" class="btn btn-neutral" title="arcgis.features.enrich_data module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="arcgis.geocoding.html" class="btn btn-neutral" title="arcgis.geocoding module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

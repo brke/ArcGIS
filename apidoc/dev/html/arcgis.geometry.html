@@ -1,0 +1,1342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>arcgis.geometry module &mdash; arcgis 0.3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="arcgis 0.3 documentation" href="index.html"/>
+        <link rel="next" title="arcgis.lyr module" href="arcgis.lyr.html"/>
+        <link rel="prev" title="arcgis.geoprocessing module" href="arcgis.geoprocessing.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> arcgis
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">arcgis</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="arcgis.gis.html">arcgis.gis module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#gis">GIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#item">Item</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#user">User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#group">Group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#datastore">Datastore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#contentmanager">ContentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#usermanager">UserManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#groupmanager">GroupManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#datastoremanager">DatastoreManager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#feature">Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featurelayer">FeatureLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#table">Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featuredataset">FeatureDataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featureset">FeatureSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featurecollection">FeatureCollection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#replicamanager">ReplicaManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featuredatasetmanager">FeatureDatasetManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayermanager">FeatureLayerManager</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#interpolate-points">interpolate_points</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.enrich_data.html#enrich-layer">enrich_layer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#find-existing-locations">find_existing_locations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#derive-new-locations">derive_new_locations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#find-similar-locations">find_similar_locations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#choose-best-facilities">choose_best_facilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#create-viewshed">create_viewshed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#create-watersheds">create_watersheds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.find_locations.html#trace-downstream">trace_downstream</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.manage_data.html">arcgis.features.manage_data module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.manage_data.html#dissolve-boundaries">dissolve_boundaries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.manage_data.html#extract-data">extract_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.manage_data.html#merge-layers">merge_layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.manage_data.html#overlay-layers">overlay_layers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#aggregate-points">aggregate_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-nearby">summarize_nearby</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.raster.html">arcgis.raster module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#imagelayer">ImageLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#generate-raster">generate_raster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#rasterize">rasterize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#interpolate">interpolate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#summarize-raster-within">summarize_raster_within</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#density">density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#classify">classify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#segment-mean-shift">segment_mean_shift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#train-classifier">train_classifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.html#convert-raster-to-feature">convert_raster_to_feature</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.network.html">arcgis.network module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#networklayer">NetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#routelayer">RouteLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#servicearealayer">ServiceAreaLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#closestfacilitylayer">ClosestFacilityLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#networkdataset">NetworkDataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.html">arcgis.geoanalytics module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#aggregate-points">aggregate_points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#describe-dataset">describe_dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#join-features">join_features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#create-buffers">create_buffers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#calculate-density">calculate_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#reconstruct-tracks">reconstruct_tracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#create-space-time-cube">create_space_time_cube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#create-panel-data">create_panel_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#copy-to-data-store">copy_to_data_store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#summarize-attributes">summarize_attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#summarize-within">summarize_within</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#find-hot-spots">find_hot_spots</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geocoding.html">arcgis.geocoding module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#geocode">geocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#reverse-geocode">reverse_geocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#batch-geocode">batch_geocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#find-best-match">find_best_match</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#suggest">suggest</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.geometry module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#point">Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#multipoint">MultiPoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#polyline">PolyLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#polygon">Polygon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#envelope">Envelope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spatialreference">SpatialReference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#geometry">Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#areas-and-lengths">areas_and_lengths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#auto-complete">auto_complete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buffer">buffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convex-hull">convex_hull</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cut">cut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#density">density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#difference">difference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#distance">distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#find-transformation">find_transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#from-geo-coordinate-string">from_geo_coordinate_string</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generalize">generalize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#intersect">intersect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#label-points">label_points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lengths">lengths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#offset">offset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#project">project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#relation">relation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reshape">reshape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-geo-coordinate-string">to_geo_coordinate_string</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trim-extend">trim_extend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#union">union</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.lyr.html">arcgis.lyr module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#layer">Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#dynamicmaplayer">DynamicMapLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#dynamicmaplayermanager">DynamicMapLayerManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#vectortilelayer">VectorTileLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#schematicslayer">SchematicsLayer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.viz.html">arcgis.viz module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#webmap">WebMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#webscene">WebScene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#mapview">MapView</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">arcgis</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>arcgis.geometry module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/arcgis.geometry.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="arcgis-geometry-module">
+<h1>arcgis.geometry module<a class="headerlink" href="#arcgis-geometry-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="point">
+<h2>Point<a class="headerlink" href="#point" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geometry.Point">
+<em class="property">class </em><code class="descclassname">arcgis.geometry.</code><code class="descname">Point</code><span class="sig-paren">(</span><em>iterable=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Point" title="Permalink to this definition">¶</a></dt>
+<dd><p>A point contains x and y fields along with a spatialReference field. A
+point can also contain m and z fields. A point is empty when its x
+field is present and has the value null or the string &#8220;NaN&#8221;. An empty
+point has no location in space.</p>
+<dl class="attribute">
+<dt id="arcgis.geometry.Point.type">
+<code class="descname">type</code><a class="headerlink" href="#arcgis.geometry.Point.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="multipoint">
+<h2>MultiPoint<a class="headerlink" href="#multipoint" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geometry.MultiPoint">
+<em class="property">class </em><code class="descclassname">arcgis.geometry.</code><code class="descname">MultiPoint</code><span class="sig-paren">(</span><em>iterable=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.MultiPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>A multipoint contains an array of points, along with a spatialReference
+field. A multipoint can also have boolean-valued hasZ and hasM fields.
+These fields control the interpretation of elements of the points
+array. Omitting an hasZ or hasM field is equivalent to setting it to
+false.
+Each element of the points array is itself an array of two, three, or
+four numbers. It will have two elements for 2D points, two or three
+elements for 2D points with Ms, three elements for 3D points, and three
+or four elements for 3D points with Ms. In all cases, the x coordinate
+is at index 0 of a point&#8217;s array, and the y coordinate is at index 1.
+For 2D points with Ms, the m coordinate, if present, is at index 2. For
+3D points, the Z coordinate is required and is at index 2. For 3D
+points with Ms, the Z coordinate is at index 2, and the M coordinate,
+if present, is at index 3.
+An empty multipoint has a points field with no elements. Empty points
+are ignored.</p>
+<dl class="attribute">
+<dt id="arcgis.geometry.MultiPoint.type">
+<code class="descname">type</code><a class="headerlink" href="#arcgis.geometry.MultiPoint.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="polyline">
+<h2>PolyLine<a class="headerlink" href="#polyline" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="polygon">
+<h2>Polygon<a class="headerlink" href="#polygon" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geometry.Polygon">
+<em class="property">class </em><code class="descclassname">arcgis.geometry.</code><code class="descname">Polygon</code><span class="sig-paren">(</span><em>iterable=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>A polygon contains an array of rings or curveRings and a
+spatialReference. For polygons with curveRings, see the sections on
+JSON curve object and Polygon with curve. Each ring is represented as
+an array of points. The first point of each ring is always the same as
+the last point. Each point in the ring is represented as an array of
+numbers. A polygon can also have boolean-valued hasM and hasZ fields.</p>
+<p>An empty polygon is represented with an empty array for the rings
+field. Nulls and/or NaNs embedded in an otherwise defined coordinate
+stream for polylines/polygons is a syntax error.
+Polygons should be topologically simple. Exterior rings are oriented
+clockwise, while holes are oriented counter-clockwise. Rings can touch
+at a vertex or self-touch at a vertex, but there should be no other
+intersections. Polygons returned by services are topologically simple.
+When drawing a polygon, use the even-odd fill rule. The even-odd fill
+rule will guarantee that the polygon will draw correctly even if the
+ring orientation is not as described above.</p>
+<dl class="attribute">
+<dt id="arcgis.geometry.Polygon.type">
+<code class="descname">type</code><a class="headerlink" href="#arcgis.geometry.Polygon.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="envelope">
+<h2>Envelope<a class="headerlink" href="#envelope" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geometry.Envelope">
+<em class="property">class </em><code class="descclassname">arcgis.geometry.</code><code class="descname">Envelope</code><span class="sig-paren">(</span><em>iterable=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Envelope" title="Permalink to this definition">¶</a></dt>
+<dd><p>An envelope is a rectangle defined by a range of values for each
+coordinate and attribute. It also has a spatialReference field. The
+fields for the z and m ranges are optional. An empty envelope has no
+in space and is defined by the presence of an xmin field a null value
+or a &#8220;NaN&#8221; string.</p>
+<dl class="attribute">
+<dt id="arcgis.geometry.Envelope.type">
+<code class="descname">type</code><a class="headerlink" href="#arcgis.geometry.Envelope.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="spatialreference">
+<h2>SpatialReference<a class="headerlink" href="#spatialreference" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geometry.SpatialReference">
+<em class="property">class </em><code class="descclassname">arcgis.geometry.</code><code class="descname">SpatialReference</code><span class="sig-paren">(</span><em>iterable=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.SpatialReference" title="Permalink to this definition">¶</a></dt>
+<dd><p>A spatial reference can be defined using a well-known ID (wkid) or
+well-known text (wkt). The default tolerance and resolution values for
+the associated coordinate system are used. The xy and z tolerance
+values are 1 mm or the equivalent in the unit of the coordinate system.
+If the coordinate system uses feet, the tolerance is 0.00328083333 ft.
+The resolution values are 10x smaller or 1/10 the tolerance values.
+Thus, 0.0001 m or 0.0003280833333 ft. For geographic coordinate systems
+using degrees, the equivalent of a mm at the equator is used.
+The well-known ID (WKID) for a given spatial reference can occasionally
+change. For example, the WGS 1984 Web Mercator (Auxiliary Sphere)
+projection was originally assigned WKID 102100, but was later changed
+to 3857. To ensure backward compatibility with older spatial data
+servers, the JSON wkid property will always be the value that was
+originally assigned to an SR when it was created.
+An additional property, latestWkid, identifies the current WKID value
+(as of a given software release) associated with the same spatial
+reference.
+A spatial reference can optionally include a definition for a vertical
+coordinate system (VCS), which is used to interpret the z-values of a
+geometry. A VCS defines units of measure, the location of z = 0, and
+whether the positive vertical direction is up or down. When a vertical
+coordinate system is specified with a WKID, the same caveat as
+mentioned above applies. There are two VCS WKID properties: vcsWkid and
+latestVcsWkid. A VCS WKT can also be embedded in the string value of
+the wkt property. In other words, the WKT syntax can be used to define
+an SR with both horizontal and vertical components in one string. If
+either part of an SR is custom, the entire SR will be serialized with
+only the wkt property.
+Starting at 10.3, Image Service supports image coordinate systems.</p>
+<dl class="attribute">
+<dt id="arcgis.geometry.SpatialReference.type">
+<code class="descname">type</code><a class="headerlink" href="#arcgis.geometry.SpatialReference.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="geometry">
+<h2>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geometry.Geometry">
+<em class="property">class </em><code class="descclassname">arcgis.geometry.</code><code class="descname">Geometry</code><span class="sig-paren">(</span><em>iterable=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="areas-and-lengths">
+<h2>areas_and_lengths<a class="headerlink" href="#areas-and-lengths" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.areas_and_lengths">
+<code class="descclassname">geometry.</code><code class="descname">areas_and_lengths</code><span class="sig-paren">(</span><em>polygons</em>, <em>lengthUnit</em>, <em>areaUnit</em>, <em>calculationType</em>, <em>sr=4326</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.areas_and_lengths" title="Permalink to this definition">¶</a></dt>
+<dd><p>The areasAndLengths operation is performed on a geometry service
+resource. This operation calculates areas and perimeter lengths
+for each polygon specified in the input array.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>polygons - The array of polygons whose areas and lengths are</dt>
+<dd>to be computed.</dd>
+<dt>lengthUnit - The length unit in which the perimeters of</dt>
+<dd>polygons will be calculated. If calculationType
+is planar, then lengthUnit can be any esriUnits
+constant. If lengthUnit is not specified, the
+units are derived from sr. If calculationType is
+not planar, then lengthUnit must be a linear
+esriUnits constant, such as esriSRUnit_Meter or
+esriSRUnit_SurveyMile. If lengthUnit is not
+specified, the units are meters. For a list of
+valid units, see esriSRUnitType Constants and
+esriSRUnit2Type Constant.</dd>
+<dt>areaUnit - The area unit in which areas of polygons will be</dt>
+<dd>calculated. If calculationType is planar, then
+areaUnit can be any esriUnits constant. If
+areaUnit is not specified, the units are derived
+from sr. If calculationType is not planar, then
+areaUnit must be a linear esriUnits constant such
+as esriSRUnit_Meter or esriSRUnit_SurveyMile. If
+areaUnit is not specified, then the units are
+meters. For a list of valid units, see
+esriSRUnitType Constants and esriSRUnit2Type
+constant.
+The list of valid esriAreaUnits constants include,
+esriSquareInches | esriSquareFeet |
+esriSquareYards | esriAcres | esriSquareMiles |
+esriSquareMillimeters | esriSquareCentimeters |
+esriSquareDecimeters | esriSquareMeters | esriAres
+| esriHectares | esriSquareKilometers.</dd>
+<dt>calculationType -  The type defined for the area and length</dt>
+<dd><p class="first">calculation of the input geometries. The
+type can be one of the following values:
+planar - Planar measurements use 2D</p>
+<blockquote>
+<div>Euclidean distance to calculate
+area and length. Th- should
+only be used if the area or
+length needs to be calculated in
+the given spatial reference.
+Otherwise, use preserveShape.</div></blockquote>
+<dl class="last docutils">
+<dt>geodesic - Use this type if you want to</dt>
+<dd>calculate an area or length using
+only the vertices of the polygon
+and define the lines between the
+points as geodesic segments
+independent of the actual shape
+of the polygon. A geodesic
+segment is the shortest path
+between two points on an ellipsoid.</dd>
+<dt>preserveShape - This type calculates the</dt>
+<dd>area or length of the geometry on
+the surface of the Earth
+ellipsoid. The shape of the
+geometry in its coordinate system
+is preserved.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>Output:</dt>
+<dd>JSON as dictionary</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="auto-complete">
+<h2>auto_complete<a class="headerlink" href="#auto-complete" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.auto_complete">
+<code class="descclassname">geometry.</code><code class="descname">auto_complete</code><span class="sig-paren">(</span><em>polygons=None</em>, <em>polylines=None</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.auto_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>The autoComplete operation simplifies the process of
+constructing new polygons that are adjacent to other polygons.
+It constructs polygons that fill in the gaps between existing
+polygons and a set of polylines.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd>polygons - array of Polygon objects
+polylines - list of Polyline objects
+sr - spatial reference of the input geometries WKID</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="buffer">
+<h2>buffer<a class="headerlink" href="#buffer" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.buffer">
+<code class="descclassname">geometry.</code><code class="descname">buffer</code><span class="sig-paren">(</span><em>geometries</em>, <em>inSR</em>, <em>distances</em>, <em>unit</em>, <em>outSR=None</em>, <em>bufferSR=None</em>, <em>unionResults=True</em>, <em>geodesic=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The buffer operation is performed on a geometry service resource
+The result of this operation is buffered polygons at the
+specified distances for the input geometry array. Options are
+available to union buffers and to use geodesic distance.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><p class="first">geometries - The array of geometries to be buffered.
+isSR - The well-known ID of the spatial reference or a spatial</p>
+<blockquote>
+<div>reference JSON object for the input geometries.</div></blockquote>
+<dl class="last docutils">
+<dt>distances - The distances that each of the input geometries is</dt>
+<dd>buffered.</dd>
+<dt>unit - The units for calculating each buffer distance. If unit</dt>
+<dd>is not specified, the units are derived from bufferSR. If
+bufferSR is not specified, the units are derived from inSR.</dd>
+<dt>outSR - The well-known ID of the spatial reference or a</dt>
+<dd>spatial reference JSON object for the input geometries.</dd>
+<dt>bufferSR - The well-known ID of the spatial reference or a</dt>
+<dd>spatial reference JSON object for the input geometries.</dd>
+<dt>unionResults -  If true, all geometries buffered at a given</dt>
+<dd>distance are unioned into a single (possibly multipart)
+polygon, and the unioned geometry is placed in the output
+array. The default is false</dd>
+<dt>geodesic - Set geodesic to true to buffer the input geometries</dt>
+<dd>using geodesic distance. Geodesic distance is the shortest
+path between two points along the ellipsoid of the earth. If
+geodesic is set to false, the 2D Euclidean distance is used
+to buffer the input geometries. The default value depends on
+the geometry type, unit and bufferSR.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="convex-hull">
+<h2>convex_hull<a class="headerlink" href="#convex-hull" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.convex_hull">
+<code class="descclassname">geometry.</code><code class="descname">convex_hull</code><span class="sig-paren">(</span><em>geometries</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.convex_hull" title="Permalink to this definition">¶</a></dt>
+<dd><p>The convexHull operation is performed on a geometry service
+resource. It returns the convex hull of the input geometry. The
+input geometry can be a point, multipoint, polyline, or polygon.
+The convex hull is typically a polygon but can also be a polyline
+or point in degenerate cases.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><p class="first">geometries - The geometries whose convex hull is to be created.
+sr - The well-known ID or a spatial reference JSON object for</p>
+<blockquote class="last">
+<div>the output geometry.</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="cut">
+<h2>cut<a class="headerlink" href="#cut" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.cut">
+<code class="descclassname">geometry.</code><code class="descname">cut</code><span class="sig-paren">(</span><em>cutter</em>, <em>target</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.cut" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cut operation is performed on a geometry service resource. This
+operation splits the target polyline or polygon where it&#8217;s crossed
+by the cutter polyline.
+At 10.1 and later, this operation calls simplify on the input
+cutter and target geometries.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>cutter - The polyline that will be used to divide the target</dt>
+<dd>into pieces where it crosses the target.The spatial reference
+of the polylines is specified by sr. The structure of the
+polyline is the same as the structure of the JSON polyline
+objects returned by the ArcGIS REST API.</dd>
+<dt>target - The array of polylines/polygons to be cut. The</dt>
+<dd>structure of the geometry is the same as the structure of the
+JSON geometry objects returned by the ArcGIS REST API. The
+spatial reference of the target geometry array is specified by
+sr.</dd>
+<dt>sr - The well-known ID or a spatial reference JSON object for</dt>
+<dd>the output geometry.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="density">
+<h2>density<a class="headerlink" href="#density" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.density">
+<code class="descclassname">geometry.</code><code class="descname">density</code><span class="sig-paren">(</span><em>geometries</em>, <em>sr</em>, <em>maxSegmentLength</em>, <em>lengthUnit</em>, <em>geodesic=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.density" title="Permalink to this definition">¶</a></dt>
+<dd><p>The densify operation is performed on a geometry service resource.
+This operation densifies geometries by plotting points between
+existing vertices.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>geometries - The array of geometries to be densified. The</dt>
+<dd>structure of each geometry in the array is the same as the
+structure of the JSON geometry objects returned by the ArcGIS
+REST API.</dd>
+<dt>sr - The well-known ID or a spatial reference JSON object for</dt>
+<dd>the input polylines. For a list of valid WKID values, see
+Projected coordinate systems and Geographic coordinate systems.</dd>
+<dt>maxSegmentLength - All segments longer than maxSegmentLength are</dt>
+<dd>replaced with sequences of lines no longer than
+maxSegmentLength.</dd>
+<dt>lengthUnit - The length unit of maxSegmentLength. If geodesic is</dt>
+<dd>set to false, then the units are derived from sr, and
+lengthUnit is ignored. If geodesic is set to true, then
+lengthUnit must be a linear unit. In a case where lengthUnit is
+not specified and sr is a PCS, the units are derived from sr.
+In a case where lengthUnit is not specified and sr is a GCS,
+then the units are meters.</dd>
+<dt>geodesic - If geodesic is set to true, then geodesic distance is</dt>
+<dd>used to calculate maxSegmentLength. Geodesic distance is the
+shortest path between two points along the ellipsoid of the
+earth. If geodesic is set to false, then 2D Euclidean distance
+is used to calculate maxSegmentLength. The default is false.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="difference">
+<h2>difference<a class="headerlink" href="#difference" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.difference">
+<code class="descclassname">geometry.</code><code class="descname">difference</code><span class="sig-paren">(</span><em>geometries</em>, <em>sr</em>, <em>geometry</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.difference" title="Permalink to this definition">¶</a></dt>
+<dd><p>The difference operation is performed on a geometry service
+resource. This operation constructs the set-theoretic difference
+between each element of an array of geometries and another geometry
+the so-called difference geometry. In other words, let B be the
+difference geometry. For each geometry, A, in the input geometry
+array, it constructs A-B.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>geometries -  An array of points, multipoints, polylines or</dt>
+<dd>polygons. The structure of each geometry in the array is the
+same as the structure of the JSON geometry objects returned by
+the ArcGIS REST API.</dd>
+<dt>geometry - A single geometry of any type and of a dimension equal</dt>
+<dd>to or greater than the elements of geometries. The structure of
+geometry is the same as the structure of the JSON geometry
+objects returned by the ArcGIS REST API. The use of simple
+syntax is not supported.</dd>
+<dt>sr - The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference JSON object for the input geometries.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="distance">
+<h2>distance<a class="headerlink" href="#distance" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.distance">
+<code class="descclassname">geometry.</code><code class="descname">distance</code><span class="sig-paren">(</span><em>sr</em>, <em>geometry1</em>, <em>geometry2</em>, <em>distanceUnit=''</em>, <em>geodesic=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The distance operation is performed on a geometry service resource.
+It reports the 2D Euclidean or geodesic distance between the two
+geometries.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>sr - The well-known ID or a spatial reference JSON object for</dt>
+<dd>input geometries.</dd>
+<dt>geometry1 - The geometry from which the distance is to be</dt>
+<dd>measured. The structure of the geometry is same as the structure
+of the JSON geometry objects returned by the ArcGIS REST API.</dd>
+<dt>geometry2 - The geometry from which the distance is to be</dt>
+<dd>measured. The structure of the geometry is same as the structure
+of the JSON geometry objects returned by the ArcGIS REST API.</dd>
+<dt>distanceUnit - specifies the units for measuring distance between</dt>
+<dd>the geometry1 and geometry2 geometries.</dd>
+<dt>geodesic - If geodesic is set to true, then the geodesic distance</dt>
+<dd>between the geometry1 and geometry2 geometries is returned.
+Geodesic distance is the shortest path between two points along
+the ellipsoid of the earth. If geodesic is set to false or not
+specified, the planar distance is returned. The default value is
+false.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="find-transformation">
+<h2>find_transformation<a class="headerlink" href="#find-transformation" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.find_transformation">
+<code class="descclassname">geometry.</code><code class="descname">find_transformation</code><span class="sig-paren">(</span><em>inSR</em>, <em>outSR</em>, <em>extentOfInterest=None</em>, <em>numOfResults=1</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.find_transformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The findTransformations operation is performed on a geometry
+service resource. This operation returns a list of applicable
+geographic transformations you should use when projecting
+geometries from the input spatial reference to the output spatial
+reference. The transformations are in JSON format and are returned
+in order of most applicable to least applicable. Recall that a
+geographic transformation is not needed when the input and output
+spatial references have the same underlying geographic coordinate
+systems. In this case, findTransformations returns an empty list.
+Every returned geographic transformation is a forward
+transformation meaning that it can be used as-is to project from
+the input spatial reference to the output spatial reference. In the
+case where a predefined transformation needs to be applied in the
+reverse direction, it is returned as a forward composite
+transformation containing one transformation and a transformForward
+element with a value of false.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>inSR - The well-known ID (WKID) of the spatial reference or a</dt>
+<dd>spatial reference JSON object for the input geometries</dd>
+<dt>outSR - The well-known ID (WKID) of the spatial reference or a</dt>
+<dd>spatial reference JSON object for the input geometries</dd>
+<dt>extentOfInterest -  The bounding box of the area of interest</dt>
+<dd>specified as a JSON envelope. If provided, the extent of
+interest is used to return the most applicable geographic
+transformations for the area. If a spatial reference is not
+included in the JSON envelope, the inSR is used for the
+envelope.</dd>
+<dt>numOfResults - The number of geographic transformations to</dt>
+<dd>return. The default value is 1. If numOfResults has a value of
+-1, all applicable transformations are returned.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="from-geo-coordinate-string">
+<h2>from_geo_coordinate_string<a class="headerlink" href="#from-geo-coordinate-string" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.from_geo_coordinate_string">
+<code class="descclassname">geometry.</code><code class="descname">from_geo_coordinate_string</code><span class="sig-paren">(</span><em>sr</em>, <em>strings</em>, <em>conversionType</em>, <em>conversionMode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.from_geo_coordinate_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The from_geo_coordinate_string operation is performed on a geometry
+service resource. The operation converts an array of well-known
+strings into xy-coordinates based on the conversion type and
+spatial reference supplied by the user. An optional conversion mode
+parameter is available for some conversion types.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>sr - The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference json object.</dd>
+<dt>strings - An array of strings formatted as specified by</dt>
+<dd><p class="first">conversionType.
+Syntax: [&lt;string1&gt;,...,&lt;stringN&gt;]
+Example: [&#8220;01N AA 66021 00000&#8221;,&#8221;11S NT 00000 62155&#8221;,</p>
+<blockquote class="last">
+<div>&#8220;31U BT 94071 65288&#8221;]</div></blockquote>
+</dd>
+<dt>conversionType - The conversion type of the input strings.</dt>
+<dd><dl class="first last docutils">
+<dt>Valid conversion types are:</dt>
+<dd>MGRS - Military Grid Reference System
+USNG - United States National Grid
+UTM - Universal Transverse Mercator
+GeoRef - World Geographic Reference System
+GARS - Global Area Reference System
+DMS - Degree Minute Second
+DDM - Degree Decimal Minute
+DD - Decimal Degree</dd>
+</dl>
+</dd>
+<dt>conversionMode - Conversion options for MGRS, UTM and GARS</dt>
+<dd><p class="first">conversion types.
+Conversion options for MGRS and UTM conversion types.
+Valid conversion modes for MGRS are:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>mgrsDefault - Default. Uses the spheroid from the given spatial</dt>
+<dd>reference.</dd>
+<dt>mgrsNewStyle - Treats all spheroids as new, like WGS 1984. The</dt>
+<dd>180 degree longitude falls into Zone 60.</dd>
+<dt>mgrsOldStyle - Treats all spheroids as old, like Bessel 1841.</dt>
+<dd>The 180 degree longitude falls into Zone 60.</dd>
+<dt>mgrsNewWith180InZone01 - Same as mgrsNewStyle except the 180</dt>
+<dd>degree longitude falls into Zone 01.</dd>
+<dt>mgrsOldWith180InZone01 - Same as mgrsOldStyle except the 180</dt>
+<dd>degree longitude falls into Zone 01.</dd>
+</dl>
+</div></blockquote>
+<dl class="last docutils">
+<dt>Valid conversion modes for UTM are:</dt>
+<dd><p class="first">utmDefault - Default. No options.
+utmNorthSouth - Uses north/south latitude indicators instead of</p>
+<blockquote class="last">
+<div>zone numbers. Non-standard. Default is recommended</div></blockquote>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="generalize">
+<h2>generalize<a class="headerlink" href="#generalize" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.generalize">
+<code class="descclassname">geometry.</code><code class="descname">generalize</code><span class="sig-paren">(</span><em>sr</em>, <em>geometries</em>, <em>maxDeviation</em>, <em>deviationUnit</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.generalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>The generalize operation is performed on a geometry service
+resource. The generalize operation simplifies the input geometries
+using the Douglas-Peucker algorithm with a specified maximum
+deviation distance. The output geometries will contain a subset of
+the original input vertices.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first docutils">
+<dt>sr - The well-known ID or a spatial reference JSON object for the</dt>
+<dd>input geometries.</dd>
+</dl>
+<p>geometries - The array of geometries to be generalized.
+maxDeviation - maxDeviation sets the maximum allowable offset,</p>
+<blockquote>
+<div>which will determine the degree of simplification. This value
+limits the distance the output geometry can differ from the input
+geometry.</div></blockquote>
+<dl class="last docutils">
+<dt>deviationUnit - A unit for maximum deviation. If a unit is not</dt>
+<dd>specified, the units are derived from sr.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="intersect">
+<h2>intersect<a class="headerlink" href="#intersect" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.intersect">
+<code class="descclassname">geometry.</code><code class="descname">intersect</code><span class="sig-paren">(</span><em>sr</em>, <em>geometries</em>, <em>geometry</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.intersect" title="Permalink to this definition">¶</a></dt>
+<dd><p>The intersect operation is performed on a geometry service
+resource. This operation constructs the set-theoretic intersection
+between an array of geometries and another geometry. The dimension
+of each resultant geometry is the minimum dimension of the input
+geometry in the geometries array and the other geometry specified
+by the geometry parameter.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>sr - The well-known ID or a spatial reference JSON object for the</dt>
+<dd>input geometries.</dd>
+<dt>geometries - An array of points, multipoints, polylines, or</dt>
+<dd>polygons. The structure of each geometry in the array is the same
+as the structure of the JSON geometry objects returned by the
+ArcGIS REST API.</dd>
+<dt>geometry - A single geometry of any type with a dimension equal to</dt>
+<dd>or greater than the elements of geometries.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="label-points">
+<h2>label_points<a class="headerlink" href="#label-points" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.label_points">
+<code class="descclassname">geometry.</code><code class="descname">label_points</code><span class="sig-paren">(</span><em>sr</em>, <em>polygons</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.label_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>The label_points operation is performed on a geometry service
+resource. The labelPoints operation calculates an interior point
+for each polygon specified in the input array. These interior
+points can be used by clients for labeling the polygons.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>sr - The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference JSON object for the input polygons.</dd>
+<dt>polygons - The array of polygons whose label points are to be</dt>
+<dd>computed. The spatial reference of the polygons is specified by
+sr.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="lengths">
+<h2>lengths<a class="headerlink" href="#lengths" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.lengths">
+<code class="descclassname">geometry.</code><code class="descname">lengths</code><span class="sig-paren">(</span><em>sr</em>, <em>polylines</em>, <em>lengthUnit</em>, <em>calculationType</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.lengths" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lengths operation is performed on a geometry service resource.
+This operation calculates the 2D Euclidean or geodesic lengths of
+each polyline specified in the input array.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>sr - The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference JSON object for the input polylines.</dd>
+<dt>polylines - The array of polylines whose lengths are to be</dt>
+<dd>computed.</dd>
+<dt>lengthUnit - The unit in which lengths of polylines will be</dt>
+<dd>calculated. If calculationType is planar, then lengthUnit can be
+any esriUnits constant. If calculationType is planar and
+lengthUnit is not specified, then the units are derived from sr.
+If calculationType is not planar, then lengthUnit must be a
+linear esriUnits constant such as esriSRUnit_Meter or
+esriSRUnit_SurveyMile. If calculationType is not planar and
+lengthUnit is not specified, then the units are meters.</dd>
+<dt>calculationType - calculationType defines the length calculation</dt>
+<dd><dl class="first last docutils">
+<dt>for the geometry. The type can be one of the following values:</dt>
+<dd><dl class="first last docutils">
+<dt>planar - Planar measurements use 2D Euclidean distance to</dt>
+<dd>calculate length. This type should only be used if the length
+needs to be calculated in the given spatial reference.
+Otherwise, use preserveShape.</dd>
+<dt>geodesic - Use this type if you want to calculate a length</dt>
+<dd>using only the vertices of the polygon and define the lines
+between the vertices as geodesic segments independent of the
+actual shape of the polyline. A geodesic segment is the
+shortest path between two points on an earth ellipsoid.</dd>
+<dt>preserveShape - This type calculates the length of the geometry</dt>
+<dd>on the surface of the earth ellipsoid. The shape of the
+geometry in its coordinate system is preserved.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="offset">
+<h2>offset<a class="headerlink" href="#offset" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.offset">
+<code class="descclassname">geometry.</code><code class="descname">offset</code><span class="sig-paren">(</span><em>geometries</em>, <em>offsetDistance</em>, <em>offsetUnit</em>, <em>offsetHow='esriGeometryOffsetRounded'</em>, <em>bevelRatio=10</em>, <em>simplifyResult=False</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>The offset operation is performed on a geometry service resource.
+This operation constructs geometries that are offset from the
+given input geometries. If the offset parameter is positive, the
+constructed offset will be on the right side of the geometry. Left
+side offsets are constructed with negative parameters. Tracing the
+geometry from its first vertex to the last will give you a
+direction along the geometry. It is to the right and left
+perspective of this direction that the positive and negative
+parameters will dictate where the offset is constructed. In these
+terms, it is simple to infer where the offset of even horizontal
+geometries will be constructed.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><p class="first">geometries -  The array of geometries to be offset.
+offsetDistance - Specifies the distance for constructing an offset</p>
+<blockquote>
+<div>based on the input geometries. If the offsetDistance parameter is
+positive, the constructed offset will be on the right side of the
+curve. Left-side offsets are constructed with negative values.</div></blockquote>
+<dl class="last docutils">
+<dt>offsetUnit - A unit for offset distance. If a unit is not</dt>
+<dd>specified, the units are derived from sr.</dd>
+<dt>offsetHow - The offsetHow parameter determines how outer corners</dt>
+<dd><dl class="first last docutils">
+<dt>between segments are handled. The three options are as follows:</dt>
+<dd><dl class="first last docutils">
+<dt>esriGeometryOffsetRounded - Rounds the corner between extended</dt>
+<dd>offsets.</dd>
+<dt>esriGeometryOffsetBevelled - Squares off the corner after a</dt>
+<dd>given ratio distance.</dd>
+<dt>esriGeometryOffsetMitered - Attempts to allow extended offsets</dt>
+<dd>to naturally intersect, but if that intersection occurs too far
+from the corner, the corner is eventually bevelled off at a
+fixed distance.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>bevelRatio - bevelRatio is multiplied by the offset distance, and</dt>
+<dd>the result determines how far a mitered offset intersection can
+be located before it is bevelled. When mitered is specified,
+bevelRatio is ignored and 10 is used internally. When bevelled is
+specified, 1.1 will be used if bevelRatio is not specified.
+bevelRatio is ignored for rounded offset.</dd>
+<dt>simplifyResult - if simplifyResult is set to true, then self</dt>
+<dd>intersecting loops will be removed from the result offset
+geometries. The default is false.</dd>
+<dt>sr - The well-known ID or a spatial reference JSON object for the</dt>
+<dd>input geometries.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="project">
+<h2>project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.project">
+<code class="descclassname">geometry.</code><code class="descname">project</code><span class="sig-paren">(</span><em>geometries</em>, <em>inSR</em>, <em>outSR</em>, <em>transformation=''</em>, <em>transformFoward=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The project operation is performed on a geometry service resource.
+This operation projects an array of input geometries from the input
+spatial reference to the output spatial reference.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><p class="first">geometries - The array of geometries to be projected.
+inSR - The well-known ID (WKID) of the spatial reference or a</p>
+<blockquote>
+<div>spatial reference JSON object for the input geometries.</div></blockquote>
+<dl class="last docutils">
+<dt>outSR - The well-known ID (WKID) of the spatial reference or a</dt>
+<dd>spatial reference JSON object for the input geometries.</dd>
+<dt>transformation - The WKID or a JSON object specifying the</dt>
+<dd>geographic transformation (also known as datum transformation) to
+be applied to the projected geometries. Note that a
+transformation is needed only if the output spatial reference
+contains a different geographic coordinate system than the input
+spatial reference.</dd>
+<dt>transformForward - A Boolean value indicating whether or not to</dt>
+<dd>transform forward. The forward or reverse direction of
+transformation is implied in the name of the transformation. If
+transformation is specified, a value for the transformForward
+parameter must also be specified. The default value is false.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="relation">
+<h2>relation<a class="headerlink" href="#relation" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.relation">
+<code class="descclassname">geometry.</code><code class="descname">relation</code><span class="sig-paren">(</span><em>geometries1</em>, <em>geometries2</em>, <em>sr</em>, <em>relation='esriGeometryRelationIntersection'</em>, <em>relationParam=''</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.relation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The relation operation is performed on a geometry service resource.
+This operation determines the pairs of geometries from the input
+geometry arrays that participate in the specified spatial relation.
+Both arrays are assumed to be in the spatial reference specified by
+sr, which is a required parameter. Geometry types cannot be mixed
+within an array. The relations are evaluated in 2D. In other words,
+z coordinates are not used.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first docutils">
+<dt>geometries1 - The first array of geometries used to compute the</dt>
+<dd>relations.</dd>
+</dl>
+<p>geometries2 -The second array of geometries used to compute the
+relations.
+sr - The well-known ID of the spatial reference or a spatial</p>
+<blockquote>
+<div>reference JSON object for the input geometries.</div></blockquote>
+<dl class="last docutils">
+<dt>relation - The spatial relationship to be tested between the two</dt>
+<dd>input geometry arrays.
+Values: esriGeometryRelationCross | esriGeometryRelationDisjoint |
+esriGeometryRelationIn | esriGeometryRelationInteriorIntersection |
+esriGeometryRelationIntersection | esriGeometryRelationLineCoincidence |
+esriGeometryRelationLineTouch | esriGeometryRelationOverlap |
+esriGeometryRelationPointTouch | esriGeometryRelationTouch |
+esriGeometryRelationWithin | esriGeometryRelationRelation</dd>
+<dt>relationParam - The Shape Comparison Language string to be</dt>
+<dd>evaluated.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="reshape">
+<h2>reshape<a class="headerlink" href="#reshape" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.reshape">
+<code class="descclassname">geometry.</code><code class="descname">reshape</code><span class="sig-paren">(</span><em>sr</em>, <em>target</em>, <em>reshaper</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.reshape" title="Permalink to this definition">¶</a></dt>
+<dd><p>The reshape operation is performed on a geometry service resource.
+It reshapes a polyline or polygon feature by constructing a
+polyline over the feature. The feature takes the shape of the
+reshaper polyline from the first place the reshaper intersects the
+feature to the last.</p>
+<dl class="docutils">
+<dt>Input:</dt>
+<dd><dl class="first docutils">
+<dt>sr - The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference JSON object for the input geometries.</dd>
+</dl>
+<p class="last">target -  The polyline or polygon to be reshaped.
+reshaper - The single-part polyline that does the reshaping.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="to-geo-coordinate-string">
+<h2>to_geo_coordinate_string<a class="headerlink" href="#to-geo-coordinate-string" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.to_geo_coordinate_string">
+<code class="descclassname">geometry.</code><code class="descname">to_geo_coordinate_string</code><span class="sig-paren">(</span><em>sr</em>, <em>coordinates</em>, <em>conversionType</em>, <em>conversionMode='mgrsDefault'</em>, <em>numOfDigits=None</em>, <em>rounding=True</em>, <em>addSpaces=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.to_geo_coordinate_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The toGeoCoordinateString operation is performed on a geometry
+service resource. The operation converts an array of
+xy-coordinates into well-known strings based on the conversion type
+and spatial reference supplied by the user. Optional parameters are
+available for some conversion types. Note that if an optional
+parameter is not applicable for a particular conversion type, but a
+value is supplied for that parameter, the value will be ignored.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>sr -  The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference json object.</dd>
+<dt>coordinates - An array of xy-coordinates in JSON format to be</dt>
+<dd>converted. Syntax: [[x1,y2],...[xN,yN]]</dd>
+<dt>conversionType - The conversion type of the input strings.</dt>
+<dd><dl class="first last docutils">
+<dt>Allowed Values:</dt>
+<dd>MGRS - Military Grid Reference System
+USNG - United States National Grid
+UTM - Universal Transverse Mercator
+GeoRef - World Geographic Reference System
+GARS - Global Area Reference System
+DMS - Degree Minute Second
+DDM - Degree Decimal Minute
+DD - Decimal Degree</dd>
+</dl>
+</dd>
+<dt>conversionMode - Conversion options for MGRS and UTM conversion</dt>
+<dd><p class="first">types.
+Valid conversion modes for MGRS are:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>mgrsDefault - Default. Uses the spheroid from the given spatial</dt>
+<dd>reference.</dd>
+<dt>mgrsNewStyle - Treats all spheroids as new, like WGS 1984. The</dt>
+<dd>180 degree longitude falls into Zone 60.</dd>
+<dt>mgrsOldStyle - Treats all spheroids as old, like Bessel 1841.</dt>
+<dd>The 180 degree longitude falls into Zone 60.</dd>
+<dt>mgrsNewWith180InZone01 - Same as mgrsNewStyle except the 180</dt>
+<dd>degree longitude falls into Zone 01.</dd>
+<dt>mgrsOldWith180InZone01 - Same as mgrsOldStyle except the 180</dt>
+<dd>degree longitude falls into Zone 01.</dd>
+</dl>
+</div></blockquote>
+<dl class="last docutils">
+<dt>Valid conversion modes for UTM are:</dt>
+<dd><p class="first">utmDefault - Default. No options.
+utmNorthSouth - Uses north/south latitude indicators instead of</p>
+<blockquote class="last">
+<div>zone numbers. Non-standard. Default is recommended.</div></blockquote>
+</dd>
+</dl>
+</dd>
+<dt>numOfDigits - The number of digits to output for each of the</dt>
+<dd>numerical portions in the string. The default value for
+numOfDigits varies depending on conversionType.</dd>
+<dt>rounding - If true, then numeric portions of the string are</dt>
+<dd>rounded to the nearest whole magnitude as specified by
+numOfDigits. Otherwise, numeric portions of the string are
+truncated. The rounding parameter applies only to conversion
+types MGRS, USNG and GeoRef. The default value is true.</dd>
+<dt>addSpaces - If true, then spaces are added between components of</dt>
+<dd>the string. The addSpaces parameter applies only to conversion
+types MGRS, USNG and UTM. The default value for MGRS is false,
+while the default value for both USNG and UTM is true.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="trim-extend">
+<h2>trim_extend<a class="headerlink" href="#trim-extend" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.trim_extend">
+<code class="descclassname">geometry.</code><code class="descname">trim_extend</code><span class="sig-paren">(</span><em>sr</em>, <em>polylines</em>, <em>trimExtendTo</em>, <em>extendHow=0</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.trim_extend" title="Permalink to this definition">¶</a></dt>
+<dd><p>The trim_extend operation is performed on a geometry service
+resource. This operation trims or extends each polyline specified
+in the input array, using the user-specified guide polylines. When
+trimming features, the part to the left of the oriented cutting
+line is preserved in the output, and the other part is discarded.
+An empty polyline is added to the output array if the corresponding
+input polyline is neither cut nor extended.</p>
+<dl class="docutils">
+<dt>Inputs:</dt>
+<dd><dl class="first docutils">
+<dt>sr - The well-known ID of the spatial reference or a spatial</dt>
+<dd>reference json object.</dd>
+</dl>
+<p>polylines - An array of polylines to be trimmed or extended.
+trimExtendTo - A polyline that is used as a guide for trimming or</p>
+<blockquote>
+<div>extending input polylines.</div></blockquote>
+<dl class="last docutils">
+<dt>extendHow - A flag that is used along with the trimExtend</dt>
+<dd><p class="first">operation.
+0 - By default, an extension considers both ends of a path. The</p>
+<blockquote>
+<div>old ends remain, and new points are added to the extended ends.
+The new points have attributes that are extrapolated from
+adjacent existing segments.</div></blockquote>
+<dl class="docutils">
+<dt>1 - If an extension is performed at an end, relocate the end</dt>
+<dd>point to the new position instead of leaving the old point and
+adding a new point at the new position.</dd>
+<dt>2 - If an extension is performed at an end, do not extrapolate</dt>
+<dd>the end-segment&#8217;s attributes for the new point. Instead, make
+its attributes the same as the current end. Incompatible with
+esriNoAttributes.</dd>
+<dt>4 - If an extension is performed at an end, do not extrapolate</dt>
+<dd>the end-segment&#8217;s attributes for the new point. Instead, make
+its attributes empty. Incompatible with esriKeepAttributes.</dd>
+</dl>
+<p class="last">8 - Do not extend the &#8216;from&#8217; end of any path.
+16 - Do not extend the &#8216;to&#8217; end of any path.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="union">
+<h2>union<a class="headerlink" href="#union" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.union">
+<code class="descclassname">geometry.</code><code class="descname">union</code><span class="sig-paren">(</span><em>sr</em>, <em>geometries</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.union" title="Permalink to this definition">¶</a></dt>
+<dd><p>The union operation is performed on a geometry service resource.
+This operation constructs the set-theoretic union of the geometries
+in the input array. All inputs must be of the same type.</p>
+<p>Inputs:
+sr - The well-known ID of the spatial reference or a spatial</p>
+<blockquote>
+<div>reference json object.</div></blockquote>
+<p>geometries - The array of geometries to be unioned.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arcgis.lyr.html" class="btn btn-neutral float-right" title="arcgis.lyr module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="arcgis.geoprocessing.html" class="btn btn-neutral" title="arcgis.geoprocessing module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Esri.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,21 +1,21 @@
 arcgis.viz module
 =================
 
-arcgis.viz.WebMap
+WebMap
 -----------------
 .. autoclass:: arcgis.viz.WebMap
     :members:
     :undoc-members:
     :show-inheritance:
 
-arcgis.viz.WebScene
+WebScene
 -------------------
 .. autoclass:: arcgis.viz.WebScene
     :members:
     :undoc-members:
     :show-inheritance:
 
-arcgis.viz.MapView
+MapView
 ------------------
 .. autoclass:: arcgis.viz.MapView
     :members:
