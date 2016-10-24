@@ -201,7 +201,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.geometry module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#point">Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#multipoint">MultiPoint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#polyline">PolyLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#polyline">Polyline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#polygon">Polygon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#envelope">Envelope</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#spatialreference">SpatialReference</a></li>
@@ -336,7 +336,28 @@ are ignored.</p>
 
 </div>
 <div class="section" id="polyline">
-<h2>PolyLine<a class="headerlink" href="#polyline" title="Permalink to this headline">¶</a></h2>
+<h2>Polyline<a class="headerlink" href="#polyline" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.geometry.Polyline">
+<em class="property">class </em><code class="descclassname">arcgis.geometry.</code><code class="descname">Polyline</code><span class="sig-paren">(</span><em>iterable=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Polyline" title="Permalink to this definition">¶</a></dt>
+<dd><p>A polyline contains an array of paths or curvePaths and a
+spatialReference. For polylines with curvePaths, see the sections on
+JSON curve object and Polyline with curve. Each path is represented as
+an array of points, and each point in the path is represented as an
+array of numbers. A polyline can also have boolean-valued hasM and hasZ
+fields.
+See the description of multipoints for details on how the point arrays
+are interpreted.
+An empty polyline is represented with an empty array for the paths
+field. Nulls and/or NaNs embedded in an otherwise defined coordinate
+stream for polylines/polygons is a syntax error.</p>
+<dl class="attribute">
+<dt id="arcgis.geometry.Polyline.type">
+<code class="descname">type</code><a class="headerlink" href="#arcgis.geometry.Polyline.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="polygon">
 <h2>Polygon<a class="headerlink" href="#polygon" title="Permalink to this headline">¶</a></h2>

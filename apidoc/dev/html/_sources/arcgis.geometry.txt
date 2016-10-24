@@ -13,9 +13,9 @@ MultiPoint
     :members:
     :undoc-members:
 
-PolyLine
+Polyline
 --------------
-.. autoclass:: arcgis.geometry.PolyLine
+.. autoclass:: arcgis.geometry.Polyline
     :members:
     :undoc-members:
 
