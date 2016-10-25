@@ -15,9 +15,9 @@ ReplicaManager
     :members:
     :undoc-members:
 
-FeatureDatasetManager
+FeatureLayerCollectionManager
 --------------
-.. autoclass:: arcgis.features.managers.FeatureDatasetManager
+.. autoclass:: arcgis.features.managers.FeatureLayerCollectionManager
     :inherited-members:
     :members:
     :undoc-members:

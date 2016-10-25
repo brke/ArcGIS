@@ -93,6 +93,7 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#user">User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#group">Group</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#datastore">Datastore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#layer">Layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#contentmanager">ContentManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#usermanager">UserManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#groupmanager">GroupManager</a></li>
@@ -110,7 +111,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.features.managers module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#attachmentmanager">AttachmentManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#replicamanager">ReplicaManager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#featuredatasetmanager">FeatureDatasetManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#featurelayercollectionmanager">FeatureLayerCollectionManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#featurelayermanager">FeatureLayerManager</a></li>
 </ul>
 </li>
@@ -172,6 +173,10 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#networkdataset">NetworkDataset</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.schematics.html">arcgis.schematics module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.schematics.html#schematicslayer">SchematicsLayer</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.html">arcgis.geoanalytics module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#aggregate-points">aggregate_points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#describe-dataset">describe_dataset</a></li>
@@ -193,10 +198,6 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#batch-geocode">batch_geocode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#find-best-match">find_best_match</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#suggest">suggest</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a><ul>
@@ -230,18 +231,17 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.lyr.html">arcgis.lyr module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#layer">Layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#dynamicmaplayer">DynamicMapLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#dynamicmaplayermanager">DynamicMapLayerManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#vectortilelayer">VectorTileLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#schematicslayer">SchematicsLayer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.viz.html">arcgis.viz module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#webmap">WebMap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#webscene">WebScene</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#mapview">MapView</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.mapping.html">arcgis.mapping module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#webmap">WebMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#webscene">WebScene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#mapview">MapView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#dynamicmaplayer">DynamicMapLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#dynamicmaplayermanager">DynamicMapLayerManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#vectortilelayer">VectorTileLayer</a></li>
 </ul>
 </li>
 </ul>
@@ -367,7 +367,7 @@ file_path - string - path to new attachment</div></blockquote>
 <em class="property">class </em><code class="descclassname">arcgis.features.managers.</code><code class="descname">ReplicaManager</code><span class="sig-paren">(</span><em>featsvc</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.ReplicaManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manager class for manipulating replicas for disconnected editing of feature datasets.
 This class is not created by users directly.
-An instance of this class, called &#8216;replicas&#8217;, is available as a property of the FeatureDataset object,
+An instance of this class, called &#8216;replicas&#8217;, is available as a property of the FeatureLayerCollection object,
 if the layer is sync enabled / supports disconnected editing.
 Users call methods on this &#8216;replicas&#8217; object to manipulate (create, synchronize, unregister) replicas.</p>
 <dl class="method">
@@ -495,18 +495,18 @@ Inputs:</p>
 </dd></dl>
 
 </div>
-<div class="section" id="featuredatasetmanager">
-<h2>FeatureDatasetManager<a class="headerlink" href="#featuredatasetmanager" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="featurelayercollectionmanager">
+<h2>FeatureLayerCollectionManager<a class="headerlink" href="#featurelayercollectionmanager" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="arcgis.features.managers.FeatureDatasetManager">
-<em class="property">class </em><code class="descclassname">arcgis.features.managers.</code><code class="descname">FeatureDatasetManager</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em>, <em>fs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureDatasetManager" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.features.managers.FeatureLayerCollectionManager">
+<em class="property">class </em><code class="descclassname">arcgis.features.managers.</code><code class="descname">FeatureLayerCollectionManager</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em>, <em>fs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureLayerCollectionManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows updating the definition (if access permits) of a feature dataset.
 This class is not created by users directly.
-An instance of this class, called &#8216;manager&#8217;, is available as a property of the FeatureDataset object.</p>
+An instance of this class, called &#8216;manager&#8217;, is available as a property of the FeatureLayerCollection object.</p>
 <p>Users call methods on this &#8216;manager&#8217; object to manage the feature dataset.</p>
 <dl class="method">
-<dt id="arcgis.features.managers.FeatureDatasetManager.add_to_definition">
-<code class="descname">add_to_definition</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureDatasetManager.add_to_definition" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.features.managers.FeatureLayerCollectionManager.add_to_definition">
+<code class="descname">add_to_definition</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureLayerCollectionManager.add_to_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The add_to_definition operation supports adding a definition
 property to a hosted feature dataset service. The result of this
 operation is a response indicating success or failure with error
@@ -528,8 +528,8 @@ individual feature service layer object.</dd>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.features.managers.FeatureDatasetManager.delete_from_definition">
-<code class="descname">delete_from_definition</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureDatasetManager.delete_from_definition" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.features.managers.FeatureLayerCollectionManager.delete_from_definition">
+<code class="descname">delete_from_definition</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureLayerCollectionManager.delete_from_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The delete_from_definition operation supports deleting a
 definition property from a hosted feature dataset service. The result of
 this operation is a response indicating success or failure with
@@ -554,25 +554,20 @@ FeatureService or layer.</dd>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.features.managers.FeatureDatasetManager.fromitem">
-<code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureDatasetManager.fromitem" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="arcgis.features.managers.FeatureDatasetManager.invoke">
-<code class="descname">invoke</code><span class="sig-paren">(</span><em>method</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureDatasetManager.invoke" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.features.managers.FeatureLayerCollectionManager.invoke">
+<code class="descname">invoke</code><span class="sig-paren">(</span><em>method</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureLayerCollectionManager.invoke" title="Permalink to this definition">¶</a></dt>
 <dd><p>Invokes the specified method on this service passing in parameters from the kwargs name-value pairs</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.features.managers.FeatureDatasetManager.refresh">
-<code class="descname">refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureDatasetManager.refresh" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.features.managers.FeatureLayerCollectionManager.refresh">
+<code class="descname">refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureLayerCollectionManager.refresh" title="Permalink to this definition">¶</a></dt>
 <dd><p>refreshes a feature dataset</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.features.managers.FeatureDatasetManager.update_definition">
-<code class="descname">update_definition</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureDatasetManager.update_definition" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.features.managers.FeatureLayerCollectionManager.update_definition">
+<code class="descname">update_definition</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureLayerCollectionManager.update_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The update_definition operation supports updating a definition
 property in a hosted feature dataset service. The result of this
 operation is a response indicating success or failure with error
@@ -652,11 +647,6 @@ FeatureService or layer.</dd>
 <dd>JSON Message as dictionary</dd>
 </dl>
 </dd></dl>
-
-<dl class="method">
-<dt id="arcgis.features.managers.FeatureLayerManager.fromitem">
-<code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureLayerManager.fromitem" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 <dl class="method">
 <dt id="arcgis.features.managers.FeatureLayerManager.invoke">

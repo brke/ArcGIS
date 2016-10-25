@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.lyr module &mdash; arcgis 0.3 documentation</title>
+  <title>arcgis.mapping module &mdash; arcgis 0.3 documentation</title>
   
 
   
@@ -34,8 +34,7 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="arcgis 0.3 documentation" href="index.html"/>
-        <link rel="next" title="arcgis.viz module" href="arcgis.viz.html"/>
-        <link rel="prev" title="arcgis.geometry module" href="arcgis.geometry.html"/> 
+        <link rel="prev" title="arcgis.geoprocessing module" href="arcgis.geoprocessing.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -92,6 +91,7 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#user">User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#group">Group</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#datastore">Datastore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#layer">Layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#contentmanager">ContentManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#usermanager">UserManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#groupmanager">GroupManager</a></li>
@@ -109,7 +109,7 @@
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#replicamanager">ReplicaManager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featuredatasetmanager">FeatureDatasetManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayercollectionmanager">FeatureLayerCollectionManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayermanager">FeatureLayerManager</a></li>
 </ul>
 </li>
@@ -171,6 +171,10 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#networkdataset">NetworkDataset</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.schematics.html">arcgis.schematics module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.schematics.html#schematicslayer">SchematicsLayer</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.html">arcgis.geoanalytics module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#aggregate-points">aggregate_points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#describe-dataset">describe_dataset</a></li>
@@ -192,10 +196,6 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#batch-geocode">batch_geocode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#find-best-match">find_best_match</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#suggest">suggest</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a><ul>
@@ -229,18 +229,17 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.lyr module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#layer">Layer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.mapping module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#webmap">WebMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#webscene">WebScene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mapview">MapView</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dynamicmaplayer">DynamicMapLayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dynamicmaplayermanager">DynamicMapLayerManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vectortilelayer">VectorTileLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#schematicslayer">SchematicsLayer</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.viz.html">arcgis.viz module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#webmap">WebMap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#webscene">WebScene</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#mapview">MapView</a></li>
 </ul>
 </li>
 </ul>
@@ -273,11 +272,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>arcgis.lyr module</li>
+    <li>arcgis.mapping module</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/arcgis.lyr.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/arcgis.mapping.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -287,27 +286,159 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-arcgis.lyr">
-<span id="arcgis-lyr-module"></span><h1>arcgis.lyr module<a class="headerlink" href="#module-arcgis.lyr" title="Permalink to this headline">¶</a></h1>
-<p>The arcgis.lyr module is used for accessing layers exposed from ArcGIS Online
-or Portal.</p>
-<div class="section" id="layer">
-<h2>Layer<a class="headerlink" href="#layer" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="arcgis-mapping-module">
+<h1>arcgis.mapping module<a class="headerlink" href="#arcgis-mapping-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="webmap">
+<h2>WebMap<a class="headerlink" href="#webmap" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="arcgis.lyr.Layer">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">Layer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.Layer" title="Permalink to this definition">¶</a></dt>
-<dd><p>a GIS layer</p>
+<dt id="arcgis.mapping.WebMap">
+<em class="property">class </em><code class="descclassname">arcgis.mapping.</code><code class="descname">WebMap</code><span class="sig-paren">(</span><em>webmapitem</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.WebMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">collections.OrderedDict</span></code></p>
+<p>Represents a webmap and provides access to it&#8217;s basemaps and operational layers as well
+as functionality to visualize and interact with them.
+<a class="reference external" href="http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/Web_map_format_overview/02qt00000007000000/">http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/Web_map_format_overview/02qt00000007000000/</a></p>
 <dl class="method">
-<dt id="arcgis.lyr.Layer.invoke">
-<code class="descname">invoke</code><span class="sig-paren">(</span><em>method</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.Layer.invoke" title="Permalink to this definition">¶</a></dt>
-<dd><p>Invokes the specified method on this service passing in parameters from the kwargs name-value pairs</p>
+<dt id="arcgis.mapping.WebMap.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.WebMap.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="webscene">
+<h2>WebScene<a class="headerlink" href="#webscene" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.mapping.WebScene">
+<em class="property">class </em><code class="descclassname">arcgis.mapping.</code><code class="descname">WebScene</code><span class="sig-paren">(</span><em>websceneitem</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.WebScene" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">collections.OrderedDict</span></code></p>
+<p>Represents a web scene and provides access to it&#8217;s basemaps and operational layers as well
+as functionality to visualize and interact with them.</p>
+<dl class="method">
+<dt id="arcgis.mapping.WebScene.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.WebScene.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="mapview">
+<h2>MapView<a class="headerlink" href="#mapview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.mapping.MapView">
+<em class="property">class </em><code class="descclassname">arcgis.mapping.</code><code class="descname">MapView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.MapView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ipywidgets.widgets.domwidget.DOMWidget</span></code></p>
+<dl class="method">
+<dt id="arcgis.mapping.MapView.add_layer">
+<code class="descname">add_layer</code><span class="sig-paren">(</span><em>item</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.MapView.add_layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds layers from the provided item</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.lyr.Layer.properties">
-<code class="descname">properties</code><a class="headerlink" href="#arcgis.lyr.Layer.properties" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the properties of this layer. The properties are returned using a mutable mapping that allows attribute
-access as well as dict-style access. It can be converted to a dict using dict(properties) if required.</p>
+<dt id="arcgis.mapping.MapView.basemap">
+<code class="descname">basemap</code><a class="headerlink" href="#arcgis.mapping.MapView.basemap" title="Permalink to this definition">¶</a></dt>
+<dd><p>A trait for unicode strings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.mapping.MapView.center">
+<code class="descname">center</code><a class="headerlink" href="#arcgis.mapping.MapView.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>An instance of a Python list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.mapping.MapView.clear_graphics">
+<code class="descname">clear_graphics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.MapView.clear_graphics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arcgis.mapping.MapView.draw">
+<code class="descname">draw</code><span class="sig-paren">(</span><em>shape</em>, <em>popup=None</em>, <em>symbol=None</em>, <em>attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.MapView.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a shape.</p>
+<p>Arguments:
+shape is one of [&#8220;circle&#8221;, &#8220;downarrow&#8221;, &#8220;ellipse&#8221;, &#8220;extent&#8221;, &#8220;freehandpolygon&#8221;,
+&#8220;freehandpolyline&#8221;, &#8220;leftarrow&#8221;, &#8220;line&#8221;, &#8220;multipoint&#8221;, &#8220;point&#8221;, &#8220;polygon&#8221;, &#8220;polyline&#8221;,
+&#8220;rectangle&#8221;, &#8220;rightarrow&#8221;, &#8220;triangle&#8221;, &#8220;uparrow&#8221;, or geometry dict object]</p>
+<p>popup is a dict containing &#8220;title&#8221; and &#8220;content&#8221; as keys that will be displayed
+when the shape is clicked</p>
+<p>symbol is a symbol specified in json format as described at <a class="reference external" href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000n5000000">http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000n5000000</a>
+a default symbol is used is one is not specified</p>
+<p>attributes is a dict containing name value pairs of fields and field values
+associated with the graphic.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.mapping.MapView.end_time">
+<code class="descname">end_time</code><a class="headerlink" href="#arcgis.mapping.MapView.end_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>A trait for unicode strings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.mapping.MapView.extent">
+<code class="descname">extent</code><a class="headerlink" href="#arcgis.mapping.MapView.extent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.mapping.MapView.id">
+<code class="descname">id</code><a class="headerlink" href="#arcgis.mapping.MapView.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A trait for unicode strings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.mapping.MapView.mode">
+<code class="descname">mode</code><a class="headerlink" href="#arcgis.mapping.MapView.mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>A trait for unicode strings.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.mapping.MapView.on_click">
+<code class="descname">on_click</code><span class="sig-paren">(</span><em>callback</em>, <em>remove=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.MapView.on_click" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to execute when the map is clicked.</p>
+<p>The callback will be called with one argument,
+the clicked widget instance.</p>
+<dl class="docutils">
+<dt>remove</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">bool (optional)</span><dd>Set to true to remove the callback from the list of callbacks.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.mapping.MapView.on_draw_end">
+<code class="descname">on_draw_end</code><span class="sig-paren">(</span><em>callback</em>, <em>remove=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.MapView.on_draw_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to execute when something is drawn</p>
+<p>The callback will be called with two argument,
+the clicked widget instance, and the geometry drawn</p>
+<dl class="docutils">
+<dt>remove</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">bool (optional)</span><dd>Set to true to remove the callback from the list of callbacks.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.mapping.MapView.remove_layers">
+<code class="descname">remove_layers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.MapView.remove_layers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arcgis.mapping.MapView.set_time_extent">
+<code class="descname">set_time_extent</code><span class="sig-paren">(</span><em>start_time</em>, <em>end_time</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.MapView.set_time_extent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.mapping.MapView.start_time">
+<code class="descname">start_time</code><a class="headerlink" href="#arcgis.mapping.MapView.start_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>A trait for unicode strings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.mapping.MapView.width">
+<code class="descname">width</code><a class="headerlink" href="#arcgis.mapping.MapView.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>A trait for unicode strings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.mapping.MapView.zoom">
+<code class="descname">zoom</code><a class="headerlink" href="#arcgis.mapping.MapView.zoom" title="Permalink to this definition">¶</a></dt>
+<dd><p>An int trait.</p>
 </dd></dl>
 
 </dd></dl>
@@ -316,12 +447,13 @@ access as well as dict-style access. It can be converted to a dict using dict(pr
 <div class="section" id="dynamicmaplayer">
 <h2>DynamicMapLayer<a class="headerlink" href="#dynamicmaplayer" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="arcgis.lyr.DynamicMapLayer">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">DynamicMapLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer" title="Permalink to this definition">¶</a></dt>
-<dd><p>a dynamic map layer</p>
+<dt id="arcgis.mapping.DynamicMapLayer">
+<em class="property">class </em><code class="descclassname">arcgis.mapping.</code><code class="descname">DynamicMapLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.DynamicMapLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="arcgis.gis.html#arcgis.gis.Layer" title="arcgis.gis.Layer"><code class="xref py py-class docutils literal"><span class="pre">arcgis.gis.Layer</span></code></a></p>
+<p>a dynamic map layer</p>
 <dl class="method">
-<dt id="arcgis.lyr.DynamicMapLayer.estimate_export_tiles_size">
-<code class="descname">estimate_export_tiles_size</code><span class="sig-paren">(</span><em>exportBy</em>, <em>levels</em>, <em>tilePackage=False</em>, <em>exportExtent='DEFAULTEXTENT'</em>, <em>areaOfInterest=None</em>, <em>async=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.estimate_export_tiles_size" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayer.estimate_export_tiles_size">
+<code class="descname">estimate_export_tiles_size</code><span class="sig-paren">(</span><em>exportBy</em>, <em>levels</em>, <em>tilePackage=False</em>, <em>exportExtent='DEFAULTEXTENT'</em>, <em>areaOfInterest=None</em>, <em>async=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.DynamicMapLayer.estimate_export_tiles_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The estimateExportTilesSize operation is an asynchronous task that
 allows estimation of the size of the tile package or the cache data
 set that you download using the Export Tiles operation. This
@@ -381,8 +513,8 @@ is set to False, the function will wait until the task completes.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.DynamicMapLayer.export_map">
-<code class="descname">export_map</code><span class="sig-paren">(</span><em>bbox</em>, <em>bboxSR=None</em>, <em>size='600</em>, <em>550'</em>, <em>dpi=200</em>, <em>imageSR=None</em>, <em>image_format='png'</em>, <em>layerDefFilter=None</em>, <em>layers=None</em>, <em>transparent=False</em>, <em>timeFilter=None</em>, <em>layerTimeOptions=None</em>, <em>dynamicLayers=None</em>, <em>mapScale=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.export_map" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayer.export_map">
+<code class="descname">export_map</code><span class="sig-paren">(</span><em>bbox</em>, <em>bboxSR=None</em>, <em>size='600</em>, <em>550'</em>, <em>dpi=200</em>, <em>imageSR=None</em>, <em>image_format='png'</em>, <em>layerDefFilter=None</em>, <em>layers=None</em>, <em>transparent=False</em>, <em>timeFilter=None</em>, <em>layerTimeOptions=None</em>, <em>dynamicLayers=None</em>, <em>mapScale=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.DynamicMapLayer.export_map" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><p>The export operation is performed on a map service resource.
 The result of this operation is a map image resource. This
@@ -468,8 +600,8 @@ specified bounding box (bbox).</dd>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.DynamicMapLayer.export_tiles">
-<code class="descname">export_tiles</code><span class="sig-paren">(</span><em>levels</em>, <em>exportBy='LevelID'</em>, <em>tilePackage=False</em>, <em>exportExtent='DEFAULT'</em>, <em>optimizeTilesForSize=True</em>, <em>compressionQuality=0</em>, <em>areaOfInterest=None</em>, <em>async=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.export_tiles" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayer.export_tiles">
+<code class="descname">export_tiles</code><span class="sig-paren">(</span><em>levels</em>, <em>exportBy='LevelID'</em>, <em>tilePackage=False</em>, <em>exportExtent='DEFAULT'</em>, <em>optimizeTilesForSize=True</em>, <em>compressionQuality=0</em>, <em>areaOfInterest=None</em>, <em>async=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.DynamicMapLayer.export_tiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>The exportTiles operation is performed as an asynchronous task and
 allows client applications to download map tiles from a server for
 offline use. This operation is performed on a Map Service that
@@ -563,14 +695,14 @@ manually.</dd>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.DynamicMapLayer.find">
-<code class="descname">find</code><span class="sig-paren">(</span><em>searchText</em>, <em>layers</em>, <em>contains=True</em>, <em>searchFields=''</em>, <em>sr=''</em>, <em>layerDefs=''</em>, <em>returnGeometry=True</em>, <em>maxAllowableOffset=''</em>, <em>geometryPrecision=''</em>, <em>dynamicLayers=''</em>, <em>returnZ=False</em>, <em>returnM=False</em>, <em>gdbVersion=''</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.find" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayer.find">
+<code class="descname">find</code><span class="sig-paren">(</span><em>searchText</em>, <em>layers</em>, <em>contains=True</em>, <em>searchFields=''</em>, <em>sr=''</em>, <em>layerDefs=''</em>, <em>returnGeometry=True</em>, <em>maxAllowableOffset=''</em>, <em>geometryPrecision=''</em>, <em>dynamicLayers=''</em>, <em>returnZ=False</em>, <em>returnM=False</em>, <em>gdbVersion=''</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.DynamicMapLayer.find" title="Permalink to this definition">¶</a></dt>
 <dd><p>performs the map service find operation</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.DynamicMapLayer.generate_kml">
-<code class="descname">generate_kml</code><span class="sig-paren">(</span><em>save_location</em>, <em>docName</em>, <em>layers</em>, <em>layerOptions='composite'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.generate_kml" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayer.generate_kml">
+<code class="descname">generate_kml</code><span class="sig-paren">(</span><em>save_location</em>, <em>docName</em>, <em>layers</em>, <em>layerOptions='composite'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.DynamicMapLayer.generate_kml" title="Permalink to this definition">¶</a></dt>
 <dd><p>The generateKml operation is performed on a map service resource.
 The result of this operation is a KML document wrapped in a KMZ
 file. The document contains a network link to the KML Service
@@ -602,8 +734,8 @@ values: composite | separateImage |</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.DynamicMapLayer.identify">
-<code class="descname">identify</code><span class="sig-paren">(</span><em>geometry</em>, <em>mapExtent</em>, <em>imageDisplay</em>, <em>tolerance</em>, <em>geometryType='esriGeometryPoint'</em>, <em>sr=None</em>, <em>layerDefs=None</em>, <em>time_value=None</em>, <em>layerTimeOptions=None</em>, <em>layers='top'</em>, <em>returnGeometry=True</em>, <em>maxAllowableOffset=None</em>, <em>geometryPrecision=None</em>, <em>dynamicLayers=None</em>, <em>returnZ=False</em>, <em>returnM=False</em>, <em>gdbVersion=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.identify" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayer.identify">
+<code class="descname">identify</code><span class="sig-paren">(</span><em>geometry</em>, <em>mapExtent</em>, <em>imageDisplay</em>, <em>tolerance</em>, <em>geometryType='esriGeometryPoint'</em>, <em>sr=None</em>, <em>layerDefs=None</em>, <em>time_value=None</em>, <em>layerTimeOptions=None</em>, <em>layers='top'</em>, <em>returnGeometry=True</em>, <em>maxAllowableOffset=None</em>, <em>geometryPrecision=None</em>, <em>dynamicLayers=None</em>, <em>returnZ=False</em>, <em>returnM=False</em>, <em>gdbVersion=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.DynamicMapLayer.identify" title="Permalink to this definition">¶</a></dt>
 <dd><p>The identify operation is performed on a map service resource
 to discover features at a geographic location. The result of this
 operation is an identify results resource. Each identified result
@@ -702,30 +834,30 @@ This parameter only applies if returnGeometry=true.</dd>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.lyr.DynamicMapLayer.itemInfo">
-<code class="descname">itemInfo</code><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.itemInfo" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayer.itemInfo">
+<code class="descname">itemInfo</code><a class="headerlink" href="#arcgis.mapping.DynamicMapLayer.itemInfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the service&#8217;s item&#8217;s infomation</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.lyr.DynamicMapLayer.kml">
-<code class="descname">kml</code><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.kml" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayer.kml">
+<code class="descname">kml</code><a class="headerlink" href="#arcgis.mapping.DynamicMapLayer.kml" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.lyr.DynamicMapLayer.manager">
-<code class="descname">manager</code><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.manager" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayer.manager">
+<code class="descname">manager</code><a class="headerlink" href="#arcgis.mapping.DynamicMapLayer.manager" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.lyr.DynamicMapLayer.metadata">
-<code class="descname">metadata</code><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.metadata" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayer.metadata">
+<code class="descname">metadata</code><a class="headerlink" href="#arcgis.mapping.DynamicMapLayer.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the service&#8217;s XML metadata file</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.DynamicMapLayer.thumbnail">
-<code class="descname">thumbnail</code><span class="sig-paren">(</span><em>out_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayer.thumbnail" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayer.thumbnail">
+<code class="descname">thumbnail</code><span class="sig-paren">(</span><em>out_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.DynamicMapLayer.thumbnail" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -734,9 +866,10 @@ This parameter only applies if returnGeometry=true.</dd>
 <div class="section" id="dynamicmaplayermanager">
 <h2>DynamicMapLayerManager<a class="headerlink" href="#dynamicmaplayermanager" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="arcgis.lyr.DynamicMapLayerManager">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">DynamicMapLayerManager</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em>, <em>ms=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayerManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>allows administration (if access permits) of an ArcGIS Online hosted map service 
+<dt id="arcgis.mapping.DynamicMapLayerManager">
+<em class="property">class </em><code class="descclassname">arcgis.mapping.</code><code class="descname">DynamicMapLayerManager</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em>, <em>ms=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.DynamicMapLayerManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">arcgis.gis._GISResource</span></code></p>
+<p>allows administration (if access permits) of an ArcGIS Online hosted map service
 A map service offer access to map and layer content.</p>
 <blockquote>
 <div>The REST API administrative map service resource represents a map
@@ -746,8 +879,8 @@ not, its spatial reference, initial and full extents, etc...  The
 administrative map service resource maintains a set of operations
 that manage the state and contents of the service.</div></blockquote>
 <dl class="method">
-<dt id="arcgis.lyr.DynamicMapLayerManager.cancel_job">
-<code class="descname">cancel_job</code><span class="sig-paren">(</span><em>jobId</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayerManager.cancel_job" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayerManager.cancel_job">
+<code class="descname">cancel_job</code><span class="sig-paren">(</span><em>jobId</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.DynamicMapLayerManager.cancel_job" title="Permalink to this definition">¶</a></dt>
 <dd><p>The cancel job operation supports cancelling a job while update
 tiles is running from a hosted feature service. The result of this
 operation is a response indicating success or failure with error
@@ -759,8 +892,8 @@ code and description.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.DynamicMapLayerManager.edit_tile_service">
-<code class="descname">edit_tile_service</code><span class="sig-paren">(</span><em>serviceDefinition=None</em>, <em>minScale=None</em>, <em>maxScale=None</em>, <em>sourceItemId=None</em>, <em>exportTilesAllowed=False</em>, <em>maxExportTileCount=100000</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayerManager.edit_tile_service" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayerManager.edit_tile_service">
+<code class="descname">edit_tile_service</code><span class="sig-paren">(</span><em>serviceDefinition=None</em>, <em>minScale=None</em>, <em>maxScale=None</em>, <em>sourceItemId=None</em>, <em>exportTilesAllowed=False</em>, <em>maxExportTileCount=100000</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.DynamicMapLayerManager.edit_tile_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation updates a Tile Service&#8217;s properties</p>
 <dl class="docutils">
 <dt>Inputs:</dt>
@@ -777,14 +910,14 @@ maxExportTileCount - sets the maximum amount of tiles to be exported</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.DynamicMapLayerManager.job_statistics">
-<code class="descname">job_statistics</code><span class="sig-paren">(</span><em>jobId</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayerManager.job_statistics" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayerManager.job_statistics">
+<code class="descname">job_statistics</code><span class="sig-paren">(</span><em>jobId</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.DynamicMapLayerManager.job_statistics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the job statistics for the given jobId</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.DynamicMapLayerManager.refresh">
-<code class="descname">refresh</code><span class="sig-paren">(</span><em>serviceDefinition=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.DynamicMapLayerManager.refresh" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.DynamicMapLayerManager.refresh">
+<code class="descname">refresh</code><span class="sig-paren">(</span><em>serviceDefinition=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.DynamicMapLayerManager.refresh" title="Permalink to this definition">¶</a></dt>
 <dd><p>The refresh operation refreshes a service, which clears the web
 server cache for the service.</p>
 </dd></dl>
@@ -795,126 +928,44 @@ server cache for the service.</p>
 <div class="section" id="vectortilelayer">
 <h2>VectorTileLayer<a class="headerlink" href="#vectortilelayer" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="arcgis.lyr.VectorTileLayer">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">VectorTileLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.VectorTileLayer" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="classmethod">
-<dt id="arcgis.lyr.VectorTileLayer.fromitem">
-<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.VectorTileLayer.fromitem" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.VectorTileLayer">
+<em class="property">class </em><code class="descclassname">arcgis.mapping.</code><code class="descname">VectorTileLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.VectorTileLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="arcgis.gis.html#arcgis.gis.Layer" title="arcgis.gis.Layer"><code class="xref py py-class docutils literal"><span class="pre">arcgis.gis.Layer</span></code></a></p>
+<dl class="classmethod">
+<dt id="arcgis.mapping.VectorTileLayer.fromitem">
+<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.VectorTileLayer.fromitem" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.lyr.VectorTileLayer.info">
-<code class="descname">info</code><a class="headerlink" href="#arcgis.lyr.VectorTileLayer.info" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.VectorTileLayer.info">
+<code class="descname">info</code><a class="headerlink" href="#arcgis.mapping.VectorTileLayer.info" title="Permalink to this definition">¶</a></dt>
 <dd><p>This returns relative paths to a list of resource files</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.lyr.VectorTileLayer.styles">
-<code class="descname">styles</code><a class="headerlink" href="#arcgis.lyr.VectorTileLayer.styles" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.VectorTileLayer.styles">
+<code class="descname">styles</code><a class="headerlink" href="#arcgis.mapping.VectorTileLayer.styles" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.VectorTileLayer.tile_fonts">
-<code class="descname">tile_fonts</code><span class="sig-paren">(</span><em>fontstack</em>, <em>stack_range</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.VectorTileLayer.tile_fonts" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.VectorTileLayer.tile_fonts">
+<code class="descname">tile_fonts</code><span class="sig-paren">(</span><em>fontstack</em>, <em>stack_range</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.VectorTileLayer.tile_fonts" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource returns glyphs in PBF format. The template url for
 this fonts resource is represented in Vector Tile Style resource.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.VectorTileLayer.tile_sprite">
-<code class="descname">tile_sprite</code><span class="sig-paren">(</span><em>out_format='sprite.json'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.VectorTileLayer.tile_sprite" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.VectorTileLayer.tile_sprite">
+<code class="descname">tile_sprite</code><span class="sig-paren">(</span><em>out_format='sprite.json'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.VectorTileLayer.tile_sprite" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource returns sprite image and metadata</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.lyr.VectorTileLayer.vector_tile">
-<code class="descname">vector_tile</code><span class="sig-paren">(</span><em>level</em>, <em>row</em>, <em>column</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.VectorTileLayer.vector_tile" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.mapping.VectorTileLayer.vector_tile">
+<code class="descname">vector_tile</code><span class="sig-paren">(</span><em>level</em>, <em>row</em>, <em>column</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.mapping.VectorTileLayer.vector_tile" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource represents a single vector tile for the map. The
 bytes for the tile at the specified level, row and column are
 returned in PBF format. If a tile is not found, an error is returned.</p>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="schematicslayer">
-<h2>SchematicsLayer<a class="headerlink" href="#schematicslayer" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="arcgis.lyr.SchematicsLayer">
-<em class="property">class </em><code class="descclassname">arcgis.lyr.</code><code class="descname">SchematicsLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.SchematicsLayer" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
-<dt id="arcgis.lyr.SchematicsLayer.diagrams">
-<code class="descname">diagrams</code><a class="headerlink" href="#arcgis.lyr.SchematicsLayer.diagrams" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Schematic Diagrams resource represents all the schematic diagrams
-under a schematic service. It is returned as an array of Schematic
-Diagram resource by the REST API.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.lyr.SchematicsLayer.folders">
-<code class="descname">folders</code><a class="headerlink" href="#arcgis.lyr.SchematicsLayer.folders" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Schematic Folders resource represents the set of schematic folders
-in the schematic dataset(s) related to the schematic layers under a
-schematic service. It is returned as an array of &lt;Schematic Folder Object&gt;
-by the REST API.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.lyr.SchematicsLayer.layers">
-<code class="descname">layers</code><a class="headerlink" href="#arcgis.lyr.SchematicsLayer.layers" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Schematic Layers resource represents all the schematic layers
-under a schematic service published by ArcGIS Server. It is returned
-as an array of Schematic Layer resources by the REST API.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="arcgis.lyr.SchematicsLayer.search_diagrams">
-<code class="descname">search_diagrams</code><span class="sig-paren">(</span><em>whereClause=None</em>, <em>relatedObjects=None</em>, <em>relatedSchematicObjects=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.lyr.SchematicsLayer.search_diagrams" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Schematic Search Diagrams operation is performed on the schematic
-service resource. The result of this operation is an array of Schematic
-Diagram Information Object.</p>
-<p>It is used to search diagrams in the schematic service by criteria;
-that is, diagrams filtered out via a where clause on any schematic
-diagram class table field, diagrams that contain schematic features
-associated with a specific set of GIS features/objects, or diagrams
-that contain schematic features associated with the same GIS features/
-objects related to another set of schematic features.</p>
-<dl class="docutils">
-<dt>Inputs:</dt>
-<dd><dl class="first last docutils">
-<dt>whereClause - A where clause for the query filter. Any legal SQL</dt>
-<dd>where clause operating on the fields in the schematic
-diagram class table is allowed. See the Schematic
-diagram class table fields section below to know the
-exact list of field names that can be used in this
-where clause.</dd>
-<dt>relatedObjects - An array containing the list of the GIS features/</dt>
-<dd>objects IDs per feature class/table name that are in
-relation with schematic features in the resulting
-queried diagrams. Each GIS feature/object ID
-corresponds to a value of the OBJECTID field in the
-GIS feature class/table.</dd>
-<dt>relatedSchematicObjects - An array containing the list of the</dt>
-<dd>schematic feature names per schematic
-feature class ID that have the same
-associated GIS features/objects with
-schematic features in the resulting
-queried diagrams. Each schematic feature
-name corresponds to a value of the
-SCHEMATICTID field in the schematic
-feature class.</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.lyr.SchematicsLayer.templates">
-<code class="descname">templates</code><a class="headerlink" href="#arcgis.lyr.SchematicsLayer.templates" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Schematic Diagram Templates represents all the schematic diagram
-templates related to the published schematic layers under a schematic
-service. It is returned as an array of Schematic Diagram Template
-resources by the REST API.</p>
 </dd></dl>
 
 </dd></dl>
@@ -929,10 +980,8 @@ resources by the REST API.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="arcgis.viz.html" class="btn btn-neutral float-right" title="arcgis.viz module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="arcgis.geometry.html" class="btn btn-neutral" title="arcgis.geometry module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="arcgis.geoprocessing.html" class="btn btn-neutral" title="arcgis.geoprocessing module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

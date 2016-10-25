@@ -23,6 +23,7 @@ User
     :undoc-members:
     :show-inheritance:
 
+
 Group
 ----------------
 .. autoclass:: arcgis.gis.Group
@@ -37,6 +38,12 @@ Datastore
     :undoc-members:
     :show-inheritance:
 
+Layer
+--------------
+.. autoclass:: arcgis.gis.Layer
+    :members:
+    :undoc-members:
+    :show-inheritance:
     
 ContentManager
 -------------------------

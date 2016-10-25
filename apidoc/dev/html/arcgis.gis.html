@@ -92,6 +92,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#user">User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#group">Group</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#datastore">Datastore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#layer">Layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#contentmanager">ContentManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#usermanager">UserManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#groupmanager">GroupManager</a></li>
@@ -109,7 +110,7 @@
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#replicamanager">ReplicaManager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featuredatasetmanager">FeatureDatasetManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayercollectionmanager">FeatureLayerCollectionManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayermanager">FeatureLayerManager</a></li>
 </ul>
 </li>
@@ -171,6 +172,10 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#networkdataset">NetworkDataset</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.schematics.html">arcgis.schematics module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.schematics.html#schematicslayer">SchematicsLayer</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.html">arcgis.geoanalytics module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#aggregate-points">aggregate_points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#describe-dataset">describe_dataset</a></li>
@@ -192,10 +197,6 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#batch-geocode">batch_geocode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#find-best-match">find_best_match</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#suggest">suggest</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a><ul>
@@ -229,18 +230,17 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.lyr.html">arcgis.lyr module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#layer">Layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#dynamicmaplayer">DynamicMapLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#dynamicmaplayermanager">DynamicMapLayerManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#vectortilelayer">VectorTileLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#schematicslayer">SchematicsLayer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.viz.html">arcgis.viz module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#webmap">WebMap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#webscene">WebScene</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#mapview">MapView</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.mapping.html">arcgis.mapping module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#webmap">WebMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#webscene">WebScene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#mapview">MapView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#dynamicmaplayer">DynamicMapLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#dynamicmaplayermanager">DynamicMapLayerManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#vectortilelayer">VectorTileLayer</a></li>
 </ul>
 </li>
 </ul>
@@ -1327,6 +1327,29 @@ is accessible to every server node in the site</p>
 <dt>Output:</dt>
 <dd>True if successful</dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="layer">
+<h2>Layer<a class="headerlink" href="#layer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.gis.Layer">
+<em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">Layer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">arcgis.gis._GISResource</span></code></p>
+<p>The layer is a primary concept for working with data in a GIS.</p>
+<p>Users create, import, export, analyze, edit, and visualize layers.</p>
+<p>Layers can be added to and visualized using maps. They act as inputs to and outputs from analysis tools.</p>
+<p>Layers are created by publishing data to a GIS, and are exposed as a broader resource (Item) in the
+GIS. Layer objects can be obtained through the layers attribute on layer Items in the GIS.</p>
+<dl class="classmethod">
+<dt id="arcgis.gis.Layer.fromitem">
+<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em>, <em>index=0</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Layer.fromitem" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the layer at the specified index from a layer item
+:param item: an item representing a layer
+:param index: optional, the index of the layer amongst the item&#8217;s layers
+:return: the layer at the specified index</p>
 </dd></dl>
 
 </dd></dl>

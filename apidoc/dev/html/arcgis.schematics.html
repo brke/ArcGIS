@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.viz module &mdash; arcgis 0.3 documentation</title>
+  <title>arcgis.schematics module &mdash; arcgis 0.3 documentation</title>
   
 
   
@@ -34,7 +34,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="arcgis 0.3 documentation" href="index.html"/>
-        <link rel="prev" title="arcgis.lyr module" href="arcgis.lyr.html"/> 
+        <link rel="next" title="arcgis.geoanalytics module" href="arcgis.geoanalytics.html"/>
+        <link rel="prev" title="arcgis.network module" href="arcgis.network.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -91,6 +92,7 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#user">User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#group">Group</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#datastore">Datastore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#layer">Layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#contentmanager">ContentManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#usermanager">UserManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#groupmanager">GroupManager</a></li>
@@ -108,7 +110,7 @@
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#replicamanager">ReplicaManager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featuredatasetmanager">FeatureDatasetManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayercollectionmanager">FeatureLayerCollectionManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayermanager">FeatureLayerManager</a></li>
 </ul>
 </li>
@@ -170,6 +172,10 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#networkdataset">NetworkDataset</a></li>
 </ul>
 </li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.schematics module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#schematicslayer">SchematicsLayer</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.html">arcgis.geoanalytics module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#aggregate-points">aggregate_points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#describe-dataset">describe_dataset</a></li>
@@ -191,10 +197,6 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#batch-geocode">batch_geocode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#find-best-match">find_best_match</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#suggest">suggest</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a><ul>
@@ -228,18 +230,17 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.lyr.html">arcgis.lyr module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#layer">Layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#dynamicmaplayer">DynamicMapLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#dynamicmaplayermanager">DynamicMapLayerManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#vectortilelayer">VectorTileLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#schematicslayer">SchematicsLayer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.viz module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#webmap">WebMap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#webscene">WebScene</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mapview">MapView</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.mapping.html">arcgis.mapping module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#webmap">WebMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#webscene">WebScene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#mapview">MapView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#dynamicmaplayer">DynamicMapLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#dynamicmaplayermanager">DynamicMapLayerManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#vectortilelayer">VectorTileLayer</a></li>
 </ul>
 </li>
 </ul>
@@ -272,11 +273,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>arcgis.viz module</li>
+    <li>arcgis.schematics module</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/arcgis.viz.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/arcgis.schematics.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -286,159 +287,86 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arcgis-viz-module">
-<h1>arcgis.viz module<a class="headerlink" href="#arcgis-viz-module" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="webmap">
-<h2>WebMap<a class="headerlink" href="#webmap" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="arcgis-schematics-module">
+<h1>arcgis.schematics module<a class="headerlink" href="#arcgis-schematics-module" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-arcgis.schematics"></span><div class="section" id="schematicslayer">
+<h2>SchematicsLayer<a class="headerlink" href="#schematicslayer" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="arcgis.viz.WebMap">
-<em class="property">class </em><code class="descclassname">arcgis.viz.</code><code class="descname">WebMap</code><span class="sig-paren">(</span><em>webmapitem</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.viz.WebMap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">collections.OrderedDict</span></code></p>
-<p>Represents a webmap and provides access to it&#8217;s basemaps and operational layers as well
-as functionality to visualize and interact with them.
-<a class="reference external" href="http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/Web_map_format_overview/02qt00000007000000/">http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/Web_map_format_overview/02qt00000007000000/</a></p>
-<dl class="method">
-<dt id="arcgis.viz.WebMap.update">
-<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.viz.WebMap.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="webscene">
-<h2>WebScene<a class="headerlink" href="#webscene" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="arcgis.viz.WebScene">
-<em class="property">class </em><code class="descclassname">arcgis.viz.</code><code class="descname">WebScene</code><span class="sig-paren">(</span><em>websceneitem</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.viz.WebScene" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">collections.OrderedDict</span></code></p>
-<p>Represents a web scene and provides access to it&#8217;s basemaps and operational layers as well
-as functionality to visualize and interact with them.</p>
-<dl class="method">
-<dt id="arcgis.viz.WebScene.update">
-<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.viz.WebScene.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="mapview">
-<h2>MapView<a class="headerlink" href="#mapview" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="arcgis.viz.MapView">
-<em class="property">class </em><code class="descclassname">arcgis.viz.</code><code class="descname">MapView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.viz.MapView" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ipywidgets.widgets.domwidget.DOMWidget</span></code></p>
-<dl class="method">
-<dt id="arcgis.viz.MapView.add_layer">
-<code class="descname">add_layer</code><span class="sig-paren">(</span><em>item</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.viz.MapView.add_layer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds layers from the provided item</p>
+<dt id="arcgis.schematics.SchematicsLayer">
+<em class="property">class </em><code class="descclassname">arcgis.schematics.</code><code class="descname">SchematicsLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.schematics.SchematicsLayer" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="arcgis.schematics.SchematicsLayer.diagrams">
+<code class="descname">diagrams</code><a class="headerlink" href="#arcgis.schematics.SchematicsLayer.diagrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Schematic Diagrams resource represents all the schematic diagrams
+under a schematic service. It is returned as an array of Schematic
+Diagram resource by the REST API.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.viz.MapView.basemap">
-<code class="descname">basemap</code><a class="headerlink" href="#arcgis.viz.MapView.basemap" title="Permalink to this definition">¶</a></dt>
-<dd><p>A trait for unicode strings.</p>
+<dt id="arcgis.schematics.SchematicsLayer.folders">
+<code class="descname">folders</code><a class="headerlink" href="#arcgis.schematics.SchematicsLayer.folders" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Schematic Folders resource represents the set of schematic folders
+in the schematic dataset(s) related to the schematic layers under a
+schematic service. It is returned as an array of &lt;Schematic Folder Object&gt;
+by the REST API.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.viz.MapView.center">
-<code class="descname">center</code><a class="headerlink" href="#arcgis.viz.MapView.center" title="Permalink to this definition">¶</a></dt>
-<dd><p>An instance of a Python list.</p>
+<dt id="arcgis.schematics.SchematicsLayer.layers">
+<code class="descname">layers</code><a class="headerlink" href="#arcgis.schematics.SchematicsLayer.layers" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Schematic Layers resource represents all the schematic layers
+under a schematic service published by ArcGIS Server. It is returned
+as an array of Schematic Layer resources by the REST API.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.viz.MapView.clear_graphics">
-<code class="descname">clear_graphics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.viz.MapView.clear_graphics" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="arcgis.viz.MapView.draw">
-<code class="descname">draw</code><span class="sig-paren">(</span><em>shape</em>, <em>popup=None</em>, <em>symbol=None</em>, <em>attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.viz.MapView.draw" title="Permalink to this definition">¶</a></dt>
-<dd><p>Draws a shape.</p>
-<p>Arguments:
-shape is one of [&#8220;circle&#8221;, &#8220;downarrow&#8221;, &#8220;ellipse&#8221;, &#8220;extent&#8221;, &#8220;freehandpolygon&#8221;,
-&#8220;freehandpolyline&#8221;, &#8220;leftarrow&#8221;, &#8220;line&#8221;, &#8220;multipoint&#8221;, &#8220;point&#8221;, &#8220;polygon&#8221;, &#8220;polyline&#8221;,
-&#8220;rectangle&#8221;, &#8220;rightarrow&#8221;, &#8220;triangle&#8221;, &#8220;uparrow&#8221;, or geometry dict object]</p>
-<p>popup is a dict containing &#8220;title&#8221; and &#8220;content&#8221; as keys that will be displayed
-when the shape is clicked</p>
-<p>symbol is a symbol specified in json format as described at <a class="reference external" href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000n5000000">http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000n5000000</a>
-a default symbol is used is one is not specified</p>
-<p>attributes is a dict containing name value pairs of fields and field values
-associated with the graphic.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.viz.MapView.end_time">
-<code class="descname">end_time</code><a class="headerlink" href="#arcgis.viz.MapView.end_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>A trait for unicode strings.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.viz.MapView.extent">
-<code class="descname">extent</code><a class="headerlink" href="#arcgis.viz.MapView.extent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.viz.MapView.id">
-<code class="descname">id</code><a class="headerlink" href="#arcgis.viz.MapView.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>A trait for unicode strings.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.viz.MapView.mode">
-<code class="descname">mode</code><a class="headerlink" href="#arcgis.viz.MapView.mode" title="Permalink to this definition">¶</a></dt>
-<dd><p>A trait for unicode strings.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="arcgis.viz.MapView.on_click">
-<code class="descname">on_click</code><span class="sig-paren">(</span><em>callback</em>, <em>remove=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.viz.MapView.on_click" title="Permalink to this definition">¶</a></dt>
-<dd><p>Register a callback to execute when the map is clicked.</p>
-<p>The callback will be called with one argument,
-the clicked widget instance.</p>
+<dt id="arcgis.schematics.SchematicsLayer.search_diagrams">
+<code class="descname">search_diagrams</code><span class="sig-paren">(</span><em>whereClause=None</em>, <em>relatedObjects=None</em>, <em>relatedSchematicObjects=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.schematics.SchematicsLayer.search_diagrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Schematic Search Diagrams operation is performed on the schematic
+service resource. The result of this operation is an array of Schematic
+Diagram Information Object.</p>
+<p>It is used to search diagrams in the schematic service by criteria;
+that is, diagrams filtered out via a where clause on any schematic
+diagram class table field, diagrams that contain schematic features
+associated with a specific set of GIS features/objects, or diagrams
+that contain schematic features associated with the same GIS features/
+objects related to another set of schematic features.</p>
 <dl class="docutils">
-<dt>remove</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">bool (optional)</span><dd>Set to true to remove the callback from the list of callbacks.</dd>
+<dt>Inputs:</dt>
+<dd><dl class="first last docutils">
+<dt>whereClause - A where clause for the query filter. Any legal SQL</dt>
+<dd>where clause operating on the fields in the schematic
+diagram class table is allowed. See the Schematic
+diagram class table fields section below to know the
+exact list of field names that can be used in this
+where clause.</dd>
+<dt>relatedObjects - An array containing the list of the GIS features/</dt>
+<dd>objects IDs per feature class/table name that are in
+relation with schematic features in the resulting
+queried diagrams. Each GIS feature/object ID
+corresponds to a value of the OBJECTID field in the
+GIS feature class/table.</dd>
+<dt>relatedSchematicObjects - An array containing the list of the</dt>
+<dd>schematic feature names per schematic
+feature class ID that have the same
+associated GIS features/objects with
+schematic features in the resulting
+queried diagrams. Each schematic feature
+name corresponds to a value of the
+SCHEMATICTID field in the schematic
+feature class.</dd>
+</dl>
+</dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="arcgis.viz.MapView.on_draw_end">
-<code class="descname">on_draw_end</code><span class="sig-paren">(</span><em>callback</em>, <em>remove=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.viz.MapView.on_draw_end" title="Permalink to this definition">¶</a></dt>
-<dd><p>Register a callback to execute when something is drawn</p>
-<p>The callback will be called with two argument,
-the clicked widget instance, and the geometry drawn</p>
-<dl class="docutils">
-<dt>remove</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">bool (optional)</span><dd>Set to true to remove the callback from the list of callbacks.</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="arcgis.viz.MapView.remove_layers">
-<code class="descname">remove_layers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.viz.MapView.remove_layers" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="arcgis.viz.MapView.set_time_extent">
-<code class="descname">set_time_extent</code><span class="sig-paren">(</span><em>start_time</em>, <em>end_time</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.viz.MapView.set_time_extent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 <dl class="attribute">
-<dt id="arcgis.viz.MapView.start_time">
-<code class="descname">start_time</code><a class="headerlink" href="#arcgis.viz.MapView.start_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>A trait for unicode strings.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.viz.MapView.width">
-<code class="descname">width</code><a class="headerlink" href="#arcgis.viz.MapView.width" title="Permalink to this definition">¶</a></dt>
-<dd><p>A trait for unicode strings.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.viz.MapView.zoom">
-<code class="descname">zoom</code><a class="headerlink" href="#arcgis.viz.MapView.zoom" title="Permalink to this definition">¶</a></dt>
-<dd><p>An int trait.</p>
+<dt id="arcgis.schematics.SchematicsLayer.templates">
+<code class="descname">templates</code><a class="headerlink" href="#arcgis.schematics.SchematicsLayer.templates" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Schematic Diagram Templates represents all the schematic diagram
+templates related to the published schematic layers under a schematic
+service. It is returned as an array of Schematic Diagram Template
+resources by the REST API.</p>
 </dd></dl>
 
 </dd></dl>
@@ -453,8 +381,10 @@ the clicked widget instance, and the geometry drawn</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="arcgis.geoanalytics.html" class="btn btn-neutral float-right" title="arcgis.geoanalytics module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="arcgis.lyr.html" class="btn btn-neutral" title="arcgis.lyr module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="arcgis.network.html" class="btn btn-neutral" title="arcgis.network module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

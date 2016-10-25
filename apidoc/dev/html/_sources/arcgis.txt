@@ -16,6 +16,9 @@ arcgis.raster module
 arcgis.network module
 -----------------
 
+arcgis.schematics module
+-----------------
+
 arcgis.geoanalytics module
 -------------------
 
@@ -28,11 +31,9 @@ arcgis.geometry module
 arcgis.geoprocessing module
 -----------------
 
-arcgis.lyr module
+arcgis.mapping module
 -----------------
-
-arcgis.viz module
------------------
+   
    
 Module contents
 ---------------

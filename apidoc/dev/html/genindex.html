@@ -91,6 +91,7 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#user">User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#group">Group</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#datastore">Datastore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#layer">Layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#contentmanager">ContentManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#usermanager">UserManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#groupmanager">GroupManager</a></li>
@@ -108,7 +109,7 @@
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#replicamanager">ReplicaManager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featuredatasetmanager">FeatureDatasetManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayercollectionmanager">FeatureLayerCollectionManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayermanager">FeatureLayerManager</a></li>
 </ul>
 </li>
@@ -170,6 +171,10 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#networkdataset">NetworkDataset</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.schematics.html">arcgis.schematics module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.schematics.html#schematicslayer">SchematicsLayer</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.html">arcgis.geoanalytics module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#aggregate-points">aggregate_points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#describe-dataset">describe_dataset</a></li>
@@ -191,10 +196,6 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#batch-geocode">batch_geocode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#find-best-match">find_best_match</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#suggest">suggest</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a><ul>
@@ -228,18 +229,17 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.lyr.html">arcgis.lyr module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#layer">Layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#dynamicmaplayer">DynamicMapLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#dynamicmaplayermanager">DynamicMapLayerManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#vectortilelayer">VectorTileLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.lyr.html#schematicslayer">SchematicsLayer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.viz.html">arcgis.viz module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#webmap">WebMap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#webscene">WebScene</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.viz.html#mapview">MapView</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.mapping.html">arcgis.mapping module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#webmap">WebMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#webscene">WebScene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#mapview">MapView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#dynamicmaplayer">DynamicMapLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#dynamicmaplayermanager">DynamicMapLayerManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#vectortilelayer">VectorTileLayer</a></li>
 </ul>
 </li>
 </ul>
@@ -344,7 +344,7 @@
   </dt>
 
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.add_layer">add_layer() (arcgis.viz.MapView method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.add_layer">add_layer() (arcgis.mapping.MapView method)</a>
   </dt>
 
       
@@ -356,7 +356,7 @@
   </dt>
 
       
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureDatasetManager.add_to_definition">add_to_definition() (arcgis.features.managers.FeatureDatasetManager method)</a>
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureLayerCollectionManager.add_to_definition">add_to_definition() (arcgis.features.managers.FeatureLayerCollectionManager method)</a>
   </dt>
 
       <dd><dl>
@@ -430,15 +430,15 @@
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#module-arcgis.lyr">arcgis.lyr (module)</a>
-  </dt>
-
-      
   <dt><a href="arcgis.network.html#module-arcgis.network">arcgis.network (module)</a>
   </dt>
 
       
   <dt><a href="arcgis.raster.html#module-arcgis.raster">arcgis.raster (module)</a>
+  </dt>
+
+      
+  <dt><a href="arcgis.schematics.html#module-arcgis.schematics">arcgis.schematics (module)</a>
   </dt>
 
       
@@ -472,7 +472,7 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.basemap">basemap (arcgis.viz.MapView attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.basemap">basemap (arcgis.mapping.MapView attribute)</a>
   </dt>
 
   </dl></td>
@@ -512,11 +512,11 @@
 
       </dl></dd>
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayerManager.cancel_job">cancel_job() (arcgis.lyr.DynamicMapLayerManager method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayerManager.cancel_job">cancel_job() (arcgis.mapping.DynamicMapLayerManager method)</a>
   </dt>
 
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.center">center (arcgis.viz.MapView attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.center">center (arcgis.mapping.MapView attribute)</a>
   </dt>
 
       
@@ -528,11 +528,7 @@
   </dt>
 
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.clear_graphics">clear_graphics() (arcgis.viz.MapView method)</a>
-  </dt>
-
-      
-  <dt><a href="arcgis.network.html#arcgis.network.NetworkDataset.closest_facility_layers">closest_facility_layers (arcgis.network.NetworkDataset attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.clear_graphics">clear_graphics() (arcgis.mapping.MapView method)</a>
   </dt>
 
       
@@ -565,12 +561,12 @@
   <dt><a href="arcgis.gis.html#arcgis.gis.Group.content">content() (arcgis.gis.Group method)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.gis.html#arcgis.gis.ContentManager">ContentManager (class in arcgis.gis)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.raster.html#arcgis.raster.convert_raster_to_feature">convert_raster_to_feature() (arcgis.raster method)</a>
   </dt>
@@ -650,16 +646,6 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayer.dataset">dataset (arcgis.features.FeatureLayer attribute)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureLayer.dataset">[1]</a>
-  </dt>
-
-      <dd><dl>
-        
-  <dt><a href="arcgis.features.html#arcgis.features.Table.dataset">(arcgis.features.Table attribute)</a>, <a href="arcgis.features.toc.html#arcgis.features.Table.dataset">[1]</a>
-  </dt>
-
-      </dl></dd>
-      
   <dt><a href="arcgis.gis.html#arcgis.gis.Datastore">Datastore (class in arcgis.gis)</a>
   </dt>
 
@@ -704,7 +690,7 @@
   </dt>
 
       
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureDatasetManager.delete_from_definition">delete_from_definition() (arcgis.features.managers.FeatureDatasetManager method)</a>
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureLayerCollectionManager.delete_from_definition">delete_from_definition() (arcgis.features.managers.FeatureLayerCollectionManager method)</a>
   </dt>
 
       <dd><dl>
@@ -727,12 +713,12 @@
   </dt>
 
       </dl></dd>
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.gis.html#arcgis.gis.Item.dependent_to">dependent_to() (arcgis.gis.Item method)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.gis.html#arcgis.gis.Item.dependent_upon">dependent_upon() (arcgis.gis.Item method)</a>
   </dt>
@@ -746,7 +732,7 @@
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.SchematicsLayer.diagrams">diagrams (arcgis.lyr.SchematicsLayer attribute)</a>
+  <dt><a href="arcgis.schematics.html#arcgis.schematics.SchematicsLayer.diagrams">diagrams (arcgis.schematics.SchematicsLayer attribute)</a>
   </dt>
 
       
@@ -794,15 +780,15 @@
 
       </dl></dd>
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.draw">draw() (arcgis.viz.MapView method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.draw">draw() (arcgis.mapping.MapView method)</a>
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayer">DynamicMapLayer (class in arcgis.lyr)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayer">DynamicMapLayer (class in arcgis.mapping)</a>
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayerManager">DynamicMapLayerManager (class in arcgis.lyr)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayerManager">DynamicMapLayerManager (class in arcgis.mapping)</a>
   </dt>
 
   </dl></td>
@@ -822,11 +808,11 @@
 
       </dl></dd>
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayerManager.edit_tile_service">edit_tile_service() (arcgis.lyr.DynamicMapLayerManager method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayerManager.edit_tile_service">edit_tile_service() (arcgis.mapping.DynamicMapLayerManager method)</a>
   </dt>
 
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.end_time">end_time (arcgis.viz.MapView attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.end_time">end_time (arcgis.mapping.MapView attribute)</a>
   </dt>
 
       
@@ -840,7 +826,7 @@
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayer.estimate_export_tiles_size">estimate_export_tiles_size() (arcgis.lyr.DynamicMapLayer method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayer.estimate_export_tiles_size">estimate_export_tiles_size() (arcgis.mapping.DynamicMapLayer method)</a>
   </dt>
 
       
@@ -852,15 +838,15 @@
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayer.export_map">export_map() (arcgis.lyr.DynamicMapLayer method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayer.export_map">export_map() (arcgis.mapping.DynamicMapLayer method)</a>
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayer.export_tiles">export_tiles() (arcgis.lyr.DynamicMapLayer method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayer.export_tiles">export_tiles() (arcgis.mapping.DynamicMapLayer method)</a>
   </dt>
 
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.extent">extent (arcgis.viz.MapView attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.extent">extent (arcgis.mapping.MapView attribute)</a>
   </dt>
 
       
@@ -882,15 +868,15 @@
   </dt>
 
       
-  <dt><a href="arcgis.features.html#arcgis.features.FeatureDataset">FeatureDataset (class in arcgis.features)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureDataset">[1]</a>
-  </dt>
-
-      
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureDatasetManager">FeatureDatasetManager (class in arcgis.features.managers)</a>
-  </dt>
-
-      
   <dt><a href="arcgis.features.html#arcgis.features.FeatureLayer">FeatureLayer (class in arcgis.features)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureLayer">[1]</a>
+  </dt>
+
+      
+  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayerCollection">FeatureLayerCollection (class in arcgis.features)</a>
+  </dt>
+
+      
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureLayerCollectionManager">FeatureLayerCollectionManager (class in arcgis.features.managers)</a>
   </dt>
 
       
@@ -916,7 +902,7 @@
 
       </dl></dd>
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayer.find">find() (arcgis.lyr.DynamicMapLayer method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayer.find">find() (arcgis.mapping.DynamicMapLayer method)</a>
   </dt>
 
       
@@ -957,7 +943,7 @@
 
       <dd><dl>
         
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.SchematicsLayer.folders">(arcgis.lyr.SchematicsLayer attribute)</a>
+  <dt><a href="arcgis.schematics.html#arcgis.schematics.SchematicsLayer.folders">(arcgis.schematics.SchematicsLayer attribute)</a>
   </dt>
 
       </dl></dd>
@@ -986,24 +972,20 @@
 
       </dl></dd>
       
-  <dt><a href="arcgis.features.html#arcgis.features.FeatureDataset.fromitem">fromitem() (arcgis.features.FeatureDataset method)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureDataset.fromitem">[1]</a>
+  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayer.fromitem">fromitem() (arcgis.features.FeatureLayer method)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureLayer.fromitem">[1]</a>
   </dt>
 
       <dd><dl>
         
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureDatasetManager.fromitem">(arcgis.features.managers.FeatureDatasetManager method)</a>
+  <dt><a href="arcgis.features.html#arcgis.features.Table.fromitem">(arcgis.features.Table method)</a>, <a href="arcgis.features.toc.html#arcgis.features.Table.fromitem">[1]</a>
   </dt>
 
         
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureLayerManager.fromitem">(arcgis.features.managers.FeatureLayerManager method)</a>
+  <dt><a href="arcgis.gis.html#arcgis.gis.Layer.fromitem">(arcgis.gis.Layer class method)</a>
   </dt>
 
         
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.VectorTileLayer.fromitem">(arcgis.lyr.VectorTileLayer class method)</a>
-  </dt>
-
-        
-  <dt><a href="arcgis.network.html#arcgis.network.NetworkDataset.fromitem">(arcgis.network.NetworkDataset class method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.VectorTileLayer.fromitem">(arcgis.mapping.VectorTileLayer class method)</a>
   </dt>
 
         
@@ -1022,7 +1004,7 @@
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayer.generate_kml">generate_kml() (arcgis.lyr.DynamicMapLayer method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayer.generate_kml">generate_kml() (arcgis.mapping.DynamicMapLayer method)</a>
   </dt>
 
       
@@ -1198,11 +1180,11 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.id">id (arcgis.viz.MapView attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.id">id (arcgis.mapping.MapView attribute)</a>
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayer.identify">identify() (arcgis.lyr.DynamicMapLayer method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayer.identify">identify() (arcgis.mapping.DynamicMapLayer method)</a>
   </dt>
 
       
@@ -1214,7 +1196,7 @@
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.VectorTileLayer.info">info (arcgis.lyr.VectorTileLayer attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.VectorTileLayer.info">info (arcgis.mapping.VectorTileLayer attribute)</a>
   </dt>
 
       
@@ -1236,12 +1218,12 @@
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.features.html#arcgis.features.FeatureDataset.invoke">invoke() (arcgis.features.FeatureDataset method)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureDataset.invoke">[1]</a>
+  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayer.invoke">invoke() (arcgis.features.FeatureLayer method)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureLayer.invoke">[1]</a>
   </dt>
 
       <dd><dl>
         
-  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayer.invoke">(arcgis.features.FeatureLayer method)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureLayer.invoke">[1]</a>
+  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayerCollection.invoke">(arcgis.features.FeatureLayerCollection method)</a>
   </dt>
 
         
@@ -1249,15 +1231,11 @@
   </dt>
 
         
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureDatasetManager.invoke">(arcgis.features.managers.FeatureDatasetManager method)</a>
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureLayerCollectionManager.invoke">(arcgis.features.managers.FeatureLayerCollectionManager method)</a>
   </dt>
 
         
   <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureLayerManager.invoke">(arcgis.features.managers.FeatureLayerManager method)</a>
-  </dt>
-
-        
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.Layer.invoke">(arcgis.lyr.Layer method)</a>
   </dt>
 
       </dl></dd>
@@ -1270,7 +1248,7 @@
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayer.itemInfo">itemInfo (arcgis.lyr.DynamicMapLayer attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayer.itemInfo">itemInfo (arcgis.mapping.DynamicMapLayer attribute)</a>
   </dt>
 
       
@@ -1284,7 +1262,7 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayerManager.job_statistics">job_statistics() (arcgis.lyr.DynamicMapLayerManager method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayerManager.job_statistics">job_statistics() (arcgis.mapping.DynamicMapLayerManager method)</a>
   </dt>
 
   </dl></td>
@@ -1300,7 +1278,7 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayer.kml">kml (arcgis.lyr.DynamicMapLayer attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayer.kml">kml (arcgis.mapping.DynamicMapLayer attribute)</a>
   </dt>
 
   </dl></td>
@@ -1314,11 +1292,11 @@
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.Layer">Layer (class in arcgis.lyr)</a>
+  <dt><a href="arcgis.gis.html#arcgis.gis.Layer">Layer (class in arcgis.gis)</a>
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.SchematicsLayer.layers">layers (arcgis.lyr.SchematicsLayer attribute)</a>
+  <dt><a href="arcgis.schematics.html#arcgis.schematics.SchematicsLayer.layers">layers (arcgis.schematics.SchematicsLayer attribute)</a>
   </dt>
 
   </dl></td>
@@ -1342,12 +1320,12 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.features.html#arcgis.features.FeatureDataset.manager">manager (arcgis.features.FeatureDataset attribute)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureDataset.manager">[1]</a>
+  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayer.manager">manager (arcgis.features.FeatureLayer attribute)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureLayer.manager">[1]</a>
   </dt>
 
       <dd><dl>
         
-  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayer.manager">(arcgis.features.FeatureLayer attribute)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureLayer.manager">[1]</a>
+  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayerCollection.manager">(arcgis.features.FeatureLayerCollection attribute)</a>
   </dt>
 
         
@@ -1355,7 +1333,7 @@
   </dt>
 
         
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayer.manager">(arcgis.lyr.DynamicMapLayer attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayer.manager">(arcgis.mapping.DynamicMapLayer attribute)</a>
   </dt>
 
       </dl></dd>
@@ -1376,7 +1354,7 @@
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView">MapView (class in arcgis.viz)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView">MapView (class in arcgis.mapping)</a>
   </dt>
 
       
@@ -1388,11 +1366,11 @@
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayer.metadata">metadata (arcgis.lyr.DynamicMapLayer attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayer.metadata">metadata (arcgis.mapping.DynamicMapLayer attribute)</a>
   </dt>
 
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.mode">mode (arcgis.viz.MapView attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.mode">mode (arcgis.mapping.MapView attribute)</a>
   </dt>
 
       
@@ -1408,12 +1386,6 @@
 
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%" valign="top"><dl>
-      
-  <dt><a href="arcgis.network.html#arcgis.network.NetworkDataset">NetworkDataset (class in arcgis.network)</a>
-  </dt>
-
-  </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.network.html#arcgis.network.NetworkLayer">NetworkLayer (class in arcgis.network)</a>
@@ -1436,11 +1408,11 @@
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.on_click">on_click() (arcgis.viz.MapView method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.on_click">on_click() (arcgis.mapping.MapView method)</a>
   </dt>
 
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.on_draw_end">on_draw_end() (arcgis.viz.MapView method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.on_draw_end">on_draw_end() (arcgis.mapping.MapView method)</a>
   </dt>
 
       
@@ -1469,34 +1441,22 @@
   <dt><a href="arcgis.geometry.html#arcgis.geometry.Polyline">Polyline (class in arcgis.geometry)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.geometry.html#arcgis.geometry.project">project() (arcgis.geometry method)</a>
   </dt>
 
       
-  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayer.properties">properties (arcgis.features.FeatureLayer attribute)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureLayer.properties">[1]</a>
+  <dt><a href="arcgis.html#arcgis.GIS.properties">properties (arcgis.GIS attribute)</a>
   </dt>
 
       <dd><dl>
         
-  <dt><a href="arcgis.html#arcgis.GIS.properties">(arcgis.GIS attribute)</a>
-  </dt>
-
-        
-  <dt><a href="arcgis.features.html#arcgis.features.Table.properties">(arcgis.features.Table attribute)</a>, <a href="arcgis.features.toc.html#arcgis.features.Table.properties">[1]</a>
-  </dt>
-
-        
   <dt><a href="arcgis.gis.html#arcgis.gis.GIS.properties">(arcgis.gis.GIS attribute)</a>
   </dt>
 
-        
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.Layer.properties">(arcgis.lyr.Layer attribute)</a>
-  </dt>
-
       </dl></dd>
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.gis.html#arcgis.gis.Item.protect">protect() (arcgis.gis.Item method)</a>
   </dt>
@@ -1517,11 +1477,11 @@
 
       <dd><dl>
         
-  <dt><a href="arcgis.features.html#arcgis.features.FeatureDataset.query">(arcgis.features.FeatureDataset method)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureDataset.query">[1]</a>
+  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayer.query">(arcgis.features.FeatureLayer method)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureLayer.query">[1]</a>
   </dt>
 
         
-  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayer.query">(arcgis.features.FeatureLayer method)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureLayer.query">[1]</a>
+  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayerCollection.query">(arcgis.features.FeatureLayerCollection method)</a>
   </dt>
 
         
@@ -1536,12 +1496,12 @@
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.features.html#arcgis.features.FeatureDataset.query_related_records">query_related_records() (arcgis.features.FeatureDataset method)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureDataset.query_related_records">[1]</a>
+  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayer.query_related_records">query_related_records() (arcgis.features.FeatureLayer method)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureLayer.query_related_records">[1]</a>
   </dt>
 
       <dd><dl>
         
-  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayer.query_related_records">(arcgis.features.FeatureLayer method)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureLayer.query_related_records">[1]</a>
+  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayerCollection.query_related_records">(arcgis.features.FeatureLayerCollection method)</a>
   </dt>
 
         
@@ -1582,7 +1542,7 @@
   </dt>
 
       
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureDatasetManager.refresh">refresh() (arcgis.features.managers.FeatureDatasetManager method)</a>
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureLayerCollectionManager.refresh">refresh() (arcgis.features.managers.FeatureLayerCollectionManager method)</a>
   </dt>
 
       <dd><dl>
@@ -1591,22 +1551,22 @@
   </dt>
 
         
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayerManager.refresh">(arcgis.lyr.DynamicMapLayerManager method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayerManager.refresh">(arcgis.mapping.DynamicMapLayerManager method)</a>
   </dt>
 
       </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.gis.html#arcgis.gis.Item.related_items">related_items() (arcgis.gis.Item method)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.geometry.html#arcgis.geometry.relation">relation() (arcgis.geometry method)</a>
   </dt>
 
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.remove_layers">remove_layers() (arcgis.viz.MapView method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.remove_layers">remove_layers() (arcgis.mapping.MapView method)</a>
   </dt>
 
       
@@ -1634,10 +1594,6 @@
   </dt>
 
       
-  <dt><a href="arcgis.network.html#arcgis.network.NetworkDataset.route_layers">route_layers (arcgis.network.NetworkDataset attribute)</a>
-  </dt>
-
-      
   <dt><a href="arcgis.network.html#arcgis.network.RouteLayer">RouteLayer (class in arcgis.network)</a>
   </dt>
 
@@ -1652,7 +1608,7 @@
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.SchematicsLayer">SchematicsLayer (class in arcgis.lyr)</a>
+  <dt><a href="arcgis.schematics.html#arcgis.schematics.SchematicsLayer">SchematicsLayer (class in arcgis.schematics)</a>
   </dt>
 
       
@@ -1674,7 +1630,7 @@
 
       </dl></dd>
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.SchematicsLayer.search_diagrams">search_diagrams() (arcgis.lyr.SchematicsLayer method)</a>
+  <dt><a href="arcgis.schematics.html#arcgis.schematics.SchematicsLayer.search_diagrams">search_diagrams() (arcgis.schematics.SchematicsLayer method)</a>
   </dt>
 
       
@@ -1682,15 +1638,11 @@
   </dt>
 
       
-  <dt><a href="arcgis.network.html#arcgis.network.NetworkDataset.service_area_layers">service_area_layers (arcgis.network.NetworkDataset attribute)</a>
-  </dt>
-
-      
   <dt><a href="arcgis.network.html#arcgis.network.ServiceAreaLayer">ServiceAreaLayer (class in arcgis.network)</a>
   </dt>
 
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.set_time_extent">set_time_extent() (arcgis.viz.MapView method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.set_time_extent">set_time_extent() (arcgis.mapping.MapView method)</a>
   </dt>
 
       
@@ -1705,12 +1657,12 @@
   <dt><a href="arcgis.gis.html#arcgis.gis.UserManager.signup">signup() (arcgis.gis.UserManager method)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.network.html#arcgis.network.RouteLayer.solve">solve() (arcgis.network.RouteLayer method)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.network.html#arcgis.network.ClosestFacilityLayer.solve_closest_facility">solve_closest_facility() (arcgis.network.ClosestFacilityLayer method)</a>
   </dt>
@@ -1728,11 +1680,21 @@
   </dt>
 
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.start_time">start_time (arcgis.viz.MapView attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.start_time">start_time (arcgis.mapping.MapView attribute)</a>
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.VectorTileLayer.styles">styles (arcgis.lyr.VectorTileLayer attribute)</a>
+  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayer.storage">storage (arcgis.features.FeatureLayer attribute)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureLayer.storage">[1]</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="arcgis.features.html#arcgis.features.Table.storage">(arcgis.features.Table attribute)</a>, <a href="arcgis.features.toc.html#arcgis.features.Table.storage">[1]</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.VectorTileLayer.styles">styles (arcgis.mapping.VectorTileLayer attribute)</a>
   </dt>
 
       
@@ -1776,19 +1738,19 @@
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.SchematicsLayer.templates">templates (arcgis.lyr.SchematicsLayer attribute)</a>
+  <dt><a href="arcgis.schematics.html#arcgis.schematics.SchematicsLayer.templates">templates (arcgis.schematics.SchematicsLayer attribute)</a>
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.DynamicMapLayer.thumbnail">thumbnail() (arcgis.lyr.DynamicMapLayer method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.DynamicMapLayer.thumbnail">thumbnail() (arcgis.mapping.DynamicMapLayer method)</a>
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.VectorTileLayer.tile_fonts">tile_fonts() (arcgis.lyr.VectorTileLayer method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.VectorTileLayer.tile_fonts">tile_fonts() (arcgis.mapping.VectorTileLayer method)</a>
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.VectorTileLayer.tile_sprite">tile_sprite() (arcgis.lyr.VectorTileLayer method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.VectorTileLayer.tile_sprite">tile_sprite() (arcgis.mapping.VectorTileLayer method)</a>
   </dt>
 
       
@@ -1879,18 +1841,18 @@
   </dt>
 
         
-  <dt><a href="arcgis.viz.html#arcgis.viz.WebMap.update">(arcgis.viz.WebMap method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.WebMap.update">(arcgis.mapping.WebMap method)</a>
   </dt>
 
         
-  <dt><a href="arcgis.viz.html#arcgis.viz.WebScene.update">(arcgis.viz.WebScene method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.WebScene.update">(arcgis.mapping.WebScene method)</a>
   </dt>
 
       </dl></dd>
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureDatasetManager.update_definition">update_definition() (arcgis.features.managers.FeatureDatasetManager method)</a>
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureLayerCollectionManager.update_definition">update_definition() (arcgis.features.managers.FeatureLayerCollectionManager method)</a>
   </dt>
 
       <dd><dl>
@@ -1944,11 +1906,11 @@
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.VectorTileLayer.vector_tile">vector_tile() (arcgis.lyr.VectorTileLayer method)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.VectorTileLayer.vector_tile">vector_tile() (arcgis.mapping.VectorTileLayer method)</a>
   </dt>
 
       
-  <dt><a href="arcgis.lyr.html#arcgis.lyr.VectorTileLayer">VectorTileLayer (class in arcgis.lyr)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.VectorTileLayer">VectorTileLayer (class in arcgis.mapping)</a>
   </dt>
 
   </dl></td>
@@ -1958,17 +1920,17 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.WebMap">WebMap (class in arcgis.viz)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.WebMap">WebMap (class in arcgis.mapping)</a>
   </dt>
 
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.WebScene">WebScene (class in arcgis.viz)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.WebScene">WebScene (class in arcgis.mapping)</a>
   </dt>
 
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.width">width (arcgis.viz.MapView attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.width">width (arcgis.mapping.MapView attribute)</a>
   </dt>
 
   </dl></td>
@@ -1978,7 +1940,7 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="arcgis.viz.html#arcgis.viz.MapView.zoom">zoom (arcgis.viz.MapView attribute)</a>
+  <dt><a href="arcgis.mapping.html#arcgis.mapping.MapView.zoom">zoom (arcgis.mapping.MapView attribute)</a>
   </dt>
 
   </dl></td>

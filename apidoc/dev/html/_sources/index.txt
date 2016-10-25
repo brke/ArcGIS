@@ -16,12 +16,12 @@ Contents:
    arcgis.features.toc
    arcgis.raster
    arcgis.network
+   arcgis.schematics
    arcgis.geoanalytics
    arcgis.geocoding
-   arcgis.geoprocessing
    arcgis.geometry
-   arcgis.lyr
-   arcgis.viz
+   arcgis.geoprocessing
+   arcgis.mapping
    
 
 Indices and tables
