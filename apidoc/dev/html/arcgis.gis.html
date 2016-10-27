@@ -287,19 +287,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-arcgis.features">
-<span id="arcgis-gis-module"></span><h1>arcgis.gis module<a class="headerlink" href="#module-arcgis.features" title="Permalink to this headline">¶</a></h1>
-<p>Module for working with features and feature layers in the GIS.</p>
-<p>In the GIS, entities located in space with a set of properties can be represented as features.  Features are stored as
-feature classes, which represent a set of features located using a single spatial type (point, line, polygon) and a
-common set of properties.  This is the geographic extension of the classic tabular or relational representation for
-entities - a set of entities is modelled as rows in a table.  Tables represent entity classes with uniform
-properties.  In addition to working with “entities with location” as features, the system can also work with
-non-spatial entities as rows in tables.  The system can also model relationships between entities using properties
-which act as primary and foreign keys.  A collection of feature classes and tables, with the associated
-relationships among the entities, is a feature layer collection. FeatureLayerCollections are one of the dataset types
-contained in a Datastore.  Finally, features are not simply entities in a dataset.  Features have a visual
-representation and user experience - on a map, in a 3D scene, as entities with a property sheet or popups.</p>
+  <div class="section" id="module-arcgis.gis">
+<span id="arcgis-gis-module"></span><h1>arcgis.gis module<a class="headerlink" href="#module-arcgis.gis" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>gis</strong> module provides an information model for GIS hosted
+within ArcGIS Online or an ArcGIS Portal. This module provides functionality to manage
+(create, read, update and delete) GIS users, groups, content and datastores. This module
+is the most important and provides the entry point into the GIS.</p>
 <div class="section" id="gis">
 <h2>GIS<a class="headerlink" href="#gis" title="Permalink to this headline">¶</a></h2>
 <dl class="class">

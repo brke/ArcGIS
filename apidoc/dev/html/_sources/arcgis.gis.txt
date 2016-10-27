@@ -1,7 +1,7 @@
 arcgis.gis module
 =================
 
-.. automodule:: arcgis.features
+.. automodule:: arcgis.gis
 
 GIS
 --------------
