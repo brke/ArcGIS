@@ -28,9 +28,9 @@ Table
     :members:
     :undoc-members:
 
-FeatureDataset
+FeatureLayerCollection
 --------------
-.. autoclass:: arcgis.features.FeatureDataset
+.. autoclass:: arcgis.features.FeatureLayerCollection
     :inherited-members:
     :members:
     :undoc-members:
