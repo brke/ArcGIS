@@ -51,12 +51,10 @@ Submodules
 --------------
 .. toctree::
    :maxdepth: 3
-   :caption: arcgis.features
 
-   arcgis.features.managers
    arcgis.features.analyze_patterns
    arcgis.features.enrich_data
    arcgis.features.find_locations
    arcgis.features.manage_data
    arcgis.features.summarize_data
-
+   arcgis.features.managers

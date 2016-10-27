@@ -106,13 +106,6 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featureset">FeatureSet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featurecollection">FeatureCollection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#submodules">Submodules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#replicamanager">ReplicaManager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayercollectionmanager">FeatureLayerCollectionManager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayermanager">FeatureLayerManager</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
@@ -144,6 +137,13 @@
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#aggregate-points">aggregate_points</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-nearby">summarize_nearby</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#syncmanager">SyncManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayercollectionmanager">FeatureLayerCollectionManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayermanager">FeatureLayerManager</a></li>
 </ul>
 </li>
 </ul>
@@ -580,7 +580,7 @@
   </dt>
 
       
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.ReplicaManager.create">create() (arcgis.features.managers.ReplicaManager method)</a>
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.SyncManager.create">create() (arcgis.features.managers.SyncManager method)</a>
   </dt>
 
       <dd><dl>
@@ -729,10 +729,6 @@
 
       
   <dt><a href="arcgis.geoanalytics.html#arcgis.geoanalytics.describe_dataset">describe_dataset() (arcgis.geoanalytics method)</a>
-  </dt>
-
-      
-  <dt><a href="arcgis.schematics.html#arcgis.schematics.SchematicsLayer.diagrams">diagrams (arcgis.schematics.SchematicsLayer attribute)</a>
   </dt>
 
       
@@ -923,12 +919,12 @@
   </dt>
 
       </dl></dd>
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.features.use_proximity.html#arcgis.features.use_proximity.find_nearest">find_nearest() (arcgis.features.use_proximity method)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.features.find_locations.html#arcgis.features.find_locations.find_similar_locations">find_similar_locations() (arcgis.features.find_locations method)</a>
   </dt>
@@ -941,12 +937,6 @@
   <dt><a href="arcgis.gis.html#arcgis.gis.User.folders">folders (arcgis.gis.User attribute)</a>
   </dt>
 
-      <dd><dl>
-        
-  <dt><a href="arcgis.schematics.html#arcgis.schematics.SchematicsLayer.folders">(arcgis.schematics.SchematicsLayer attribute)</a>
-  </dt>
-
-      </dl></dd>
       
   <dt><a href="arcgis.features.html#arcgis.features.Feature.from_dict">from_dict() (arcgis.features.Feature class method)</a>, <a href="arcgis.features.toc.html#arcgis.features.Feature.from_dict">[1]</a>
   </dt>
@@ -977,7 +967,19 @@
 
       <dd><dl>
         
+  <dt><a href="arcgis.features.html#arcgis.features.FeatureLayerCollection.fromitem">(arcgis.features.FeatureLayerCollection method)</a>
+  </dt>
+
+        
   <dt><a href="arcgis.features.html#arcgis.features.Table.fromitem">(arcgis.features.Table method)</a>, <a href="arcgis.features.toc.html#arcgis.features.Table.fromitem">[1]</a>
+  </dt>
+
+        
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureLayerCollectionManager.fromitem">(arcgis.features.managers.FeatureLayerCollectionManager method)</a>
+  </dt>
+
+        
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.FeatureLayerManager.fromitem">(arcgis.features.managers.FeatureLayerManager method)</a>
   </dt>
 
         
@@ -1038,7 +1040,7 @@
   </dt>
 
       
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.ReplicaManager.get">get() (arcgis.features.managers.ReplicaManager method)</a>
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.SyncManager.get">get() (arcgis.features.managers.SyncManager method)</a>
   </dt>
 
       <dd><dl>
@@ -1081,7 +1083,7 @@
 
       <dd><dl>
         
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.ReplicaManager.get_list">(arcgis.features.managers.ReplicaManager method)</a>
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.SyncManager.get_list">(arcgis.features.managers.SyncManager method)</a>
   </dt>
 
       </dl></dd>
@@ -1293,10 +1295,6 @@
 
       
   <dt><a href="arcgis.gis.html#arcgis.gis.Layer">Layer (class in arcgis.gis)</a>
-  </dt>
-
-      
-  <dt><a href="arcgis.schematics.html#arcgis.schematics.SchematicsLayer.layers">layers (arcgis.schematics.SchematicsLayer attribute)</a>
   </dt>
 
   </dl></td>
@@ -1574,10 +1572,6 @@
   </dt>
 
       
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.ReplicaManager">ReplicaManager (class in arcgis.features.managers)</a>
-  </dt>
-
-      
   <dt><a href="arcgis.gis.html#arcgis.gis.User.reset">reset() (arcgis.gis.User method)</a>
   </dt>
 
@@ -1608,10 +1602,6 @@
   </dt>
 
       
-  <dt><a href="arcgis.schematics.html#arcgis.schematics.SchematicsLayer">SchematicsLayer (class in arcgis.schematics)</a>
-  </dt>
-
-      
   <dt><a href="arcgis.gis.html#arcgis.gis.ContentManager.search">search() (arcgis.gis.ContentManager method)</a>
   </dt>
 
@@ -1629,10 +1619,6 @@
   </dt>
 
       </dl></dd>
-      
-  <dt><a href="arcgis.schematics.html#arcgis.schematics.SchematicsLayer.search_diagrams">search_diagrams() (arcgis.schematics.SchematicsLayer method)</a>
-  </dt>
-
       
   <dt><a href="arcgis.raster.html#arcgis.raster.segment_mean_shift">segment_mean_shift() (arcgis.raster method)</a>
   </dt>
@@ -1661,8 +1647,6 @@
   <dt><a href="arcgis.network.html#arcgis.network.RouteLayer.solve">solve() (arcgis.network.RouteLayer method)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.network.html#arcgis.network.ClosestFacilityLayer.solve_closest_facility">solve_closest_facility() (arcgis.network.ClosestFacilityLayer method)</a>
   </dt>
@@ -1671,6 +1655,8 @@
   <dt><a href="arcgis.network.html#arcgis.network.ServiceAreaLayer.solve_service_area">solve_service_area() (arcgis.network.ServiceAreaLayer method)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.features.html#arcgis.features.FeatureSet.spatial_reference">spatial_reference (arcgis.features.FeatureSet attribute)</a>, <a href="arcgis.features.toc.html#arcgis.features.FeatureSet.spatial_reference">[1]</a>
   </dt>
@@ -1724,7 +1710,11 @@
 
       </dl></dd>
       
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.ReplicaManager.synchronize">synchronize() (arcgis.features.managers.ReplicaManager method)</a>
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.SyncManager.synchronize">synchronize() (arcgis.features.managers.SyncManager method)</a>
+  </dt>
+
+      
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.SyncManager">SyncManager (class in arcgis.features.managers)</a>
   </dt>
 
   </dl></td>
@@ -1735,10 +1725,6 @@
   <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="arcgis.features.html#arcgis.features.Table">Table (class in arcgis.features)</a>, <a href="arcgis.features.toc.html#arcgis.features.Table">[1]</a>
-  </dt>
-
-      
-  <dt><a href="arcgis.schematics.html#arcgis.schematics.SchematicsLayer.templates">templates (arcgis.schematics.SchematicsLayer attribute)</a>
   </dt>
 
       
@@ -1812,7 +1798,7 @@
   </dt>
 
       
-  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.ReplicaManager.unregister">unregister() (arcgis.features.managers.ReplicaManager method)</a>
+  <dt><a href="arcgis.features.managers.html#arcgis.features.managers.SyncManager.unregister">unregister() (arcgis.features.managers.SyncManager method)</a>
   </dt>
 
       

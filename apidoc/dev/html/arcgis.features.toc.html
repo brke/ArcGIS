@@ -34,7 +34,7 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="arcgis 0.3 documentation" href="index.html"/>
-        <link rel="next" title="arcgis.features.managers module" href="arcgis.features.managers.html"/>
+        <link rel="next" title="arcgis.features.analyze_patterns module" href="arcgis.features.analyze_patterns.html"/>
         <link rel="prev" title="arcgis.gis module" href="arcgis.gis.html"/> 
 
   
@@ -107,13 +107,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#featureset">FeatureSet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#featurecollection">FeatureCollection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#replicamanager">ReplicaManager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayercollectionmanager">FeatureLayerCollectionManager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayermanager">FeatureLayerManager</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
@@ -145,6 +138,13 @@
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#aggregate-points">aggregate_points</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-nearby">summarize_nearby</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#syncmanager">SyncManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayercollectionmanager">FeatureLayerCollectionManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#featurelayermanager">FeatureLayerManager</a></li>
 </ul>
 </li>
 </ul>
@@ -297,9 +297,9 @@ entities - a set of entities is modelled as rows in a table.  Tables represent e
 properties.  In addition to working with “entities with location” as features, the system can also work with
 non-spatial entities as rows in tables.  The system can also model relationships between entities using properties
 which act as primary and foreign keys.  A collection of feature classes and tables, with the associated
-relationships among the entities, is a feature dataset. FeatureDatasets are one of the dataset types contained
-in a Datastore.  Finally, features are not simply entities in a dataset.  Features have a visual representation
-and user experience - on a map, in a 3D scene, as entities with a property sheet or popups.</p>
+relationships among the entities, is a feature layer collection. FeatureLayerCollections are one of the dataset types
+contained in a Datastore.  Finally, features are not simply entities in a dataset.  Features have a visual
+representation and user experience - on a map, in a 3D scene, as entities with a property sheet or popups.</p>
 <div class="section" id="feature">
 <h2>Feature<a class="headerlink" href="#feature" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
@@ -1217,16 +1217,8 @@ if an output name for a feature layer is not specified when calling the tool.</p
 </div>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound" id="arcgis-features">
-<p class="caption"><span class="caption-text">arcgis.features</span><a class="headerlink" href="#arcgis-features" title="Permalink to this toctree">¶</a></p>
+<div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#replicamanager">ReplicaManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#featurelayercollectionmanager">FeatureLayerCollectionManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#featurelayermanager">FeatureLayerManager</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
@@ -1260,6 +1252,13 @@ if an output name for a feature layer is not specified when calling the tool.</p
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#syncmanager">SyncManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#featurelayercollectionmanager">FeatureLayerCollectionManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#featurelayermanager">FeatureLayerManager</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1272,7 +1271,7 @@ if an output name for a feature layer is not specified when calling the tool.</p
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="arcgis.features.managers.html" class="btn btn-neutral float-right" title="arcgis.features.managers module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="arcgis.features.analyze_patterns.html" class="btn btn-neutral float-right" title="arcgis.features.analyze_patterns module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="arcgis.gis.html" class="btn btn-neutral" title="arcgis.gis module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

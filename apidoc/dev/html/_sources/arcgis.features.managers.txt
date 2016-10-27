@@ -9,9 +9,9 @@ AttachmentManager
     :members:
     :undoc-members:
 
-ReplicaManager
+SyncManager
 --------------
-.. autoclass:: arcgis.features.managers.ReplicaManager
+.. autoclass:: arcgis.features.managers.SyncManager
     :members:
     :undoc-members:
 
