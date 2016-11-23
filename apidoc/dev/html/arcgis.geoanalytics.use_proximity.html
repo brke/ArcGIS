@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis &mdash; arcgis 0.9 documentation</title>
+  <title>arcgis.geoanalytics.use_proximity module &mdash; arcgis 0.9 documentation</title>
   
 
   
@@ -33,7 +33,10 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 0.9 documentation" href="index.html"/> 
+    <link rel="top" title="arcgis 0.9 documentation" href="index.html"/>
+        <link rel="up" title="arcgis.geoanalytics module" href="arcgis.geoanalytics.toc.html"/>
+        <link rel="next" title="arcgis.geocoding module" href="arcgis.geocoding.html"/>
+        <link rel="prev" title="arcgis.geoanalytics.summarize_data module" href="arcgis.geoanalytics.summarize_data.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -83,7 +86,7 @@
             
             
                 <p class="caption"><span class="caption-text">arcgis</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.html">arcgis.gis module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#gis">GIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#item">Item</a></li>
@@ -219,10 +222,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#get-datastores">get_datastores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#is-supported">is_supported</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#submodules">Submodules</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="arcgis.geoanalytics.toc.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html">arcgis.geoanalytics.analyze_patterns module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html#calculate-density">calculate_density</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
@@ -244,8 +247,8 @@
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html#summarize-within">summarize_within</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.use_proximity.html">arcgis.geoanalytics.use_proximity module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.use_proximity.html#create-buffers">create_buffers</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.geoanalytics.use_proximity module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-buffers">create_buffers</a></li>
 </ul>
 </li>
 </ul>
@@ -351,11 +354,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>arcgis</li>
+          <li><a href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a> &raquo;</li>
+      
+    <li>arcgis.geoanalytics.use_proximity module</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/modules.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/arcgis.geoanalytics.use_proximity.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -365,28 +370,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arcgis">
-<h1>arcgis<a class="headerlink" href="#arcgis" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.html">arcgis package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-gis-module">arcgis.gis module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-env-module">arcgis.env module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-features-module">arcgis.features module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-raster-module">arcgis.raster module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-network-module">arcgis.network module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-schematics-module">arcgis.schematics module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geoanalytics-module">arcgis.geoanalytics module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geocoding-module">arcgis.geocoding module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geometry-module">arcgis.geometry module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geoprocessing-module">arcgis.geoprocessing module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-mapping-module">arcgis.mapping module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-widgets-module">arcgis.widgets module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#module-arcgis">Module contents</a></li>
+  <div class="section" id="arcgis-geoanalytics-use-proximity-module">
+<h1>arcgis.geoanalytics.use_proximity module<a class="headerlink" href="#arcgis-geoanalytics-use-proximity-module" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-arcgis.geoanalytics.use_proximity"></span><p>These tools help answer one of the most common questions posed in spatial analysis: What is near what?</p>
+<p>create_buffers() creates areas of a specified distance from features.</p>
+<div class="section" id="create-buffers">
+<h2>create_buffers<a class="headerlink" href="#create-buffers" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geoanalytics.use_proximity.create_buffers">
+<code class="descclassname">use_proximity.</code><code class="descname">create_buffers</code><span class="sig-paren">(</span><em>input_layer</em>, <em>distance: float = 1</em>, <em>distance_unit: str = 'Miles'</em>, <em>field: str = None</em>, <em>method: str = 'Planar'</em>, <em>dissolve_option: str = 'None'</em>, <em>dissolve_fields: str = None</em>, <em>summary_fields: str = None</em>, <em>multipart: bool = False</em>, <em>output_name: str = None</em>, <em>context: str = None</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.use_proximity.create_buffers" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>A buffer is an area that covers a given distance from a point, line, or polygon feature.</p>
+<p>Buffers are typically used to create areas that can be further analyzed using other tools. For example, if the question is What buildings are within 1 mile of the school?, the answer can be found by creating a 1-mile buffer around the school and overlaying the buffer with the layer containing building footprints. The end result is a layer of those buildings within 1 mile of the school.</p>
+<p>For example</p>
+<ul class="simple">
+<li>Using linear river features, buffer each river by 50 times the width of the river to determine a proposed riparian boundary.</li>
+<li>Given areas representing countries, buffer each country by 200 nautical miles to determine the maritime boundary.</li>
 </ul>
-</li>
-</ul>
+</div></blockquote>
+<p>Parameters:</p>
+<blockquote>
+<div><p>input_layer: Input Features (_FeatureSet). Required parameter.</p>
+<p>distance: Buffer Distance (float). Optional parameter.</p>
+<dl class="docutils">
+<dt>distance_unit: Buffer Distance Unit (str). Optional parameter.</dt>
+<dd>Choice list:[&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;NauticalMiles&#8217;]</dd>
+</dl>
+<p>field: Buffer Distance Field (str). Optional parameter.</p>
+<dl class="docutils">
+<dt>method: Method (str). Required parameter.</dt>
+<dd>Choice list:[&#8216;Geodesic&#8217;, &#8216;Planar&#8217;]</dd>
+<dt>dissolve_option: Dissolve Option (str). Optional parameter.</dt>
+<dd>Choice list:[&#8216;All&#8217;, &#8216;List&#8217;, &#8216;None&#8217;]</dd>
+</dl>
+<p>dissolve_fields: Dissolve Fields (str). Optional parameter.</p>
+<p>summary_fields: Summary Statistics (str). Optional parameter.</p>
+<p>multipart: Allow Multipart Geometries (bool). Optional parameter.</p>
+<p>output_name: Output Features Name (str). Required parameter.</p>
+<p>gis: Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>output - Output Features as a feature layer collection item</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 
@@ -394,6 +422,15 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arcgis.geocoding.html" class="btn btn-neutral float-right" title="arcgis.geocoding module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="arcgis.geoanalytics.summarize_data.html" class="btn btn-neutral" title="arcgis.geoanalytics.summarize_data module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

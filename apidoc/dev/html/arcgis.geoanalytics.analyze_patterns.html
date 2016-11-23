@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis &mdash; arcgis 0.9 documentation</title>
+  <title>arcgis.geoanalytics.analyze_patterns module &mdash; arcgis 0.9 documentation</title>
   
 
   
@@ -33,7 +33,10 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 0.9 documentation" href="index.html"/> 
+    <link rel="top" title="arcgis 0.9 documentation" href="index.html"/>
+        <link rel="up" title="arcgis.geoanalytics module" href="arcgis.geoanalytics.toc.html"/>
+        <link rel="next" title="arcgis.geoanalytics.find_locations module" href="arcgis.geoanalytics.find_locations.html"/>
+        <link rel="prev" title="arcgis.geoanalytics module" href="arcgis.geoanalytics.toc.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -83,7 +86,7 @@
             
             
                 <p class="caption"><span class="caption-text">arcgis</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.html">arcgis.gis module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#gis">GIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#item">Item</a></li>
@@ -219,13 +222,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#get-datastores">get_datastores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#is-supported">is_supported</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#submodules">Submodules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html">arcgis.geoanalytics.analyze_patterns module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html#calculate-density">calculate_density</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="arcgis.geoanalytics.toc.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.geoanalytics.analyze_patterns module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#calculate-density">calculate_density</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#find-hot-spots">find_hot_spots</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html">arcgis.geoanalytics.find_locations module</a><ul>
@@ -351,11 +354,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>arcgis</li>
+          <li><a href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a> &raquo;</li>
+      
+    <li>arcgis.geoanalytics.analyze_patterns module</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/modules.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/arcgis.geoanalytics.analyze_patterns.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -365,28 +370,94 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arcgis">
-<h1>arcgis<a class="headerlink" href="#arcgis" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.html">arcgis package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-gis-module">arcgis.gis module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-env-module">arcgis.env module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-features-module">arcgis.features module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-raster-module">arcgis.raster module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-network-module">arcgis.network module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-schematics-module">arcgis.schematics module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geoanalytics-module">arcgis.geoanalytics module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geocoding-module">arcgis.geocoding module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geometry-module">arcgis.geometry module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geoprocessing-module">arcgis.geoprocessing module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-mapping-module">arcgis.mapping module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-widgets-module">arcgis.widgets module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#module-arcgis">Module contents</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="arcgis-geoanalytics-analyze-patterns-module">
+<h1>arcgis.geoanalytics.analyze_patterns module<a class="headerlink" href="#arcgis-geoanalytics-analyze-patterns-module" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-arcgis.geoanalytics.analyze_patterns"></span><p>These tools help you identify, quantify, and visualize spatial patterns in your data.</p>
+<p>calculate_density takes known quantities of some phenomenon and spreads these quantities across the map.
+find_hot_spots identifies statistically significant clustering in the spatial pattern of your data.</p>
+<div class="section" id="calculate-density">
+<h2>calculate_density<a class="headerlink" href="#calculate-density" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geoanalytics.analyze_patterns.calculate_density">
+<code class="descclassname">analyze_patterns.</code><code class="descname">calculate_density</code><span class="sig-paren">(</span><em>input_layer</em>, <em>fields: str = None</em>, <em>weight: str = 'Uniform'</em>, <em>bin_type: str = 'Square'</em>, <em>bin_size: float = None</em>, <em>bin_size_unit: str = None</em>, <em>time_step_interval: int = None</em>, <em>time_step_interval_unit: str = None</em>, <em>time_step_repeat_interval: int = None</em>, <em>time_step_repeat_interval_unit: str = None</em>, <em>time_step_reference: datetime.datetime = None</em>, <em>radius: float = None</em>, <em>radius_unit: str = None</em>, <em>area_units: str = 'SquareKilometers'</em>, <em>output_name: str = None</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.calculate_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameters:</p>
+<blockquote>
+<div><p>input_layer: Input Points (Feature layer). Required parameter.</p>
+<p>fields: Population Field (str). Optional parameter.</p>
+<dl class="docutils">
+<dt>weight: Weight (str). Required parameter.</dt>
+<dd>Choice list:[&#8216;Uniform&#8217;, &#8216;Kernel&#8217;]</dd>
+<dt>bin_type: Output Bin Type (str). Required parameter.</dt>
+<dd>Choice list:[&#8216;Square&#8217;, &#8216;Hexagon&#8217;]</dd>
+</dl>
+<p>bin_size: Output Bin Size (float). Required parameter.</p>
+<dl class="docutils">
+<dt>bin_size_unit: Output Bin Size Unit (str). Required parameter.</dt>
+<dd>Choice list:[&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;NauticalMiles&#8217;]</dd>
+</dl>
+<p>time_step_interval: Time Step Interval (int). Optional parameter.</p>
+<dl class="docutils">
+<dt>time_step_interval_unit: Time Step Interval Unit (str). Optional parameter.</dt>
+<dd>Choice list:[&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+</dl>
+<p>time_step_repeat_interval: Time Step Repeat Interval (int). Optional parameter.</p>
+<dl class="docutils">
+<dt>time_step_repeat_interval_unit: Time Step Repeat Interval Unit (str). Optional parameter.</dt>
+<dd>Choice list:[&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+</dl>
+<p>time_step_reference: Time Step Reference (_datetime). Optional parameter.</p>
+<p>radius: Radius (float). Required parameter.</p>
+<dl class="docutils">
+<dt>radius_unit: Radius Unit (str). Required parameter.</dt>
+<dd>Choice list:[&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;NauticalMiles&#8217;]</dd>
+<dt>area_units: Area Unit Scale Factor (str). Optional parameter.</dt>
+<dd>Choice list:[&#8216;SquareMeters&#8217;, &#8216;SquareKilometers&#8217;, &#8216;Hectares&#8217;, &#8216;SquareFeet&#8217;, &#8216;SquareYards&#8217;, &#8216;SquareMiles&#8217;, &#8216;Acres&#8217;]</dd>
+</dl>
+<p>output_name: Output Features Name (str). Required parameter.</p>
+<p>gis: Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>output - Output Features as a feature layer collection item</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="find-hot-spots">
+<h2>find_hot_spots<a class="headerlink" href="#find-hot-spots" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geoanalytics.analyze_patterns.find_hot_spots">
+<code class="descclassname">analyze_patterns.</code><code class="descname">find_hot_spots</code><span class="sig-paren">(</span><em>point_layer</em>, <em>bin_size: float = 5</em>, <em>bin_size_unit: str = 'Miles'</em>, <em>neighborhood_distance: float = 5</em>, <em>neighborhood_distance_unit: str = 'Miles'</em>, <em>time_step_interval: int = None</em>, <em>time_step_interval_unit: str = None</em>, <em>time_step_alignment: str = None</em>, <em>time_step_reference: datetime.datetime = None</em>, <em>output_name: str = None</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.find_hot_spots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameters:</p>
+<blockquote>
+<div><p>point_layer: Input Points (_FeatureSet). Required parameter.</p>
+<p>bin_size: Bin Size (float). Required parameter.</p>
+<dl class="docutils">
+<dt>bin_size_unit: Bin Size Unit (str). Required parameter.</dt>
+<dd>Choice list:[&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;NauticalMiles&#8217;]</dd>
+</dl>
+<p>neighborhood_distance: Neighborhood Distance (float). Required parameter.</p>
+<dl class="docutils">
+<dt>neighborhood_distance_unit: Neighborhood Distance Unit (str). Required parameter.</dt>
+<dd>Choice list:[&#8216;Feet&#8217;, &#8216;Yards&#8217;, &#8216;Miles&#8217;, &#8216;Meters&#8217;, &#8216;Kilometers&#8217;, &#8216;NauticalMiles&#8217;]</dd>
+</dl>
+<p>time_step_interval: Time Step Interval (int). Optional parameter.</p>
+<dl class="docutils">
+<dt>time_step_interval_unit: Time Step Interval Unit (str). Optional parameter.</dt>
+<dd>Choice list:[&#8216;Years&#8217;, &#8216;Months&#8217;, &#8216;Weeks&#8217;, &#8216;Days&#8217;, &#8216;Hours&#8217;, &#8216;Minutes&#8217;, &#8216;Seconds&#8217;, &#8216;Milliseconds&#8217;]</dd>
+<dt>time_step_alignment: Time Step Alignment (str). Optional parameter.</dt>
+<dd>Choice list:[&#8216;EndTime&#8217;, &#8216;StartTime&#8217;, &#8216;ReferenceTime&#8217;]</dd>
+</dl>
+<p>time_step_reference: Time Step Reference (_datetime). Optional parameter.</p>
+<p>output_name: Output Features Name (str). Required parameter.</p>
+<p>gis: Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>output - Output Features as a feature layer collection item</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 
@@ -394,6 +465,15 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arcgis.geoanalytics.find_locations.html" class="btn btn-neutral float-right" title="arcgis.geoanalytics.find_locations module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="arcgis.geoanalytics.toc.html" class="btn btn-neutral" title="arcgis.geoanalytics module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis &mdash; arcgis 0.9 documentation</title>
+  <title>arcgis.widgets module &mdash; arcgis 0.9 documentation</title>
   
 
   
@@ -33,7 +33,8 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 0.9 documentation" href="index.html"/> 
+    <link rel="top" title="arcgis 0.9 documentation" href="index.html"/>
+        <link rel="prev" title="arcgis.schematics module" href="arcgis.schematics.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -83,7 +84,7 @@
             
             
                 <p class="caption"><span class="caption-text">arcgis</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.html">arcgis.gis module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#gis">GIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#item">Item</a></li>
@@ -317,8 +318,8 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.schematics.html#schematiclayers">SchematicLayers</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.widgets.html">arcgis.widgets module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.widgets.html#mapview">MapView</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.widgets module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mapview">MapView</a></li>
 </ul>
 </li>
 </ul>
@@ -351,11 +352,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>arcgis</li>
+    <li>arcgis.widgets module</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/modules.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/arcgis.widgets.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -365,28 +366,133 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arcgis">
-<h1>arcgis<a class="headerlink" href="#arcgis" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.html">arcgis package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-gis-module">arcgis.gis module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-env-module">arcgis.env module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-features-module">arcgis.features module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-raster-module">arcgis.raster module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-network-module">arcgis.network module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-schematics-module">arcgis.schematics module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geoanalytics-module">arcgis.geoanalytics module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geocoding-module">arcgis.geocoding module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geometry-module">arcgis.geometry module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geoprocessing-module">arcgis.geoprocessing module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-mapping-module">arcgis.mapping module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-widgets-module">arcgis.widgets module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#module-arcgis">Module contents</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="arcgis-widgets-module">
+<h1>arcgis.widgets module<a class="headerlink" href="#arcgis-widgets-module" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-arcgis.widgets"></span><p>The arcgis.widgets module provides components for visualizing GIS data and analysis.
+This module includes the MapView Jupyter notebook widget for visualizing maps and layers</p>
+<div class="section" id="mapview">
+<h2>MapView<a class="headerlink" href="#mapview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.widgets.MapView">
+<em class="property">class </em><code class="descclassname">arcgis.widgets.</code><code class="descname">MapView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ipywidgets.widgets.domwidget.DOMWidget</span></code></p>
+<p>Mapping widget for Jupyter Notebook</p>
+<dl class="method">
+<dt id="arcgis.widgets.MapView.add_layer">
+<code class="descname">add_layer</code><span class="sig-paren">(</span><em>item</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.add_layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds layers from the provided item</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.widgets.MapView.basemap">
+<code class="descname">basemap</code><a class="headerlink" href="#arcgis.widgets.MapView.basemap" title="Permalink to this definition">¶</a></dt>
+<dd><p>A trait for unicode strings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.widgets.MapView.center">
+<code class="descname">center</code><a class="headerlink" href="#arcgis.widgets.MapView.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>An instance of a Python list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.widgets.MapView.clear_graphics">
+<code class="descname">clear_graphics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.clear_graphics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arcgis.widgets.MapView.draw">
+<code class="descname">draw</code><span class="sig-paren">(</span><em>shape</em>, <em>popup=None</em>, <em>symbol=None</em>, <em>attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a shape.</p>
+<p>Arguments:
+shape is one of [&#8220;circle&#8221;, &#8220;downarrow&#8221;, &#8220;ellipse&#8221;, &#8220;extent&#8221;, &#8220;freehandpolygon&#8221;,
+&#8220;freehandpolyline&#8221;, &#8220;leftarrow&#8221;, &#8220;line&#8221;, &#8220;multipoint&#8221;, &#8220;point&#8221;, &#8220;polygon&#8221;, &#8220;polyline&#8221;,
+&#8220;rectangle&#8221;, &#8220;rightarrow&#8221;, &#8220;triangle&#8221;, &#8220;uparrow&#8221;, or geometry dict object]</p>
+<p>popup is a dict containing &#8220;title&#8221; and &#8220;content&#8221; as keys that will be displayed
+when the shape is clicked</p>
+<p>symbol is a symbol specified in json format as described at <a class="reference external" href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000n5000000">http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000n5000000</a>
+a default symbol is used is one is not specified</p>
+<p>attributes is a dict containing name value pairs of fields and field values
+associated with the graphic.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.widgets.MapView.end_time">
+<code class="descname">end_time</code><a class="headerlink" href="#arcgis.widgets.MapView.end_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>A trait for unicode strings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.widgets.MapView.extent">
+<code class="descname">extent</code><a class="headerlink" href="#arcgis.widgets.MapView.extent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.widgets.MapView.id">
+<code class="descname">id</code><a class="headerlink" href="#arcgis.widgets.MapView.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A trait for unicode strings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.widgets.MapView.mode">
+<code class="descname">mode</code><a class="headerlink" href="#arcgis.widgets.MapView.mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>A trait for unicode strings.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.widgets.MapView.on_click">
+<code class="descname">on_click</code><span class="sig-paren">(</span><em>callback</em>, <em>remove=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.on_click" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to execute when the map is clicked.</p>
+<p>The callback will be called with one argument,
+the clicked widget instance.</p>
+<dl class="docutils">
+<dt>remove</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">bool (optional)</span><dd>Set to true to remove the callback from the list of callbacks.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.widgets.MapView.on_draw_end">
+<code class="descname">on_draw_end</code><span class="sig-paren">(</span><em>callback</em>, <em>remove=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.on_draw_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to execute when something is drawn</p>
+<p>The callback will be called with two argument,
+the clicked widget instance, and the geometry drawn</p>
+<dl class="docutils">
+<dt>remove</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">bool (optional)</span><dd>Set to true to remove the callback from the list of callbacks.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.widgets.MapView.remove_layers">
+<code class="descname">remove_layers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.remove_layers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="arcgis.widgets.MapView.set_time_extent">
+<code class="descname">set_time_extent</code><span class="sig-paren">(</span><em>start_time</em>, <em>end_time</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.set_time_extent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.widgets.MapView.start_time">
+<code class="descname">start_time</code><a class="headerlink" href="#arcgis.widgets.MapView.start_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>A trait for unicode strings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.widgets.MapView.width">
+<code class="descname">width</code><a class="headerlink" href="#arcgis.widgets.MapView.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>A trait for unicode strings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.widgets.MapView.zoom">
+<code class="descname">zoom</code><a class="headerlink" href="#arcgis.widgets.MapView.zoom" title="Permalink to this definition">¶</a></dt>
+<dd><p>An int trait.</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 
@@ -394,6 +500,13 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="arcgis.schematics.html" class="btn btn-neutral" title="arcgis.schematics module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

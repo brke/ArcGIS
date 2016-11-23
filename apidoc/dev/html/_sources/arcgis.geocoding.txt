@@ -3,6 +3,17 @@ arcgis.geocoding module
 
 .. automodule:: arcgis.geocoding
 
+Geocoder
+--------------
+.. autoclass:: arcgis.geocoding.Geocoder
+    :inherited-members:
+    :members:
+    :undoc-members:
+
+get_geocoders
+--------------
+.. automethod:: arcgis.geocoding.get_geocoders
+    
 geocode
 --------------
 .. automethod:: arcgis.geocoding.geocode
@@ -15,10 +26,6 @@ batch_geocode
 --------------
 .. automethod:: arcgis.geocoding.batch_geocode
 
-find_best_match
---------------
-.. automethod:: arcgis.geocoding.find_best_match
-    
 suggest
 --------------
 .. automethod:: arcgis.geocoding.suggest

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis &mdash; arcgis 0.9 documentation</title>
+  <title>arcgis.geoanalytics.find_locations module &mdash; arcgis 0.9 documentation</title>
   
 
   
@@ -33,7 +33,10 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 0.9 documentation" href="index.html"/> 
+    <link rel="top" title="arcgis 0.9 documentation" href="index.html"/>
+        <link rel="up" title="arcgis.geoanalytics module" href="arcgis.geoanalytics.toc.html"/>
+        <link rel="next" title="arcgis.geoanalytics.manage_data module" href="arcgis.geoanalytics.manage_data.html"/>
+        <link rel="prev" title="arcgis.geoanalytics.analyze_patterns module" href="arcgis.geoanalytics.analyze_patterns.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -83,7 +86,7 @@
             
             
                 <p class="caption"><span class="caption-text">arcgis</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.html">arcgis.gis module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#gis">GIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#item">Item</a></li>
@@ -219,17 +222,17 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#get-datastores">get_datastores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#is-supported">is_supported</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#submodules">Submodules</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="arcgis.geoanalytics.toc.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html">arcgis.geoanalytics.analyze_patterns module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html#calculate-density">calculate_density</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html">arcgis.geoanalytics.find_locations module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html#find-similar-locations">find_similar_locations</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.geoanalytics.find_locations module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#find-similar-locations">find_similar_locations</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html">arcgis.geoanalytics.manage_data module</a><ul>
@@ -351,11 +354,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>arcgis</li>
+          <li><a href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a> &raquo;</li>
+      
+    <li>arcgis.geoanalytics.find_locations module</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/modules.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/arcgis.geoanalytics.find_locations.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -365,28 +370,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arcgis">
-<h1>arcgis<a class="headerlink" href="#arcgis" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.html">arcgis package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-gis-module">arcgis.gis module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-env-module">arcgis.env module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-features-module">arcgis.features module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-raster-module">arcgis.raster module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-network-module">arcgis.network module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-schematics-module">arcgis.schematics module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geoanalytics-module">arcgis.geoanalytics module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geocoding-module">arcgis.geocoding module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geometry-module">arcgis.geometry module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geoprocessing-module">arcgis.geoprocessing module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-mapping-module">arcgis.mapping module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-widgets-module">arcgis.widgets module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#module-arcgis">Module contents</a></li>
+  <div class="section" id="arcgis-geoanalytics-find-locations-module">
+<h1>arcgis.geoanalytics.find_locations module<a class="headerlink" href="#arcgis-geoanalytics-find-locations-module" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-arcgis.geoanalytics.find_locations"></span><p>These tools are used to identify areas that meet a number of different criteria you specify.</p>
+<p>find_similar_locations finds locations most similar to one or more reference locations based on criteria you specify.</p>
+<div class="section" id="find-similar-locations">
+<h2>find_similar_locations<a class="headerlink" href="#find-similar-locations" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geoanalytics.find_locations.find_similar_locations">
+<code class="descclassname">find_locations.</code><code class="descname">find_similar_locations</code><span class="sig-paren">(</span><em>input_layer</em>, <em>search_layer</em>, <em>analysis_fields: str</em>, <em>most_or_least_similar: str = 'MostSimilar'</em>, <em>match_method: str = 'AttributeValues'</em>, <em>number_of_results: int = 10</em>, <em>append_fields: str = None</em>, <em>output_name: str = None</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.find_locations.find_similar_locations" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Based on criteria you specify, find similar locations by measuring the similarity of locations in your candidate search layer to one or more reference locations.</p>
+<p>For example</p>
+<ul class="simple">
+<li>Find the ten most similar stores by examining the number of employees and the annual sales.</li>
+<li>Find the 100 most similar cities by examining the relationship between population, annual growth, and tax revenue.</li>
 </ul>
-</li>
-</ul>
+</div></blockquote>
+<p>Parameters:</p>
+<p>input_layer: Input Layer (feature layer). Required parameter.</p>
+<p>search_layer: Search Layer (feature layer). Required parameter.</p>
+<p>analysis_fields: Analysis Fields (str). Required parameter.</p>
+<dl class="docutils">
+<dt>most_or_least_similar: Most Or Least Similar (str). Required parameter.</dt>
+<dd>Choice list:[&#8216;MostSimilar&#8217;, &#8216;LeastSimilar&#8217;, &#8216;Both&#8217;]</dd>
+<dt>match_method: Match Method (str). Required parameter.</dt>
+<dd>Choice list:[&#8216;AttributeValues&#8217;, &#8216;AttributeProfiles&#8217;]</dd>
+</dl>
+<p>number_of_results: Number Of Results (int). Required parameter.</p>
+<p>append_fields: Fields To Append To Output (str). Optional parameter.</p>
+<p>output_name: Output Features Name (str). Required parameter.</p>
+<p>gis: Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>output - Output feature layer Item</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 
@@ -394,6 +416,15 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arcgis.geoanalytics.manage_data.html" class="btn btn-neutral float-right" title="arcgis.geoanalytics.manage_data module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="arcgis.geoanalytics.analyze_patterns.html" class="btn btn-neutral" title="arcgis.geoanalytics.analyze_patterns module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

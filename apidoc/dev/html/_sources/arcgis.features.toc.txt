@@ -57,4 +57,6 @@ Submodules
    arcgis.features.find_locations
    arcgis.features.manage_data
    arcgis.features.summarize_data
+   arcgis.features.use_proximity
+   arcgis.features.elevation
    arcgis.features.managers

@@ -3,9 +3,9 @@ arcgis.schematics module
 
 .. automodule:: arcgis.schematics
 
-SchematicsLayer
+SchematicLayers
 -------------------------
-.. autoclass:: arcgis.schematics.SchematicsLayer
+.. autoclass:: arcgis.schematics.SchematicLayers
     :members:
     :undoc-members:
 

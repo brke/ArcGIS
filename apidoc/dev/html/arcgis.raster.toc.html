@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.raster module &mdash; arcgis 0.3 documentation</title>
+  <title>arcgis.raster module &mdash; arcgis 0.9 documentation</title>
   
 
   
@@ -33,8 +33,8 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 0.3 documentation" href="index.html"/>
-        <link rel="next" title="arcgis.network module" href="arcgis.network.html"/>
+    <link rel="top" title="arcgis 0.9 documentation" href="index.html"/>
+        <link rel="next" title="arcgis.raster.analytics module" href="arcgis.raster.analytics.html"/>
         <link rel="prev" title="arcgis.features.managers module" href="arcgis.features.managers.html"/> 
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.3
+                0.9
               </div>
             
           
@@ -92,11 +92,23 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#user">User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#group">Group</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#datastore">Datastore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#role">Role</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#layer">Layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#contentmanager">ContentManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#usermanager">UserManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#groupmanager">GroupManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#datastoremanager">DatastoreManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.html#rolemanager">RoleManager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#active-gis">active_gis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#active-geocoder">active_geocoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#analysis-extent">analysis_extent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#out-spatial-reference">out_spatial_reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#process-spatial-reference">process_spatial_reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#return-z">return_z</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#return-m">return_m</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a><ul>
@@ -140,6 +152,20 @@
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.use_proximity.html">arcgis.features.use_proximity module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.use_proximity.html#connect-origins-to-destinations">connect_origins_to_destinations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.use_proximity.html#create-buffers">create_buffers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.use_proximity.html#create-drive-time-areas">create_drive_time_areas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.use_proximity.html#find-nearest">find_nearest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.use_proximity.html#plan-routes">plan_routes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.elevation.html">arcgis.features.elevation module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.elevation.html#profile">profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.elevation.html#viewshed">viewshed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.elevation.html#summarize-elevation">summarize_elevation</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#attachmentmanager">AttachmentManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#syncmanager">SyncManager</a></li>
@@ -152,50 +178,88 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.raster module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#imagelayer">ImageLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#generate-raster">generate_raster</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rasterize">rasterize</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#interpolate">interpolate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#summarize-raster-within">summarize_raster_within</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#density">density</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#classify">classify</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#segment-mean-shift">segment_mean_shift</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#train-classifier">train_classifier</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#convert-raster-to-feature">convert_raster_to_feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#imagerylayer">ImageryLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.raster.analytics.html">arcgis.raster.analytics module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#get-datastores">get_datastores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#is-supported">is_supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#generate-raster">generate_raster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#interpolate-points">interpolate_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#create-viewshed">create_viewshed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#summarize-raster-within">summarize_raster_within</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#calculate-density">calculate_density</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#classify">classify</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#segment">segment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#train-classifier">train_classifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#convert-feature-to-raster">convert_feature_to_raster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#convert-raster-to-feature">convert_raster_to_feature</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#copy-raster">copy_raster</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.network.html">arcgis.network module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#networklayer">NetworkLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#routelayer">RouteLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#servicearealayer">ServiceAreaLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#closestfacilitylayer">ClosestFacilityLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.network.html#networkdataset">NetworkDataset</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.schematics.html">arcgis.schematics module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.schematics.html#schematicslayer">SchematicsLayer</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.html">arcgis.geoanalytics module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#aggregate-points">aggregate_points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#describe-dataset">describe_dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#join-features">join_features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#create-buffers">create_buffers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#calculate-density">calculate_density</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#reconstruct-tracks">reconstruct_tracks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#create-space-time-cube">create_space_time_cube</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#create-panel-data">create_panel_data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#copy-to-data-store">copy_to_data_store</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#summarize-attributes">summarize_attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#summarize-within">summarize_within</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.html#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.network.toc.html">arcgis.network module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.toc.html#networklayer">NetworkLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.toc.html#routelayer">RouteLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.toc.html#servicearealayer">ServiceAreaLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.toc.html#closestfacilitylayer">ClosestFacilityLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.toc.html#networkdataset">NetworkDataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.network.toc.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.network.analysis.html">arcgis.network.analysis module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.network.analysis.html#solve-vehicle-routing-problem">solve_vehicle_routing_problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.network.analysis.html#find-closest-facilities">find_closest_facilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.network.analysis.html#solve-location-allocation">solve_location_allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.network.analysis.html#generate-origin-destination-cost-matrix">generate_origin_destination_cost_matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.network.analysis.html#find-routes">find_routes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.network.analysis.html#generate-service-areas">generate_service_areas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.network.analysis.html#get-travel-modes">get_travel_modes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#get-datastores">get_datastores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#is-supported">is_supported</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html">arcgis.geoanalytics.analyze_patterns module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html#calculate-density">calculate_density</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html">arcgis.geoanalytics.find_locations module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html#find-similar-locations">find_similar_locations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html">arcgis.geoanalytics.manage_data module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#copy-to-data-store">copy_to_data_store</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html">arcgis.geoanalytics.summarize_data module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html#aggregate-points">aggregate_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html#join-features">join_features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html#reconstruct-tracks">reconstruct_tracks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html#summarize-attributes">summarize_attributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html#summarize-within">summarize_within</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.use_proximity.html">arcgis.geoanalytics.use_proximity module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.use_proximity.html#create-buffers">create_buffers</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geocoding.html">arcgis.geocoding module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#geocoder">Geocoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#get-geocoders">get_geocoders</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#geocode">geocode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#reverse-geocode">reverse_geocode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#batch-geocode">batch_geocode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#find-best-match">find_best_match</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#suggest">suggest</a></li>
 </ul>
 </li>
@@ -231,16 +295,32 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#geoprocessingtool">GeoprocessingTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#import-toolbox">import_toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#datafile">DataFile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#linearunit">LinearUnit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#rasterdata">RasterData</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.mapping.html">arcgis.mapping module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#webmap">WebMap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#webscene">WebScene</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#mapview">MapView</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#dynamicmaplayer">DynamicMapLayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#dynamicmaplayermanager">DynamicMapLayerManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#mapimagelayer">MapImageLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#mapimagelayermanager">MapImageLayerManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#vectortilelayer">VectorTileLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#export-map">export_map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#get-layout-templates">get_layout_templates</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.realtime.html">arcgis.realtime module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.realtime.html#streamlayer">StreamLayer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.schematics.html">arcgis.schematics module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.schematics.html#schematiclayers">SchematicLayers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.widgets.html">arcgis.widgets module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.widgets.html#mapview">MapView</a></li>
 </ul>
 </li>
 </ul>
@@ -277,7 +357,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/arcgis.raster.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/arcgis.raster.toc.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -289,15 +369,20 @@
             
   <div class="section" id="module-arcgis.raster">
 <span id="arcgis-raster-module"></span><h1>arcgis.raster module<a class="headerlink" href="#module-arcgis.raster" title="Permalink to this headline">¶</a></h1>
-<p>Module for working with rasters and image layers</p>
-<div class="section" id="imagelayer">
-<h2>ImageLayer<a class="headerlink" href="#imagelayer" title="Permalink to this headline">¶</a></h2>
+<p>The arcgis.raster module containing classes and raster analysis functions for working with raster data and
+imagery layers.</p>
+<p>Raster data is made up of a grid of cells, where each cell or pixel can have a value. Raster data is useful
+for storing data that varies continuously, as in a satellite image, a surface of chemical concentrations, or
+an elevation surface.</p>
+<p>Use arcgis.raster.analytics.is_supported(gis) to check if raster analysis is supported in your GIS.</p>
+<div class="section" id="imagerylayer">
+<h2>ImageryLayer<a class="headerlink" href="#imagerylayer" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="arcgis.raster.ImageLayer">
-<em class="property">class </em><code class="descclassname">arcgis.raster.</code><code class="descname">ImageLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageLayer" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.ImageryLayer">
+<em class="property">class </em><code class="descclassname">arcgis.raster.</code><code class="descname">ImageryLayer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageryLayer" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
-<dt id="arcgis.raster.ImageLayer.add_rasters">
-<code class="descname">add_rasters</code><span class="sig-paren">(</span><em>rasterType</em>, <em>itemIds=None</em>, <em>serviceUrl=None</em>, <em>computeStatistics=False</em>, <em>buildPyramids=False</em>, <em>buildThumbnail=False</em>, <em>minimumCellSizeFactor=None</em>, <em>maximumCellSizeFactor=None</em>, <em>attributes=None</em>, <em>geodataTransforms=None</em>, <em>geodataTransformApplyMethod='esriGeodataTransformApplyAppend'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageLayer.add_rasters" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.ImageryLayer.add_rasters">
+<code class="descname">add_rasters</code><span class="sig-paren">(</span><em>rasterType</em>, <em>itemIds=None</em>, <em>serviceUrl=None</em>, <em>computeStatistics=False</em>, <em>buildPyramids=False</em>, <em>buildThumbnail=False</em>, <em>minimumCellSizeFactor=None</em>, <em>maximumCellSizeFactor=None</em>, <em>attributes=None</em>, <em>geodataTransforms=None</em>, <em>geodataTransformApplyMethod='esriGeodataTransformApplyAppend'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageryLayer.add_rasters" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation is supported at 10.1 and later.
 The Add Rasters operation is performed on an image service resource.
 The Add Rasters operation adds new rasters to an image service
@@ -420,16 +505,16 @@ esriGeodataTransformApplyOverwrite</div></blockquote>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.raster.ImageLayer.colormap">
-<code class="descname">colormap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageLayer.colormap" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.ImageryLayer.colormap">
+<code class="descname">colormap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageryLayer.colormap" title="Permalink to this definition">¶</a></dt>
 <dd><p>The colormap resource returns RGB color representation of pixel
 values. This resource is supported if the hasColormap property of
 the service is true.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="arcgis.raster.ImageLayer.export_image">
-<code class="descname">export_image</code><span class="sig-paren">(</span><em>bbox</em>, <em>imageSR</em>, <em>bboxSR</em>, <em>size=None</em>, <em>time=None</em>, <em>export_format='jpgpng'</em>, <em>pixelType='UNKNOWN'</em>, <em>noData=None</em>, <em>noDataInterpretation='esriNoDataMatchAny'</em>, <em>interpolation=None</em>, <em>compression=None</em>, <em>compressionQuality=75</em>, <em>bandIds=None</em>, <em>moasiacRule=None</em>, <em>renderingRule=''</em>, <em>f='json'</em>, <em>saveFolder=None</em>, <em>saveFile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageLayer.export_image" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.ImageryLayer.export_image">
+<code class="descname">export_image</code><span class="sig-paren">(</span><em>bbox</em>, <em>imageSR</em>, <em>bboxSR</em>, <em>size=None</em>, <em>time=None</em>, <em>export_format='jpgpng'</em>, <em>pixelType='UNKNOWN'</em>, <em>noData=None</em>, <em>noDataInterpretation='esriNoDataMatchAny'</em>, <em>interpolation=None</em>, <em>compression=None</em>, <em>compressionQuality=75</em>, <em>bandIds=None</em>, <em>moasiacRule=None</em>, <em>renderingRule=''</em>, <em>f='json'</em>, <em>saveFolder=None</em>, <em>saveFile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageryLayer.export_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>The exportImage operation is performed on an image service resource
 The result of this operation is an image resource. This resource
 provides information about the exported image, such as its URL,
@@ -508,13 +593,19 @@ mosaicOperator, sortField, sortValue).</dd>
 </dd></dl>
 
 <dl class="classmethod">
-<dt id="arcgis.raster.ImageLayer.fromitem">
-<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageLayer.fromitem" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.ImageryLayer.fromitem">
+<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageryLayer.fromitem" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="attribute">
+<dt id="arcgis.raster.ImageryLayer.properties">
+<code class="descname">properties</code><a class="headerlink" href="#arcgis.raster.ImageryLayer.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>The properties of this object</p>
+</dd></dl>
+
 <dl class="method">
-<dt id="arcgis.raster.ImageLayer.query">
-<code class="descname">query</code><span class="sig-paren">(</span><em>where='1=1'</em>, <em>out_fields='*'</em>, <em>timeFilter=None</em>, <em>geometryFilter=None</em>, <em>returnGeometry=True</em>, <em>returnIdsOnly=False</em>, <em>returnCountOnly=False</em>, <em>pixelSize=None</em>, <em>orderByFields=None</em>, <em>returnDistinctValues=True</em>, <em>outStatistics=None</em>, <em>groupByFieldsForStatistics=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageLayer.query" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.ImageryLayer.query">
+<code class="descname">query</code><span class="sig-paren">(</span><em>where='1=1'</em>, <em>out_fields='*'</em>, <em>timeFilter=None</em>, <em>geometryFilter=None</em>, <em>returnGeometry=True</em>, <em>returnIdsOnly=False</em>, <em>returnCountOnly=False</em>, <em>pixelSize=None</em>, <em>orderByFields=None</em>, <em>returnDistinctValues=True</em>, <em>outStatistics=None</em>, <em>groupByFieldsForStatistics=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageryLayer.query" title="Permalink to this definition">¶</a></dt>
 <dd><p>queries a feature service based on a sql statement
 Inputs:</p>
 <blockquote>
@@ -564,164 +655,28 @@ returnFeatureClass is set to True.</dd>
 </dd></dl>
 
 </div>
-<div class="section" id="generate-raster">
-<h2>generate_raster<a class="headerlink" href="#generate-raster" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.generate_raster">
-<code class="descclassname">raster.</code><code class="descname">generate_raster</code><span class="sig-paren">(</span><em>raster_function</em>, <em>function_arguments=None</em>, <em>output_raster=None</em>, <em>output_raster_properties=None</em>, <em>context=None</em>, <em>num_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.generate_raster" title="Permalink to this definition">¶</a></dt>
-<dd><p>raster_function : Required, see <a class="reference external" href="http://resources.arcgis.com/en/help/rest/apiref/israsterfunctions.html">http://resources.arcgis.com/en/help/rest/apiref/israsterfunctions.html</a></p>
-<p>function_arguments : Optional,  for specifying input Raster alone, portal Item can be passed</p>
-<dl class="docutils">
-<dt>output_raster</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional. If not provided, an Image Service is created by the method and used as the output raster.</span><dd>You can pass in an existing Image Service Item from your GIS to use that instead.
-Alternatively, you can pass in the name of the output Image Service that should be created by this method to be used as the output for the tool.
-A RuntimeError is raised if a service by that name already exists</dd>
-</dl>
-<p>output_raster_properties : Optional string</p>
-<p>context : Optional</p>
-<p>num_instances : Optional, number of instances to use</p>
-<p>out_raster : Image Service item</p>
-</dd></dl>
-
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.raster.analytics.html">arcgis.raster.analytics module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#get-datastores">get_datastores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#is-supported">is_supported</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#generate-raster">generate_raster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#interpolate-points">interpolate_points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#create-viewshed">create_viewshed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#summarize-raster-within">summarize_raster_within</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#calculate-density">calculate_density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#classify">classify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#segment">segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#train-classifier">train_classifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#convert-feature-to-raster">convert_feature_to_raster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#convert-raster-to-feature">convert_raster_to_feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#copy-raster">copy_raster</a></li>
+</ul>
+</li>
+</ul>
 </div>
-<div class="section" id="rasterize">
-<h2>rasterize<a class="headerlink" href="#rasterize" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.rasterize">
-<code class="descclassname">raster.</code><code class="descname">rasterize</code><span class="sig-paren">(</span><em>input_table</em>, <em>output_raster</em>, <em>raster_info</em>, <em>value_field=None</em>, <em>context=None</em>, <em>num_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.rasterize" title="Permalink to this definition">¶</a></dt>
-<dd><p>input_table : Required string</p>
-<p>output_raster : Required string</p>
-<p>raster_info : Required string</p>
-<p>value_field : Optional string</p>
-<p>context : Optional string</p>
-<p>num_instances : Optional string</p>
-<p>out_raster : layer</p>
-</dd></dl>
-
-</div>
-<div class="section" id="interpolate">
-<h2>interpolate<a class="headerlink" href="#interpolate" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.interpolate">
-<code class="descclassname">raster.</code><code class="descname">interpolate</code><span class="sig-paren">(</span><em>input_table</em>, <em>output_raster</em>, <em>raster_info</em>, <em>value_field=None</em>, <em>interpolation_method='Nearest'</em>, <em>radius=None</em>, <em>context=None</em>, <em>num_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.interpolate" title="Permalink to this definition">¶</a></dt>
-<dd><p>input_table : Required string</p>
-<p>output_raster : Required string</p>
-<p>raster_info : Required string</p>
-<p>value_field : Optional string</p>
-<dl class="docutils">
-<dt>interpolation_method</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>One of the following: [&#8216;Nearest&#8217;, &#8216;Bilinear&#8217;, &#8216;Linear&#8217;, &#8216;NaturalNeighbor&#8217;]</dd>
-</dl>
-<p>radius : Optional float</p>
-<p>context : Optional string</p>
-<p>num_instances : Optional string</p>
-<p>out_raster : layer (Feature Service item)</p>
-</dd></dl>
-
-</div>
-<div class="section" id="summarize-raster-within">
-<h2>summarize_raster_within<a class="headerlink" href="#summarize-raster-within" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.summarize_raster_within">
-<code class="descclassname">raster.</code><code class="descname">summarize_raster_within</code><span class="sig-paren">(</span><em>input_zone_layer</em>, <em>zone_field</em>, <em>input_raster_layerto_summarize</em>, <em>output_name</em>, <em>statistic_type='Mean'</em>, <em>ignore_missing_values=True</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.summarize_raster_within" title="Permalink to this definition">¶</a></dt>
-<dd><p>input_zone_layer : Required layer</p>
-<p>zone_field : Required string</p>
-<p>input_raster_layerto_summarize : Required string</p>
-<p>output_name : Required string</p>
-<dl class="docutils">
-<dt>statistic_type</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>One of the following: [&#8216;Mean&#8217;, &#8216;Majority&#8217;, &#8216;Maximum&#8217;, &#8216;Median&#8217;, &#8216;Minimum&#8217;, &#8216;Minority&#8217;, &#8216;Range&#8217;, &#8216;STD&#8217;, &#8216;SUM&#8217;, &#8216;Variety&#8217;]</dd>
-</dl>
-<p>ignore_missing_values : Optional bool</p>
-<p>context : Optional string</p>
-<p>out_raster : layer</p>
-</dd></dl>
-
-</div>
-<div class="section" id="density">
-<h2>density<a class="headerlink" href="#density" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.density">
-<code class="descclassname">raster.</code><code class="descname">density</code><span class="sig-paren">(</span><em>input_feature_class</em>, <em>output_raster</em>, <em>value_field</em>, <em>raster_info=None</em>, <em>method='Point_Density'</em>, <em>neighborhood=None</em>, <em>area_units='Square_map_units'</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.density" title="Permalink to this definition">¶</a></dt>
-<dd><p>input_feature_class : Required string</p>
-<p>output_raster : Required string</p>
-<p>value_field : Required string</p>
-<p>raster_info : Optional string</p>
-<dl class="docutils">
-<dt>method</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>One of the following: [&#8216;Point_Density&#8217;, &#8216;Line_Density&#8217;, &#8216;Kernel_Density_Densities_Planar&#8217;, &#8216;Kernel_Density_Densities_Geodesic&#8217;, &#8216;Kernel_Density_Counts_Planar&#8217;, &#8216;Kernel_Density_Counts_Geodesic&#8217;]</dd>
-</dl>
-<p>neighborhood : Optional string</p>
-<dl class="docutils">
-<dt>area_units</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>One of the following: [&#8216;Square_map_units&#8217;, &#8216;Square_miles&#8217;, &#8216;Square_kilometers&#8217;, &#8216;Arces&#8217;, &#8216;Hectares&#8217;, &#8216;Square_yards&#8217;, &#8216;Square_feet&#8217;, &#8216;Square_inches&#8217;, &#8216;Square_meters&#8217;, &#8216;Square_centimeters&#8217;, &#8216;Square_millimeters&#8217;]</dd>
-</dl>
-<p>context : Optional string</p>
-<p>out_raster : layer (Feature Service item)</p>
-</dd></dl>
-
-</div>
-<div class="section" id="classify">
-<h2>classify<a class="headerlink" href="#classify" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.classify">
-<code class="descclassname">raster.</code><code class="descname">classify</code><span class="sig-paren">(</span><em>input_raster</em>, <em>input_classifier_definition</em>, <em>output_raster</em>, <em>additional_input_raster=None</em>, <em>number_of_instances='4'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.classify" title="Permalink to this definition">¶</a></dt>
-<dd><p>input_raster : Required string</p>
-<p>input_classifier_definition : Required string</p>
-<p>output_raster : Required string</p>
-<p>additional_input_raster : Optional string</p>
-<p>number_of_instances : Required string</p>
-</dd></dl>
-
-</div>
-<div class="section" id="segment-mean-shift">
-<h2>segment_mean_shift<a class="headerlink" href="#segment-mean-shift" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.segment_mean_shift">
-<code class="descclassname">raster.</code><code class="descname">segment_mean_shift</code><span class="sig-paren">(</span><em>input_raster</em>, <em>output_raster</em>, <em>spectral_detail='15.5'</em>, <em>spatial_detail='15'</em>, <em>minimum_segment_size_in_pixels='20'</em>, <em>band_indexes='1</em>, <em>2</em>, <em>3'</em>, <em>remove_tiiling_artifacts='false'</em>, <em>number_of_instances='4'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.segment_mean_shift" title="Permalink to this definition">¶</a></dt>
-<dd><p>input_raster : Required string</p>
-<p>output_raster : Required string</p>
-<p>spectral_detail : Required string</p>
-<p>spatial_detail : Required string</p>
-<p>minimum_segment_size_in_pixels : Required string</p>
-<p>band_indexes : Required string</p>
-<p>remove_tiiling_artifacts : Required string</p>
-<p>number_of_instances : Required string</p>
-</dd></dl>
-
-</div>
-<div class="section" id="train-classifier">
-<h2>train_classifier<a class="headerlink" href="#train-classifier" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.train_classifier">
-<code class="descclassname">raster.</code><code class="descname">train_classifier</code><span class="sig-paren">(</span><em>input_raster</em>, <em>input_training_sample_json</em>, <em>segmented_raster</em>, <em>classifier_parameters</em>, <em>segment_attributes='COLOR;MEAN'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.train_classifier" title="Permalink to this definition">¶</a></dt>
-<dd><p>input_raster : Required string</p>
-<p>input_training_sample_json : Required string</p>
-<p>segmented_raster : Required string</p>
-<p>classifier_parameters : Required string</p>
-<p>segment_attributes : Required string</p>
-<p>output_classifier_definition : layer</p>
-</dd></dl>
-
-</div>
-<div class="section" id="convert-raster-to-feature">
-<h2>convert_raster_to_feature<a class="headerlink" href="#convert-raster-to-feature" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.convert_raster_to_feature">
-<code class="descclassname">raster.</code><code class="descname">convert_raster_to_feature</code><span class="sig-paren">(</span><em>input_raster</em>, <em>output_name</em>, <em>field='Value'</em>, <em>output_type='Point'</em>, <em>simplify_lines_or_polygons=True</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.convert_raster_to_feature" title="Permalink to this definition">¶</a></dt>
-<dd><p>This service tool converts imagery data to feature class vector data.</p>
-<p>input_raster : Required string</p>
-<p>output_name : Required string</p>
-<p>field : Optional string</p>
-<dl class="docutils">
-<dt>output_type</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span><dd>One of the following: [&#8216;Point&#8217;, &#8216;Line&#8217;, &#8216;Polygon&#8217;]</dd>
-</dl>
-<p>simplify_lines_or_polygons : Optional bool</p>
-<p>context : Optional string</p>
-<p>output_feature : layer (Feature Service item)</p>
-</dd></dl>
-
 </div>
 </div>
 
@@ -732,7 +687,7 @@ A RuntimeError is raised if a service by that name already exists</dd>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="arcgis.network.html" class="btn btn-neutral float-right" title="arcgis.network module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="arcgis.raster.analytics.html" class="btn btn-neutral float-right" title="arcgis.raster.analytics module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="arcgis.features.managers.html" class="btn btn-neutral" title="arcgis.features.managers module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -766,7 +721,7 @@ A RuntimeError is raised if a service by that name already exists</dd>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.3',
+            VERSION:'0.9',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

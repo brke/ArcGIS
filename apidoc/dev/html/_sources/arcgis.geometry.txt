@@ -1,6 +1,8 @@
 arcgis.geometry module
 ======================
 
+.. automodule:: arcgis.geometry
+
 Point
 --------------
 .. autoclass:: arcgis.geometry.Point

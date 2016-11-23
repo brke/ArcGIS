@@ -38,6 +38,13 @@ Datastore
     :undoc-members:
     :show-inheritance:
 
+Role
+--------------
+.. autoclass:: arcgis.gis.Role
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 Layer
 --------------
 .. autoclass:: arcgis.gis.Layer
@@ -68,6 +75,13 @@ GroupManager
 DatastoreManager
 ---------------------------
 .. autoclass:: arcgis.gis.DatastoreManager
+    :members:
+    :undoc-members:
+    :show-inheritance:
+    
+RoleManager
+---------------------------
+.. autoclass:: arcgis.gis.RoleManager
     :members:
     :undoc-members:
     :show-inheritance:

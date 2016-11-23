@@ -7,6 +7,9 @@ Submodules
 arcgis.gis module
 ------------------
 
+arcgis.env module
+------------------
+
 arcgis.features module
 -----------------
 
@@ -32,6 +35,9 @@ arcgis.geoprocessing module
 -----------------
 
 arcgis.mapping module
+-----------------
+   
+arcgis.widgets module
 -----------------
    
    
