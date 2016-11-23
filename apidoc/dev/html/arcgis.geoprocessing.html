@@ -378,10 +378,7 @@ The module also provides simple types that can be used as parameters for these t
 <dt id="arcgis.geoprocessing.import_toolbox">
 <code class="descclassname">geoprocessing.</code><code class="descname">import_toolbox</code><span class="sig-paren">(</span><em>url_or_item</em>, <em>gis=None</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.import_toolbox" title="Permalink to this definition">¶</a></dt>
 <dd><p>Imports geoprocessing toolboxes as native Python modules.
-You can call the functions available in the imported module to invoke these tools.
-:param url: location of toolbox, can be a geoprocessing server endpoint or Item of type: Geoprocessing Service
-:param gis: the GIS used for running the tool
-:return: module with functions for the various tools in the toolbox</p>
+You can call the functions available in the imported module to invoke these tools.</p>
 <blockquote>
 <div><table border="1" class="docutils">
 <colgroup>
@@ -406,6 +403,7 @@ arcgis.env.active_gis is used if not specified</td>
 </tbody>
 </table>
 </div></blockquote>
+<p>Returns module with functions for the various tools in the toolbox</p>
 </dd></dl>
 
 </div>
