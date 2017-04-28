@@ -1,0 +1,29 @@
+arcgis\.server package
+======================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    arcgis.server.admin
+
+Submodules
+----------
+
+arcgis\.server\.managers module
+-------------------------------
+
+.. automodule:: arcgis.server.managers
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: arcgis.server
+    :members:
+    :undoc-members:
+    :show-inheritance:

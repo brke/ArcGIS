@@ -1,0 +1,46 @@
+arcgis\.data\.geodataset\.io package
+====================================
+
+Submodules
+----------
+
+arcgis\.data\.geodataset\.io\.esrijson module
+---------------------------------------------
+
+.. automodule:: arcgis.data.geodataset.io.esrijson
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+arcgis\.data\.geodataset\.io\.fileops module
+--------------------------------------------
+
+.. automodule:: arcgis.data.geodataset.io.fileops
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+arcgis\.data\.geodataset\.io\.serviceops module
+-----------------------------------------------
+
+.. automodule:: arcgis.data.geodataset.io.serviceops
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+arcgis\.data\.geodataset\.io\.sqliteio module
+---------------------------------------------
+
+.. automodule:: arcgis.data.geodataset.io.sqliteio
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: arcgis.data.geodataset.io
+    :members:
+    :undoc-members:
+    :show-inheritance:

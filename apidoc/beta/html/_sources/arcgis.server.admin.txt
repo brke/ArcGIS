@@ -1,0 +1,30 @@
+arcgis\.server\.admin package
+=============================
+
+Submodules
+----------
+
+arcgis\.server\.admin\.administration module
+--------------------------------------------
+
+.. automodule:: arcgis.server.admin.administration
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+arcgis\.server\.admin\.parameters module
+----------------------------------------
+
+.. automodule:: arcgis.server.admin.parameters
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: arcgis.server.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:

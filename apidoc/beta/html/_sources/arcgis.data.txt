@@ -1,0 +1,17 @@
+arcgis\.data package
+====================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    arcgis.data.geodataset
+
+Module contents
+---------------
+
+.. automodule:: arcgis.data
+    :members:
+    :undoc-members:
+    :show-inheritance:
