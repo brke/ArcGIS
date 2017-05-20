@@ -34,6 +34,9 @@ arcgis.geometry module
 arcgis.geoprocessing module
 -----------------
 
+arcgis.server module
+-----------------
+
 arcgis.mapping module
 -----------------
    

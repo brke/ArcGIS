@@ -414,6 +414,20 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#to-geo-coordinate-string">to_geo_coordinate_string</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#trim-extend">trim_extend</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geometry.filter.html">arcgis.geometry.filter module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#intersects">intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#contains">contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#crosses">crosses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#envelope-intersects">envelope_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#index-intersects">index_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#overlaps">overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#touches">touches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#within">within</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
@@ -965,7 +979,7 @@ str, can be none | center | nadir | northwest | seamline | viewpoint | attribute
 required if method is: center | nadir | northwest | seamline,
 optional otherwise. If no method is passed &#8220;none&#8221; method is used, which uses the order of records to sort
 If sort_by and optionally sort_val parameters are specified, &#8220;attribute&#8221; method is used
-If lock_raster_ids are specified, &#8220;lock-raster&#8221; method is used
+If lock_rasters are specified, &#8220;lock-raster&#8221; method is used
 If a viewpt parameter is passed, &#8220;viewpoint&#8221; method is used.</li>
 <li><strong>sort_by</strong> &#8211; optional str, field name when sorting by attributes</li>
 <li><strong>sort_val</strong> &#8211; optional, a constant value defining a reference or base value for the sort field when sorting by
@@ -1014,7 +1028,7 @@ pixel values, or blend them.</li>
 
 <dl class="method">
 <dt id="arcgis.raster.ImageryLayer.query">
-<code class="descname">query</code><span class="sig-paren">(</span><em>where=None</em>, <em>out_fields='*'</em>, <em>time_filter=None</em>, <em>geometry_filter=None</em>, <em>return_geometry=True</em>, <em>return_ids_only=False</em>, <em>return_count_only=False</em>, <em>pixel_size=None</em>, <em>order_by_fields=None</em>, <em>return_distinct_values=None</em>, <em>out_statistics=None</em>, <em>group_by_fields_for_statistics=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageryLayer.query" title="Permalink to this definition">¶</a></dt>
+<code class="descname">query</code><span class="sig-paren">(</span><em>where=None</em>, <em>out_fields='*'</em>, <em>time_filter=None</em>, <em>geometry_filter=None</em>, <em>return_geometry=True</em>, <em>return_ids_only=False</em>, <em>return_count_only=False</em>, <em>pixel_size=None</em>, <em>order_by_fields=None</em>, <em>return_distinct_values=None</em>, <em>out_statistics=None</em>, <em>group_by_fields_for_statistics=None</em>, <em>out_sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageryLayer.query" title="Permalink to this definition">¶</a></dt>
 <dd><p>queries an imagery layer by applying the filter specified by the user. The result of this operation is
 either a set of features or an array of raster IDs (if return_ids_only is set to True),
 count (if return_count_only is set to True), or a set of field statistics (if out_statistics is used).</p>
@@ -1061,6 +1075,9 @@ of the image service is true.</dd>
 <dt>group_by_fields_for_statistics-One or more field names using the</dt>
 <dd>values that need to be grouped for
 calculating the statistics.</dd>
+<dt>out_sr - if the returning geometry needs to be in a different</dt>
+<dd>spatial reference, provide the function with the
+desired WKID.</dd>
 </dl>
 </dd>
 <dt>Output:</dt>

@@ -412,6 +412,20 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#to-geo-coordinate-string">to_geo_coordinate_string</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#trim-extend">trim_extend</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geometry.filter.html">arcgis.geometry.filter module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#intersects">intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#contains">contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#crosses">crosses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#envelope-intersects">envelope_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#index-intersects">index_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#overlaps">overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#touches">touches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#within">within</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
@@ -529,28 +543,6 @@ folders and services published on the host.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="arcgis.server.managers.Server.data">
-<code class="descname">data</code><a class="headerlink" href="#arcgis.server.managers.Server.data" title="Permalink to this definition">¶</a></dt>
-<dd><p>This resource provides information about the data holdings of the
-server. Data items are used by ArcGIS for Desktop and other clients
-to validate data paths referenced by GIS services.
-You can register new data items with the server by using the
-Register Data Item operation. Use the Find Data Items operation to
-search through the hierarchy of data items.
-A relational data store type represents a database platform that
-has been registered for use on a portal&#8217;s hosting server by the
-ArcGIS Server administrator. Each relational data store type
-describes the properties ArcGIS Server requires in order to connect
-to an instance of a database for a particular platform. At least
-one registered relational data store type is required before client
-applications such as Insights for ArcGIS can create Relational
-Database Connection portal items.
-The Compute Ref Count operation counts and lists all references to
-a specific data item. This operation helps you determine if a
-particular data item can be safely deleted or refreshed.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="arcgis.server.managers.Server.datastore">
 <code class="descname">datastore</code><a class="headerlink" href="#arcgis.server.managers.Server.datastore" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource provides information about the data holdings of the
@@ -627,6 +619,13 @@ ServerManager Object.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="arcgis.server.managers.Server.site">
+<code class="descname">site</code><a class="headerlink" href="#arcgis.server.managers.Server.site" title="Permalink to this definition">¶</a></dt>
+<dd><p>The site maintains all its configuration and meta information on
+disk in a set of files that make up the Configuration Store.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="arcgis.server.managers.Server.system">
 <code class="descname">system</code><a class="headerlink" href="#arcgis.server.managers.Server.system" title="Permalink to this definition">¶</a></dt>
 <dd><p>provides access to common system configuration settings</p>
@@ -684,28 +683,6 @@ folders and services published on the host.</p>
 <dt id="arcgis.server.Server.connection">
 <code class="descname">connection</code><a class="headerlink" href="#arcgis.server.Server.connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>gets server the connection object</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.server.Server.data">
-<code class="descname">data</code><a class="headerlink" href="#arcgis.server.Server.data" title="Permalink to this definition">¶</a></dt>
-<dd><p>This resource provides information about the data holdings of the
-server. Data items are used by ArcGIS for Desktop and other clients
-to validate data paths referenced by GIS services.
-You can register new data items with the server by using the
-Register Data Item operation. Use the Find Data Items operation to
-search through the hierarchy of data items.
-A relational data store type represents a database platform that
-has been registered for use on a portal&#8217;s hosting server by the
-ArcGIS Server administrator. Each relational data store type
-describes the properties ArcGIS Server requires in order to connect
-to an instance of a database for a particular platform. At least
-one registered relational data store type is required before client
-applications such as Insights for ArcGIS can create Relational
-Database Connection portal items.
-The Compute Ref Count operation counts and lists all references to
-a specific data item. This operation helps you determine if a
-particular data item can be safely deleted or refreshed.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -782,6 +759,13 @@ need them.</p>
 <code class="descname">services</code><a class="headerlink" href="#arcgis.server.Server.services" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides administrator access to the services on ArcGIS Server as a
 ServerManager Object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.server.Server.site">
+<code class="descname">site</code><a class="headerlink" href="#arcgis.server.Server.site" title="Permalink to this definition">¶</a></dt>
+<dd><p>The site maintains all its configuration and meta information on
+disk in a set of files that make up the Configuration Store.</p>
 </dd></dl>
 
 <dl class="attribute">

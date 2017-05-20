@@ -415,6 +415,20 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#to-geo-coordinate-string">to_geo_coordinate_string</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#trim-extend">trim_extend</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geometry.filter.html">arcgis.geometry.filter module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#intersects">intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#contains">contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#crosses">crosses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#envelope-intersects">envelope_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#index-intersects">index_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#overlaps">overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#touches">touches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#within">within</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
@@ -714,7 +728,7 @@ An instance of this class, called &#8216;manager&#8217;, is available as a prope
 property to a hosted feature layer collection service. The result of this
 operation is a response indicating success or failure with error
 code and description.</p>
-<p>This function will allow users to change add additional values
+<p>This function will allow users to change or add additional values
 to an already published service.</p>
 <dl class="docutils">
 <dt>Input:</dt>
@@ -760,6 +774,36 @@ FeatureService or layer.</dd>
 <dt id="arcgis.features.managers.FeatureLayerCollectionManager.fromitem">
 <code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureLayerCollectionManager.fromitem" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="arcgis.features.managers.FeatureLayerCollectionManager.overwrite">
+<code class="descname">overwrite</code><span class="sig-paren">(</span><em>data_file</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureLayerCollectionManager.overwrite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite all the features and layers in a hosted feature layer collection service. This operation removes
+all features but retains the properties (such as symbology, itemID) and capabilities configured on the service.
+There are some limits to using this operation:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Only hosted feature layer collection services can be overwritten</li>
+<li>The original data used to publish this layer should be available on the portal</li>
+</ol>
+<p>3. The data file used to overwrite should be of the same format and filename as the original that was used to
+publish the layer
+4. The schema (column names, column data types) of the data_file should be the same as original. You can have
+additional or fewer rows (features).</p>
+</div></blockquote>
+<p>In addition to overwriting the features, this operation also updates the data of the item used to published this
+layer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; path to data_file used to overwrite the hosted feature layer collection</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON message as dictionary such as {&#8216;success&#8217;:True} or {&#8216;error&#8217;:&#8217;error message&#8217;}</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="arcgis.features.managers.FeatureLayerCollectionManager.properties">
@@ -879,8 +923,8 @@ The layer_id is the id of the layer in feature layer collection (feature service
 <dl class="method">
 <dt id="arcgis.features.managers.FeatureLayerManager.truncate">
 <code class="descname">truncate</code><span class="sig-paren">(</span><em>attachment_only=False</em>, <em>asynchronous=False</em>, <em>wait=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureLayerManager.truncate" title="Permalink to this definition">¶</a></dt>
-<dd><p>The truncate operation supports deleting all features or attachments 
-in a hosted feature service layer. The result of this operation is a 
+<dd><p>The truncate operation supports deleting all features or attachments
+in a hosted feature service layer. The result of this operation is a
 response indicating success or failure with error code and description.
 See: <a class="reference external" href="http://resources.arcgis.com/en/help/arcgis-rest-api/#/Truncate_Feature_Layer/02r3000002v0000000/">http://resources.arcgis.com/en/help/arcgis-rest-api/#/Truncate_Feature_Layer/02r3000002v0000000/</a> # noqa
 for additional information on this function.
@@ -888,12 +932,12 @@ Input:</p>
 <blockquote>
 <div><dl class="docutils">
 <dt>attachment_only - Deletes all the attachments for this layer.</dt>
-<dd>None of the layer features will be deleted 
+<dd>None of the layer features will be deleted
 when attachmentOnly=true.</dd>
 <dt>asynchronous - Supports options for asynchronous processing. The</dt>
-<dd>default format is false. It is recommended to set 
+<dd>default format is false. It is recommended to set
 async=true for larger datasets.</dd>
-<dt>wait - if async, wait to pause the process until the async </dt>
+<dt>wait - if async, wait to pause the process until the async</dt>
 <dd>operation is completed.</dd>
 </dl>
 </div></blockquote>

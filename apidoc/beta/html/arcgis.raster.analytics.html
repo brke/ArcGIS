@@ -415,6 +415,20 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#to-geo-coordinate-string">to_geo_coordinate_string</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#trim-extend">trim_extend</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geometry.filter.html">arcgis.geometry.filter module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#intersects">intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#contains">contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#crosses">crosses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#envelope-intersects">envelope_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#index-intersects">index_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#overlaps">overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#touches">touches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#within">within</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
@@ -525,9 +539,11 @@ checks if arcgis.env.active_gis supports raster analytics</p>
 <p>output_raster_properties : Optional</p>
 <dl class="docutils">
 <dt>output_name</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">Optional. If not provided, an Image Service is created by the method and used as the output raster. </span><dd>You can pass in an existing Image Service Item from your GIS to use that instead.
-Alternatively, you can pass in the name of the output Image Service that should be created by this method to be used as the output for the tool.
-A RuntimeError is raised if a service by that name already exists</dd>
+ <span class="classifier-delimiter">:</span> <span class="classifier">Optional. If not provided, an Image Service is created by the method and used as the output raster. </span><dd><p class="first">You can pass in an existing Image Service Item from your GIS to use that instead.</p>
+<p>Alternatively, you can pass in the name of the output Image Service that should be created by this method to be
+used as the output for the tool.</p>
+<p class="last">A RuntimeError is raised if a service by that name already exists</p>
+</dd>
 </dl>
 <p>gis: Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p>
 <p>output_raster : Image layer item</p>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.widgets module &mdash; arcgis 1.2.0 documentation</title>
+  <title>arcgis.geometry.filter module &mdash; arcgis 1.2.0 documentation</title>
   
 
   
@@ -34,7 +34,9 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="arcgis 1.2.0 documentation" href="index.html"/>
-        <link rel="prev" title="arcgis.schematics module" href="arcgis.schematics.html"/> 
+        <link rel="up" title="arcgis.geometry module" href="arcgis.geometry.html"/>
+        <link rel="next" title="arcgis.geoprocessing module" href="arcgis.geoprocessing.html"/>
+        <link rel="prev" title="arcgis.geometry module" href="arcgis.geometry.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -384,7 +386,7 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geocoding.html#suggest">suggest</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#point">Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#multipoint">MultiPoint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#polyline">Polyline</a></li>
@@ -413,16 +415,16 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#to-geo-coordinate-string">to_geo_coordinate_string</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#trim-extend">trim_extend</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#submodules">Submodules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.geometry.filter.html">arcgis.geometry.filter module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#intersects">intersects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#contains">contains</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#crosses">crosses</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#envelope-intersects">envelope_intersects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#index-intersects">index_intersects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#overlaps">overlaps</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#touches">touches</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#within">within</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="arcgis.geometry.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.geometry.filter module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#intersects">intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#contains">contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#crosses">crosses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#envelope-intersects">envelope_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#index-intersects">index_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overlaps">overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#touches">touches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#within">within</a></li>
 </ul>
 </li>
 </ul>
@@ -454,8 +456,8 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.schematics.html#schematiclayers">SchematicLayers</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.widgets module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#mapview">MapView</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.widgets.html">arcgis.widgets module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.widgets.html#mapview">MapView</a></li>
 </ul>
 </li>
 </ul>
@@ -488,11 +490,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>arcgis.widgets module</li>
+          <li><a href="arcgis.geometry.html">arcgis.geometry module</a> &raquo;</li>
+      
+    <li>arcgis.geometry.filter module</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/arcgis.widgets.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/arcgis.geometry.filter.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -502,131 +506,85 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="arcgis-widgets-module">
-<h1>arcgis.widgets module<a class="headerlink" href="#arcgis-widgets-module" title="Permalink to this headline">¶</a></h1>
-<span class="target" id="module-arcgis.widgets"></span><p>The arcgis.widgets module provides components for visualizing GIS data and analysis.
-This module includes the MapView Jupyter notebook widget for visualizing maps and layers</p>
-<div class="section" id="mapview">
-<h2>MapView<a class="headerlink" href="#mapview" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="arcgis.widgets.MapView">
-<em class="property">class </em><code class="descclassname">arcgis.widgets.</code><code class="descname">MapView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ipywidgets.widgets.domwidget.DOMWidget</span></code></p>
-<p>Mapping widget for Jupyter Notebook</p>
+  <div class="section" id="module-arcgis.geometry.filter">
+<span id="arcgis-geometry-filter-module"></span><h1>arcgis.geometry.filter module<a class="headerlink" href="#module-arcgis.geometry.filter" title="Permalink to this headline">¶</a></h1>
+<p>Functions to filter query results by a spatial relationship with another geometry
+Used when querying feature layers and imagery layers.</p>
+<div class="section" id="intersects">
+<h2>intersects<a class="headerlink" href="#intersects" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
-<dt id="arcgis.widgets.MapView.add_layer">
-<code class="descname">add_layer</code><span class="sig-paren">(</span><em>item</em>, <em>options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.add_layer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds layers from the provided item</p>
+<dt id="arcgis.geometry.filter.intersects">
+<code class="descclassname">filter.</code><code class="descname">intersects</code><span class="sig-paren">(</span><em>geometry</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filter.intersects" title="Permalink to this definition">¶</a></dt>
+<dd><p>filters results whose geometry intersects with the specified geometry</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="arcgis.widgets.MapView.basemap">
-<code class="descname">basemap</code><a class="headerlink" href="#arcgis.widgets.MapView.basemap" title="Permalink to this definition">¶</a></dt>
-<dd><p>A trait for unicode strings.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.widgets.MapView.center">
-<code class="descname">center</code><a class="headerlink" href="#arcgis.widgets.MapView.center" title="Permalink to this definition">¶</a></dt>
-<dd><p>An instance of a Python list.</p>
-</dd></dl>
-
+</div>
+<div class="section" id="contains">
+<h2>contains<a class="headerlink" href="#contains" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
-<dt id="arcgis.widgets.MapView.clear_graphics">
-<code class="descname">clear_graphics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.clear_graphics" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="arcgis.geometry.filter.contains">
+<code class="descclassname">filter.</code><code class="descname">contains</code><span class="sig-paren">(</span><em>geometry</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filter.contains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a feature if its shape is wholly contained within the search geometry.
+Valid for all shape type combinations.</p>
+</dd></dl>
 
+</div>
+<div class="section" id="crosses">
+<h2>crosses<a class="headerlink" href="#crosses" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
-<dt id="arcgis.widgets.MapView.draw">
-<code class="descname">draw</code><span class="sig-paren">(</span><em>shape</em>, <em>popup=None</em>, <em>symbol=None</em>, <em>attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.draw" title="Permalink to this definition">¶</a></dt>
-<dd><p>Draws a shape.</p>
-<p>Arguments:
-shape is one of [&#8220;circle&#8221;, &#8220;downarrow&#8221;, &#8220;ellipse&#8221;, &#8220;extent&#8221;, &#8220;freehandpolygon&#8221;,
-&#8220;freehandpolyline&#8221;, &#8220;leftarrow&#8221;, &#8220;line&#8221;, &#8220;multipoint&#8221;, &#8220;point&#8221;, &#8220;polygon&#8221;, &#8220;polyline&#8221;,
-&#8220;rectangle&#8221;, &#8220;rightarrow&#8221;, &#8220;triangle&#8221;, &#8220;uparrow&#8221;, or geometry dict object]</p>
-<p>popup is a dict containing &#8220;title&#8221; and &#8220;content&#8221; as keys that will be displayed
-when the shape is clicked</p>
-<p>symbol is a symbol specified in json format as described at <a class="reference external" href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000n5000000">http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r3000000n5000000</a>
-a default symbol is used is one is not specified</p>
-<p>attributes is a dict containing name value pairs of fields and field values
-associated with the graphic.</p>
+<dt id="arcgis.geometry.filter.crosses">
+<code class="descclassname">filter.</code><code class="descname">crosses</code><span class="sig-paren">(</span><em>geometry</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filter.crosses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a feature if the intersection of the interiors of the two shapes is not empty and has a lower dimension
+than the maximum dimension of the two shapes. Two lines that share an endpoint in common do not cross.
+Valid for Line/Line, Line/Area, Multi-point/Area, and Multi-point/Line shape type combinations.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="arcgis.widgets.MapView.end_time">
-<code class="descname">end_time</code><a class="headerlink" href="#arcgis.widgets.MapView.end_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>A trait for unicode strings.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.widgets.MapView.extent">
-<code class="descname">extent</code><a class="headerlink" href="#arcgis.widgets.MapView.extent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.widgets.MapView.id">
-<code class="descname">id</code><a class="headerlink" href="#arcgis.widgets.MapView.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>A trait for unicode strings.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.widgets.MapView.mode">
-<code class="descname">mode</code><a class="headerlink" href="#arcgis.widgets.MapView.mode" title="Permalink to this definition">¶</a></dt>
-<dd><p>A trait for unicode strings.</p>
-</dd></dl>
-
+</div>
+<div class="section" id="envelope-intersects">
+<h2>envelope_intersects<a class="headerlink" href="#envelope-intersects" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
-<dt id="arcgis.widgets.MapView.on_click">
-<code class="descname">on_click</code><span class="sig-paren">(</span><em>callback</em>, <em>remove=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.on_click" title="Permalink to this definition">¶</a></dt>
-<dd><p>Register a callback to execute when the map is clicked.</p>
-<p>The callback will be called with one argument,
-the clicked widget instance.</p>
-<dl class="docutils">
-<dt>remove</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">bool (optional)</span><dd>Set to true to remove the callback from the list of callbacks.</dd>
-</dl>
+<dt id="arcgis.geometry.filter.envelope_intersects">
+<code class="descclassname">filter.</code><code class="descname">envelope_intersects</code><span class="sig-paren">(</span><em>geometry</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filter.envelope_intersects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns features if the envelope of the two shapes intersects.</p>
 </dd></dl>
 
+</div>
+<div class="section" id="index-intersects">
+<h2>index_intersects<a class="headerlink" href="#index-intersects" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
-<dt id="arcgis.widgets.MapView.on_draw_end">
-<code class="descname">on_draw_end</code><span class="sig-paren">(</span><em>callback</em>, <em>remove=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.on_draw_end" title="Permalink to this definition">¶</a></dt>
-<dd><p>Register a callback to execute when something is drawn</p>
-<p>The callback will be called with two argument,
-the clicked widget instance, and the geometry drawn</p>
-<dl class="docutils">
-<dt>remove</dt>
- <span class="classifier-delimiter">:</span> <span class="classifier">bool (optional)</span><dd>Set to true to remove the callback from the list of callbacks.</dd>
-</dl>
+<dt id="arcgis.geometry.filter.index_intersects">
+<code class="descclassname">filter.</code><code class="descname">index_intersects</code><span class="sig-paren">(</span><em>geometry</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filter.index_intersects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a feature if the envelope of the query geometry intersects the index entry for the target geometry.</p>
 </dd></dl>
 
+</div>
+<div class="section" id="overlaps">
+<h2>overlaps<a class="headerlink" href="#overlaps" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
-<dt id="arcgis.widgets.MapView.remove_layers">
-<code class="descname">remove_layers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.remove_layers" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="arcgis.geometry.filter.overlaps">
+<code class="descclassname">filter.</code><code class="descname">overlaps</code><span class="sig-paren">(</span><em>geometry</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filter.overlaps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a feature if the intersection of the two shapes results in an object of the same dimension, but different
+from both of the shapes. Applies to Area/Area, Line/Line, and Multi-point/Multi-point shape type combinations.</p>
+</dd></dl>
 
+</div>
+<div class="section" id="touches">
+<h2>touches<a class="headerlink" href="#touches" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
-<dt id="arcgis.widgets.MapView.set_time_extent">
-<code class="descname">set_time_extent</code><span class="sig-paren">(</span><em>start_time</em>, <em>end_time</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView.set_time_extent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.widgets.MapView.start_time">
-<code class="descname">start_time</code><a class="headerlink" href="#arcgis.widgets.MapView.start_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>A trait for unicode strings.</p>
+<dt id="arcgis.geometry.filter.touches">
+<code class="descclassname">filter.</code><code class="descname">touches</code><span class="sig-paren">(</span><em>geometry</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filter.touches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a feature if the two shapes share a common boundary. However, the intersection of the interiors of the
+two shapes must be empty. In the Point/Line case, the point may touch an endpoint only of the line. Applies to all
+combinations except Point/Point.</p>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="arcgis.widgets.MapView.width">
-<code class="descname">width</code><a class="headerlink" href="#arcgis.widgets.MapView.width" title="Permalink to this definition">¶</a></dt>
-<dd><p>A trait for unicode strings.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="arcgis.widgets.MapView.zoom">
-<code class="descname">zoom</code><a class="headerlink" href="#arcgis.widgets.MapView.zoom" title="Permalink to this definition">¶</a></dt>
-<dd><p>An int trait.</p>
-</dd></dl>
-
+</div>
+<div class="section" id="within">
+<h2>within<a class="headerlink" href="#within" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geometry.filter.within">
+<code class="descclassname">filter.</code><code class="descname">within</code><span class="sig-paren">(</span><em>geometry</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filter.within" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a feature if its shape wholly contains the search geometry. Valid for all shape type combinations.</p>
 </dd></dl>
 
 </div>
@@ -639,8 +597,10 @@ the clicked widget instance, and the geometry drawn</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="arcgis.geoprocessing.html" class="btn btn-neutral float-right" title="arcgis.geoprocessing module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="arcgis.schematics.html" class="btn btn-neutral" title="arcgis.schematics module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="arcgis.geometry.html" class="btn btn-neutral" title="arcgis.geometry module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

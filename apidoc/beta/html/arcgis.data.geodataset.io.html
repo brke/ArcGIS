@@ -412,6 +412,20 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#to-geo-coordinate-string">to_geo_coordinate_string</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#trim-extend">trim_extend</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geometry.filter.html">arcgis.geometry.filter module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#intersects">intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#contains">contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#crosses">crosses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#envelope-intersects">envelope_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#index-intersects">index_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#overlaps">overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#touches">touches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#within">within</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a><ul>
@@ -580,6 +594,42 @@ type Table, the function will return a Pandas&#8217; DataFrame</td>
 &gt;&gt;&gt; mylayer = Layer(&#8220;<a class="reference external" href="https://sampleserver6.arcgisonline.com/arcgis/rest">https://sampleserver6.arcgisonline.com/arcgis/rest</a>&#8221; +                        &#8220;/services/CommercialDamageAssessment/FeatureServer/0&#8221;)
 &gt;&gt;&gt; sdf = from_layer(mylayer)
 &gt;&gt;&gt; print(sdf)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="arcgis.data.geodataset.io.serviceops.to_layer">
+<code class="descclassname">arcgis.data.geodataset.io.serviceops.</code><code class="descname">to_layer</code><span class="sig-paren">(</span><em>df</em>, <em>layer</em>, <em>update_existing=True</em>, <em>add_new=False</em>, <em>truncate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.data.geodataset.io.serviceops.to_layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends the Spatial DataFrame information to a published service</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">df:</th><td class="field-body">Spatial DataFrame object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">layer:</th><td class="field-body">Feature Layer or Table Layer object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">update_existing:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">boolean -</td>
+</tr>
+<tr class="field-even field"><th class="field-name">add_new:</th><td class="field-body">boolean</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">truncate:</th><td class="field-body">if true, all records will be deleted and the dataframe
+records will replace the service data</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Output:</dt>
+<dd>A layer object</dd>
+</dl>
 </dd></dl>
 
 </div>
