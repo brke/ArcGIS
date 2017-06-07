@@ -140,4 +140,4 @@ Submodules
 .. toctree::
    :maxdepth: 3
 
-   arcgis.geometry.filter
+   arcgis.geometry.filters

@@ -1,29 +1,16 @@
-arcgis\.server package
-======================
-
-Subpackages
------------
-
-.. toctree::
-
-    arcgis.server.admin
-
-Submodules
-----------
-
-arcgis\.server\.managers module
--------------------------------
-
-.. automodule:: arcgis.server.managers
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-
-Module contents
----------------
+arcgis.server module
+=================
 
 .. automodule:: arcgis.server
+
+Server
+--------------
+.. autoclass:: arcgis.server.Server
     :members:
     :undoc-members:
-    :show-inheritance:
+
+Service
+---------------
+.. autoclass:: arcgis.server.Service
+    :members:
+    :undoc-members:

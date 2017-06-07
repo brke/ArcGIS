@@ -261,18 +261,12 @@
 <li class="toctree-l4"><a class="reference internal" href="#log10">log10</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#log2">log2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#majority">majority</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#majority-ignore-no-data">majority_ignore_no_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#mask">mask</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#max">max</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#max-ignore-no-data">max_ignore_no_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#mean">mean</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#mean-ignore-no-data">mean_ignore_no_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#med">med</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#med-ignore-no-data">med_ignore_no_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#min">min</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#min-ignore-no-data">min_ignore_no_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#minority">minority</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#minority-ignore-no-data">minority_ignore_no_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#minus">minus</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ml-classify">ml_classify</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#mod">mod</a></li>
@@ -286,7 +280,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#power">power</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pvi">pvi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#range">range</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#range-ignore-no-data">range_ignore_no_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#remap">remap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#resample">resample</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#round-down">round_down</a></li>
@@ -300,13 +293,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#slope">slope</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sqrt">sqrt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#square">square</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#statistics">statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#focal-statistics">focal_statistics</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#std">std</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#std-ignore-no-data">std_ignore_no_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#stretch">stretch</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sultan">sultan</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sum">sum</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sum-ignore-no-data">sum_ignore_no_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tan">tan</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tanh">tanh</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#threshold">threshold</a></li>
@@ -315,7 +306,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#tsavi">tsavi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#unit-conversion">unit_conversion</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#variety">variety</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#variety-ignore-no-data">variety_ignore_no_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#vector-field-renderer">vector_field_renderer</a></li>
 </ul>
 </li>
@@ -416,15 +406,15 @@
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#trim-extend">trim_extend</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#submodules">Submodules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.geometry.filter.html">arcgis.geometry.filter module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#intersects">intersects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#contains">contains</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#crosses">crosses</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#envelope-intersects">envelope_intersects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#index-intersects">index_intersects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#overlaps">overlaps</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#touches">touches</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filter.html#within">within</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geometry.filters.html">arcgis.geometry.filters module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filters.html#intersects">intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filters.html#contains">contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filters.html#crosses">crosses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filters.html#envelope-intersects">envelope_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filters.html#index-intersects">index_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filters.html#overlaps">overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filters.html#touches">touches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geometry.filters.html#within">within</a></li>
 </ul>
 </li>
 </ul>
@@ -2167,7 +2157,7 @@ At versions prior to 10.5, the hosting ArcGIS Server needs to have a Spatial Ana
 <h2>majority<a class="headerlink" href="#majority" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.raster.functions.majority">
-<code class="descclassname">functions.</code><code class="descname">majority</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.majority" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">functions.</code><code class="descname">majority</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>ignore_nodata=False</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.majority" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Majority operation</p>
 <p>The arguments for this function are as follows:</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2178,33 +2168,7 @@ At versions prior to 10.5, the hosting ArcGIS Server needs to have a Spatial Ana
 <li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
 <li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
 <li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>astype</strong> &#8211; output pixel type</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="majority-ignore-no-data">
-<h2>majority_ignore_no_data<a class="headerlink" href="#majority-ignore-no-data" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.functions.majority_ignore_no_data">
-<code class="descclassname">functions.</code><code class="descname">majority_ignore_no_data</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.majority_ignore_no_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The MajorityIgnoreNoData operation</p>
-<p>The arguments for this function are as follows:</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
-<li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
+<li><strong>ignore_nodata</strong> &#8211; True or False, set to True to ignore NoData values</li>
 <li><strong>astype</strong> &#8211; output pixel type</li>
 </ul>
 </td>
@@ -2249,35 +2213,8 @@ The arguments for the mask function are as follows:</p>
 <h2>max<a class="headerlink" href="#max" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.raster.functions.max">
-<code class="descclassname">functions.</code><code class="descname">max</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.max" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">functions.</code><code class="descname">max</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>ignore_nodata=False</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.max" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Max operation</p>
-<p>The arguments for this function are as follows:</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
-<li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>astype</strong> &#8211; output pixel type</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="max-ignore-no-data">
-<h2>max_ignore_no_data<a class="headerlink" href="#max-ignore-no-data" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.functions.max_ignore_no_data">
-<code class="descclassname">functions.</code><code class="descname">max_ignore_no_data</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.max_ignore_no_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The MaxIgnoreNoData operation</p>
 <p>The arguments for this function are as follows:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2303,7 +2240,7 @@ The arguments for the mask function are as follows:</p>
 <h2>mean<a class="headerlink" href="#mean" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.raster.functions.mean">
-<code class="descclassname">functions.</code><code class="descname">mean</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.mean" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">functions.</code><code class="descname">mean</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>ignore_nodata=False</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.mean" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Mean operation</p>
 <p>The arguments for this function are as follows:</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2314,33 +2251,7 @@ The arguments for the mask function are as follows:</p>
 <li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
 <li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
 <li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>astype</strong> &#8211; output pixel type</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="mean-ignore-no-data">
-<h2>mean_ignore_no_data<a class="headerlink" href="#mean-ignore-no-data" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.functions.mean_ignore_no_data">
-<code class="descclassname">functions.</code><code class="descname">mean_ignore_no_data</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.mean_ignore_no_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The MeanIgnoreNoData operation</p>
-<p>The arguments for this function are as follows:</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
-<li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
+<li><strong>ignore_nodata</strong> &#8211; True or False, set to True to ignore NoData values</li>
 <li><strong>astype</strong> &#8211; output pixel type</li>
 </ul>
 </td>
@@ -2357,7 +2268,7 @@ The arguments for the mask function are as follows:</p>
 <h2>med<a class="headerlink" href="#med" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.raster.functions.med">
-<code class="descclassname">functions.</code><code class="descname">med</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.med" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">functions.</code><code class="descname">med</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>ignore_nodata=False</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.med" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Med operation</p>
 <p>The arguments for this function are as follows:</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2368,33 +2279,7 @@ The arguments for the mask function are as follows:</p>
 <li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
 <li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
 <li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>astype</strong> &#8211; output pixel type</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="med-ignore-no-data">
-<h2>med_ignore_no_data<a class="headerlink" href="#med-ignore-no-data" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.functions.med_ignore_no_data">
-<code class="descclassname">functions.</code><code class="descname">med_ignore_no_data</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.med_ignore_no_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The MedIgnoreNoData operation</p>
-<p>The arguments for this function are as follows:</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
-<li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
+<li><strong>ignore_nodata</strong> &#8211; True or False, set to True to ignore NoData values</li>
 <li><strong>astype</strong> &#8211; output pixel type</li>
 </ul>
 </td>
@@ -2411,7 +2296,7 @@ The arguments for the mask function are as follows:</p>
 <h2>min<a class="headerlink" href="#min" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.raster.functions.min">
-<code class="descclassname">functions.</code><code class="descname">min</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.min" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">functions.</code><code class="descname">min</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>ignore_nodata=False</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.min" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Min operation</p>
 <p>The arguments for this function are as follows:</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2422,33 +2307,7 @@ The arguments for the mask function are as follows:</p>
 <li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
 <li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
 <li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>astype</strong> &#8211; output pixel type</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="min-ignore-no-data">
-<h2>min_ignore_no_data<a class="headerlink" href="#min-ignore-no-data" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.functions.min_ignore_no_data">
-<code class="descclassname">functions.</code><code class="descname">min_ignore_no_data</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.min_ignore_no_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The MinIgnoreNoData operation</p>
-<p>The arguments for this function are as follows:</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
-<li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
+<li><strong>ignore_nodata</strong> &#8211; True or False, set to True to ignore NoData values</li>
 <li><strong>astype</strong> &#8211; output pixel type</li>
 </ul>
 </td>
@@ -2465,7 +2324,7 @@ The arguments for the mask function are as follows:</p>
 <h2>minority<a class="headerlink" href="#minority" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.raster.functions.minority">
-<code class="descclassname">functions.</code><code class="descname">minority</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.minority" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">functions.</code><code class="descname">minority</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>ignore_nodata=False</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.minority" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Minority operation</p>
 <p>The arguments for this function are as follows:</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2476,33 +2335,7 @@ The arguments for the mask function are as follows:</p>
 <li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
 <li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
 <li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>astype</strong> &#8211; output pixel type</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="minority-ignore-no-data">
-<h2>minority_ignore_no_data<a class="headerlink" href="#minority-ignore-no-data" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.functions.minority_ignore_no_data">
-<code class="descclassname">functions.</code><code class="descname">minority_ignore_no_data</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.minority_ignore_no_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The MinorityIgnoreNoData operation</p>
-<p>The arguments for this function are as follows:</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
-<li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
+<li><strong>ignore_nodata</strong> &#8211; True or False, set to True to ignore NoData values</li>
 <li><strong>astype</strong> &#8211; output pixel type</li>
 </ul>
 </td>
@@ -2789,57 +2622,6 @@ PVI = (NIR-a*Red-b)/(sqrt(1+a^2))</p>
 </div>
 <div class="section" id="range">
 <h2>range<a class="headerlink" href="#range" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.functions.range">
-<code class="descclassname">functions.</code><code class="descname">range</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.range" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Range operation</p>
-<p>The arguments for this function are as follows:</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
-<li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>astype</strong> &#8211; output pixel type</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="range-ignore-no-data">
-<h2>range_ignore_no_data<a class="headerlink" href="#range-ignore-no-data" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.functions.range_ignore_no_data">
-<code class="descclassname">functions.</code><code class="descname">range_ignore_no_data</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.range_ignore_no_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The RangeIgnoreNoData operation</p>
-<p>The arguments for this function are as follows:</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
-<li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>astype</strong> &#8211; output pixel type</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </div>
 <div class="section" id="remap">
 <h2>remap<a class="headerlink" href="#remap" title="Permalink to this headline">¶</a></h2>
@@ -3221,12 +3003,12 @@ The arguments for the slope function are as follows:</p>
 </dd></dl>
 
 </div>
-<div class="section" id="statistics">
-<h2>statistics<a class="headerlink" href="#statistics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="focal-statistics">
+<h2>focal_statistics<a class="headerlink" href="#focal-statistics" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
-<dt id="arcgis.raster.functions.statistics">
-<code class="descclassname">functions.</code><code class="descname">statistics</code><span class="sig-paren">(</span><em>raster</em>, <em>kernel_columns=None</em>, <em>kernel_rows=None</em>, <em>stat_type=None</em>, <em>columns=None</em>, <em>rows=None</em>, <em>fill_no_data_only=None</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.statistics" title="Permalink to this definition">¶</a></dt>
-<dd><p>The statistics function calculates focal statistics for each pixel of an image based on a defined focal neighborhood.
+<dt id="arcgis.raster.functions.focal_statistics">
+<code class="descclassname">functions.</code><code class="descname">focal_statistics</code><span class="sig-paren">(</span><em>raster</em>, <em>kernel_columns=None</em>, <em>kernel_rows=None</em>, <em>stat_type=None</em>, <em>columns=None</em>, <em>rows=None</em>, <em>fill_no_data_only=None</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.focal_statistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>The focal_statistics function calculates focal statistics for each pixel of an image based on a defined focal neighborhood.
 For more information, see
 &lt;a href=&#8221;<a class="reference external" href="http://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/statistics-function.htm">http://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/statistics-function.htm</a>&#8220;&gt;statistics function&lt;/a&gt;.
 The arguments for the statistics function are as follows:</p>
@@ -3258,7 +3040,7 @@ The arguments for the statistics function are as follows:</p>
 <h2>std<a class="headerlink" href="#std" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.raster.functions.std">
-<code class="descclassname">functions.</code><code class="descname">std</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.std" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">functions.</code><code class="descname">std</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>ignore_nodata=False</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.std" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Std operation</p>
 <p>The arguments for this function are as follows:</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -3269,33 +3051,7 @@ The arguments for the statistics function are as follows:</p>
 <li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
 <li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
 <li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>astype</strong> &#8211; output pixel type</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="std-ignore-no-data">
-<h2>std_ignore_no_data<a class="headerlink" href="#std-ignore-no-data" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.functions.std_ignore_no_data">
-<code class="descclassname">functions.</code><code class="descname">std_ignore_no_data</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.std_ignore_no_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The StdIgnoreNoData operation</p>
-<p>The arguments for this function are as follows:</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
-<li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
+<li><strong>ignore_nodata</strong> &#8211; True or False, set to True to ignore NoData values</li>
 <li><strong>astype</strong> &#8211; output pixel type</li>
 </ul>
 </td>
@@ -3384,7 +3140,7 @@ Band 3 = (Band3 / Band4) x (Band5 / Band4) x 100</dd>
 <h2>sum<a class="headerlink" href="#sum" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.raster.functions.sum">
-<code class="descclassname">functions.</code><code class="descname">sum</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.sum" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">functions.</code><code class="descname">sum</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>ignore_nodata=False</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.sum" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Sum operation</p>
 <p>The arguments for this function are as follows:</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -3395,33 +3151,7 @@ Band 3 = (Band3 / Band4) x (Band5 / Band4) x 100</dd>
 <li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
 <li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
 <li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>astype</strong> &#8211; output pixel type</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="sum-ignore-no-data">
-<h2>sum_ignore_no_data<a class="headerlink" href="#sum-ignore-no-data" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.functions.sum_ignore_no_data">
-<code class="descclassname">functions.</code><code class="descname">sum_ignore_no_data</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.sum_ignore_no_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The SumIgnoreNoData operation</p>
-<p>The arguments for this function are as follows:</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
-<li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
+<li><strong>ignore_nodata</strong> &#8211; True or False, set to True to ignore NoData values</li>
 <li><strong>astype</strong> &#8211; output pixel type</li>
 </ul>
 </td>
@@ -3618,11 +3348,10 @@ TSAVI = (s(NIR-s*Red-a))/(a*NIR+Red-a*s+X*(1+s^2))</p>
 <dt id="arcgis.raster.functions.unit_conversion">
 <code class="descclassname">functions.</code><code class="descname">unit_conversion</code><span class="sig-paren">(</span><em>raster</em>, <em>from_unit=None</em>, <em>to_unit=None</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.unit_conversion" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unit_conversion function performs unit conversions.The arguments for the unit_conversion function are as follows:
-FromUnit and ToUnit take the following:
-Speed Units: 100=MetersPerSecond, 101=KilometersPerHour, 102 =Knots, 103 =FeetPerSecond, 104=MilesPerHour
-Temperature Units: 200=Celsius,201=Fahrenheit,202=Kelvin
-Distance Units: 1=Inches, 2=Points, 3=Feet,4=Yards,5=Miles, 6=NauticalMiles,7=Millimeters,8=Centimeters,9=Meters,
-10=Kilometers,11=DecimalDegrees,12=Decimeters</p>
+from_unit and to_unit take the following str values:
+Speed Units: MetersPerSecond, KilometersPerHour, Knots, FeetPerSecond, MilesPerHour
+Temperature Units: Celsius,Fahrenheit,Kelvin
+Distance Units: str, one of Inches, Feet, Yards, Miles, NauticalMiles, Millimeters, Centimeters, Meters</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -3647,7 +3376,7 @@ Distance Units: 1=Inches, 2=Points, 3=Feet,4=Yards,5=Miles, 6=NauticalMiles,7=Mi
 <h2>variety<a class="headerlink" href="#variety" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.raster.functions.variety">
-<code class="descclassname">functions.</code><code class="descname">variety</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.variety" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">functions.</code><code class="descname">variety</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>ignore_nodata=False</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.variety" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Variety operation</p>
 <p>The arguments for this function are as follows:</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -3658,33 +3387,7 @@ Distance Units: 1=Inches, 2=Points, 3=Feet,4=Yards,5=Miles, 6=NauticalMiles,7=Mi
 <li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
 <li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
 <li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>astype</strong> &#8211; output pixel type</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="variety-ignore-no-data">
-<h2>variety_ignore_no_data<a class="headerlink" href="#variety-ignore-no-data" title="Permalink to this headline">¶</a></h2>
-<dl class="method">
-<dt id="arcgis.raster.functions.variety_ignore_no_data">
-<code class="descclassname">functions.</code><code class="descname">variety_ignore_no_data</code><span class="sig-paren">(</span><em>rasters</em>, <em>extent_type='FirstOf'</em>, <em>cellsize_type='FirstOf'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.variety_ignore_no_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The VarietyIgnoreNoData operation</p>
-<p>The arguments for this function are as follows:</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>rasters</strong> &#8211; array of rasters. If a scalar is needed for the operation, the scalar can be a double or string</li>
-<li><strong>extent_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;IntersectionOf&#8221;, &#8220;UnionOf&#8221;, &#8220;LastOf&#8221;</li>
-<li><strong>cellsize_type</strong> &#8211; one of &#8220;FirstOf&#8221;, &#8220;MinOf&#8221;, &#8220;MaxOf, &#8220;MeanOf&#8221;, &#8220;LastOf&#8221;</li>
+<li><strong>ignore_nodata</strong> &#8211; True or False, set to True to ignore NoData values</li>
 <li><strong>astype</strong> &#8211; output pixel type</li>
 </ul>
 </td>

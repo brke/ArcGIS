@@ -255,10 +255,6 @@ majority
 ________
 .. automethod:: arcgis.raster.functions.majority
 
-majority_ignore_no_data
-_______________________
-.. automethod:: arcgis.raster.functions.majority_ignore_no_data
-
 mask
 ____
 .. automethod:: arcgis.raster.functions.mask
@@ -267,42 +263,21 @@ max
 ___
 .. automethod:: arcgis.raster.functions.max
 
-max_ignore_no_data
-__________________
-.. automethod:: arcgis.raster.functions.max_ignore_no_data
-
 mean
 ____
 .. automethod:: arcgis.raster.functions.mean
-
-mean_ignore_no_data
-___________________
-.. automethod:: arcgis.raster.functions.mean_ignore_no_data
 
 med
 ___
 .. automethod:: arcgis.raster.functions.med
 
-med_ignore_no_data
-__________________
-.. automethod:: arcgis.raster.functions.med_ignore_no_data
-
 min
 ___
 .. automethod:: arcgis.raster.functions.min
 
-min_ignore_no_data
-__________________
-.. automethod:: arcgis.raster.functions.min_ignore_no_data
-
 minority
 ________
 .. automethod:: arcgis.raster.functions.minority
-
-minority_ignore_no_data
-_______________________
-.. automethod:: arcgis.raster.functions.minority_ignore_no_data
-
 minus
 _____
 .. automethod:: arcgis.raster.functions.minus
@@ -354,10 +329,6 @@ ___
 range
 _____
 .. automethod:: arcgis.raster.functions.range
-
-range_ignore_no_data
-____________________
-.. automethod:: arcgis.raster.functions.range_ignore_no_data
 
 remap
 _____
@@ -411,17 +382,13 @@ square
 ______
 .. automethod:: arcgis.raster.functions.square
 
-statistics
+focal_statistics
 __________
-.. automethod:: arcgis.raster.functions.statistics
+.. automethod:: arcgis.raster.functions.focal_statistics
 
 std
 ___
 .. automethod:: arcgis.raster.functions.std
-
-std_ignore_no_data
-__________________
-.. automethod:: arcgis.raster.functions.std_ignore_no_data
 
 stretch
 _______
@@ -434,10 +401,6 @@ ______
 sum
 ___
 .. automethod:: arcgis.raster.functions.sum
-
-sum_ignore_no_data
-__________________
-.. automethod:: arcgis.raster.functions.sum_ignore_no_data
 
 tan
 ___
@@ -470,10 +433,6 @@ _______________
 variety
 _______
 .. automethod:: arcgis.raster.functions.variety
-
-variety_ignore_no_data
-______________________
-.. automethod:: arcgis.raster.functions.variety_ignore_no_data
 
 vector_field_renderer
 _____________________
