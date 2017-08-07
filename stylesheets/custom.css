@@ -1,0 +1,59 @@
+/*
+Placeholder for custom user CSS
+
+mainly to be overridden in profile/static/custom/custom.css
+
+This will always be an empty file in IPython
+*/
+
+
+@import url("//js.arcgis.com/3.17/esri/css/esri.css");
+@import url("//js.arcgis.com/3.17compact/dijit/themes/claro/claro.css");
+
+html, body, #map {
+        height:100%;
+        width:100%;
+        margin:0;
+        padding:0;
+}
+
+      #search {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: 20px;
+        left: 74px;
+      }
+
+.frame { padding: 5px; border: 1px solid #aaa; }
+
+#legendDiv{
+  background-color: #fff;
+  position: absolute !important;
+  z-index: 99;
+  top:10px;
+  right:20px;
+}
+.item_container {
+   height: auto;
+   overflow: hidden;
+
+   border: 1px solid #cfcfcf;
+   border-radius: 2px;
+   background: #f6fafa;
+   line-height: 1.21429em;
+   padding:10px;
+}
+
+.item_left {
+    width: 210px;
+    float: left;
+}
+
+.item_right {
+    float: none; /* not needed, just for clarification */
+
+    /* the next props are meant to keep this block independent from the other floated one */
+    width: auto;
+    overflow: hidden;
+}
