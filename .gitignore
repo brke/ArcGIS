@@ -1,0 +1,70 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+*.pyc
+src/geosaurus/__pycache__/
+src/arcgis.egg-info/
+.vs/
+*.pyproj
+*.sln
+*.suo
+.ipynb_checkpoints/
+__pycache__/
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+# Ignore all files with 3 underscores
+___*.py
+___*.*
+___*
+
+# IDE files
+.idea
+src/.vscode/launch.json
+src/.vscode/settings.json
+*.bz2
+
+# Unittest outputs
+/unittests/test-results/
+/*.wpr
+/*.wpu
