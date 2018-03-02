@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.gis module &mdash; arcgis 1.3.0 documentation</title>
+  <title>arcgis.gis module &mdash; arcgis 1.4.0 documentation</title>
   
 
   
@@ -37,7 +37,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.3.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.4.0 documentation" href="index.html"/>
         <link rel="next" title="arcgis.gis.admin module" href="arcgis.gis.admin.html"/>
         <link rel="prev" title="API Reference for the ArcGIS API for Python" href="index.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
@@ -77,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.3.0
+                1.4.0
               </div>
             
           
@@ -227,6 +227,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-outliers">find_outliers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#interpolate-points">interpolate_points</a></li>
 </ul>
 </li>
@@ -253,6 +254,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#aggregate-points">aggregate_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#join-features">join_features</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-nearby">summarize_nearby</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
 </ul>
@@ -335,8 +337,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#clip">clip</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#colormap">colormap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#colormap-to-rgb">colormap_to_rgb</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#id1">colormap_to_rgb</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#colorspace-conversion">colorspace_conversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#complex">complex</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#composite-band">composite_band</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#con">con</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#contrast-brightness">contrast_brightness</a></li>
@@ -358,6 +360,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#floor-divide">floor_divide</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#gemi">gemi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#geometric">geometric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#grayscale">grayscale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#greater-than">greater_than</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#greater-than-equal">greater_than_equal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#gvitm">gvitm</a></li>
@@ -392,6 +395,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#power">power</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#pvi">pvi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#cellstats-range">cellstats_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#raster-calculator">raster_calculator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#remap">remap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#resample">resample</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#round-down">round_down</a></li>
@@ -403,6 +407,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#sin">sin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#sinh">sinh</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#slope">slope</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#spectral-conversion">spectral_conversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#speckle">speckle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#sqrt">sqrt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#square">square</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#focal-statistics">focal_statistics</a></li>
@@ -769,6 +775,11 @@ access in the network where the script is run.</td>
 <tr class="row-odd"><td>proxy_port</td>
 <td>Optional integer. The proxy host port.  The default is 80.</td>
 </tr>
+<tr class="row-even"><td>token</td>
+<td>Optional string. This is the Enterprise token for built-in
+logins. This parameter is only honored if the username/password
+is None and the security for the site uses BUILT-IN security.</td>
+</tr>
 </tbody>
 </table>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 1: Anonymous Login to ArcGIS Online</span>
@@ -809,8 +820,7 @@ access in the network where the script is run.</td>
 <dl class="method">
 <dt id="arcgis.gis.GIS.map">
 <code class="descname">map</code><span class="sig-paren">(</span><em>location=None</em>, <em>zoomlevel=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.GIS.map" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>Creates a map widget centered at the declared location with the specified
+<dd><p>Creates a map widget centered at the declared location with the specified
 zoom level. If an address is provided, it is geocoded
 using the GIS’s configured geocoders and if a match is found, the geographic
 extent of the matched address is used as the map extent. If a zoomlevel is also
@@ -834,7 +844,6 @@ to the specified zoomlevel.</p>
 </tr>
 </tbody>
 </table>
-</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1459,7 +1468,7 @@ available to the item owner and the organization administrator.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.publish">
-<code class="descname">publish</code><span class="sig-paren">(</span><em>publish_parameters=None</em>, <em>address_fields=None</em>, <em>output_type=None</em>, <em>overwrite=False</em>, <em>file_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.publish" title="Permalink to this definition">¶</a></dt>
+<code class="descname">publish</code><span class="sig-paren">(</span><em>publish_parameters=None</em>, <em>address_fields=None</em>, <em>output_type=None</em>, <em>overwrite=False</em>, <em>file_type=None</em>, <em>build_initial_cache=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.publish" title="Permalink to this definition">¶</a></dt>
 <dd><p>Publishes a hosted service based on an existing source item (this item).
 Publishers can create feature, tiled map, vector tile and scene services.</p>
 <p>Feature services can be created using input files of type csv, shapefile, serviceDefinition, featureCollection, and fileGeodatabase.
@@ -1506,6 +1515,11 @@ tilePackage, featureService, featureCollection, fileGeodatabase,
 geojson, scenepackage, vectortilepackage, imageCollection,
 mapService, and sqliteGeodatabase are valid entries. This is an
 optional parameter.</td>
+</tr>
+<tr class="row-odd"><td>build_initial_cache</td>
+<td>Optional boolean.  The boolean value (default False), if true
+and applicable for the file_type, the value will built cache
+for the service.</td>
 </tr>
 </tbody>
 </table>
@@ -1568,7 +1582,7 @@ user.reassign_to() method.  This method only moves one item at a time.</p>
 <dl class="method">
 <dt id="arcgis.gis.Item.related_items">
 <code class="descname">related_items</code><span class="sig-paren">(</span><em>rel_type</em>, <em>direction='forward'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.related_items" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieves the items related to this item. Relationsships can be added and deleted using
+<dd><p>Retrieves the items related to this item. Relationships can be added and deleted using
 item.add_relationship() and item.delete_relationship(), respectively.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2161,7 +2175,7 @@ that a user wants to unlink.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.User.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>access=None</em>, <em>preferred_view=None</em>, <em>description=None</em>, <em>tags=None</em>, <em>thumbnail=None</em>, <em>fullname=None</em>, <em>email=None</em>, <em>culture=None</em>, <em>region=None</em>, <em>first_name=None</em>, <em>last_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.User.update" title="Permalink to this definition">¶</a></dt>
+<code class="descname">update</code><span class="sig-paren">(</span><em>access=None</em>, <em>preferred_view=None</em>, <em>description=None</em>, <em>tags=None</em>, <em>thumbnail=None</em>, <em>fullname=None</em>, <em>email=None</em>, <em>culture=None</em>, <em>region=None</em>, <em>first_name=None</em>, <em>last_name=None</em>, <em>security_question=None</em>, <em>security_answer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.User.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates this user’s properties.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -2170,10 +2184,15 @@ All other properties will be left as they are.  If you
 want to update the description, then only provide
 the description argument.</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When updating the security question, you must provide a
+security_answer as well.</p>
+</div>
 <table border="1" class="docutils">
 <colgroup>
-<col width="16%" />
-<col width="84%" />
+<col width="18%" />
+<col width="82%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Argument</strong></td>
@@ -2213,6 +2232,37 @@ or JPEG. Maximum allowed size is 1 MB.</td>
 </tr>
 <tr class="row-even"><td>last_name</td>
 <td>Optional string. User’s first name.</td>
+</tr>
+<tr class="row-odd"><td>security_question</td>
+<td><p class="first">Optional integer.  The is a number from 1-14.  The
+questions are as follows:</p>
+<ol class="arabic simple">
+<li>What city were you born in?</li>
+<li>What was your high school mascot?</li>
+<li>What is your mother’s maden name?</li>
+<li>What was the make of your first car?</li>
+<li>What high school did you got to?</li>
+<li>What is the last name of your best friend?</li>
+<li>What is the middle name of your youngest sibling?</li>
+<li>What is the name of the street on which your grew up?</li>
+<li>What is the name of your favorite fictional character?</li>
+<li>What is the name of your favorite pet?</li>
+<li>What is the name of your favorite restaurant?</li>
+<li>What is the title of your facorite book?</li>
+<li>What is your dream job?</li>
+<li>Where did you go on your first date?</li>
+</ol>
+<p>Usage Example:</p>
+<p class="last">security_question=13</p>
+</td>
+</tr>
+<tr class="row-even"><td>security_answer</td>
+<td><p class="first">Optional string.  This is the answer to security querstion.
+If you are changing a user’s question, an answer must be
+provided.</p>
+<p>Usage example:</p>
+<p class="last">security_answer=”Working on the Python API”</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -2649,7 +2699,7 @@ that the user be logged in.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.Group.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>title=None</em>, <em>tags=None</em>, <em>description=None</em>, <em>snippet=None</em>, <em>access=None</em>, <em>is_invitation_only=None</em>, <em>sort_field=None</em>, <em>sort_order=None</em>, <em>is_view_only=None</em>, <em>thumbnail=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Group.update" title="Permalink to this definition">¶</a></dt>
+<code class="descname">update</code><span class="sig-paren">(</span><em>title=None</em>, <em>tags=None</em>, <em>description=None</em>, <em>snippet=None</em>, <em>access=None</em>, <em>is_invitation_only=None</em>, <em>sort_field=None</em>, <em>sort_order=None</em>, <em>is_view_only=None</em>, <em>thumbnail=None</em>, <em>max_file_size=None</em>, <em>users_update_items=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Group.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates this group with only values supplied for particular arguments.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2695,6 +2745,17 @@ True means the group is searchable.</td>
 </tr>
 <tr class="row-odd"><td>thumbnail</td>
 <td>Optional string. URL or file location to a new group image.</td>
+</tr>
+<tr class="row-even"><td>max_file_size</td>
+<td>Optional integer.  This is the maximum file size allowed
+be uploaded/shared to a group. Default value is: 1024000</td>
+</tr>
+<tr class="row-odd"><td>users_update_items</td>
+<td>Optional boolean.  Members can update all items in this
+group.  Updates to an item can include changes to the
+item’s description, tags, metadata, as well as content.
+This option can’t be disabled once the group has
+been created. Default is False.</td>
 </tr>
 </tbody>
 </table>
@@ -3155,11 +3216,72 @@ or not allowed (false).</td>
 </dd></dl>
 
 <dl class="method">
+<dt id="arcgis.gis.ContentManager.analyze">
+<code class="descname">analyze</code><span class="sig-paren">(</span><em>url=None</em>, <em>item=None</em>, <em>file_path=None</em>, <em>text=None</em>, <em>file_type=None</em>, <em>source_locale='en'</em>, <em>geocoding_service=None</em>, <em>location_type=None</em>, <em>source_country='world'</em>, <em>country_hint=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.analyze" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Analyze call helps a client analyze a CSV or Excel file (.xlsx, .xls) prior to publishing or generating features using the Publish or Generate operation, respectively.</p>
+<p>Analyze returns information about the file including the fields present as well as sample records. Analyze attempts to detect the presence of location fields that may be present as either X,Y fields or address fields.</p>
+<p>Analyze packages its result so that publishParameters within the JSON response contains information that can be passed back to the server in a subsequent call to Publish or Generate. The publishParameters subobject contains properties that describe the resulting layer after publishing, including its fields, the desired renderer, and so on. Analyze will suggest defaults for the renderer.</p>
+<p>In a typical workflow, the client will present portions of the Analyze results to the user for editing before making the call to Publish or Generate.</p>
+<p>If the file to be analyzed currently exists in the portal as an item, callers can pass in its itemId. Callers can also directly post the file. In this case, the request must be a multipart post request pursuant to IETF RFC1867. The third option for text files is to pass the text in as the value of the text parameter.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>url</td>
+<td>optional string. The URL of the csv file.</td>
+</tr>
+<tr class="row-odd"><td>item</td>
+<td>optional string/Item. The ID or Item of the item to be
+analyzed.</td>
+</tr>
+<tr class="row-even"><td>file_path</td>
+<td>optional string. The file to be analyzed.</td>
+</tr>
+<tr class="row-odd"><td>text</td>
+<td>optional string. The text in the file to be analyzed.</td>
+</tr>
+<tr class="row-even"><td>file_type</td>
+<td>optional string. The type of the input file: shapefile, csv or excel</td>
+</tr>
+<tr class="row-odd"><td>source_locale</td>
+<td>optional string. The locale used for the geocoding service source.</td>
+</tr>
+<tr class="row-even"><td>geocoding_service</td>
+<td>optional string/geocoder. The URL of the service.</td>
+</tr>
+<tr class="row-odd"><td>location_type</td>
+<td><p class="first">optional string. Indicates the type of spatial information stored in the dataset.</p>
+<p class="last">Values for CSV: coordinates | address | lookup | none
+Values for Excel: coordinates | address | none</p>
+</td>
+</tr>
+<tr class="row-even"><td>source_country</td>
+<td>optional string. The two character country code associated with the geocoding service, default is “world”.</td>
+</tr>
+<tr class="row-odd"><td>country_hint</td>
+<td>optional string. If first time analyzing, the hint is used. If source country is already specified than sourcecountry is used.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dictionary</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="arcgis.gis.ContentManager.clone_items">
 <code class="descname">clone_items</code><span class="sig-paren">(</span><em>items</em>, <em>folder=None</em>, <em>item_extent=None</em>, <em>use_org_basemap=False</em>, <em>copy_data=True</em>, <em>search_existing_items=True</em>, <em>item_mapping=None</em>, <em>group_mapping=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.clone_items" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clone content to the GIS by creating new items.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
 <p>Cloning an item will create a copy of the item and for certain
 item types a copy of the item dependencies in the GIS.</p>
 <p>For example a web application created using Web AppBuilder
@@ -3167,9 +3289,8 @@ or a Configurable App Template which is built from a web map
 that references one or more hosted feature layers. This function
 will clone all of these items to the GIS and swizzle the paths
 in the web map and web application to point to the new layers.</p>
-<p class="last">This creates an exact copy of the application, map, and layers
+<p>This creates an exact copy of the application, map, and layers
 in the GIS.</p>
-</div>
 <table border="1" class="docutils">
 <colgroup>
 <col width="22%" />
@@ -3426,6 +3547,28 @@ the given folder name.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.ContentManager.delete_items">
+<code class="descname">delete_items</code><span class="sig-paren">(</span><em>items</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.delete_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a collection of items from a users content.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>items</td>
+<td>list of Item or Item Ids.  This is an array of items to be deleted from
+the current user’s content</td>
+</tr>
+</tbody>
+</table>
+<p>Returns: boolean. True on</p>
 </dd></dl>
 
 <dl class="method">
@@ -3947,7 +4090,7 @@ An instance of this class, called ‘groups’, is available as a property of th
 Users call methods on this ‘groups’ object to manipulate (create, get, search, etc) users.</p>
 <dl class="method">
 <dt id="arcgis.gis.GroupManager.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>title</em>, <em>tags</em>, <em>description=None</em>, <em>snippet=None</em>, <em>access='public'</em>, <em>thumbnail=None</em>, <em>is_invitation_only=False</em>, <em>sort_field='avgRating'</em>, <em>sort_order='desc'</em>, <em>is_view_only=False</em>, <em>auto_join=False</em>, <em>provider_group_name=None</em>, <em>provider=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.GroupManager.create" title="Permalink to this definition">¶</a></dt>
+<code class="descname">create</code><span class="sig-paren">(</span><em>title</em>, <em>tags</em>, <em>description=None</em>, <em>snippet=None</em>, <em>access='public'</em>, <em>thumbnail=None</em>, <em>is_invitation_only=False</em>, <em>sort_field='avgRating'</em>, <em>sort_order='desc'</em>, <em>is_view_only=False</em>, <em>auto_join=False</em>, <em>provider_group_name=None</em>, <em>provider=None</em>, <em>max_file_size=None</em>, <em>users_update_items=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.GroupManager.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a group with the values for any particular arguments that are specified.
 Only title and tags are required.</p>
 <table border="1" class="docutils">
@@ -4006,6 +4149,17 @@ membership approval. Default is False.</td>
 </tr>
 <tr class="row-even"><td>provider</td>
 <td>Optional string. Name of the provider.</td>
+</tr>
+<tr class="row-odd"><td>max_file_size</td>
+<td>Optional integer.  This is the maximum file size allowed
+be uploaded/shared to a group. Default value is: 1024000</td>
+</tr>
+<tr class="row-even"><td>users_update_items</td>
+<td>Optional boolean.  Members can update all items in this
+group.  Updates to an item can include changes to the
+item’s description, tags, metadata, as well as content.
+This option can’t be disabled once the group has
+been created. Default is False.</td>
 </tr>
 </tbody>
 </table>
@@ -4899,7 +5053,7 @@ used together with file_name.</td>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.3.0',
+            VERSION:'1.4.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

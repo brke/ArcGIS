@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.features module &mdash; arcgis 1.3.0 documentation</title>
+  <title>arcgis.features module &mdash; arcgis 1.4.0 documentation</title>
   
 
   
@@ -37,7 +37,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.3.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.4.0 documentation" href="index.html"/>
         <link rel="next" title="arcgis.features.analysis module" href="arcgis.features.analysis.html"/>
         <link rel="prev" title="arcgis.env module" href="arcgis.env.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
@@ -77,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.3.0
+                1.4.0
               </div>
             
           
@@ -227,6 +227,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-outliers">find_outliers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.analyze_patterns.html#interpolate-points">interpolate_points</a></li>
 </ul>
 </li>
@@ -253,6 +254,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#aggregate-points">aggregate_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#join-features">join_features</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-nearby">summarize_nearby</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
 </ul>
@@ -335,8 +337,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#clip">clip</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#colormap">colormap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#colormap-to-rgb">colormap_to_rgb</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#id1">colormap_to_rgb</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#colorspace-conversion">colorspace_conversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#complex">complex</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#composite-band">composite_band</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#con">con</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#contrast-brightness">contrast_brightness</a></li>
@@ -358,6 +360,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#floor-divide">floor_divide</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#gemi">gemi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#geometric">geometric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#grayscale">grayscale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#greater-than">greater_than</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#greater-than-equal">greater_than_equal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#gvitm">gvitm</a></li>
@@ -392,6 +395,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#power">power</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#pvi">pvi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#cellstats-range">cellstats_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#raster-calculator">raster_calculator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#remap">remap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#resample">resample</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#round-down">round_down</a></li>
@@ -403,6 +407,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#sin">sin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#sinh">sinh</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#slope">slope</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#spectral-conversion">spectral_conversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#speckle">speckle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#sqrt">sqrt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#square">square</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#focal-statistics">focal_statistics</a></li>
@@ -943,34 +949,52 @@ value is true.</div></blockquote>
 <dt id="arcgis.features.FeatureLayer.edit_features">
 <code class="descname">edit_features</code><span class="sig-paren">(</span><em>adds=None</em>, <em>updates=None</em>, <em>deletes=None</em>, <em>gdb_version=None</em>, <em>use_global_ids=False</em>, <em>rollback_on_failure=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.FeatureLayer.edit_features" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation adds, updates, and deletes features to the
-associated feature layer or table in a single call.
-Inputs:</p>
-<blockquote>
-<div><p>adds - The array of features to be added.
-updates - The array of features to be updateded.
-deletes - string of OIDs to remove from service
-gdbVersion - Geodatabase version to apply the edits.
-useGlobalIds - instead of referencing the default Object ID</p>
-<blockquote>
-<div>field, the service will look at a GUID field
-to track changes.  This means the GUIDs will
-be passed instead of OIDs for delete,
-update or add features.</div></blockquote>
-<dl class="docutils">
-<dt>rollbackOnFailure - Optional parameter to specify if the</dt>
-<dd>edits should be applied only if all
-submitted edits succeed. If false, the
+associated feature layer or table in a single call.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Inputs</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>adds</td>
+<td>Optional FeatureSet/List. The array of
+features to be added.</td>
+</tr>
+<tr class="row-odd"><td>updates</td>
+<td>Optional FeatureSet/List. The array of
+features to be updateded.</td>
+</tr>
+<tr class="row-even"><td>deletes</td>
+<td>Optional FeatureSet/List. string of OIDs to
+remove from service</td>
+</tr>
+<tr class="row-odd"><td>use_global_ids</td>
+<td>Optional boolean. Instead of referencing
+the default Object ID field, the service
+will look at a GUID field to track changes.
+This means the GUIDs will be passed instead
+of OIDs for delete, update or add features.</td>
+</tr>
+<tr class="row-even"><td>gdb_version</td>
+<td>Optional boolean. Geodatabase version to
+apply the edits.</td>
+</tr>
+<tr class="row-odd"><td>rollback_on_failure</td>
+<td>Optional boolean. Optional parameter to
+specify if the edits should be applied only
+if all submitted edits succeed. If false, the
 server will apply the edits that succeed
 even if some of the submitted edits fail.
 If true, the server will apply the edits
 only if all edits succeed. The default
-value is true.</dd>
-</dl>
-</div></blockquote>
-<dl class="docutils">
-<dt>Output:</dt>
-<dd>dictionary of messages</dd>
-</dl>
+value is true.</td>
+</tr>
+</tbody>
+</table>
+<p>Output: dictionary</p>
 </dd></dl>
 
 <dl class="classmethod">
@@ -1500,34 +1524,52 @@ value is true.</div></blockquote>
 <dt id="arcgis.features.Table.edit_features">
 <code class="descname">edit_features</code><span class="sig-paren">(</span><em>adds=None</em>, <em>updates=None</em>, <em>deletes=None</em>, <em>gdb_version=None</em>, <em>use_global_ids=False</em>, <em>rollback_on_failure=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.Table.edit_features" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation adds, updates, and deletes features to the
-associated feature layer or table in a single call.
-Inputs:</p>
-<blockquote>
-<div><p>adds - The array of features to be added.
-updates - The array of features to be updateded.
-deletes - string of OIDs to remove from service
-gdbVersion - Geodatabase version to apply the edits.
-useGlobalIds - instead of referencing the default Object ID</p>
-<blockquote>
-<div>field, the service will look at a GUID field
-to track changes.  This means the GUIDs will
-be passed instead of OIDs for delete,
-update or add features.</div></blockquote>
-<dl class="docutils">
-<dt>rollbackOnFailure - Optional parameter to specify if the</dt>
-<dd>edits should be applied only if all
-submitted edits succeed. If false, the
+associated feature layer or table in a single call.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Inputs</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>adds</td>
+<td>Optional FeatureSet/List. The array of
+features to be added.</td>
+</tr>
+<tr class="row-odd"><td>updates</td>
+<td>Optional FeatureSet/List. The array of
+features to be updateded.</td>
+</tr>
+<tr class="row-even"><td>deletes</td>
+<td>Optional FeatureSet/List. string of OIDs to
+remove from service</td>
+</tr>
+<tr class="row-odd"><td>use_global_ids</td>
+<td>Optional boolean. Instead of referencing
+the default Object ID field, the service
+will look at a GUID field to track changes.
+This means the GUIDs will be passed instead
+of OIDs for delete, update or add features.</td>
+</tr>
+<tr class="row-even"><td>gdb_version</td>
+<td>Optional boolean. Geodatabase version to
+apply the edits.</td>
+</tr>
+<tr class="row-odd"><td>rollback_on_failure</td>
+<td>Optional boolean. Optional parameter to
+specify if the edits should be applied only
+if all submitted edits succeed. If false, the
 server will apply the edits that succeed
 even if some of the submitted edits fail.
 If true, the server will apply the edits
 only if all edits succeed. The default
-value is true.</dd>
-</dl>
-</div></blockquote>
-<dl class="docutils">
-<dt>Output:</dt>
-<dd>dictionary of messages</dd>
-</dl>
+value is true.</td>
+</tr>
+</tbody>
+</table>
+<p>Output: dictionary</p>
 </dd></dl>
 
 <dl class="method">
@@ -3396,6 +3438,7 @@ in the store wherever possible</dd>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#calculate-density">calculate_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#find-outliers">find_outliers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.analyze_patterns.html#interpolate-points">interpolate_points</a></li>
 </ul>
 </li>
@@ -3422,6 +3465,7 @@ in the store wherever possible</dd>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#aggregate-points">aggregate_points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#join-features">join_features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-nearby">summarize_nearby</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.summarize_data.html#summarize-within">summarize_within</a></li>
 </ul>
@@ -3497,7 +3541,7 @@ in the store wherever possible</dd>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.3.0',
+            VERSION:'1.4.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
