@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.features.analysis module &mdash; arcgis 1.4.1 documentation</title>
+  <title>arcgis.features.analysis module &mdash; arcgis 1.4.2 documentation</title>
   
 
   
@@ -37,7 +37,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.4.1 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.4.2 documentation" href="index.html"/>
         <link rel="up" title="arcgis.features module" href="arcgis.features.toc.html"/>
         <link rel="next" title="arcgis.features.analyze_patterns module" href="arcgis.features.analyze_patterns.html"/>
         <link rel="prev" title="arcgis.features module" href="arcgis.features.toc.html"/>
@@ -78,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.4.1
+                1.4.2
               </div>
             
           
@@ -187,6 +187,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#return-z">return_z</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#return-m">return_m</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#verbose">verbose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#default-aggregation-styles">default_aggregation_styles</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a><ul class="current">
@@ -305,6 +306,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#convert-feature-to-raster">convert_feature_to_raster</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#convert-raster-to-feature">convert_raster_to_feature</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#copy-raster">copy_raster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#create-image-collection">create_image_collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#add-image">add_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#delete-image">delete_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#delete-image-collection">delete_image_collection</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.html">arcgis.raster.functions module</a><ul>
@@ -447,6 +452,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.gbl.html#stream-link">stream_link</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.gbl.html#watershed">watershed</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.gbl.html#zonal-statistics">zonal_statistics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.raster.orthomapping.html">arcgis.raster.orthomapping module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#is-supported">is_supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#compute-sensor-model">compute_sensor_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#alter-processing-states">alter_processing_states</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#get-processing-states">get_processing_states</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#match-control-points">match_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#color-correction">color_correction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#compute-control-points">compute_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#compute-seamlines">compute_seamlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#edit-control-points">edit_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#generate-dem">generate_dem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#generate-orthomosaic">generate_orthomosaic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#generate-report">generate_report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#query-camera-info">query_camera_info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#query-control-points">query_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#reset-image-collection">reset_image_collection</a></li>
 </ul>
 </li>
 </ul>
@@ -620,6 +643,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.workforce.html#track">Track</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.workforce.html#worker">Worker</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.workforce.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.apps.storymap.html">arcgis.apps.storymap module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.storymap.html#journalstorymap">JournalStoryMap</a></li>
 </ul>
 </li>
 </ul>
@@ -1591,7 +1618,7 @@ shape (eg. length for lines) for each unique groupByField value is calculated.</
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.4.1',
+            VERSION:'1.4.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.gis module &mdash; arcgis 1.4.1 documentation</title>
+  <title>arcgis.gis module &mdash; arcgis 1.4.2 documentation</title>
   
 
   
@@ -37,7 +37,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.4.1 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.4.2 documentation" href="index.html"/>
         <link rel="next" title="arcgis.gis.admin module" href="arcgis.gis.admin.html"/>
         <link rel="prev" title="API Reference for the ArcGIS API for Python" href="index.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
@@ -77,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.4.1
+                1.4.2
               </div>
             
           
@@ -186,6 +186,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#return-z">return_z</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#return-m">return_m</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#verbose">verbose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#default-aggregation-styles">default_aggregation_styles</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a><ul>
@@ -304,6 +305,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#convert-feature-to-raster">convert_feature_to_raster</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#convert-raster-to-feature">convert_raster_to_feature</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#copy-raster">copy_raster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#create-image-collection">create_image_collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#add-image">add_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#delete-image">delete_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#delete-image-collection">delete_image_collection</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.html">arcgis.raster.functions module</a><ul>
@@ -446,6 +451,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.gbl.html#stream-link">stream_link</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.gbl.html#watershed">watershed</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.gbl.html#zonal-statistics">zonal_statistics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.raster.orthomapping.html">arcgis.raster.orthomapping module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#is-supported">is_supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#compute-sensor-model">compute_sensor_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#alter-processing-states">alter_processing_states</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#get-processing-states">get_processing_states</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#match-control-points">match_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#color-correction">color_correction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#compute-control-points">compute_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#compute-seamlines">compute_seamlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#edit-control-points">edit_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#generate-dem">generate_dem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#generate-orthomosaic">generate_orthomosaic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#generate-report">generate_report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#query-camera-info">query_camera_info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#query-control-points">query_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#reset-image-collection">reset_image_collection</a></li>
 </ul>
 </li>
 </ul>
@@ -619,6 +642,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.workforce.html#track">Track</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.workforce.html#worker">Worker</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.workforce.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.apps.storymap.html">arcgis.apps.storymap module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.storymap.html#journalstorymap">JournalStoryMap</a></li>
 </ul>
 </li>
 </ul>
@@ -1041,6 +1068,23 @@ REST API help for more information on this parameter.</td>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="arcgis.gis.Item.app_info">
+<code class="descname">app_info</code><a class="headerlink" href="#arcgis.gis.Item.app_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the parent item is registered using the register app operation,
+this resource returns information pertaining to the registered app.
+Every registered app gets an App ID and App Secret which in OAuth
+speak are known as client_id and client_secret respectively.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="arcgis.gis.Item.comments">
 <code class="descname">comments</code><a class="headerlink" href="#arcgis.gis.Item.comments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a list of comments for a given item.</p>
@@ -1246,16 +1290,75 @@ to publish the service.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.delete" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes an item.</p>
+<code class="descname">delete</code><span class="sig-paren">(</span><em>force=False</em>, <em>dry_run=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the item. If unable to delete, raises a RuntimeException. To know if you can safely delete the item,
+use the optional parameter ‘dry_run’</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>force</td>
+<td>Optional bool. Available in ArcGIS Enterprise 10.6.1 and higher.
+Force deletion is applicable only to items that were orphaned when
+a server federated to the ArcGIS Enterprise was removed accidentally
+before properly unfederating it. When called on other items, it has
+no effect.</td>
+</tr>
+<tr class="row-odd"><td>dry_run</td>
+<td>Optional bool. Available in ArcGIS Enterprise 10.6.1 and higher.If
+True, checks if the item can be safely deleted and gives you back
+either a dictionary with details. If dependent items are preventing
+deletion, a list of such Item objects are provided.</td>
+</tr>
+</tbody>
+</table>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A boolean indicating success (True) or failure (False).</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A bool containing True (for success) or False (for failure). When dry_run is used, a dictionary with
+details is returned.</td>
 </tr>
 </tbody>
 </table>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Successful</span> <span class="n">deletion</span> <span class="n">of</span> <span class="n">an</span> <span class="n">item</span>
+
+<span class="n">item1</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;itemId12345&#39;</span><span class="p">)</span>
+<span class="n">item1</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+
+<span class="o">&gt;&gt;</span> <span class="bp">True</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">deletion</span> <span class="n">of</span> <span class="n">an</span> <span class="n">item</span>
+
+<span class="n">item1</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;itemId12345&#39;</span><span class="p">)</span>
+<span class="n">item1</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+
+<span class="o">&gt;&gt;</span> <span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">Unable</span> <span class="n">to</span> <span class="n">delete</span> <span class="n">item</span><span class="o">.</span> <span class="n">This</span> <span class="n">service</span> <span class="n">item</span> <span class="n">has</span> <span class="n">a</span> <span class="n">related</span> <span class="n">Service</span> <span class="n">item</span>
+<span class="o">&gt;&gt;</span> <span class="p">(</span><span class="n">Error</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Dry</span> <span class="n">run</span> <span class="n">to</span> <span class="n">check</span> <span class="n">deletion</span> <span class="n">of</span> <span class="n">an</span> <span class="n">item</span>
+
+<span class="n">item1</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;itemId12345abcde&#39;</span><span class="p">)</span>
+<span class="n">item1</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">dry_run</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;</span> <span class="p">{</span><span class="s1">&#39;can_delete&#39;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+<span class="o">&gt;&gt;</span> <span class="s1">&#39;details&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+<span class="o">&gt;&gt;</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Unable to delete item. This service item has a related Service item&#39;</span><span class="p">,</span>
+<span class="o">&gt;&gt;</span> <span class="s1">&#39;offending_items&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">Item</span> <span class="n">title</span><span class="p">:</span><span class="s2">&quot;Chicago_accidents_WFS&quot;</span> <span class="nb">type</span><span class="p">:</span><span class="n">WFS</span> <span class="n">owner</span><span class="p">:</span><span class="n">sharing1</span><span class="o">&gt;</span><span class="p">]}}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">During the dry run, if you receive a list of offending items, attempt to delete them first before deleting
+the current item. You can in turn call ‘dry_run’ on those items to ensure they can be deleted safely.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -1709,6 +1812,62 @@ user.reassign_to() method.  This method only moves one item at a time.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="arcgis.gis.Item.register">
+<code class="descname">register</code><span class="sig-paren">(</span><em>app_type</em>, <em>redirect_uris=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>The register method registers an app item with the enterprise. App
+registration results in an APPID and APPSECRET (also known as
+client_id and client_secret in OAuth speak, respectively) being
+generated for that app. Upon successful registration, a Registered
+App type keyword gets appended to the app item.</p>
+<p><strong>Available to the item owner.</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>app_type</td>
+<td>Required string. The type of app that was registered indicating
+whether it’s a browser app, native app, server app, or a multiple
+interface app.
+Values: browser, native, server, or multiple</td>
+</tr>
+<tr class="row-odd"><td>redirect_uris</td>
+<td><p class="first">Optional list.  The URIs where the access_token or authorization
+code will be delivered upon successful authorization. The
+redirect_uri specified during authorization must match one of the
+registered URIs, otherwise authorization will be rejected.</p>
+<p>A special value of <a class="reference external" href="urn:ietf:wg:oauth:2.0:oob">urn:ietf:wg:oauth:2.0:oob</a> can also be specified
+for authorization grants. This will result in the authorization
+code being delivered to a portal URL (/oauth2/approval). This
+value is typically used by apps that don’t have a web server or a
+custom URI scheme where the code can be delivered.</p>
+<p>The value is a JSON string array.</p>
+<p>Example:</p>
+<dl class="docutils">
+<dt>[</dt>
+<dd>“<a class="reference external" href="https://app.foo.com">https://app.foo.com</a>”,
+“<a class="reference external" href="urn:ietf:wg:oauth:2.0:oob">urn:ietf:wg:oauth:2.0:oob</a>”</dd>
+</dl>
+<p class="last">]</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="arcgis.gis.Item.related_items">
 <code class="descname">related_items</code><span class="sig-paren">(</span><em>rel_type</em>, <em>direction='forward'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.related_items" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the items related to this item. Relationships can be added and deleted using
@@ -1850,6 +2009,23 @@ below. Values: <cite>publish</cite>, generateFeatures, export, and createService
 </dd></dl>
 
 <dl class="method">
+<dt id="arcgis.gis.Item.unregister">
+<code class="descname">unregister</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.unregister" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unregister app removes the application registration from an app
+item along with the Registered App type keyword.</p>
+<p>The operation is available to item owner and organization administrators.</p>
+<p><strong>Available to the item owner.</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="arcgis.gis.Item.unshare">
 <code class="descname">unshare</code><span class="sig-paren">(</span><em>groups</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.unshare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops sharing of the item with the specified list of groups.</p>
@@ -1945,28 +2121,31 @@ item’s description, then only provide the description argument in item_propert
 <td>Optional string. Tags listed as comma-separated values, or a list of strings.
 Used for searches on items.</td>
 </tr>
-<tr class="row-even"><td>snippet</td>
+<tr class="row-even"><td>text</td>
+<td>Optional string. For text based items such as Feature Collections &amp; WebMaps</td>
+</tr>
+<tr class="row-odd"><td>snippet</td>
 <td>Optional string. Provide a short summary (limit to max 250 characters) of the what the item is.</td>
 </tr>
-<tr class="row-odd"><td>extent</td>
+<tr class="row-even"><td>extent</td>
 <td>Optional string. Provide comma-separated values for min x, min y, max x, max y.</td>
 </tr>
-<tr class="row-even"><td>spatialReference</td>
+<tr class="row-odd"><td>spatialReference</td>
 <td>Optional string. Coordinate system that the item is in.</td>
 </tr>
-<tr class="row-odd"><td>accessInformation</td>
+<tr class="row-even"><td>accessInformation</td>
 <td>Optional string. Information on the source of the content.</td>
 </tr>
-<tr class="row-even"><td>licenseInfo</td>
+<tr class="row-odd"><td>licenseInfo</td>
 <td>Optional string.  Any license information or restrictions regarding the content.</td>
 </tr>
-<tr class="row-odd"><td>culture</td>
+<tr class="row-even"><td>culture</td>
 <td>Optional string. Locale, country and language information.</td>
 </tr>
-<tr class="row-even"><td>access</td>
+<tr class="row-odd"><td>access</td>
 <td>Optional string. Valid values are private, shared, org, or public.</td>
 </tr>
-<tr class="row-odd"><td>commentsEnabled</td>
+<tr class="row-even"><td>commentsEnabled</td>
 <td>Optional boolean. Default is true, controls whether comments are allowed (true)
 or not allowed (false).</td>
 </tr>
@@ -2087,6 +2266,7 @@ A member whose account has Esri access enabled can use My Esri and
 Community and Forums (GeoNet), access e-Learning on the Training
 website, and manage email communications from Esri. The member
 cannot enable or disable their own access to these Esri resources.</p>
+<p><strong>Trial</strong> accounts cannot modify esri_access property.</p>
 <p>Please see: <a class="reference external" href="http://doc.arcgis.com/en/arcgis-online/administer/manage-members.htm#ESRI_SECTION1_7CE845E428034AE8A40EF8C1085E2A23">http://doc.arcgis.com/en/arcgis-online/administer/manage-members.htm#ESRI_SECTION1_7CE845E428034AE8A40EF8C1085E2A23</a>
 for more information.</p>
 </dd></dl>
@@ -3492,6 +3672,44 @@ Values for Excel: coordinates | address | none</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="arcgis.gis.ContentManager.bulk_update">
+<code class="descname">bulk_update</code><span class="sig-paren">(</span><em>itemids</em>, <em>properties</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.bulk_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates a collection of items’ properties.</p>
+<p>Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">itemsids</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;owner: TestUser12399&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">properties</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;categories&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;clothes&quot;</span><span class="p">,</span><span class="s2">&quot;formal_wear/socks&quot;</span><span class="p">]}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">_bulk_update</span><span class="p">(</span><span class="n">itemids</span><span class="p">,</span> <span class="n">properties</span><span class="p">)</span>
+<span class="go">[{&#39;results&#39; : [{&#39;itemid&#39; : &#39;id&#39;, &#39;success&#39; : &quot;True/False&quot; }]}]</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>itemids</td>
+<td>Required list of string or Item. The collection of Items to update.</td>
+</tr>
+<tr class="row-odd"><td>properties</td>
+<td>Required dictionary. The Item’s properties to update.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of results</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="arcgis.gis.ContentManager.clone_items">
 <code class="descname">clone_items</code><span class="sig-paren">(</span><em>items</em>, <em>folder=None</em>, <em>item_extent=None</em>, <em>use_org_basemap=False</em>, <em>copy_data=True</em>, <em>search_existing_items=True</em>, <em>item_mapping=None</em>, <em>group_mapping=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.clone_items" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clone content to the GIS by creating new items.</p>
@@ -4296,7 +4514,7 @@ is properly formatted. If false, no check will occur</td>
 
 <dl class="method">
 <dt id="arcgis.gis.UserManager.search">
-<code class="descname">search</code><span class="sig-paren">(</span><em>query=None</em>, <em>sort_field='username'</em>, <em>sort_order='asc'</em>, <em>max_users=100</em>, <em>outside_org=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.UserManager.search" title="Permalink to this definition">¶</a></dt>
+<code class="descname">search</code><span class="sig-paren">(</span><em>query=None</em>, <em>sort_field='username'</em>, <em>sort_order='asc'</em>, <em>max_users=100</em>, <em>outside_org=False</em>, <em>exclude_system=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.UserManager.search" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searches portal users.</p>
 <p>Returns a list of users matching the specified query</p>
 <div class="admonition note">
@@ -4345,6 +4563,11 @@ to get list of all users in the organization.</td>
 <td>Optional boolean. This controls whether to search outside
 your organization. The default is False (search only
 within your organization).</td>
+</tr>
+<tr class="row-odd"><td>exclude_system</td>
+<td>Optional boolean. Controls if built-in system accounts are
+returned or not.  True means built-in account are not
+returned, where as False means that they are.</td>
 </tr>
 </tbody>
 </table>
@@ -4669,12 +4892,12 @@ federated with the portal.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.DatastoreManager.add_bigdata">
-<code class="descname">add_bigdata</code><span class="sig-paren">(</span><em>name</em>, <em>server_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.DatastoreManager.add_bigdata" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add_bigdata</code><span class="sig-paren">(</span><em>name</em>, <em>server_path=None</em>, <em>connection_type='fileShare'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.DatastoreManager.add_bigdata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers a bigdata fileshare with the data store.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="18%" />
-<col width="82%" />
+<col width="17%" />
+<col width="83%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Argument</strong></td>
@@ -4686,6 +4909,12 @@ federated with the portal.</p>
 <tr class="row-odd"><td>server_path</td>
 <td>Optional string. The path to the folder from the server.</td>
 </tr>
+<tr class="row-even"><td>connection_type</td>
+<td>Optional string. Allows for the setting of the types of big data store.
+The value ‘fileShare’ is used for local big data stores, and for
+cloud stores, the connection_type should be ‘dataStore’. The value
+‘fileShare’ is the default value.</td>
+</tr>
 </tbody>
 </table>
 <table class="docutils field-list" frame="void" rules="none">
@@ -4693,6 +4922,62 @@ federated with the portal.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The big data fileshare if registered successfully, None otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.DatastoreManager.add_cloudstore">
+<code class="descname">add_cloudstore</code><span class="sig-paren">(</span><em>name</em>, <em>conn_str</em>, <em>object_store</em>, <em>provider</em>, <em>managed=False</em>, <em>folder=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.DatastoreManager.add_cloudstore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud Store data item represents a connection to a Amazon or Microsoft Azure store.
+Connection information for the data store item is stored within conn_str as a
+stringified JSON. ArcGIS Server encrypts connection string for storage. Connection
+strings that are encrypted will include a {crypt} prefix. You can get a data store
+item with decrypted connection string by passing a decrypt=true parameter in the request
+for a data store item. Data store with decrypted connection string will be returned only for
+requests made with https. The examples below show data stores with decrypted conn_str.
+A valid object_store (S3 bucket or Azure Blob store) is required. Folders within an object
+store are optional.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>name</td>
+<td>Required string. The name of the cloud store.</td>
+</tr>
+<tr class="row-odd"><td>conn_str</td>
+<td>Required string. The connection information for the cloud storage
+product.</td>
+</tr>
+<tr class="row-even"><td>object_store</td>
+<td>Required string. This is the amazon bucket path or Azuze path.</td>
+</tr>
+<tr class="row-odd"><td>provider</td>
+<td>Required string. Values must be amazon or azure.</td>
+</tr>
+<tr class="row-even"><td>managed</td>
+<td>Optional boolean. When the data store is server only, the database
+is entirely managed and owned by the server and cannot be accessed
+by the publisher directly. When this option is chosen, the
+managed property should be set to true. Otherwise it is false.</td>
+</tr>
+<tr class="row-odd"><td>folder</td>
+<td>Optional string. For some Azure cloud stores, an optional folder
+can be specified.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">DataStore</td>
 </tr>
 </tbody>
 </table>
@@ -5373,7 +5658,7 @@ used together with file_name.</td>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.4.1',
+            VERSION:'1.4.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

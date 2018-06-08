@@ -9,3 +9,4 @@ Submodules
    :maxdepth: 3
 
    arcgis.apps.workforce
+   arcgis.apps.storymap

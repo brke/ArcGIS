@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.gis.admin module &mdash; arcgis 1.4.1 documentation</title>
+  <title>arcgis.gis.admin module &mdash; arcgis 1.4.2 documentation</title>
   
 
   
@@ -37,7 +37,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.4.1 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.4.2 documentation" href="index.html"/>
         <link rel="up" title="arcgis.gis module" href="arcgis.gis.toc.html"/>
         <link rel="next" title="arcgis.gis.server module" href="arcgis.gis.server.html"/>
         <link rel="prev" title="arcgis.gis module" href="arcgis.gis.toc.html"/>
@@ -78,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.4.1
+                1.4.2
               </div>
             
           
@@ -187,6 +187,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#return-z">return_z</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#return-m">return_m</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#verbose">verbose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#default-aggregation-styles">default_aggregation_styles</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a><ul>
@@ -305,6 +306,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#convert-feature-to-raster">convert_feature_to_raster</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#convert-raster-to-feature">convert_raster_to_feature</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#copy-raster">copy_raster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#create-image-collection">create_image_collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#add-image">add_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#delete-image">delete_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#delete-image-collection">delete_image_collection</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.html">arcgis.raster.functions module</a><ul>
@@ -447,6 +452,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.gbl.html#stream-link">stream_link</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.gbl.html#watershed">watershed</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.gbl.html#zonal-statistics">zonal_statistics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.raster.orthomapping.html">arcgis.raster.orthomapping module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#is-supported">is_supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#compute-sensor-model">compute_sensor_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#alter-processing-states">alter_processing_states</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#get-processing-states">get_processing_states</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#match-control-points">match_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#color-correction">color_correction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#compute-control-points">compute_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#compute-seamlines">compute_seamlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#edit-control-points">edit_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#generate-dem">generate_dem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#generate-orthomosaic">generate_orthomosaic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#generate-report">generate_report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#query-camera-info">query_camera_info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#query-control-points">query_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#reset-image-collection">reset_image_collection</a></li>
 </ul>
 </li>
 </ul>
@@ -620,6 +643,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.workforce.html#track">Track</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.workforce.html#worker">Worker</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.workforce.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.apps.storymap.html">arcgis.apps.storymap module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.storymap.html#journalstorymap">JournalStoryMap</a></li>
 </ul>
 </li>
 </ul>
@@ -3987,7 +4014,7 @@ store. You can narrow down the search using the filter parameter.</p>
 administrators can create, export, import, and join sites.</p>
 <dl class="staticmethod">
 <dt id="arcgis.gis.admin.Site.create">
-<em class="property">static </em><code class="descname">create</code><span class="sig-paren">(</span><em>url</em>, <em>username</em>, <em>password</em>, <em>full_name</em>, <em>email</em>, <em>content_store</em>, <em>description=''</em>, <em>question_idx=None</em>, <em>question_ans=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.admin.Site.create" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">create</code><span class="sig-paren">(</span><em>con</em>, <em>url</em>, <em>username</em>, <em>password</em>, <em>full_name</em>, <em>email</em>, <em>content_store</em>, <em>description=''</em>, <em>question_idx=None</em>, <em>question_ans=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.admin.Site.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>The create site operation initializes and configures Portal for
 ArcGIS for use. It must be the first operation invoked after
 installation. Creating a new site involves:</p>
@@ -4015,34 +4042,37 @@ restarted.</p>
 <tr class="row-odd"><td><strong>Argument</strong></td>
 <td><strong>Description</strong></td>
 </tr>
-<tr class="row-even"><td>url</td>
+<tr class="row-even"><td>con</td>
+<td>Required Connection. The connection object.</td>
+</tr>
+<tr class="row-odd"><td>url</td>
 <td>Required string. The portal administration url
 Ex: <a class="reference external" href="https://mysite.com">https://mysite.com</a>/&lt;web adaptor&gt;/portaladmin</td>
 </tr>
-<tr class="row-odd"><td>username</td>
+<tr class="row-even"><td>username</td>
 <td>Required string. The initial admin account name</td>
 </tr>
-<tr class="row-even"><td>password</td>
+<tr class="row-odd"><td>password</td>
 <td>Required string. The password for initial admin account</td>
 </tr>
-<tr class="row-odd"><td>full_name</td>
+<tr class="row-even"><td>full_name</td>
 <td>Required string. The full name of the admin account</td>
 </tr>
-<tr class="row-even"><td>email</td>
+<tr class="row-odd"><td>email</td>
 <td>Required string. The account email address</td>
 </tr>
-<tr class="row-odd"><td>content_store</td>
+<tr class="row-even"><td>content_store</td>
 <td>Required string. JSON string including the path to the location of
 the site’s content.</td>
 </tr>
-<tr class="row-even"><td>description</td>
+<tr class="row-odd"><td>description</td>
 <td>Optional string. The optional description for the account</td>
 </tr>
-<tr class="row-odd"><td>question_idx</td>
+<tr class="row-even"><td>question_idx</td>
 <td>Optional integer. The index of the secret question to retrieve a
 forgotten password</td>
 </tr>
-<tr class="row-even"><td>question_ans</td>
+<tr class="row-odd"><td>question_ans</td>
 <td>Optional string. The answer to the secret question</td>
 </tr>
 </tbody>
@@ -4742,7 +4772,7 @@ Adaptor configured with the portal.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.4.1',
+            VERSION:'1.4.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
