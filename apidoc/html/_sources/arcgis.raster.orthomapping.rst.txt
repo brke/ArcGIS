@@ -77,3 +77,8 @@ reset_image_collection
 ------------
 .. automethod:: arcgis.raster.orthomapping.reset_image_collection
 
+
+compute_spatial_reference_factory_code
+------------
+.. automethod:: arcgis.raster.orthomapping.compute_spatial_reference_factory_code
+

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.raster.orthomapping module &mdash; arcgis 1.4.2 documentation</title>
+  <title>arcgis.raster.orthomapping module &mdash; arcgis 1.5.0 documentation</title>
   
 
   
@@ -37,7 +37,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.4.2 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.5.0 documentation" href="index.html"/>
         <link rel="up" title="arcgis.raster module" href="arcgis.raster.toc.html"/>
         <link rel="next" title="arcgis.network module" href="arcgis.network.toc.html"/>
         <link rel="prev" title="arcgis.raster.functions.gbl module" href="arcgis.raster.functions.gbl.html"/>
@@ -78,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.4.2
+                1.5.0
               </div>
             
           
@@ -127,6 +127,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#collaborationmanager">CollaborationManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#collaboration">Collaboration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#creditmanager">CreditManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#license">License</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#licensemanager">LicenseManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#identityprovidermanager">IdentityProviderManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#passwordpolicy">PasswordPolicy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#portalresourcemanager">PortalResourceManager</a></li>
@@ -197,6 +199,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featurelayercollection">FeatureLayerCollection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featureset">FeatureSet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featurecollection">FeatureCollection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#arcgis-features-geoaccessor">arcgis.features.GeoAccessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#arcgis-features-geoseriesaccessor">arcgis.features.GeoSeriesAccessor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#spatialdataframe">SpatialDataFrame</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analysis.html">arcgis.features.analysis module</a><ul>
@@ -470,6 +474,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#query-camera-info">query_camera_info</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#query-control-points">query_control_points</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#reset-image-collection">reset_image_collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compute-spatial-reference-factory-code">compute_spatial_reference_factory_code</a></li>
 </ul>
 </li>
 </ul>
@@ -516,6 +521,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html">arcgis.geoanalytics.manage_data module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#append-data">append_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#calculate-fields">calculate_fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#clip-layer">clip_layer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#copy-to-data-store">copy_to_data_store</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#overlay-data">overlay_data</a></li>
 </ul>
@@ -616,6 +622,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#mapimagelayer">MapImageLayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#mapimagelayermanager">MapImageLayerManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#vectortilelayer">VectorTileLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#scenelayer">SceneLayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#export-map">export_map</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#get-layout-templates">get_layout_templates</a></li>
 </ul>
@@ -633,6 +640,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.apps.html">arcgis.apps module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.apps.html#build-collector-url">build_collector_url</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.apps.html#build-explorer-url">build_explorer_url</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.apps.html#build-navigator-url">build_navigator_url</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.apps.html#build-survey123-url">build_survey123_url</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.apps.html#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.apps.workforce.html">arcgis.apps.workforce module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.workforce.html#assignment">Assignment</a></li>
@@ -1412,7 +1423,9 @@ detect feature points. It is recommended for DTM generation.</p>
 <p>SGM- Produces more points and more detail than the ETM method. It is
 suitable for generating a DSM for urban areas. This is more
 computationally intensive than the ETM method1.</p>
-<p>ESGM-This is an extension of SGM, with edge enhancement capability.</p>
+<p>MVM (Multi-view image matching (MVM) - is based on the SGM matching method followed by a fusion step in which
+the redundant depth estimations across single stereo model are merged.
+It produces dense 3D points and is computationally efficient</p>
 <p>References:
 Heiko Hirschmuller et al., “Memory Efficient Semi-Global Matching,”
 ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial
@@ -1474,9 +1487,8 @@ interpolated from the point cloud.</p>
 <dl class="method">
 <dt id="arcgis.raster.orthomapping.generate_orthomosaic">
 <code class="descclassname">orthomapping.</code><code class="descname">generate_orthomosaic</code><span class="sig-paren">(</span><em>image_collection</em>, <em>out_ortho</em>, <em>regen_seamlines=True</em>, <em>recompute_color_correction=True</em>, <em>context=None</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.generate_orthomosaic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a DEM from the image collection. Refer to “Interpolate From Point Cloud”
-GP tool for more documentation
-<a class="reference external" href="http://pro.arcgis.com/en/pro-app/tool-reference/data-management/interpolate-from-point-cloud.htm">http://pro.arcgis.com/en/pro-app/tool-reference/data-management/interpolate-from-point-cloud.htm</a></p>
+<dd><p>Function can be used for generating single ortho-rectified mosaicked image from image collection after 
+the block adjustment.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="28%" />
@@ -1707,6 +1719,18 @@ The image_collection can be a portal Item or an image service URL or a URI.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="compute-spatial-reference-factory-code">
+<h2>compute_spatial_reference_factory_code<a class="headerlink" href="#compute-spatial-reference-factory-code" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.orthomapping.compute_spatial_reference_factory_code">
+<code class="descclassname">orthomapping.</code><code class="descname">compute_spatial_reference_factory_code</code><span class="sig-paren">(</span><em>latitude</em>, <em>longitude</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.compute_spatial_reference_factory_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes spatial reference factory code. This value may be used as out_sr value in create image collection function</p>
+<p>latitude : latitude value in decimal degress that will be used to compute UTM zone
+longitude : longitude value in decimal degress that will be used to compute UTM zone</p>
+<p>factory_code : spatial reference factory code</p>
+</dd></dl>
+
+</div>
 </div>
 
 
@@ -1754,7 +1778,7 @@ The image_collection can be a portal Item or an image service URL or a URI.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.4.2',
+            VERSION:'1.5.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

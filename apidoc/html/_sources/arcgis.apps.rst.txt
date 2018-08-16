@@ -3,6 +3,22 @@ arcgis.apps module
 
 .. automodule:: arcgis.apps
 
+build_collector_url
+--------------
+.. automethod:: arcgis.apps.build_collector_url
+
+build_explorer_url
+--------------
+.. automethod:: arcgis.apps.build_explorer_url
+
+build_navigator_url
+--------------
+.. automethod:: arcgis.apps.build_navigator_url
+
+build_survey123_url
+--------------
+.. automethod:: arcgis.apps.build_survey123_url
+
 Submodules
 ----------
 .. toctree::

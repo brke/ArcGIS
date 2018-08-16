@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.gis module &mdash; arcgis 1.4.2 documentation</title>
+  <title>arcgis.gis module &mdash; arcgis 1.5.0 documentation</title>
   
 
   
@@ -37,7 +37,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.4.2 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.5.0 documentation" href="index.html"/>
         <link rel="next" title="arcgis.gis.admin module" href="arcgis.gis.admin.html"/>
         <link rel="prev" title="API Reference for the ArcGIS API for Python" href="index.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
@@ -77,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.4.2
+                1.5.0
               </div>
             
           
@@ -126,6 +126,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#collaborationmanager">CollaborationManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#collaboration">Collaboration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#creditmanager">CreditManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#license">License</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#licensemanager">LicenseManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#identityprovidermanager">IdentityProviderManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#passwordpolicy">PasswordPolicy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#portalresourcemanager">PortalResourceManager</a></li>
@@ -196,6 +198,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featurelayercollection">FeatureLayerCollection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featureset">FeatureSet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#featurecollection">FeatureCollection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#arcgis-features-geoaccessor">arcgis.features.GeoAccessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#arcgis-features-geoseriesaccessor">arcgis.features.GeoSeriesAccessor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#spatialdataframe">SpatialDataFrame</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.toc.html#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analysis.html">arcgis.features.analysis module</a><ul>
@@ -469,6 +473,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#query-camera-info">query_camera_info</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#query-control-points">query_control_points</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#reset-image-collection">reset_image_collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.orthomapping.html#compute-spatial-reference-factory-code">compute_spatial_reference_factory_code</a></li>
 </ul>
 </li>
 </ul>
@@ -515,6 +520,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html">arcgis.geoanalytics.manage_data module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#append-data">append_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#calculate-fields">calculate_fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#clip-layer">clip_layer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#copy-to-data-store">copy_to_data_store</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#overlay-data">overlay_data</a></li>
 </ul>
@@ -615,6 +621,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#mapimagelayer">MapImageLayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#mapimagelayermanager">MapImageLayerManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#vectortilelayer">VectorTileLayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#scenelayer">SceneLayer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#export-map">export_map</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.html#get-layout-templates">get_layout_templates</a></li>
 </ul>
@@ -632,6 +639,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.apps.html">arcgis.apps module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.apps.html#build-collector-url">build_collector_url</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.apps.html#build-explorer-url">build_explorer_url</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.apps.html#build-navigator-url">build_navigator_url</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.apps.html#build-survey123-url">build_survey123_url</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.apps.html#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.apps.workforce.html">arcgis.apps.workforce module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.workforce.html#assignment">Assignment</a></li>
@@ -796,7 +807,7 @@ will be used as the default GIS object throughout the whole
 scripting session.</td>
 </tr>
 <tr class="row-odd"><td>client_id</td>
-<td>Optional string. Used for OAuth athentication.  This is the
+<td>Optional string. Used for OAuth authentication.  This is the
 client ID value.</td>
 </tr>
 <tr class="row-even"><td>profile</td>
@@ -880,13 +891,13 @@ is None and the security for the site uses BUILT-IN security.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.GIS.map">
-<code class="descname">map</code><span class="sig-paren">(</span><em>location=None</em>, <em>zoomlevel=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.GIS.map" title="Permalink to this definition">¶</a></dt>
+<code class="descname">map</code><span class="sig-paren">(</span><em>location=None</em>, <em>zoomlevel=None</em>, <em>mode='2D'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.GIS.map" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a map widget centered at the declared location with the specified
 zoom level. If an address is provided, it is geocoded
 using the GIS’s configured geocoders and if a match is found, the geographic
 extent of the matched address is used as the map extent. If a zoomlevel is also
 provided, the map is centered at the matched address instead and the map is zoomed
-to the specified zoomlevel.</p>
+to the specified zoomlevel. See <a class="reference internal" href="arcgis.widgets.html#module-arcgis.widgets" title="arcgis.widgets"><code class="xref py py-class docutils literal"><span class="pre">widgets</span></code></a> for more inforomation.</p>
 <p>Note: The map widget is only supported within Jupyter Notebook.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -902,6 +913,9 @@ to the specified zoomlevel.</p>
 </tr>
 <tr class="row-odd"><td>zoomlevel</td>
 <td>Optional integer. The desired zoom level.</td>
+</tr>
+<tr class="row-even"><td>mode</td>
+<td>Optional string of either ‘2D’ or ‘3D’ to specify map mode. Defaults to ‘2D’.</td>
 </tr>
 </tbody>
 </table>
@@ -1052,8 +1066,9 @@ type.</p>
 <tr class="row-odd"><td>rel_type</td>
 <td>Required string.  The type of the related item; is one of
 [‘Map2Service’, ‘WMA2Code’, ‘Map2FeatureCollection’, ‘MobileApp2Code’,
-‘Service2Data’, ‘Service2Service’]. See Relationship types in
-REST API help for more information on this parameter.</td>
+‘Service2Data’, ‘Service2Service’]. See
+<a class="reference external" href="https://bit.ly/2LAHNoK">Relationship Types</a>. in the REST API help
+for more information on this parameter.</td>
 </tr>
 </tbody>
 </table>
@@ -1109,7 +1124,7 @@ should be either this information or not.</p>
 <td><p class="first">Optional string or None.  Defines if an Item is deprecated or
 authoritative.
 If a value of None is given, then the value will be reset.</p>
-<p class="last">Allowsed Values: authoritative, deprecated, or None</p>
+<p class="last">Allowed Values: authoritative, deprecated, or None</p>
 </td>
 </tr>
 </tbody>
@@ -1236,6 +1251,37 @@ want the service to be owned by another user, pass in this value.</td>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Item on success. None on failure</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.Item.create_thumbnail">
+<code class="descname">create_thumbnail</code><span class="sig-paren">(</span><em>update=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.create_thumbnail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Thumbnail for a feature service portal item using the service’s symbology
+and the print service registered for the enterprise.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>update</td>
+<td>Optional boolean. When set to True, the item will be updated with the
+thumbnail generated in this call, else it will not update the item.
+The default is True.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">DataFile</td>
 </tr>
 </tbody>
 </table>
@@ -1386,8 +1432,9 @@ the current item. You can in turn call ‘dry_run’ on those items to ensure th
 <tr class="row-odd"><td>rel_type</td>
 <td>Required string.  The type of the related item; is one of
 [‘Map2Service’, ‘WMA2Code’, ‘Map2FeatureCollection’, ‘MobileApp2Code’,
-‘Service2Data’, ‘Service2Service’]. See Relationship types in
-REST API help for more information on this parameter.</td>
+‘Service2Data’, ‘Service2Service’]. See
+<a class="reference external" href="https://bit.ly/2LAHNoK">Relationship Types</a>. in the REST API help
+for more information on this parameter.</td>
 </tr>
 </tbody>
 </table>
@@ -1549,7 +1596,11 @@ the item is returned when wait=False.</td>
 <dl class="method">
 <dt id="arcgis.gis.Item.get_data">
 <code class="descname">get_data</code><span class="sig-paren">(</span><em>try_json=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.get_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieves the data component of an item and returns the data associated with an item.</p>
+<dd><p>Retrieves the data associated with an item. Note that this call may
+return different results for different item types: some item types may
+even return <em>None</em>. See
+<a class="reference external" href="https://developers.arcgis.com/rest/users-groups-and-items/working-with-users-groups-and-items.htm">this REST API page</a>
+for more information.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1705,10 +1756,10 @@ available to the item owner and the organization administrator.</p>
 Publishers can create feature, tiled map, vector tile and scene services.</p>
 <p>Feature services can be created using input files of type csv, shapefile, serviceDefinition, featureCollection, and fileGeodatabase.
 CSV files that contain location fields (i.e. address fields or XY fields) are spatially enabled during the process of publishing.
-Shapefiles and file geodatabases should be packaged as <a href="#id2"><span class="problematic" id="id3">*</span></a>.zip files.</p>
-<p>Tiled map services can be created from service definition (<a href="#id4"><span class="problematic" id="id5">*</span></a>.sd) files, tile packages, and existing feature services.</p>
-<p>Vector tile services can be created from vector tile package (<a href="#id6"><span class="problematic" id="id7">*</span></a>.vtpk) files.</p>
-<p>Scene services can be created from scene layer package (<a href="#id8"><span class="problematic" id="id9">*</span></a>.spk, <a href="#id10"><span class="problematic" id="id11">*</span></a>.slpk) files.</p>
+Shapefiles and file geodatabases should be packaged as <a href="#id3"><span class="problematic" id="id4">*</span></a>.zip files.</p>
+<p>Tiled map services can be created from service definition (<a href="#id5"><span class="problematic" id="id6">*</span></a>.sd) files, tile packages, and existing feature services.</p>
+<p>Vector tile services can be created from vector tile package (<a href="#id7"><span class="problematic" id="id8">*</span></a>.vtpk) files.</p>
+<p>Scene services can be created from scene layer package (<a href="#id9"><span class="problematic" id="id10">*</span></a>.spk, <a href="#id11"><span class="problematic" id="id12">*</span></a>.slpk) files.</p>
 <p>Service definitions are authored in ArcGIS for Desktop and contain both the cartographic definition for a map
 as well as its packaged data together with the definition of the geo-service to be created.</p>
 <div class="admonition note">
@@ -1849,7 +1900,7 @@ custom URI scheme where the code can be delivered.</p>
 <p>Example:</p>
 <dl class="docutils">
 <dt>[</dt>
-<dd>“<a class="reference external" href="https://app.foo.com">https://app.foo.com</a>”,
+<dd>“<a class="reference external" href="https://app.example.com">https://app.example.com</a>”,
 “<a class="reference external" href="urn:ietf:wg:oauth:2.0:oob">urn:ietf:wg:oauth:2.0:oob</a>”</dd>
 </dl>
 <p class="last">]</p>
@@ -1888,8 +1939,9 @@ item.add_relationship() and item.delete_relationship(), respectively.</p>
 <tr class="row-even"><td>rel_type</td>
 <td>Required string.  The type of the related item; is one of
 [‘Map2Service’, ‘WMA2Code’, ‘Map2FeatureCollection’, ‘MobileApp2Code’,
-‘Service2Data’, ‘Service2Service’]. See Relationship types in
-REST API help for more information on this parameter.</td>
+‘Service2Data’, ‘Service2Service’]. See
+<a class="reference external" href="https://bit.ly/2LAHNoK">Relationship Types</a>. in the REST API help
+for more information on this parameter.</td>
 </tr>
 <tr class="row-odd"><td>direction</td>
 <td>Required string. One of [‘forward’, ‘reverse’]</td>
@@ -2162,6 +2214,89 @@ or not allowed (false).</td>
 </table>
 </dd></dl>
 
+<dl class="method">
+<dt id="arcgis.gis.Item.usage">
+<code class="descname">usage</code><span class="sig-paren">(</span><em>date_range='7D'</em>, <em>as_df=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.usage" title="Permalink to this definition">¶</a></dt>
+<dd><p>For item owners and administrators, usage provides usage details about an item that help you
+gauge its popularity. Usage details show how many times the item has been used for the time
+period you select. Historical usage information is available for the past year. Depending on
+the item type, usage details can include the number of views, requests, or downloads, and
+the average number of views, requests, or downloads per day.</p>
+<p>Views refers to the number of times the item has been viewed or opened. For maps, scenes,
+nonhosted layers, and web apps, the view count is increased by one when you open the item
+page or open the item in Map Viewer. For example, if you opened the item page for a map
+image layer and clicked Open in Map Viewer, the count would increase by two. For other items
+such as mobile apps, KML, and so on, the view count is increased by one when you open the
+item; the count does not increase when you open the item details page.</p>
+<p>For hosted web layers (feature, tile, and scene), the number of requests is provided instead
+of views. Requests refers to the number of times a request is made for the data within the
+layer. For example, someone might open an app that contains a hosted feature layer. Opening
+the app counts as one view for the application, but multiple requests may be necessary to
+draw all the features in the hosted layer and are counted as such.</p>
+<p>For downloadable file item types such as CSV, SHP, and so on, the number of downloads is
+displayed. For registered apps, the Usage tab also displays the number of times users have
+logged in to the app. Apps that allow access to subscriber content through the organization
+subscription show usage by credits. You can change the time frame for the credit usage
+reporting period.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>date_range</td>
+<td><p class="first">Optional string.  The default is 7d.  This is the period to query
+usage for a given item.</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>24H</td>
+<td>Past 24 hours</td>
+</tr>
+<tr class="row-even"><td>7D</td>
+<td>Past 7 days</td>
+</tr>
+<tr class="row-odd"><td>14D</td>
+<td>Past 14 days (default)</td>
+</tr>
+<tr class="row-even"><td>30D</td>
+<td>Past 30 days</td>
+</tr>
+<tr class="row-odd"><td>60D</td>
+<td>Past 60 days</td>
+</tr>
+<tr class="row-even"><td>6M</td>
+<td>Past 6 months</td>
+</tr>
+<tr class="row-odd"><td>1Y</td>
+<td>Past 12 months</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td>as_df</td>
+<td>Optional boolean.  Returns a Pandas DataFrame when True, returns data
+as a dictionary when False</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Pandas DataFrame or Dictionary</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -2261,14 +2396,15 @@ It is only available to the administrator of the organization.</p>
 <dl class="attribute">
 <dt id="arcgis.gis.User.esri_access">
 <code class="descname">esri_access</code><a class="headerlink" href="#arcgis.gis.User.esri_access" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enable or disable ‘Esri access’. Administrator privileges required.
-A member whose account has Esri access enabled can use My Esri and
+<dd><p>When getting, will return a string describing the current user’s esri access
+When setting, supply a <em>bool</em> to enable or disable esri_access for that user (Administrator privileges required)</p>
+<p>A member whose account has Esri access enabled can use My Esri and
 Community and Forums (GeoNet), access e-Learning on the Training
 website, and manage email communications from Esri. The member
 cannot enable or disable their own access to these Esri resources.</p>
 <p><strong>Trial</strong> accounts cannot modify esri_access property.</p>
 <p>Please see: <a class="reference external" href="http://doc.arcgis.com/en/arcgis-online/administer/manage-members.htm#ESRI_SECTION1_7CE845E428034AE8A40EF8C1085E2A23">http://doc.arcgis.com/en/arcgis-online/administer/manage-members.htm#ESRI_SECTION1_7CE845E428034AE8A40EF8C1085E2A23</a>
-for more information.</p>
+or <a class="reference external" href="https://bit.ly/2JsJV1i">https://bit.ly/2JsJV1i</a> for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4236,7 +4372,7 @@ the same time. Share the staging service with a smaller set of users and QA the 
 If you need to update them use the <cite>Item.update()</cite> method.</p>
 <p>3. Call the replace_service operation. The service running on the hosting server gets replaced
 (for example, its cache).</p>
-<p><a href="#id12"><span class="problematic" id="id13">*</span></a>Note:
+<p><a href="#id14"><span class="problematic" id="id15">*</span></a>Note:
 It is the responsibility of the user to ensure both services are functionally equivalent for clients
 consuming them. For example, when replacing a hosted feature service, ensure the new service is constructed
 with the anticipated layers and fields for its client application.</p>
@@ -4276,7 +4412,7 @@ You can provide any name for the replaced service as long as it is not pre-exist
 
 <dl class="method">
 <dt id="arcgis.gis.ContentManager.search">
-<code class="descname">search</code><span class="sig-paren">(</span><em>query</em>, <em>item_type=None</em>, <em>sort_field='avgRating'</em>, <em>sort_order='desc'</em>, <em>max_items=10</em>, <em>outside_org=False</em>, <em>categories=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.search" title="Permalink to this definition">¶</a></dt>
+<code class="descname">search</code><span class="sig-paren">(</span><em>query</em>, <em>item_type=None</em>, <em>sort_field='avgRating'</em>, <em>sort_order='desc'</em>, <em>max_items=10</em>, <em>outside_org=False</em>, <em>categories=None</em>, <em>category_filters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.search" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searches for portal items.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -4324,6 +4460,13 @@ avgRating, numRatings, numComments, and numViews.</td>
 </tr>
 <tr class="row-even"><td>categories</td>
 <td>Optional string or list. A string of category values.</td>
+</tr>
+<tr class="row-odd"><td>category_filters</td>
+<td><p class="first">Optional string. A comma separated list of up to 3 category terms to
+search items that have matching categories.</p>
+<p class="last">Up to 2 category_filters parameter are allowed per request. It can not be
+used together with categories to search in a request.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -4959,7 +5102,8 @@ product.</td>
 <td>Required string. This is the amazon bucket path or Azuze path.</td>
 </tr>
 <tr class="row-odd"><td>provider</td>
-<td>Required string. Values must be amazon or azure.</td>
+<td>Required string. Values must be azuredatalakestore, amazon,
+Huawei, Alibaba, or azure.</td>
 </tr>
 <tr class="row-even"><td>managed</td>
 <td>Optional boolean. When the data store is server only, the database
@@ -5261,15 +5405,15 @@ each privilege.  For supported privileges see
 <dd><p>Retrieves the role with the specified role ID.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="19%" />
-<col width="81%" />
+<col width="21%" />
+<col width="79%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Argument</strong></td>
 <td><strong>Description</strong></td>
 </tr>
 <tr class="row-even"><td>role_id</td>
-<td>Required string. The role ID of the role to get. Set to None to get all roles</td>
+<td>Required string. The role ID of the role to get.</td>
 </tr>
 </tbody>
 </table>
@@ -5277,7 +5421,7 @@ each privilege.  For supported privileges see
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The role associated with the specified role ID, or a list of all roles if role_id was set to None.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The role associated with the specified role ID</td>
 </tr>
 </tbody>
 </table>
@@ -5561,6 +5705,8 @@ used together with file_name.</td>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#collaborationmanager">CollaborationManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#collaboration">Collaboration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#creditmanager">CreditManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#licensemanager">LicenseManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#identityprovidermanager">IdentityProviderManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#passwordpolicy">PasswordPolicy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#portalresourcemanager">PortalResourceManager</a></li>
@@ -5658,7 +5804,7 @@ used together with file_name.</td>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.4.2',
+            VERSION:'1.5.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
