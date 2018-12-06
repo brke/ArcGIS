@@ -49,3 +49,10 @@ ParcelFabricManager
     :inherited-members:
     :members:
     :undoc-members:
+
+UtilityNetworkManager
+--------------
+.. autoclass:: arcgis.features._utility.UtilityNetworkManager
+    :inherited-members:
+    :members:
+    :undoc-members:

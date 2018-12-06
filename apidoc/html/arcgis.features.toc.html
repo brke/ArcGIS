@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.features module &mdash; arcgis 1.5.1 documentation</title>
+  <title>arcgis.features module &mdash; arcgis 1.5.2 documentation</title>
   
 
   
@@ -37,7 +37,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.5.1 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.5.2 documentation" href="index.html"/>
         <link rel="next" title="arcgis.features.analysis module" href="arcgis.features.analysis.html"/>
         <link rel="prev" title="arcgis.env module" href="arcgis.env.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
@@ -77,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.5.1
+                1.5.2
               </div>
             
           
@@ -122,6 +122,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l3"><a class="reference internal" href="arcgis.gis.admin.html">arcgis.gis.admin module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#agoladminmanager">AGOLAdminManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#portaladminmanager">PortalAdminManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#bundle">Bundle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#categorymanager">CategoryManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#collaborationmanager">CollaborationManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#collaboration">Collaboration</a></li>
@@ -202,8 +203,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="#featurelayercollection">FeatureLayerCollection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#featureset">FeatureSet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#featurecollection">FeatureCollection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-features-geoaccessor">arcgis.features.GeoAccessor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arcgis-features-geoseriesaccessor">arcgis.features.GeoSeriesAccessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#geoaccessor">GeoAccessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#geoseriesaccessor">GeoSeriesAccessor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#spatialdataframe">SpatialDataFrame</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analysis.html">arcgis.features.analysis module</a><ul>
@@ -290,6 +291,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#versionmanager">VersionManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#version">Version</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#parcelfabricmanager">ParcelFabricManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#utilitynetworkmanager">UtilityNetworkManager</a></li>
 </ul>
 </li>
 </ul>
@@ -3039,8 +3041,8 @@ Filtering by where clause is not supported for feature collections</p>
 </dd></dl>
 
 </div>
-<div class="section" id="arcgis-features-geoaccessor">
-<h2>arcgis.features.GeoAccessor<a class="headerlink" href="#arcgis-features-geoaccessor" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="geoaccessor">
+<h2>GeoAccessor<a class="headerlink" href="#geoaccessor" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="arcgis.features.GeoAccessor">
 <em class="property">class </em><code class="descclassname">arcgis.features.</code><code class="descname">GeoAccessor</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.GeoAccessor" title="Permalink to this definition">¶</a></dt>
@@ -4369,8 +4371,8 @@ the table exists, and exception will be raised.</td>
 </dd></dl>
 
 </div>
-<div class="section" id="arcgis-features-geoseriesaccessor">
-<h2>arcgis.features.GeoSeriesAccessor<a class="headerlink" href="#arcgis-features-geoseriesaccessor" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="geoseriesaccessor">
+<h2>GeoSeriesAccessor<a class="headerlink" href="#geoseriesaccessor" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="arcgis.features.GeoSeriesAccessor">
 <em class="property">class </em><code class="descclassname">arcgis.features.</code><code class="descname">GeoSeriesAccessor</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.GeoSeriesAccessor" title="Permalink to this definition">¶</a></dt>
@@ -4921,7 +4923,7 @@ tolerance.</p>
 <dl class="attribute">
 <dt id="arcgis.features.GeoSeriesAccessor.geometry_type">
 <code class="descname">geometry_type</code><a class="headerlink" href="#arcgis.features.GeoSeriesAccessor.geometry_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>A returns the geometry types</p>
+<dd><p>returns the geometry types</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -5350,7 +5352,7 @@ For percentages, the value should be expressed as a double from
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">arcgis.gis.Geometry</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Geometry</td>
 </tr>
 </tbody>
 </table>
@@ -7195,6 +7197,7 @@ in the store wherever possible</dd>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#versionmanager">VersionManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#version">Version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#parcelfabricmanager">ParcelFabricManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.features.managers.html#utilitynetworkmanager">UtilityNetworkManager</a></li>
 </ul>
 </li>
 </ul>
@@ -7247,7 +7250,7 @@ in the store wherever possible</dd>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.5.1',
+            VERSION:'1.5.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
