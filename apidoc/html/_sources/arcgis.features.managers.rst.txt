@@ -42,3 +42,10 @@ Version
     :inherited-members:
     :members:
     :undoc-members:
+
+ParcelFabricManager
+--------------
+.. autoclass:: arcgis.features._parcel.ParcelFabricManager
+    :inherited-members:
+    :members:
+    :undoc-members:
