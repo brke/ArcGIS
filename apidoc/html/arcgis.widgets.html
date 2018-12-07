@@ -24,22 +24,13 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.5.2 documentation" href="index.html"/>
-        <link rel="next" title="arcgis.apps module" href="arcgis.apps.html"/>
-        <link rel="prev" title="arcgis.schematics module" href="arcgis.schematics.html"/>
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="arcgis.apps module" href="arcgis.apps.html" />
+    <link rel="prev" title="arcgis.schematics module" href="arcgis.schematics.html" />
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -55,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -668,10 +659,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.workforce.html#submodules">Submodules</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.apps.storymap.html">arcgis.apps.storymap module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.storymap.html#journalstorymap">JournalStoryMap</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -687,7 +674,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">arcgis</a>
@@ -695,9 +682,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -749,7 +737,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <dl class="class">
 <dt id="arcgis.widgets.MapView">
 <em class="property">class </em><code class="descclassname">arcgis.widgets.</code><code class="descname">MapView</code><span class="sig-paren">(</span><em>gis=None</em>, <em>item=None</em>, <em>mode='2D'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.widgets.MapView" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ipywidgets.widgets.domwidget.DOMWidget</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ipywidgets.widgets.domwidget.DOMWidget</span></code></p>
 <p>Mapping widget for Jupyter Notebook and JupyterLab.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -796,7 +784,7 @@ opacity, definition expressions. See example below</td>
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># USAGE EXAMPLE: Add a feature layer with smart mapping renderer and</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># USAGE EXAMPLE: Add a feature layer with smart mapping renderer and</span>
 <span class="c1"># a definition expression to limit the features drawn.</span>
 <span class="n">map1</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="s2">&quot;Seattle, WA&quot;</span><span class="p">)</span>
 <span class="n">map1</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">wa_streets_feature_layer</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;renderer&#39;</span><span class="p">:</span><span class="s1">&#39;ClassedSizeRenderer&#39;</span><span class="p">,</span>
@@ -1106,7 +1094,7 @@ of callbacks.</td>
 <code class="descname">print_service_url</code><a class="headerlink" href="#arcgis.widgets.MapView.print_service_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The print service URL used when taking 2D screenshots. This member will
 be auto populated with the value from
-<cite>gis.properties.helperServices.printTask[‘url’]</cite>. If it can’t find that
+<cite>gis.properties.helperServices.printTask[‘url’]</cite>. If it can’t find that 
 value, it will use the default value of
 <cite>“https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task”</cite>.</p>
 <p>You can set this value to a valid Export Web Map Task URL, which will
@@ -1266,7 +1254,7 @@ allowed (true) or not allowed (false).</td>
 :return:</p>
 <blockquote>
 <div>Item object corresponding to the new web map Item created.</div></blockquote>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Save</span> <span class="nb">map</span> <span class="n">widget</span> <span class="k">as</span> <span class="n">a</span> <span class="n">new</span> <span class="n">web</span> <span class="nb">map</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">GIS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Save</span> <span class="nb">map</span> <span class="n">widget</span> <span class="k">as</span> <span class="n">a</span> <span class="n">new</span> <span class="n">web</span> <span class="nb">map</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">GIS</span>
 <span class="n">map1</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="s2">&quot;Italy&quot;</span><span class="p">)</span>
 <span class="n">map1</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">Italy_streets_item</span><span class="p">)</span>
 <span class="n">map1</span><span class="o">.</span><span class="n">basemap</span> <span class="o">=</span> <span class="s1">&#39;dark-gray&#39;</span>
@@ -1566,7 +1554,7 @@ allowed (true) or not allowed (false).</td>
 :return:</p>
 <blockquote>
 <div>A boolean indicating success (True) or failure (False).</div></blockquote>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Interactively</span> <span class="n">add</span> <span class="n">a</span> <span class="n">new</span> <span class="n">layer</span> <span class="ow">and</span> <span class="n">change</span> <span class="n">the</span> <span class="n">basemap</span> <span class="n">of</span> <span class="n">an</span> <span class="n">existing</span> <span class="n">web</span> <span class="nb">map</span><span class="o">.</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Interactively</span> <span class="n">add</span> <span class="n">a</span> <span class="n">new</span> <span class="n">layer</span> <span class="ow">and</span> <span class="n">change</span> <span class="n">the</span> <span class="n">basemap</span> <span class="n">of</span> <span class="n">an</span> <span class="n">existing</span> <span class="n">web</span> <span class="nb">map</span><span class="o">.</span>
 <span class="n">italy_streets_item</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;Italy streets&quot;</span><span class="p">,</span> <span class="s2">&quot;Web Map&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">map1</span> <span class="o">=</span> <span class="n">MapView</span><span class="p">(</span><span class="n">item</span> <span class="o">=</span> <span class="n">italy_streets_item</span><span class="p">)</span>
 <span class="n">map1</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">Italy_streets2</span><span class="p">)</span>
@@ -1591,9 +1579,7 @@ zoomed in you are.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -1615,7 +1601,7 @@ zoomed in you are.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -1634,6 +1620,7 @@ zoomed in you are.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.5.2',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -1646,19 +1633,13 @@ zoomed in you are.</p>
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

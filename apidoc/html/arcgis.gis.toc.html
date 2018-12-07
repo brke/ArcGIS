@@ -24,22 +24,13 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.5.2 documentation" href="index.html"/>
-        <link rel="next" title="arcgis.gis.admin module" href="arcgis.gis.admin.html"/>
-        <link rel="prev" title="API Reference for the ArcGIS API for Python" href="index.html"/>
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="arcgis.gis.admin module" href="arcgis.gis.admin.html" />
+    <link rel="prev" title="API Reference for the ArcGIS API for Python" href="index.html" />
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -55,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -668,10 +659,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.workforce.html#submodules">Submodules</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.apps.storymap.html">arcgis.apps.storymap module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.storymap.html#journalstorymap">JournalStoryMap</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -687,7 +674,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">arcgis</a>
@@ -695,9 +682,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -857,34 +845,34 @@ is None and the security for the site uses BUILT-IN security.</td>
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 1: Anonymous Login to ArcGIS Online</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 1: Anonymous Login to ArcGIS Online</span>
 
 <span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 2: Built-in Login to ArcGIS Online</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 2: Built-in Login to ArcGIS Online</span>
 
 <span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;someuser&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;secret1234&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 3: Built-in Login to ArcGIS Enterprise</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 3: Built-in Login to ArcGIS Enterprise</span>
 
 <span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;http://pythonplayground.esri.com/portal&quot;</span><span class="p">,</span>
       <span class="n">username</span><span class="o">=</span><span class="s2">&quot;user1&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password1&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 4: Built-in Login to ArcGIS Enterprise, ignoring SSL errors</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 4: Built-in Login to ArcGIS Enterprise, ignoring SSL errors</span>
 
 <span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;http://pythonplayground.esri.com/portal&quot;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s2">&quot;user1&quot;</span><span class="p">,</span>
           <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password1&quot;</span><span class="p">,</span> <span class="n">verify_cert</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 5: Anonymous ArcGIS Online Login with Proxy</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 5: Anonymous ArcGIS Online Login with Proxy</span>
 
 <span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="n">proxy_host</span><span class="o">=</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">proxy_port</span><span class="o">=</span><span class="mi">8888</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 6: PKI Login to ArcGIS Enterprise, using PKCS12 user certificate</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 6: PKI Login to ArcGIS Enterprise, using PKCS12 user certificate</span>
 
 <span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://pkienterprise.esri.com/portal&quot;</span><span class="p">,</span>
           <span class="n">cert_file</span><span class="o">=</span><span class="s2">&quot;C:\users\someuser\mycert.pfx&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password1&quot;</span><span class="p">)</span>
@@ -893,13 +881,13 @@ is None and the security for the site uses BUILT-IN security.</td>
 <dl class="attribute">
 <dt id="arcgis.gis.GIS.content">
 <code class="descname">content</code><a class="headerlink" href="#arcgis.gis.GIS.content" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource manager for GIS content. See <a class="reference internal" href="#arcgis.gis.ContentManager" title="arcgis.gis.ContentManager"><code class="xref py py-class docutils literal"><span class="pre">ContentManager</span></code></a>.</p>
+<dd><p>The resource manager for GIS content. See <a class="reference internal" href="#arcgis.gis.ContentManager" title="arcgis.gis.ContentManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContentManager</span></code></a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="arcgis.gis.GIS.groups">
 <code class="descname">groups</code><a class="headerlink" href="#arcgis.gis.GIS.groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource manager for GIS groups. See <a class="reference internal" href="#arcgis.gis.GroupManager" title="arcgis.gis.GroupManager"><code class="xref py py-class docutils literal"><span class="pre">GroupManager</span></code></a>.</p>
+<dd><p>The resource manager for GIS groups. See <a class="reference internal" href="#arcgis.gis.GroupManager" title="arcgis.gis.GroupManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">GroupManager</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -910,7 +898,7 @@ zoom level. If an address is provided, it is geocoded
 using the GIS’s configured geocoders and if a match is found, the geographic
 extent of the matched address is used as the map extent. If a zoomlevel is also
 provided, the map is centered at the matched address instead and the map is zoomed
-to the specified zoomlevel. See <a class="reference internal" href="arcgis.widgets.html#module-arcgis.widgets" title="arcgis.widgets"><code class="xref py py-class docutils literal"><span class="pre">widgets</span></code></a> for more information.</p>
+to the specified zoomlevel. See <a class="reference internal" href="arcgis.widgets.html#module-arcgis.widgets" title="arcgis.widgets"><code class="xref py py-class docutils literal notranslate"><span class="pre">widgets</span></code></a> for more information.</p>
 <p>Note: The map widget is only supported within Jupyter Notebook.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -981,7 +969,7 @@ values that are to be updated.</td>
 <p class="last">For examples of the property names and key/values to use when updating utility services,
 refer to the Portal parameters section at <a class="reference external" href="https://developers.arcgis.com/rest/users-groups-and-items/common-parameters.htm">https://developers.arcgis.com/rest/users-groups-and-items/common-parameters.htm</a></p>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Usage Example: Update the geocode service</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example: Update the geocode service</span>
 
 <span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="n">profile</span><span class="o">=</span><span class="s1">&#39;xyz&#39;</span><span class="p">)</span>
 <span class="n">upd</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;geocodeService&#39;</span><span class="p">:</span> <span class="p">[{</span>
@@ -1008,7 +996,7 @@ refer to the Portal parameters section at <a class="reference external" href="ht
 <dl class="attribute">
 <dt id="arcgis.gis.GIS.users">
 <code class="descname">users</code><a class="headerlink" href="#arcgis.gis.GIS.users" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource manager for GIS users. See <a class="reference internal" href="#arcgis.gis.UserManager" title="arcgis.gis.UserManager"><code class="xref py py-class docutils literal"><span class="pre">UserManager</span></code></a>.</p>
+<dd><p>The resource manager for GIS users. See <a class="reference internal" href="#arcgis.gis.UserManager" title="arcgis.gis.UserManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserManager</span></code></a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1025,7 +1013,7 @@ refer to the Portal parameters section at <a class="reference external" href="ht
 <dl class="class">
 <dt id="arcgis.gis.Item">
 <em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">Item</code><span class="sig-paren">(</span><em>gis</em>, <em>itemid</em>, <em>itemdict=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">dict</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 <p>An item (a unit of content) in the GIS. Each item has a unique identifier and a well
 known URL that is independent of the user owning the item.
 An item can have associated binary or textual data that’s available via the item data resource.
@@ -1174,7 +1162,7 @@ provided.</p>
 </ul>
 </div></blockquote>
 <p><strong>Usage Example</strong></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">item</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">item</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="go">&lt;Item title:&quot;gisslideshow - Copy 94452b&quot; type:Microsoft Powerpoint owner:geoguy&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">item</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;GIS_Tutorial&quot;</span><span class="p">)</span>
 <span class="go">&lt;Item title:&quot;GIS_Tutorial&quot; type:Microsoft Powerpoint owner:geoguy&gt;</span>
@@ -1397,7 +1385,7 @@ details is returned.</td>
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Successful</span> <span class="n">deletion</span> <span class="n">of</span> <span class="n">an</span> <span class="n">item</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Successful</span> <span class="n">deletion</span> <span class="n">of</span> <span class="n">an</span> <span class="n">item</span>
 
 <span class="n">item1</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;itemId12345&#39;</span><span class="p">)</span>
 <span class="n">item1</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
@@ -1405,7 +1393,7 @@ details is returned.</td>
 <span class="o">&gt;&gt;</span> <span class="bp">True</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">deletion</span> <span class="n">of</span> <span class="n">an</span> <span class="n">item</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">deletion</span> <span class="n">of</span> <span class="n">an</span> <span class="n">item</span>
 
 <span class="n">item1</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;itemId12345&#39;</span><span class="p">)</span>
 <span class="n">item1</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
@@ -1414,7 +1402,7 @@ details is returned.</td>
 <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="n">Error</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">400</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Dry</span> <span class="n">run</span> <span class="n">to</span> <span class="n">check</span> <span class="n">deletion</span> <span class="n">of</span> <span class="n">an</span> <span class="n">item</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Dry</span> <span class="n">run</span> <span class="n">to</span> <span class="n">check</span> <span class="n">deletion</span> <span class="n">of</span> <span class="n">an</span> <span class="n">item</span>
 
 <span class="n">item1</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;itemId12345abcde&#39;</span><span class="p">)</span>
 <span class="n">item1</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">dry_run</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -1669,7 +1657,7 @@ that can be converted to string using data.decode(‘utf-8’). Zero byte files 
 </tbody>
 </table>
 <p>Example</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">get_thumbnail</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">get_thumbnail</span><span class="p">()</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
 <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </pre></div>
@@ -2345,7 +2333,7 @@ as a dictionary when False</td>
 <dl class="class">
 <dt id="arcgis.gis.User">
 <em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">User</code><span class="sig-paren">(</span><em>gis</em>, <em>username</em>, <em>userdict=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.User" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">dict</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 <p>Represents a registered user of the GIS (ArcGIS Online, or Portal for ArcGIS).</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2591,7 +2579,7 @@ or <a class="reference external" href="https://bit.ly/2JsJV1i">https://bit.ly/2J
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">Usage</span> <span class="n">Example</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Usage</span> <span class="n">Example</span><span class="p">:</span>
 
 <span class="n">response</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">get_thumbnail</span><span class="p">()</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
@@ -3083,7 +3071,7 @@ returns the user type and assigned applications</p>
 <dl class="class">
 <dt id="arcgis.gis.Group">
 <em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>gis</em>, <em>groupid</em>, <em>groupdict=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">dict</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 <p>Represents a group within the GIS (ArcGIS Online or Portal for ArcGIS).</p>
 <dl class="method">
 <dt id="arcgis.gis.Group.add_users">
@@ -3233,7 +3221,7 @@ the group is part of one.</p>
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Usage Example: To print users in a group</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example: To print users in a group</span>
 
 <span class="n">response</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">get_members</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;users&#39;</span><span class="p">]</span> <span class="p">:</span>
@@ -3255,7 +3243,7 @@ the group is part of one.</p>
 </tbody>
 </table>
 <p>Example</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">get_thumbnail</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">get_thumbnail</span><span class="p">()</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
 <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </pre></div>
@@ -3535,7 +3523,7 @@ been created. Default is False.</td>
 <dl class="class">
 <dt id="arcgis.gis.Datastore">
 <em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">Datastore</code><span class="sig-paren">(</span><em>datastore</em>, <em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Datastore" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">dict</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 <p>Represents a datastore (folder, database or bigdata fileshare) within the GIS’s data store.</p>
 <dl class="attribute">
 <dt id="arcgis.gis.Datastore.datasets">
@@ -3621,7 +3609,7 @@ is accessible to every server node in the site.</p>
 <dl class="class">
 <dt id="arcgis.gis.Role">
 <em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">Role</code><span class="sig-paren">(</span><em>gis</em>, <em>role_id</em>, <em>role</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Role" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A custom role in the GIS.</p>
 <dl class="method">
 <dt id="arcgis.gis.Role.delete">
@@ -3746,7 +3734,7 @@ is accessible to every server node in the site.</p>
 <dl class="class">
 <dt id="arcgis.gis.Layer">
 <em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">Layer</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Layer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">arcgis.gis._GISResource</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">arcgis.gis._GISResource</span></code></p>
 <p>The layer is a primary concept for working with data in a GIS.</p>
 <p>Users create, import, export, analyze, edit, and visualize layers.</p>
 <p>Layers can be added to and visualized using maps. They act as inputs to and outputs from analysis tools.</p>
@@ -3797,7 +3785,7 @@ GIS. Layer objects can be obtained through the layers attribute on layer Items i
 <dl class="class">
 <dt id="arcgis.gis.GroupApplication">
 <em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">GroupApplication</code><span class="sig-paren">(</span><em>url</em>, <em>gis</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.GroupApplication" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Represents a single group application on the GIS (ArcGIS Online or
 Portal for ArcGIS).</p>
 <dl class="method">
@@ -4050,7 +4038,7 @@ Values for Excel: coordinates | address | none</p>
 <code class="descname">bulk_update</code><span class="sig-paren">(</span><em>itemids</em>, <em>properties</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.bulk_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates a collection of items’ properties.</p>
 <p>Example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">itemsids</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;owner: TestUser12399&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">itemsids</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;owner: TestUser12399&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">properties</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;categories&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;clothes&quot;</span><span class="p">,</span><span class="s2">&quot;formal_wear/socks&quot;</span><span class="p">]}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">_bulk_update</span><span class="p">(</span><span class="n">itemids</span><span class="p">,</span> <span class="n">properties</span><span class="p">)</span>
 <span class="go">[{&#39;results&#39; : [{&#39;itemid&#39; : &#39;id&#39;, &#39;success&#39; : &quot;True/False&quot; }]}]</span>
@@ -4813,7 +4801,7 @@ arcgis.gis.Group objects, or a list of group IDs.</td>
 <dl class="class">
 <dt id="arcgis.gis.UserManager">
 <em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">UserManager</code><span class="sig-paren">(</span><em>gis</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.UserManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Helper class for managing GIS users. This class is not created by users directly.
 An instance of this class, called ‘users’, is available as a property of the Gis object.
 Users call methods on this ‘users’ object to manipulate (create, get, search, etc) users.</p>
@@ -4858,7 +4846,7 @@ it is returned as a list of dictionaries.</td>
 </tbody>
 </table>
 <p><strong>Example as_df=True</strong></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">um</span><span class="o">.</span><span class="n">counts</span><span class="p">(</span><span class="s1">&#39;user_type&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">um</span><span class="o">.</span><span class="n">counts</span><span class="p">(</span><span class="s1">&#39;user_type&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">df</span>
 <span class="go">    count        key</span>
 <span class="go"> 0     12  creatorUT</span>
@@ -4866,7 +4854,7 @@ it is returned as a list of dictionaries.</td>
 </pre></div>
 </div>
 <p><strong>Example as_df=False</strong></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">um</span><span class="o">.</span><span class="n">counts</span><span class="p">(</span><span class="s1">&#39;user_type&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">um</span><span class="o">.</span><span class="n">counts</span><span class="p">(</span><span class="s1">&#39;user_type&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">df</span>
 <span class="go">[{&#39;key&#39;: &#39;creatorUT&#39;, &#39;count&#39;: 12}, {&#39;key&#39;: &#39;viewerUT&#39;, &#39;count&#39;: 2}]</span>
 </pre></div>
@@ -5291,7 +5279,7 @@ tool for administrators so they can easily manage a user or users groups.</p>
 <dl class="class">
 <dt id="arcgis.gis.GroupManager">
 <em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">GroupManager</code><span class="sig-paren">(</span><em>gis</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.GroupManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Helper class for managing GIS groups. This class is not created by users directly.
 An instance of this class, called ‘groups’, is available as a property of the Gis object.
 Users call methods on this ‘groups’ object to manipulate (create, get, search, etc) users.</p>
@@ -5516,7 +5504,7 @@ your org. Default is False, do not search ourside your org.</td>
 <dl class="class">
 <dt id="arcgis.gis.DatastoreManager">
 <em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">DatastoreManager</code><span class="sig-paren">(</span><em>gis</em>, <em>admin_url</em>, <em>server</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.DatastoreManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Helper class for managing the GIS data stores in on-premises ArcGIS Portals.
 This class is not created by users directly.
 Instances of this class are returned from arcgis.geoanalytics.get_datastores() and
@@ -5826,7 +5814,7 @@ at once, you can invoke this operation.</p>
 <dl class="class">
 <dt id="arcgis.gis.RoleManager">
 <em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">RoleManager</code><span class="sig-paren">(</span><em>gis</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.RoleManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Helper class to manage custom roles for users in a GIS.</p>
 <dl class="method">
 <dt id="arcgis.gis.RoleManager.all">
@@ -5956,7 +5944,7 @@ each privilege.  For supported privileges see
 <dl class="class">
 <dt id="arcgis.gis.ResourceManager">
 <em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">ResourceManager</code><span class="sig-paren">(</span><em>item</em>, <em>gis</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ResourceManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Helper class for managing resource files of an item. This class is not created by users directly.
 An instance of this class, called ‘resources’, is available as a property of the Item object.
 Users call methods on this ‘resources’ object to manage (add, remove, update, list, get) item resources.</p>
@@ -6284,9 +6272,7 @@ used together with file_name.</td>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -6308,7 +6294,7 @@ used together with file_name.</td>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -6327,6 +6313,7 @@ used together with file_name.</td>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.5.2',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -6339,19 +6326,13 @@ used together with file_name.</td>
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
