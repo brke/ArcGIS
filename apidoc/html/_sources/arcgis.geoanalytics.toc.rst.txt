@@ -23,6 +23,7 @@ Submodules
    :maxdepth: 3
 
    arcgis.geoanalytics.analyze_patterns
+   arcgis.geoanalytics.data_enrichment
    arcgis.geoanalytics.find_locations
    arcgis.geoanalytics.manage_data
    arcgis.geoanalytics.summarize_data

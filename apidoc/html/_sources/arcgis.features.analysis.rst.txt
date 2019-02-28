@@ -64,6 +64,10 @@ find_nearest
 --------------
 .. automethod:: arcgis.features.analysis.find_nearest
 
+find_point_clusters
+--------------
+.. automethod:: arcgis.features.analysis.find_point_clusters
+
 find_similar_locations
 --------------
 .. automethod:: arcgis.features.analysis.find_similar_locations

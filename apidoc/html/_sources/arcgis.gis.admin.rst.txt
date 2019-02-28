@@ -202,3 +202,14 @@ WebAdaptors
    :members:
    :undoc-members:
 
+WebhookManager
+---------------
+.. autoclass:: arcgis.gis.admin.WebhookManager
+   :members:
+   :undoc-members:
+
+Webhook
+---------------
+.. autoclass:: arcgis.gis.admin.Webhook
+   :members:
+   :undoc-members:

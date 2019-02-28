@@ -28,3 +28,14 @@ Model
     :members:
     :undoc-members:
 
+prepare_data
+-----------
+.. automethod:: arcgis.learn.prepare_data
+
+SingleShotDetector
+------------------
+.. autoclass:: arcgis.learn.SingleShotDetector
+    :members:
+    :undoc-members:
+
+

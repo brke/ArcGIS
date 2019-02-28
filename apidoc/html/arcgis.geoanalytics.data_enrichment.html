@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.geoanalytics.data_enrichment module &mdash; arcgis 1.6.0 documentation</title>
   
 
   
@@ -40,6 +40,9 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+        <link rel="up" title="arcgis.geoanalytics module" href="arcgis.geoanalytics.toc.html"/>
+        <link rel="next" title="arcgis.geoanalytics.find_locations module" href="arcgis.geoanalytics.find_locations.html"/>
+        <link rel="prev" title="arcgis.geoanalytics.analyze_patterns module" href="arcgis.geoanalytics.analyze_patterns.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -105,13 +108,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <p class="caption"><span class="caption-text">arcgis</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.raster.toc.html">arcgis.raster module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.network.toc.html">arcgis.network module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#get-datastores">get_datastores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#is-supported">is_supported</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="arcgis.geoanalytics.toc.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html">arcgis.geoanalytics.analyze_patterns module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.geoanalytics.data_enrichment module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#enrich-from-grid">enrich_from_grid</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html">arcgis.geoanalytics.find_locations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html">arcgis.geoanalytics.manage_data module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html">arcgis.geoanalytics.summarize_data module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.use_proximity.html">arcgis.geoanalytics.use_proximity module</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geocoding.html">arcgis.geocoding module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoenrichment.html">arcgis.geoenrichment module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a></li>
@@ -166,7 +185,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>arcgis</li>
+          <li><a href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a> &raquo;</li>
+        
+      <li>arcgis.geoanalytics.data_enrichment module</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -188,30 +209,67 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJGGV5"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <div class="section" id="arcgis">
-<h1>arcgis<a class="headerlink" href="#arcgis" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="arcgis.html">arcgis package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-gis-module">arcgis.gis module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-env-module">arcgis.env module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-features-module">arcgis.features module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-raster-module">arcgis.raster module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-network-module">arcgis.network module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-schematics-module">arcgis.schematics module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geoanalytics-module">arcgis.geoanalytics module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geocoding-module">arcgis.geocoding module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geometry-module">arcgis.geometry module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geoenrichment-module">arcgis.geoenrichment module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-geoprocessing-module">arcgis.geoprocessing module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-mapping-module">arcgis.mapping module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-widgets-module">arcgis.widgets module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#arcgis-apps-module">arcgis.apps module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.html#module-arcgis">Module contents</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="arcgis-geoanalytics-data-enrichment-module">
+<h1>arcgis.geoanalytics.data_enrichment module<a class="headerlink" href="#arcgis-geoanalytics-data-enrichment-module" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-arcgis.geoanalytics.data_enrichment"></span><p>These tools are used for data enrichment using geoanalytics</p>
+<div class="section" id="enrich-from-grid">
+<h2>enrich_from_grid<a class="headerlink" href="#enrich-from-grid" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geoanalytics.data_enrichment.enrich_from_grid">
+<code class="descclassname">data_enrichment.</code><code class="descname">enrich_from_grid</code><span class="sig-paren">(</span><em>input_layer</em>, <em>grid_layer</em>, <em>enrichment_attributes=None</em>, <em>output_name=None</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.data_enrichment.enrich_from_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Enrich From Multi-Variable Grid task joins attributes from a multi-variable grid to a point
+layer. The multi-variable grid must be created using the Build Multi-Variable Grid task.
+Metadata from the multi-variable grid is used to efficiently enrich the input point features,
+making it faster than the Join Features task. Attributes in the multi-variable grid are joined
+to the input point features when the features intersect the grid.</p>
+<p>The attributes in the multi-variable grid can be used as explanatory variables when modeling
+spatial relationships with your input point features, and this task allows you to join those
+attributes to the point features quickly.</p>
+<blockquote>
+<div><p>Usage Notes:</p>
+<p>Only available at ArcGIS Enterprise 10.7 and later.</p>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>input_layer</td>
+<td>required FeatureLayer. The point features that will be enriched
+by the multi-variable grid.</td>
+</tr>
+<tr class="row-odd"><td>grid_layer</td>
+<td>required FeatureLayer. The multi-variable grid layer.</td>
+</tr>
+<tr class="row-even"><td>enrichment_attributes</td>
+<td>optional String. A list of fields in the multi-variable grid
+that will be joined to the input point features. If the
+attributes are not provided, all fields in the multi-variable
+grid will be joined to the input point features.</td>
+</tr>
+<tr class="row-odd"><td>output_name</td>
+<td>optional string. The task will create a feature service of the
+results. You define the name of the service.</td>
+</tr>
+<tr class="row-even"><td>gis</td>
+<td>optional GIS. The GIS object where the analysis will take place.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">FeatureLayer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 </div>
 
@@ -223,6 +281,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arcgis.geoanalytics.find_locations.html" class="btn btn-neutral float-right" title="arcgis.geoanalytics.find_locations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="arcgis.geoanalytics.analyze_patterns.html" class="btn btn-neutral" title="arcgis.geoanalytics.analyze_patterns module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

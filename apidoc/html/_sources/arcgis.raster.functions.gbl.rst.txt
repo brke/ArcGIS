@@ -19,6 +19,10 @@ euclidean_distance
 _______________
 .. automethod:: arcgis.raster.functions.gbl.euclidean_distance
 
+euclidean_direction
+_______________
+.. automethod:: arcgis.raster.functions.gbl.euclidean_direction
+
 fill
 _______________
 .. automethod:: arcgis.raster.functions.gbl.fill
@@ -54,3 +58,24 @@ _______________
 zonal_statistics
 _______________
 .. automethod:: arcgis.raster.functions.gbl.zonal_statistics
+
+region_group
+____________
+.. automethod:: arcgis.raster.functions.gbl.region_group
+
+corridor
+________
+.. automethod:: arcgis.raster.functions.gbl.corridor
+
+path_distance
+_____________
+.. automethod:: arcgis.raster.functions.gbl.path_distance
+
+path_distance_allocation
+________________________
+.. automethod:: arcgis.raster.functions.gbl.path_distance_allocation
+
+path_distance_back_link
+_______________________
+.. automethod:: arcgis.raster.functions.gbl.path_distance_back_link
+
