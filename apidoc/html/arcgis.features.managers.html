@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.features.managers module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.features.managers module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,10 +39,10 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="up" title="arcgis.features module" href="arcgis.features.toc.html"/>
-        <link rel="next" title="arcgis.raster module" href="arcgis.raster.toc.html"/>
-        <link rel="prev" title="arcgis.features.elevation module" href="arcgis.features.elevation.html"/>
+        <link rel="next" title="arcgis.features.summarize_data module" href="arcgis.features.summarize_data.html"/>
+        <link rel="prev" title="arcgis.features.manage_data module" href="arcgis.features.manage_data.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -83,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -124,12 +124,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2 current"><a class="reference internal" href="arcgis.features.toc.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analysis.html">arcgis.features.analysis module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.elevation.html">arcgis.features.elevation module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.hydrology.html">arcgis.features.hydrology module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.manage_data.html">arcgis.features.manage_data module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.features.use_proximity.html">arcgis.features.use_proximity module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.features.elevation.html">arcgis.features.elevation module</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.features.managers module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#attachmentmanager">AttachmentManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#syncmanager">SyncManager</a></li>
@@ -141,6 +140,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#utilitynetworkmanager">UtilityNetworkManager</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.use_proximity.html">arcgis.features.use_proximity module</a></li>
 </ul>
 </li>
 </ul>
@@ -444,95 +445,155 @@ Users call methods on this ‘replicas’ object to manipulate (create, synchron
 <dl class="method">
 <dt id="arcgis.features.managers.SyncManager.create">
 <code class="descname">create</code><span class="sig-paren">(</span><em>replica_name</em>, <em>layers</em>, <em>layer_queries=None</em>, <em>geometry_filter=None</em>, <em>replica_sr=None</em>, <em>transport_type='esriTransportTypeUrl'</em>, <em>return_attachments=False</em>, <em>return_attachments_databy_url=False</em>, <em>asynchronous=False</em>, <em>attachments_sync_direction='none'</em>, <em>sync_model='none'</em>, <em>data_format='json'</em>, <em>replica_options=None</em>, <em>wait=False</em>, <em>out_path=None</em>, <em>sync_direction=None</em>, <em>target_type='client'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.SyncManager.create" title="Permalink to this definition">¶</a></dt>
-<dd><p>The create operation is performed on a feature layer collection
-resource. This operation creates the replica between the feature
-dataset and a client based on a client-supplied replica definition.
-It requires the Sync capability. See Sync overview for more
-information on sync. The response for create includes
-replicaID, replica generation number, and data similar to the
-response from the feature layer collection query operation.
-The create operation returns a response of type
-esriReplicaResponseTypeData, as the response has data for the
-layers in the replica. If the operation is called to register
-existing data by using replicaOptions, the response type will be
-esriReplicaResponseTypeInfo, and the response will not contain data
-for the layers in the replica.</p>
-<dl class="docutils">
-<dt>Inputs:</dt>
-<dd><p class="first">replica_name - name of the replica
-layers - layers to export
-layer_queries - In addition to the layers and geometry parameters, the layer_queries</p>
-<blockquote>
-<div><p>parameter can be used to further define what is replicated. This
-parameter allows you to set properties on a per layer or per table
-basis. Only the properties for the layers and tables that you want
-changed from the default are required.
-Example:</p>
-<blockquote>
-<div>layer_queries = {“0”:{“queryOption”: “useFilter”, “useGeometry”: true,
-“where”: “requires_inspection = Yes”}}</div></blockquote>
-</div></blockquote>
-<dl class="docutils">
-<dt>geometry_filter - spatial filter from arcgis.geometry.filters module to filter results by a</dt>
-<dd>spatial relationship with another geometry</dd>
-</dl>
-<p>replica_sr - the spatial reference of the replica geometry.
-transport_type -  The transport_type represents the response format. If the</p>
-<blockquote>
-<div>transport_type is esriTransportTypeUrl, the JSON response is contained in a file,
-and the URL link to the file is returned. Otherwise, the JSON object is returned
-directly. The default is esriTransportTypeUrl.
-If async is true, the results will always be returned as if transport_type is
-esriTransportTypeUrl. If dataFormat is sqlite, the transportFormat will always be
-esriTransportTypeUrl regardless of how the parameter is set.
-Values: esriTransportTypeUrl | esriTransportTypeEmbedded</div></blockquote>
-<dl class="docutils">
-<dt>return_attachments - If true, attachments are added to the replica and returned in</dt>
-<dd>the response. Otherwise, attachments are not included. The default is false. This
-parameter is only applicable if the feature service has attachments.</dd>
-<dt>return_attachments_databy_url -  If true, a reference to a URL will be provided for</dt>
-<dd>each attachment returned from create method. Otherwise, attachments are embedded
-in the response. The default is true. This parameter is only applicable if the
-feature service has attachments and if return_attachments is true.</dd>
-<dt>asynchronous - If true, the request is processed as an asynchronous job, and a URL is</dt>
-<dd>returned that a client can visit to check the status of the job. See the topic on
-asynchronous usage for more information. The default is false.</dd>
-<dt>attachments_sync_direction - Client can specify the attachmentsSyncDirection when</dt>
-<dd>creating a replica. AttachmentsSyncDirection is currently a createReplica property
+<dd><blockquote>
+<div>The create operation is performed on a feature layer collection resource. This operation
+creates the replica between the feature dataset and a client based on a client-supplied
+replica definition. It requires the Sync capability. See Sync overview for more
+information on sync. The response for create includes replicaID, replica generation
+number, and data similar to the response from the feature layer collection query
+operation. The create operation returns a response of type esriReplicaResponseTypeData,
+as the response has data for the layers in the replica. If the operation is called to
+register existing data by using replicaOptions, the response type will be
+esriReplicaResponseTypeInfo, and the response will not contain data for the layers in
+the replica.</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>replica_name</td>
+<td>Required string. Name of the replica.</td>
+</tr>
+<tr class="row-odd"><td>layers</td>
+<td>Required list. A list of layers and tables to include in the replica.</td>
+</tr>
+<tr class="row-even"><td>layer_queries</td>
+<td>Optional dictionary. In addition to the layers and geometry
+parameters, the layer_queries parameter can be used to further define
+what is replicated. This parameter allows you to set properties on a
+per layer or per table basis. Only the properties for the layers and
+tables that you want changed from the default are required.
+Example:
+layer_queries = {“0”:{“queryOption”: “useFilter”, “useGeometry”: true,
+“where”: “requires_inspection = Yes”}}</td>
+</tr>
+<tr class="row-odd"><td>geometry_filter</td>
+<td>Optional {} object. spatial filter from arcgis.geometry.filters module
+to filter results by a spatial relationship with another geometry.</td>
+</tr>
+<tr class="row-even"><td>replica_sr</td>
+<td>Optional WKID or a spatial reference JSON object. the spatial
+reference of the replica geometry.</td>
+</tr>
+<tr class="row-odd"><td>transport_type</td>
+<td>The transport_type represents the response format. If the
+transport_type is esriTransportTypeUrl, the JSON response is contained
+in a file, and the URL link to the file is returned. Otherwise, the
+JSON object is returned directly. The default is esriTransportTypeUrl.
+If async is true, the results will always be returned as if
+transport_type is esriTransportTypeUrl. If dataFormat is sqlite, the
+transportFormat will always be esriTransportTypeUrl regardless of how
+the parameter is set.
+Values: esriTransportTypeUrl | esriTransportTypeEmbedded.</td>
+</tr>
+<tr class="row-even"><td>return_attachments</td>
+<td>If True, attachments are added to the replica and returned in the
+response. Otherwise, attachments are not included. The default is
+False. This parameter is only applicable if the feature service has
+attachments.</td>
+</tr>
+<tr class="row-odd"><td>return_attachments</td>
+<td>If True, a reference to a URL will be provided for each attachment</td>
+</tr>
+<tr class="row-even"><td>_databy_url</td>
+<td>returned from create method. Otherwise, attachments are embedded in
+the response. The default is True. This parameter is only applicable
+if the feature service has attachments and if return_attachments is
+True.</td>
+</tr>
+<tr class="row-odd"><td>asynchronous</td>
+<td>If True, the request is processed as an asynchronous job, and a URL
+is returned that a client can visit to check the status of the job.
+See the topic on asynchronous usage for more information. The default
+is False.</td>
+</tr>
+<tr class="row-even"><td><a href="#id1"><span class="problematic" id="id2">attachments_sync_</span></a></td>
+<td>Client can specify the attachmentsSyncDirection when creating a</td>
+</tr>
+<tr class="row-odd"><td>direction</td>
+<td>replica. AttachmentsSyncDirection is currently a createReplica property
 and cannot be overridden during sync.
-Values: none, upload, bidirectional</dd>
-<dt>sync_model - this parameter is used to indicate that the replica is being created for</dt>
-<dd><p class="first">per-layer sync or per-replica sync. To determine which model types are supported by a
-service, query the supportsPerReplicaSync, supportsPerLayerSync, and supportsSyncModelNone
-properties of the Feature Service. By default, a replica is created for per-replica sync.
-If syncModel is perReplica, the syncDirection specified during sync applies to all layers
-in the replica. If the syncModel is perLayer, the syncDirection is defined on a layer-by-layer
-basis.</p>
-<p>If syncModel is perReplica, the response will have replicaServerGen. A perReplica syncModel
-requires the replicaServerGen on sync. The replicaServerGen tells the server the point
-in time from which to send back changes. If syncModel is perLayer, the response will include
-an array of server generation numbers for the layers in layerServerGens. A perLayer sync
-model requires the layerServerGens on sync. The layerServerGens tell the server the point
-in time from which to send back changes for a specific layer. sync_model=none can be used
-to export the data without creating a replica. Query the supportsSyncModelNone property
-of the feature service to see if this model type is supported.</p>
+Values: none, upload, bidirectional</td>
+</tr>
+<tr class="row-even"><td>sync_model</td>
+<td><p class="first">This parameter is used to indicate that the replica is being created
+for per-layer sync or per-replica sync. To determine which model types
+are supported by a service, query the supportsPerReplicaSync,
+supportsPerLayerSync, and supportsSyncModelNone properties of the Feature
+Service. By default, a replica is created for per-replica sync.
+If syncModel is perReplica, the syncDirection specified during sync
+applies to all layers in the replica. If the syncModel is perLayer, the
+syncDirection is defined on a layer-by-layer basis.</p>
+<p>If syncModel is perReplica, the response will have replicaServerGen.
+A perReplica syncModel requires the replicaServerGen on sync. The
+replicaServerGen tells the server the point in time from which to send
+back changes. If syncModel is perLayer, the response will include an
+array of server generation numbers for the layers in layerServerGens. A
+perLayer sync model requires the layerServerGens on sync. The
+layerServerGens tell the server the point in time from which to send
+back changes for a specific layer. sync_model=none can be used to export
+the data without creating a replica. Query the supportsSyncModelNone
+property of the feature service to see if this model type is supported.</p>
 <p class="last">See the RollbackOnFailure and Sync Models topic for more details.
 Values: perReplica | perLayer | none
 Example: syncModel=perLayer</p>
-</dd>
-<dt>data_format - The format of the replica geodatabase returned in the response. The</dt>
-<dd>default is json.
-Values: filegdb, json, sqlite, shapefile</dd>
-<dt>replica_options - This parameter instructs the create operation to create a</dt>
-<dd>new replica based on an existing replica definition (refReplicaId). It can be used
-to specify parameters for registration of existing data for sync. The operation
-will create a replica but will not return data. The responseType returned in the
-create response will be esriReplicaResponseTypeInfo.</dd>
-</dl>
-<p class="last">wait - if async, wait to pause the process until the async operation is completed.
-out_path - folder path to save the file</p>
-</dd>
-</dl>
+</td>
+</tr>
+<tr class="row-odd"><td>data_format</td>
+<td>The format of the replica geodatabase returned in the response. The
+default is json.
+Values: filegdb, json, sqlite, shapefile</td>
+</tr>
+<tr class="row-even"><td>replica_options</td>
+<td>This parameter instructs the create operation to create a new replica
+based on an existing replica definition (refReplicaId). It can be used
+to specify parameters for registration of existing data for sync. The
+operation will create a replica but will not return data. The
+responseType returned in the create response will be
+esriReplicaResponseTypeInfo.</td>
+</tr>
+<tr class="row-odd"><td>wait</td>
+<td>if async, wait to pause the process until the async operation is completed.</td>
+</tr>
+<tr class="row-even"><td>out_path</td>
+<td>out_path - folder path to save the file.</td>
+</tr>
+<tr class="row-odd"><td>syncDirection</td>
+<td>Defaults to bidirectional when the targetType is client and download
+when the targetType is server. If set, only bidirectional is supported
+when targetType is client. If set, only upload or download are
+supported when targetType is server.
+Values: download | upload | bidirectional
+Example: syncDirection=download</td>
+</tr>
+<tr class="row-even"><td>targetType</td>
+<td>Can be set to either server or client. If not set, the default is
+client. This option was added at 10.5.1.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Required. JSON response if POST request made successfully. Otherwise, return None.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -2139,10 +2200,10 @@ is supported synchronously and asynchronously.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="arcgis.raster.toc.html" class="btn btn-neutral float-right" title="arcgis.raster module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="arcgis.features.summarize_data.html" class="btn btn-neutral float-right" title="arcgis.features.summarize_data module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="arcgis.features.elevation.html" class="btn btn-neutral" title="arcgis.features.elevation module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="arcgis.features.manage_data.html" class="btn btn-neutral" title="arcgis.features.manage_data module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -2173,7 +2234,7 @@ is supported synchronously and asynchronously.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

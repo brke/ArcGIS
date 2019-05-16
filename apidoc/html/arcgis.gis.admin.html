@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.gis.admin module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.gis.admin module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="up" title="arcgis.gis module" href="arcgis.gis.toc.html"/>
         <link rel="next" title="arcgis.gis.server module" href="arcgis.gis.server.html"/>
         <link rel="prev" title="arcgis.gis module" href="arcgis.gis.toc.html"/>
@@ -83,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -118,6 +118,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#role">Role</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#layer">Layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#groupapplication">GroupApplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#categoryschemamanager">CategorySchemaManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#contentmanager">ContentManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#usermanager">UserManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#groupmanager">GroupManager</a></li>
@@ -150,7 +151,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#enterprisegroups">EnterpriseGroups</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#site">Site</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#system">System</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#licenses">Licenses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#licenses-deprecated-10-7">Licenses (Deprecated 10.7+)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#portallicense">PortalLicense</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#directory">Directory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#webadaptor">WebAdaptor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#webadaptors">WebAdaptors</a></li>
@@ -335,6 +337,12 @@ entitlements.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="arcgis.gis.admin.AGOLAdminManager.location_tracking">
+<code class="descname">location_tracking</code><a class="headerlink" href="#arcgis.gis.admin.AGOLAdminManager.location_tracking" title="Permalink to this definition">¶</a></dt>
+<dd><p>The manager for Location Tracking. See :class:<a href="#id1"><span class="problematic" id="id2">`</span></a>~arcgis.apps.tracker.LocationTrackingManager’.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="arcgis.gis.admin.AGOLAdminManager.metadata">
 <code class="descname">metadata</code><a class="headerlink" href="#arcgis.gis.admin.AGOLAdminManager.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>resources to work with metadata on GIS</p>
@@ -463,6 +471,12 @@ entitlements.</p>
 <dt id="arcgis.gis.admin.PortalAdminManager.living_atlas">
 <code class="descname">living_atlas</code><a class="headerlink" href="#arcgis.gis.admin.PortalAdminManager.living_atlas" title="Permalink to this definition">¶</a></dt>
 <dd><p>provides a set of tools to manage and setup Living Atlas content.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.gis.admin.PortalAdminManager.location_tracking">
+<code class="descname">location_tracking</code><a class="headerlink" href="#arcgis.gis.admin.PortalAdminManager.location_tracking" title="Permalink to this definition">¶</a></dt>
+<dd><p>The manager for Location Tracking. See :class:<a href="#id3"><span class="problematic" id="id4">`</span></a>~arcgis.apps.tracker.LocationTrackingManager’.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2047,21 +2061,41 @@ and listing information.</td>
 <dl class="method">
 <dt id="arcgis.gis.admin.License.assign">
 <code class="descname">assign</code><span class="sig-paren">(</span><em>username</em>, <em>entitlements</em>, <em>suppress_email=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.admin.License.assign" title="Permalink to this definition">¶</a></dt>
-<dd><p>grants a user an entitlement.
-===============     ====================================================
-<strong>Argument</strong>        <strong>Description</strong>
-—————     —————————————————-
-username            required string, the name of the user you wish to</p>
-<blockquote>
-<div>assign an entitlement to.</div></blockquote>
-<p>—————     —————————————————-
-entitlments         required list, a list of entitlements values
-—————     —————————————————-
-suppress_email       optional boolean, if True, the org will not notify</p>
-<blockquote>
-<div>a user that their entitlements has changed (default)
+<dd><p>grants a user an entitlement.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>username</td>
+<td>required string, the name of the user you wish to
+assign an entitlement to.</td>
+</tr>
+<tr class="row-odd"><td>entitlments</td>
+<td>required list, a list of entitlements values</td>
+</tr>
+<tr class="row-even"><td>suppress_email</td>
+<td><blockquote class="first">
+<div>optional boolean, if True, the org will not notify</div></blockquote>
+<p class="last">a user that their entitlements has changed (default)
 If False, the org will send an email notifying a
-user that their entitlements have changed.</div></blockquote>
+user that their entitlements have changed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -4791,8 +4825,8 @@ the installation.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="licenses">
-<h2>Licenses<a class="headerlink" href="#licenses" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="licenses-deprecated-10-7">
+<h2>Licenses (Deprecated 10.7+)<a class="headerlink" href="#licenses-deprecated-10-7" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="arcgis.gis.admin.Licenses">
 <em class="property">class </em><code class="descclassname">arcgis.gis.admin.</code><code class="descname">Licenses</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.admin.Licenses" title="Permalink to this definition">¶</a></dt>
@@ -4805,6 +4839,7 @@ you have questions about license levels or expiration properties.
 Starting at 10.5, Portal for ArcGIS enforces two levels of membership
 for licensing to define sets of privileges for registered members and
 their assigned roles.</p>
+<p><strong>Deprecated at ArcGIS Enterprise 10.7</strong></p>
 <dl class="method">
 <dt id="arcgis.gis.admin.Licenses.entitlements">
 <code class="descname">entitlements</code><span class="sig-paren">(</span><em>app='arcgisprodesktop'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.admin.Licenses.entitlements" title="Permalink to this definition">¶</a></dt>
@@ -4985,6 +5020,227 @@ connection information.</td>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="portallicense">
+<h2>PortalLicense<a class="headerlink" href="#portallicense" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.gis.admin.PortalLicense">
+<em class="property">class </em><code class="descclassname">arcgis.gis.admin.</code><code class="descname">PortalLicense</code><span class="sig-paren">(</span><em>url</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.admin.PortalLicense" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Enterprise portal requires a valid license to function correctly.
+This resource returns information for user types that are licensed
+for your organization.</p>
+<p>Starting at 10.7, the Enterprise portal enforces user type licensing.
+Members are assigned a user type which determines the privileges that
+an be granted to the member through a role. Each user type may
+include access to specific apps and app bundles.</p>
+<p>The license information returned for the organization includes the
+total number of registered members that can be added, the current
+number of members in the organization and the Portal for ArcGIS
+version. For each user type, the license information includes the ID,
+the maximum number of registered members that can be assigned, the
+number of members currently assigned the license and the expiration,
+in epoch time. In addition, this resource provides access to the
+Validate License, Import License, Populate License, Update License
+Manager, and Release License operations.</p>
+<dl class="method">
+<dt id="arcgis.gis.admin.PortalLicense.import_license">
+<code class="descname">import_license</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.admin.PortalLicense.import_license" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <cite>import_license</cite> operation is used to import a new license
+file. The portal license file contains your Enterprise portal’s
+user type, app and app bundle licenses. By importing a portal
+license file, you will be applying the licenses in the file to your
+organization.</p>
+<p>Caution:</p>
+<blockquote>
+<div>Importing a new portal license file will overwrite your
+organization’s current user type, app, and app bundle licenses.
+Before importing, verify that the new license file has
+sufficient user type, app, and app bundle licenses.</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>file</td>
+<td>Required String. The portal license file.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.admin.PortalLicense.populate">
+<code class="descname">populate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.admin.PortalLicense.populate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <cite>populate</cite> operation applies the license information from the
+license file that is used to create or upgrade your portal. This
+operation is only necessary as you create or upgrade your portal
+through the Portal Admin API.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.admin.PortalLicense.release_license">
+<code class="descname">release_license</code><span class="sig-paren">(</span><em>username</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.admin.PortalLicense.release_license" title="Permalink to this definition">¶</a></dt>
+<dd><p>If a user checks out an ArcGIS Pro license for offline or
+disconnected use, this operation releases the license for the
+specified account. A license can only be used with a single device
+running ArcGIS Pro. To check in the license, a valid access token
+and refresh token is required. If the refresh token for the device
+is lost, damaged, corrupted, or formatted, the user will not be
+able to check in the license. This prevents the user from logging
+in to ArcGIS Pro from any other device. As an administrator, you
+can release the license. This frees the outstanding license and
+allows the user to check out a new license or use ArcGIS Pro in a
+connected environment.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>username</td>
+<td>Required String. The user name of the account.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.admin.PortalLicense.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>info</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.admin.PortalLicense.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>ArcGIS License Server Administrator works with your portal and
+enforces licenses for ArcGIS Pro. This operation allows you to
+change the license server connection information for your portal.</p>
+<p>You can register a backup license manager for high availability of
+your licensing portal. After configuring the backup license
+manager, Portal for ArcGIS is restarted automatically. When the
+restart completes, the portal is configured with the backup license
+server you specified. When configuring a backup license manager,
+you will need to ensure that the backup is authorized using the
+same license file as your portal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Note:</th><td class="field-body">Previously, premium apps were licensed individually through the
+portal. Starting at 10.7, there will no longer be separate
+licensing for apps; the portal’s user types, apps, and app
+bundles will be licensed using a single portal license file.
+Licensing ArcGIS Pro and Drone2Map requires licensing your
+Enterprise portal’s ArcGIS License Server Administrator
+(license manager). Previously, users were required to import a
+.lic file into the portal’s license manager. They would then
+generate a .json file through the license manager and import
+the file into portal. Now, users licensing ArcGIS Pro and
+Drone2Map import the same license file used to license their
+portal into their license manager. Users are no longer required
+to generate an additional license file in the license manager.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>info</td>
+<td>Required Dict. The JSON representation of the license server
+connection information.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Usage</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gis</span><span class="o">.</span><span class="n">admin</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">licenses</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">info</span><span class="o">=</span><span class="p">{</span> <span class="s2">&quot;hostname&quot;</span><span class="p">:</span> <span class="s2">&quot;licensemanager.domain.com,backuplicensemanager.domain.com&quot;</span><span class="p">,</span>
+<span class="go">                                            &quot;port&quot;: 27000</span>
+<span class="go">                                          })</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.admin.PortalLicense.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><em>file</em>, <em>list_ut=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.admin.PortalLicense.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <cite>validate</cite> operation is used to validate an input license file.
+Only valid license files can be imported into the Enterprise
+portal. If the provided file is valid, the operation will return
+user type, app bundle, and app information from the license file.
+If the file is invalid, the operation will fail and return an error
+message.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>file</td>
+<td>Required String. The portal license file.</td>
+</tr>
+<tr class="row-odd"><td>list_ut</td>
+<td>Optional Boolean. Returns a list of user types that are compatible
+with the Administrator role. This identifies the user type(s) that
+can be assigned to the Initial Administrator Account when creating
+a portal.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Dict</td>
 </tr>
 </tbody>
 </table>
@@ -5607,7 +5863,7 @@ the message on your receiver.</td>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

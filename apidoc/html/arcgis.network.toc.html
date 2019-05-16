@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.network module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.network module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,9 +39,9 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="next" title="arcgis.network.analysis module" href="arcgis.network.analysis.html"/>
-        <link rel="prev" title="arcgis.raster.orthomapping module" href="arcgis.raster.orthomapping.html"/>
+        <link rel="prev" title="arcgis.raster.functions.RFT" href="arcgis.raster.functions.RFT.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -82,7 +82,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -251,11 +251,11 @@ route operation as query parameters.</p>
 <td><strong>Description</strong></td>
 </tr>
 <tr class="row-even"><td>stops</td>
-<td>Required Points/FeatureSet. The set of stops loaded as network
-locations during analysis. Stops can be specified using a simple
-comma / semi-colon based syntax or as a JSON structure. If stops are
-not specified, preloaded stops from the map document are used in the
-analysis.</td>
+<td>Required Points/FeatureSet/a list of Features. The set of stops
+loaded as network locations during analysis. Stops can be specified
+using a simple comma / semi-colon based syntax or as a JSON
+structure. If stops are not specified, preloaded stops from the map
+document are used in the analysis.</td>
 </tr>
 <tr class="row-odd"><td>barriers</td>
 <td>Optional Point/FeatureSet. The set of barriers loaded as network
@@ -450,6 +450,24 @@ The default is false.</td>
 </tr>
 </tbody>
 </table>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># USAGE EXAMPLE: Solving the routing problem by passing in a FeatureSet</span>
+
+<span class="c1"># get a FeatureSet through query</span>
+<span class="n">fl</span> <span class="o">=</span> <span class="n">sample_cities</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">cities_to_visit</span> <span class="o">=</span> <span class="n">fl</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">where</span><span class="o">=</span><span class="s2">&quot;ST = &#39;CA&#39; AND POP2010 &gt; 300000&quot;</span><span class="p">,</span>
+                           <span class="n">out_fields</span><span class="o">=</span><span class="s1">&#39;NAME&#39;</span><span class="p">,</span> <span class="n">out_sr</span><span class="o">=</span><span class="mi">4326</span><span class="p">)</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">cities_to_visit</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="n">arcgis</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">FeatureSet</span>
+
+<span class="c1"># pass in the FeatureSet</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">route_layer</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">stops</span><span class="o">=</span><span class="n">cities_to_visit</span><span class="p">,</span> <span class="n">preserve_first_stop</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                           <span class="n">preserve_last_stop</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">find_best_sequence</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">return_directions</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                           <span class="n">return_stops</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">return_barriers</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">return_polygon_barriers</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                           <span class="n">return_polyline_barriers</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">return_routes</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                           <span class="n">output_lines</span><span class="o">=</span><span class="s1">&#39;esriNAOutputLineStraight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -845,7 +863,7 @@ service area layers and closest facility layers.</p>
         <a href="arcgis.network.analysis.html" class="btn btn-neutral float-right" title="arcgis.network.analysis module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="arcgis.raster.orthomapping.html" class="btn btn-neutral" title="arcgis.raster.orthomapping module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="arcgis.raster.functions.RFT.html" class="btn btn-neutral" title="arcgis.raster.functions.RFT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -876,7 +894,7 @@ service area layers and closest facility layers.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

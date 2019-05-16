@@ -1,5 +1,18 @@
+.. _FeatureInput:
+
 arcgis.features.analysis module
 =======================================
+**Feature Input**	
+
+ All standard spatial analysis tools accept features as input. Features can be specified in one of the following ways:	
+    * Item (of type Feature Layer Collection or Feature Collection) - only the first feature layer is used	
+    * Instance of FeatureLayer, FeatureLayerCollection, FeatureCollection, 	
+    * Feature Service URL as a string, 	
+    * Python dict in the `feature collection format <https://developers.arcgis.com/rest/analysis/api-reference/feature-input.htm>`_	
+
+ For point feature layers, the following inputs may additonally be used for convenience:	
+    * (lat, long) pair for point feature layer	
+    * dict with 'location' as key (eg result from geocoding)
 
 .. automodule:: arcgis.features.analysis
 

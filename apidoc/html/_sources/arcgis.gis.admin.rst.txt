@@ -177,12 +177,17 @@ System
    :undoc-members:
 
 
-Licenses
+Licenses (Deprecated 10.7+)
 ---------------
 .. autoclass:: arcgis.gis.admin.Licenses
    :members:
    :undoc-members:
 
+PortalLicense
+---------------
+.. autoclass:: arcgis.gis.admin.PortalLicense
+   :members:
+   :undoc-members:
 
 Directory
 ---------------

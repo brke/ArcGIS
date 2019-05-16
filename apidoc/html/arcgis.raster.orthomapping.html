@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.raster.orthomapping module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.raster.orthomapping module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,9 +39,9 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="up" title="arcgis.raster module" href="arcgis.raster.toc.html"/>
-        <link rel="next" title="arcgis.network module" href="arcgis.network.toc.html"/>
+        <link rel="next" title="arcgis.raster.functions.RFT" href="arcgis.raster.functions.RFT.html"/>
         <link rel="prev" title="arcgis.raster.functions.gbl module" href="arcgis.raster.functions.gbl.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
@@ -83,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -140,6 +140,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#compute-spatial-reference-factory-code">compute_spatial_reference_factory_code</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.RFT.html">arcgis.raster.functions.RFT</a></li>
 </ul>
 </li>
 </ul>
@@ -243,7 +244,7 @@ checks if arcgis.env.active_gis supports raster analytics</p>
 <h2>compute_sensor_model<a class="headerlink" href="#compute-sensor-model" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.raster.orthomapping.compute_sensor_model">
-<code class="descclassname">orthomapping.</code><code class="descname">compute_sensor_model</code><span class="sig-paren">(</span><em>image_collection</em>, <em>mode='QUICK'</em>, <em>location_accuracy='High'</em>, <em>context=None</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.compute_sensor_model" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">orthomapping.</code><code class="descname">compute_sensor_model</code><span class="sig-paren">(</span><em>image_collection</em>, <em>mode='Quick'</em>, <em>location_accuracy='High'</em>, <em>context=None</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.compute_sensor_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute_sensor_model computes the bundle block adjustment for the image collection 
 and applies the frame xform to the images. It will also generate the control point 
 table, solution table, solution points table and flight path table. 
@@ -284,7 +285,7 @@ matching images, then calculate tie points and compute adjustments.</p>
 <li>‘High’    : GPS accuracy is 0 to 10 meters, and the tool uses a maximum of 4 by 3 images</li>
 <li>‘Medium’  : GPS accuracy of 10 to 20 meters, and the tool uses a maximum of 4 by 6 images</li>
 <li>‘Low’     : GPS accuracy of 20 to 50 meters, and the tool uses a maximum of 4 by 12 images</li>
-<li>‘Verylow’ : GPS accuracy is more than 50 meters, and the tool uses a maximum of 4 by 20 images</li>
+<li>‘VeryLow’ : GPS accuracy is more than 50 meters, and the tool uses a maximum of 4 by 20 images</li>
 </ul>
 <p class="last">The default location_accuracy is ‘High’</p>
 </td>
@@ -414,7 +415,7 @@ blockadjustment, dem, gcp, seamlines, colorcorrection, adjust_index, imagetype</
 <h2>match_control_points<a class="headerlink" href="#match-control-points" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.raster.orthomapping.match_control_points">
-<code class="descclassname">orthomapping.</code><code class="descname">match_control_points</code><span class="sig-paren">(</span><em>image_collection</em>, <em>control_points</em>, <em>similarity=None</em>, <em>context=None</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.match_control_points" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">orthomapping.</code><code class="descname">match_control_points</code><span class="sig-paren">(</span><em>image_collection</em>, <em>control_points</em>, <em>similarity='High'</em>, <em>context=None</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.match_control_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>The match_control_points is a function that takes a collection of ground control points
 as input (control points to be specified as a list of dictionary objects), and each of the 
 ground control points needs at least one matching tie point in the control point sets. 
@@ -537,7 +538,7 @@ coordinates are in image coordinate system.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A dictionary object</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A list of dictionary objects</td>
 </tr>
 </tbody>
 </table>
@@ -668,8 +669,8 @@ collection images and the reference image.
 <a class="reference external" href="http://pro.arcgis.com/en/pro-app/tool-reference/data-management/compute-control-points.htm">http://pro.arcgis.com/en/pro-app/tool-reference/data-management/compute-control-points.htm</a></p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="29%" />
-<col width="71%" />
+<col width="26%" />
+<col width="74%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Argument</strong></td>
@@ -687,28 +688,55 @@ points set with the image service.
 It can be a portal Item or an image service URL or a URI</td>
 </tr>
 <tr class="row-even"><td>image_location_accuracy</td>
-<td><p class="first">Optional string. This option allows users to specify the location accuracy of the
-imagery.
-VERYLOW, LOW, MEDIUM, HIGH</p>
+<td><p class="first">Optional string. This option allows you to specify the GPS location accuracy
+level of the source image. It determines how far the tool will search for
+neighboring matching images for calculating tie points and block adjustments.
+The following are the available options:
+Low, Medium, High</p>
 <dl class="docutils">
-<dt>LOW-Images have a large shift and a large rotation (&gt; 5 degrees).</dt>
-<dd>The SIFT algorithm will be used in the point matching computation.</dd>
-<dt>MEDIUM-Images have a medium shift and a small rotation (&lt;5 degrees).</dt>
-<dd>The Harris algorithm will be used in the point matching computation.</dd>
-<dt>HIGH-Images have a small shift and a small rotation.</dt>
-<dd>The Harris algorithm will be used in the point matching computation.</dd>
+<dt>Low- GPS accuracy of 20 to 50 meters, and the tool uses a maximum of 4</dt>
+<dd>by 12 images.</dd>
+<dt>Medium- GPS accuracy of 10 to 20 meters, and the tool uses a maximum of</dt>
+<dd>4 by 6 images.</dd>
 </dl>
-<p class="last">Default is HIGH</p>
+<p>High- GPS accuracy of 0 to 10 meters, and the tool uses a maximum of 4 by 3 images.</p>
+<p>If the image collection is created from satellite data, it will be automatically switched
+to use RPC adjustment mode. In this case, the mode need not be explicitly set by the user.</p>
+<p class="last">Default is High</p>
 </td>
 </tr>
 <tr class="row-odd"><td>context</td>
-<td>Optional dictionary. Context contains additional environment settings that affect
-output control points generation.
-{
+<td><p class="first">Optional dictionary. Context contains additional environment settings that affect
+output control points generation. Possible keys and their possible values are:</p>
+<dl class="docutils">
+<dt>pointSimilarity- Sets LOW, MEDIUM, or HIGH tolerance for computing control points</dt>
+<dd><p class="first">with varying levels of potential error.</p>
+<p>LOW tolerance will produce the most control point, but may have a higher
+level of error.</p>
+<p>HIGH tolerance will produce the least number of control point,
+but each matching pair will have a lower level of error.</p>
+<p class="last">MEDIUM tolerance will set the similarity tolerance to medium.</p>
+</dd>
+<dt>pointDensity- Sets the number of tie points (LOW, MEDIUM, or HIGH), to be created.</dt>
+<dd><p class="first">LOW point density will create the fewest number of tie points.</p>
+<p>MEDIUM point density will create a moderate number of tie points.</p>
+<p class="last">HIGH point density will create the highest number of tie points.</p>
+</dd>
+<dt>pointDistribution- Randomly generates points that are better for overlapping areas</dt>
+<dd><p class="first">with irregular shapes.</p>
+<p>RANDOM- will generate points that are better for overlapping areas
+with irregular shapes.</p>
+<p class="last">REGULAR- will generate points based on a
+fixed pattern and uses the point density to determine how frequently to create points.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<p class="last">{
 “pointSimilarity”:”MEDIUM”,
 “pointDensity”: “MEDIUM”,
 “pointDistribution”: “RANDOM”
-}</td>
+}</p>
+</td>
 </tr>
 <tr class="row-even"><td>gis</td>
 <td>Optional GIS. the GIS on which this tool runs. If not specified, the active GIS is used.</td>
@@ -937,10 +965,10 @@ The image_collection can be a portal Item or an image service URL or a URI
 The image_collection must exist.</td>
 </tr>
 <tr class="row-odd"><td>out_dem</td>
-<td>This is the output digital elevation model image url or name.
-Like Raster Analysis services, the service can be an existing multi-tenant service URL
-or this service tool can create it.
-It can be a url, uri, portal item, string representing the name of output image service</td>
+<td>This is the output digital elevation model.
+It can be a url, uri, portal item, or string representing the name of output dem
+(either existing or to be created.)
+Like Raster Analysis services, the service can be an existing multi-tenant service URL.</td>
 </tr>
 <tr class="row-even"><td>cell_size</td>
 <td>Required, The cell size of the output raster dataset. This is a single numeric input.
@@ -1044,14 +1072,15 @@ The image_collection can be a portal Item or an image service URL or a URI
 The image_collection must exist.</td>
 </tr>
 <tr class="row-odd"><td>out_ortho</td>
-<td>Required. This is the output ortho-mosaicked image converted from the image
+<td>Required. This is the ortho-mosaicked image converted from the image
 collection after the block adjustment.
-It can be a url, uri, portal item, string representing the name of output image
-service</td>
+It can be a url, uri, portal item, or string representing the name of output dem
+(either existing or to be created.)
+Like Raster Analysis services, the service can be an existing multi-tenant service URL.</td>
 </tr>
 <tr class="row-even"><td>regen_seamlines</td>
-<td><p class="first">Optional, boolean.</p>
-<p>Choose whether to apply seamlines before the orthomosaic image generation or not.
+<td><p class="first">Optional, boolean.
+Choose whether to apply seamlines before the orthomosaic image generation or not.
 The seamlines will always be regenerated if this parameter is set to True.
 The user can set the seamline options through the context parameter.
 If the seamline generation options are not set, the default will be used.</p>
@@ -1285,7 +1314,7 @@ longitude : longitude value in decimal degress that will be used to compute UTM 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="arcgis.network.toc.html" class="btn btn-neutral float-right" title="arcgis.network module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="arcgis.raster.functions.RFT.html" class="btn btn-neutral float-right" title="arcgis.raster.functions.RFT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="arcgis.raster.functions.gbl.html" class="btn btn-neutral" title="arcgis.raster.functions.gbl module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -1319,7 +1348,7 @@ longitude : longitude value in decimal degress that will be used to compute UTM 
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

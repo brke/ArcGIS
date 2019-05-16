@@ -15,3 +15,11 @@ find_hot_spots
 --------------
 .. automethod:: arcgis.geoanalytics.analyze_patterns.find_hot_spots
 
+forest
+--------------
+.. automethod:: arcgis.geoanalytics.analyze_patterns.forest
+
+
+glr
+--------------
+.. automethod:: arcgis.geoanalytics.analyze_patterns.glr

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.raster module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.raster module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,9 +39,9 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="next" title="arcgis.raster.analytics module" href="arcgis.raster.analytics.html"/>
-        <link rel="prev" title="arcgis.features.managers module" href="arcgis.features.managers.html"/>
+        <link rel="prev" title="arcgis.features.use_proximity module" href="arcgis.features.use_proximity.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -82,7 +82,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -121,6 +121,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.html">arcgis.raster.functions module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.gbl.html">arcgis.raster.functions.gbl module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.orthomapping.html">arcgis.raster.orthomapping module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.RFT.html">arcgis.raster.functions.RFT</a></li>
 </ul>
 </li>
 </ul>
@@ -251,6 +252,12 @@ indicate a correct bandCount value.</td>
 </table>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="arcgis.raster.ImageryLayer.band_count">
+<code class="descname">band_count</code><a class="headerlink" href="#arcgis.raster.ImageryLayer.band_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the band count of the imagery layer</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="arcgis.raster.ImageryLayer.blend">
 <code class="descname">blend</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageryLayer.blend" title="Permalink to this definition">¶</a></dt>
@@ -341,6 +348,12 @@ envelope or a polygon</td>
 <dd><p>The colormap method returns RGB color representation of pixel
 values. This method is supported if the hasColormap property of
 the layer is true.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.raster.ImageryLayer.columns">
+<code class="descname">columns</code><a class="headerlink" href="#arcgis.raster.ImageryLayer.columns" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns number of columns in the imagery layer</p>
 </dd></dl>
 
 <dl class="method">
@@ -640,7 +653,7 @@ that it fits within the given size.</td>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">G - Graph item</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Graph</td>
 </tr>
 </tbody>
 </table>
@@ -1055,6 +1068,12 @@ include all the field values in the results.</td>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.raster.ImageryLayer.height">
+<code class="descname">height</code><a class="headerlink" href="#arcgis.raster.ImageryLayer.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns height of image service</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1481,6 +1500,12 @@ Common data sources for multidimensional image services are mosaic
 datasets created from netCDF, GRIB, and HDF data.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="arcgis.raster.ImageryLayer.pixel_type">
+<code class="descname">pixel_type</code><a class="headerlink" href="#arcgis.raster.ImageryLayer.pixel_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns pixel type of the imagery layer</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="arcgis.raster.ImageryLayer.project">
 <code class="descname">project</code><span class="sig-paren">(</span><em>geometries</em>, <em>in_sr</em>, <em>out_sr</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageryLayer.project" title="Permalink to this definition">¶</a></dt>
@@ -1680,6 +1705,12 @@ type.</td>
 <dd><p>Raster manager for this layer</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="arcgis.raster.ImageryLayer.rows">
+<code class="descname">rows</code><a class="headerlink" href="#arcgis.raster.ImageryLayer.rows" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns number of rows in the imagery layer</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="arcgis.raster.ImageryLayer.save">
 <code class="descname">save</code><span class="sig-paren">(</span><em>output_name=None</em>, <em>for_viz=False</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.ImageryLayer.save" title="Permalink to this definition">¶</a></dt>
@@ -1877,6 +1908,12 @@ output. The GIS must have Raster Analytics capability.</td>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.raster.ImageryLayer.width">
+<code class="descname">width</code><a class="headerlink" href="#arcgis.raster.ImageryLayer.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns width of the imagery layer</p>
 </dd></dl>
 
 </dd></dl>
@@ -2587,10 +2624,12 @@ for a blank/missing tile.</td>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#add-image">add_image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#delete-image">delete_image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#delete-image-collection">delete_image_collection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#list-datastore-content">list_datastore_content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#build-footprints">build_footprints</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#build-overview">build_overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#calculate-statistics">calculate_statistics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#optimum-travel-cost-network">optimum_travel_cost_network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.analytics.html#determine-travel-costpath-as-polyline">determine_travel_costpath_as_polyline</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.raster.functions.html">arcgis.raster.functions module</a><ul>
@@ -2620,7 +2659,10 @@ for a blank/missing tile.</td>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#boolean-not">boolean_not</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#boolean-or">boolean_or</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#boolean-xor">boolean_xor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#cire">cire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#cig">cig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#classify">classify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#clay-minerals">clay_minerals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#clip">clip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#colormap">colormap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#colormap-to-rgb">colormap_to_rgb</a></li>
@@ -2637,17 +2679,20 @@ for a blank/missing tile.</td>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#duration">duration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#elevation-void-fill">elevation_void_fill</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#equal-to">equal_to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#evi">evi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#exp">exp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#exp10">exp10</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#exp2">exp2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#expression">expression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#extract-band">extract_band</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#ferrous-minerals">ferrous_minerals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#float">FLOAT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#float-divide">float_divide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#floor-divide">floor_divide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#focal-stats">focal_stats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#gemi">gemi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#geometric">geometric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#gndvi">gndvi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#grayscale">grayscale</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#greater-than">greater_than</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#greater-than-equal">greater_than_equal</a></li>
@@ -2655,6 +2700,7 @@ for a blank/missing tile.</td>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#hillshade">hillshade</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#identity">identity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#int">INT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#iron-oxide">iron_oxide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#is-null">is_null</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#less-than">less_than</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#less-than-equal">less_than_equal</a></li>
@@ -2673,8 +2719,13 @@ for a blank/missing tile.</td>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#minus">minus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#ml-classify">ml_classify</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#mod">mod</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#monitor-vegetation">monitor_vegetation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#msavi">msavi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#mtvi2">mtvi2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#ndvi">ndvi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#ndvire">ndvire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#id3">NDVI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#ndwi">ndwi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#negate">negate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#not-equal">not_equal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#pansharpen">pansharpen</a></li>
@@ -2683,10 +2734,12 @@ for a blank/missing tile.</td>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#pvi">pvi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#cellstats-range">cellstats_range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#raster-calculator">raster_calculator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#raster-collection-function">raster_collection_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#remap">remap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#resample">resample</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#round-down">round_down</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#round-up">round_up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#rtvi-core">rtvi_core</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#savi">savi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#segment-mean-shift">segment_mean_shift</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#set-null">set_null</a></li>
@@ -2698,6 +2751,8 @@ for a blank/missing tile.</td>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#speckle">speckle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#sqrt">sqrt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#square">square</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#sr">sr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#srre">srre</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#focal-statistics">focal_statistics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#statistics-histogram">statistics_histogram</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#std">std</a></li>
@@ -2712,6 +2767,7 @@ for a blank/missing tile.</td>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#transpose-bits">transpose_bits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#tsavi">tsavi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#unit-conversion">unit_conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#vari">vari</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#variety">variety</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#vector-field">vector_field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.html#vector-field-renderer">vector_field_renderer</a></li>
@@ -2720,8 +2776,12 @@ for a blank/missing tile.</td>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.raster.functions.gbl.html">arcgis.raster.functions.gbl module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#calculate-travel-cost">calculate_travel_cost</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#calculate-distance">calculate_distance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#cost-allocation">cost_allocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#cost-backlink">cost_backlink</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#cost-distance">cost_distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#cost-path">cost_path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#euclidean-allocation">euclidean_allocation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#euclidean-distance">euclidean_distance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#euclidean-direction">euclidean_direction</a></li>
@@ -2729,6 +2789,7 @@ for a blank/missing tile.</td>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#flow-accumulation">flow_accumulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#flow-distance">flow_distance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#flow-direction">flow_direction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#kernel-density">kernel_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#least-cost-path">least_cost_path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#nibble">nibble</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.functions.gbl.html#stream-link">stream_link</a></li>
@@ -2760,6 +2821,7 @@ for a blank/missing tile.</td>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.raster.orthomapping.html#compute-spatial-reference-factory-code">compute_spatial_reference_factory_code</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.raster.functions.RFT.html">arcgis.raster.functions.RFT</a></li>
 </ul>
 </div>
 </div>
@@ -2779,7 +2841,7 @@ for a blank/missing tile.</td>
         <a href="arcgis.raster.analytics.html" class="btn btn-neutral float-right" title="arcgis.raster.analytics module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="arcgis.features.managers.html" class="btn btn-neutral" title="arcgis.features.managers module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="arcgis.features.use_proximity.html" class="btn btn-neutral" title="arcgis.features.use_proximity module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -2810,7 +2872,7 @@ for a blank/missing tile.</td>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

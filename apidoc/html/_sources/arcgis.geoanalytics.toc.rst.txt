@@ -9,10 +9,14 @@ arcgis.geoanalytics module
 .. automodule:: arcgis.geoanalytics
 
 
+define_output_datastore
+--------------
+.. automethod:: arcgis.geoanalytics.define_output_datastore
+
 get_datastores
 --------------
 .. automethod:: arcgis.geoanalytics.get_datastores
-    
+
 is_supported
 --------------
 .. automethod:: arcgis.geoanalytics.is_supported

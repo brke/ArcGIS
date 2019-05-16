@@ -3,13 +3,29 @@ arcgis.raster.functions.gbl module
 
 .. automodule:: arcgis.raster.functions.gbl
 
+calculate_travel_cost
+_______________
+.. automethod:: arcgis.raster.functions.gbl.calculate_travel_cost
+
+calculate_distance
+__________________
+.. automethod:: arcgis.raster.functions.gbl.calculate_distance
+
 cost_allocation
 _______________
 .. automethod:: arcgis.raster.functions.gbl.cost_allocation
 
+cost_backlink
+_____________
+.. automethod:: arcgis.raster.functions.gbl.cost_backlink
+
 cost_distance
 _______________
 .. automethod:: arcgis.raster.functions.gbl.cost_distance
+
+cost_path
+__________
+.. automethod:: arcgis.raster.functions.gbl.cost_path
 
 euclidean_allocation
 _______________
@@ -38,6 +54,10 @@ _______________
 flow_direction
 _______________
 .. automethod:: arcgis.raster.functions.gbl.flow_direction
+
+kernel_density
+_______________
+.. automethod:: arcgis.raster.functions.gbl.kernel_density
 
 least_cost_path
 _______________

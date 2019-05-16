@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.geoanalytics.summarize_data module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.geoanalytics.summarize_data module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="up" title="arcgis.geoanalytics module" href="arcgis.geoanalytics.toc.html"/>
         <link rel="next" title="arcgis.geoanalytics.use_proximity module" href="arcgis.geoanalytics.use_proximity.html"/>
         <link rel="prev" title="arcgis.geoanalytics.manage_data module" href="arcgis.geoanalytics.manage_data.html"/>
@@ -83,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -115,6 +115,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l1"><a class="reference internal" href="arcgis.raster.toc.html">arcgis.raster module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.network.toc.html">arcgis.network module</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#define-output-datastore">define_output_datastore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#get-datastores">get_datastores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#is-supported">is_supported</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="arcgis.geoanalytics.toc.html#submodules">Submodules</a><ul class="current">
@@ -125,6 +126,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.geoanalytics.summarize_data module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#aggregate-points">aggregate_points</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#build-multivariable-grid">build_multivariable_grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#describe-dataset">describe_dataset</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#join-features">join_features</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#reconstruct-tracks">reconstruct_tracks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#summarize-attributes">summarize_attributes</a></li>
@@ -448,56 +450,175 @@ options are the following:</p>
 </dd></dl>
 
 </div>
+<div class="section" id="describe-dataset">
+<h2>describe_dataset<a class="headerlink" href="#describe-dataset" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geoanalytics.summarize_data.describe_dataset">
+<code class="descclassname">summarize_data.</code><code class="descname">describe_dataset</code><span class="sig-paren">(</span><em>input_layer</em>, <em>extent_output=False</em>, <em>sample_size=None</em>, <em>output_name=None</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.summarize_data.describe_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Describe Dataset task provides an overview of your big data. The tool outputs a JSON
+detailing the input layer’s geometry and time settings, schema, and summary statistics for each
+field. Optionally, the tool can output two types of descriptive feature layers: a feature layer
+representing a sample of your input features, and a single polygon feature layer that
+represents the extent of the input features. You can choose to output one or both.</p>
+<blockquote>
+<div><p>Usage Notes:</p>
+<p>Only available at ArcGIS Enterprise 10.7 and later.</p>
+</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>input_layer</td>
+<td>required FeatureLayer. The point, line or polygon features.</td>
+</tr>
+<tr class="row-odd"><td>extent_output</td>
+<td>Optional Boolean. The task will output a single rectangle
+feature representing the extent of the input_layer if this value
+is set to true. The default is False.</td>
+</tr>
+<tr class="row-even"><td>sample_size</td>
+<td>Optional integer. The task will output a feature layer
+representing a sample of features from the input_layer. Specify
+the number of sample features to return. If the input value is
+0 or empty then no sample layer will be created. The output
+will have the same schema, geometry, and time type as the input
+layer. The default is None.</td>
+</tr>
+<tr class="row-odd"><td>output_name</td>
+<td>optional string. The task will create a feature service of the results. You define the name of the service.</td>
+</tr>
+<tr class="row-even"><td>gis</td>
+<td>optional GIS. The GIS object where the analysis will take place.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">FeatureLayer</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="join-features">
 <h2>join_features<a class="headerlink" href="#join-features" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.geoanalytics.summarize_data.join_features">
 <code class="descclassname">summarize_data.</code><code class="descname">join_features</code><span class="sig-paren">(</span><em>target_layer</em>, <em>join_layer</em>, <em>join_operation: str = 'JoinOneToOne'</em>, <em>join_fields: str = None</em>, <em>summary_fields: str = None</em>, <em>spatial_relationship: str = None</em>, <em>spatial_near_distance: float = None</em>, <em>spatial_near_distance_unit: str = None</em>, <em>temporal_relationship: str = None</em>, <em>temporal_near_distance: int = None</em>, <em>temporal_near_distance_unit: str = None</em>, <em>attribute_relationship: str = None</em>, <em>join_condition: str = None</em>, <em>output_name: str = None</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.summarize_data.join_features" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>Using either feature layers or tabular data, you can join features and records based on specific relationships between the input layers or tables. Joins will be determined by spatial, temporal, and attribute relationships, and summary statistics can be optionally calculated.</p>
+<dd><p>Using either feature layers or tabular data, you can join features and records based on
+specific relationships between the input layers or tables. Joins will be determined by
+spatial, temporal, and attribute relationships, and summary statistics can be optionally
+calculated.</p>
 <p>For example</p>
 <ul class="simple">
-<li>Given point locations of crime incidents with a time, join the crime data to itself specifying a spatial relationship of crimes within 1 kilometer of each other and that occurred within 1 hour of each other to determine if there are a sequence of crimes close to each other in space and time.</li>
-<li>Given a table of ZIP Codes with demographic information and area features representing residential buildings, join the demographic information to the residences so each residence now has the information.</li>
+<li>Given point locations of crime incidents with a time, join the crime data to itself
+specifying a spatial relationship of crimes within 1 kilometer of each other and that
+occurred within 1 hour of each other to determine if there are a sequence of crimes
+close to each other in space and time.</li>
+<li>Given a table of ZIP Codes with demographic information and area features representing
+residential buildings, join the demographic information to the residences so each
+residence now has the information.</li>
 </ul>
-<p>The Join Features task works with two layers. Join Features joins attributes from one feature to another based on spatial, temporal, and attribute relationships or some combination of the three. The tool determines all input features that meet the specified join conditions and joins the second input layer to the first. You can optionally join all features to the matching features or summarize the matching features.</p>
-<p>Join Features can be applied to points, lines, areas, and tables. A temporal join requires that your input data is time-enabled, and a spatial join requires that your data has a geometry.</p>
-</div></blockquote>
-<p>Parameters:</p>
-<blockquote>
-<div><p>target_layer: Target Features (feature input). Required parameter.</p>
-<p>join_layer: Join Features (feature input). Required parameter.</p>
-<dl class="docutils">
-<dt>join_operation: Join Operation (str). Required parameter.</dt>
-<dd>Choice list:[‘JoinOneToOne’, ‘JoinOneToMany’]</dd>
-</dl>
-<p>join_fields: Join Fields (str). Optional parameter.</p>
-<p>summary_fields: Summary Statistics (str). Optional parameter.</p>
-<dl class="docutils">
-<dt>spatial_relationship: Spatial Relationship (str). Optional parameter.</dt>
-<dd>Choice list:[‘Equals’, ‘Intersects’, ‘Contains’, ‘Within’, ‘Crosses’, ‘Touches’, ‘Overlaps’, ‘Near’]</dd>
-</dl>
-<p>spatial_near_distance: Near Spatial Distance (float). Optional parameter.</p>
-<dl class="docutils">
-<dt>spatial_near_distance_unit: Near Spatial Distance Unit (str). Optional parameter.</dt>
-<dd>Choice list:[‘Feet’, ‘Yards’, ‘Miles’, ‘Meters’, ‘Kilometers’, ‘NauticalMiles’]</dd>
-<dt>temporal_relationship: Temporal Relationship (str). Optional parameter.</dt>
-<dd>Choice list:[‘Equals’, ‘Intersects’, ‘During’, ‘Contains’, ‘Finishes’, ‘FinishedBy’, ‘Meets’, ‘MetBy’, ‘Overlaps’, ‘OverlappedBy’, ‘Starts’, ‘StartedBy’, ‘Near’]</dd>
-</dl>
-<p>temporal_near_distance: Near Temporal Distance (int). Optional parameter.</p>
-<dl class="docutils">
-<dt>temporal_near_distance_unit: Near Temporal Distance Unit (str). Optional parameter.</dt>
-<dd>Choice list:[‘Years’, ‘Months’, ‘Weeks’, ‘Days’, ‘Hours’, ‘Minutes’, ‘Seconds’, ‘Milliseconds’]</dd>
-</dl>
-<p>attribute_relationship: Attribute Relationships (str). Optional parameter.</p>
-<p>join_condition: Join Condition (str). Optional parameter.</p>
-<p>output_name: Output Features Name (str). Optional parameter.</p>
-<p>gis: Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p>
-</div></blockquote>
-<dl class="docutils">
-<dt>Returns:</dt>
-<dd>output - Output Features as Feature Layer Collection Item</dd>
-</dl>
+<p>The Join Features task works with two layers. Join Features joins attributes from one
+feature to another based on spatial, temporal, and attribute relationships or some
+combination of the three. The tool determines all input features that meet the specified
+join conditions and joins the second input layer to the first. You can optionally join
+all features to the matching features or summarize the matching features.</p>
+<p>Join Features can be applied to points, lines, areas, and tables. A temporal join
+requires that your input data is time-enabled, and a spatial join requires that your
+data has a geometry.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>target_layer</td>
+<td>Required FeatureLayer. Target Features (feature input)</td>
+</tr>
+<tr class="row-odd"><td>join_layer</td>
+<td>Required FeatureLayer. Join Features (feature input).</td>
+</tr>
+<tr class="row-even"><td>join_operation</td>
+<td>Required String. The join operation. Allowed values:
+JoinOneToOne and JoinOneToMany</td>
+</tr>
+<tr class="row-odd"><td>join_fields</td>
+<td>Optional String. Join Fields</td>
+</tr>
+<tr class="row-even"><td>summary_fields</td>
+<td>Optional String. Summary Statistics</td>
+</tr>
+<tr class="row-odd"><td>spatial_relationship</td>
+<td>Optional String. The spatial relationship. Choice list: [‘Equals’,
+‘Intersects’, ‘Contains’, ‘Within’, ‘Crosses’, ‘Touches’,
+‘Overlaps’, ‘Near’, ‘NearGeodesic’]</td>
+</tr>
+<tr class="row-even"><td>spatial_near_distance</td>
+<td>Optional Float. Near Spatial Distance. This is required if the
+<cite>spatial_relationship</cite> is defined as <cite>NearGeodesic</cite>.</td>
+</tr>
+<tr class="row-odd"><td>spatial_near_distance_unit</td>
+<td><p class="first">Optional String. Near Spatial Distance Unit. This is required
+if the <cite>spatial_relationship</cite> is defined as <cite>NearGeodesic</cite>.
+Choice list:[‘Feet’, ‘Yards’, ‘Miles’, ‘Meters’, ‘Kilometers’,</p>
+<blockquote class="last">
+<div>‘NauticalMiles’]</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>temporal_relationship</td>
+<td><p class="first">Optional String. Temporal Relationship.
+Choice list : [‘Equals’, ‘Intersects’, ‘During’, ‘Contains’,</p>
+<blockquote class="last">
+<div>‘Finishes’, ‘FinishedBy’, ‘Meets’, ‘MetBy’,
+‘Overlaps’, ‘OverlappedBy’, ‘Starts’,
+‘StartedBy’, ‘Near’]</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>temporal_near_distance</td>
+<td>Optional Integer. Near Temporal Distance (int)</td>
+</tr>
+<tr class="row-even"><td>temporal_near_distance_unit</td>
+<td><p class="first">Optional String.Near Temporal Distance Unit
+Choice list:[‘Years’, ‘Months’, ‘Weeks’, ‘Days’, ‘Hours’,</p>
+<blockquote class="last">
+<div>‘Minutes’, ‘Seconds’, ‘Milliseconds’]</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>attribute_relationship</td>
+<td>Optional String. Attribute Relationships</td>
+</tr>
+<tr class="row-even"><td>join_condition</td>
+<td>Optional String. Join Condition</td>
+</tr>
+<tr class="row-odd"><td>output_name</td>
+<td>Optional String. The task will create a feature service of the
+results. You define the name of the service.</td>
+</tr>
+<tr class="row-even"><td>gis</td>
+<td>Optional GIS. The GIS object where the analysis will take place.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Output Features as Feature Layer Collection Item</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>
@@ -678,7 +799,7 @@ For example, suppose you have GPS measurements of hurricanes every 10 minutes. E
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

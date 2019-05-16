@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.raster.functions.gbl module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.raster.functions.gbl module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="up" title="arcgis.raster module" href="arcgis.raster.toc.html"/>
         <link rel="next" title="arcgis.raster.orthomapping module" href="arcgis.raster.orthomapping.html"/>
         <link rel="prev" title="arcgis.raster.functions module" href="arcgis.raster.functions.html"/>
@@ -83,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -121,8 +121,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.analytics.html">arcgis.raster.analytics module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.html">arcgis.raster.functions module</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.raster.functions.gbl module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#calculate-travel-cost">calculate_travel_cost</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculate-distance">calculate_distance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cost-allocation">cost_allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cost-backlink">cost_backlink</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cost-distance">cost_distance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cost-path">cost_path</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#euclidean-allocation">euclidean_allocation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#euclidean-distance">euclidean_distance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#euclidean-direction">euclidean_direction</a></li>
@@ -130,6 +134,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#flow-accumulation">flow_accumulation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#flow-distance">flow_distance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#flow-direction">flow_direction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kernel-density">kernel_density</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#least-cost-path">least_cost_path</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#nibble">nibble</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#stream-link">stream_link</a></li>
@@ -143,6 +148,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.orthomapping.html">arcgis.raster.orthomapping module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.RFT.html">arcgis.raster.functions.RFT</a></li>
 </ul>
 </li>
 </ul>
@@ -239,6 +245,155 @@ are added to a map for on-the-fly image processing or visualized inline within t
 <li>Imagery layers</li>
 <li>Rasters within imagery layers</li>
 </ul>
+<div class="section" id="calculate-travel-cost">
+<h2>calculate_travel_cost<a class="headerlink" href="#calculate-travel-cost" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.gbl.calculate_travel_cost">
+<code class="descclassname">gbl.</code><code class="descname">calculate_travel_cost</code><span class="sig-paren">(</span><em>in_source_data</em>, <em>in_cost_raster=None</em>, <em>in_surface_raster=None</em>, <em>in_horizontal_raster=None</em>, <em>in_vertical_raster=None</em>, <em>horizontal_factor='BINARY'</em>, <em>vertical_factor='BINARY'</em>, <em>maximum_distance=None</em>, <em>source_cost_multiplier=None</em>, <em>source_start_cost=None</em>, <em>source_resistance_rate=None</em>, <em>source_capacity=None</em>, <em>source_direction=None</em>, <em>allocation_field=None</em>, <em>generate_out_allocation_raster=False</em>, <em>generate_out_backlink_raster=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.gbl.calculate_travel_cost" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>in_source_data</strong> – The layer that defines the sources to calculate the distance too. The layer 
+can be raster or feature.</li>
+<li><strong>in_cost_raster</strong> – A raster defining the impedance or cost to move planimetrically through each cell.</li>
+<li><strong>in_surface_raster</strong> – A raster defining the elevation values at each cell location.</li>
+<li><strong>in_horizontal_raster</strong> – A raster defining the horizontal direction at each cell.</li>
+<li><strong>in_vertical_raster</strong> – A raster defining the vertical (z) value for each cell.</li>
+<li><strong>horizontal_factor</strong> – The Horizontal Factor defines the relationship between the horizontal cost 
+factor and the horizontal relative moving angle.
+Possible values are: “BINARY”, “LINEAR”, “FORWARD”, “INVERSE_LINEAR”</li>
+<li><strong>vertical_factor</strong> – The Vertical Factor defines the relationship between the vertical cost factor and 
+the vertical relative moving angle (VRMA)
+Possible values are: “BINARY”, “LINEAR”, “SYMMETRIC_LINEAR”, “INVERSE_LINEAR”,
+“SYMMETRIC_INVERSE_LINEAR”, “COS”, “SEC”, “COS_SEC”, “SEC_COS”</li>
+<li><strong>maximum_distance</strong> – The maximum distance to calculate out to. If no distance is provided, a default will 
+be calculated that is based on the locations of the input sources.</li>
+<li><strong>source_cost_multiplier</strong> – Multiplier to apply to the cost values.</li>
+<li><strong>source_start_cost</strong> – The starting cost from which to begin the cost calculations.</li>
+<li><strong>source_resistance_rate</strong> – This parameter simulates the increase in the effort to overcome costs 
+as the accumulative cost increases.</li>
+<li><strong>source_capacity</strong> – Defines the cost capacity for the traveler for a source.</li>
+<li><strong>source_direction</strong> – Defines the direction of the traveler when applying horizontal and vertical factors, 
+the source resistance rate, and the source starting cost.
+Possible values: FROM_SOURCE, TO_SOURCE</li>
+<li><strong>allocation_field</strong> – A field on theinputSourceRasterOrFeatures layer that holds the values that define each source.</li>
+<li><strong>generate_out_backlink_raster</strong> – <p>Boolean, determines whether out_backlink_raster should be generated or not.
+Set this parameter to True, in order to generate the out_backlink_raster.
+If set to true, the output will be a named tuple with name values being
+output_distance_service and output_backlink_service.
+eg,
+out_layer = calculate_travel_cost(in_source_data</p>
+<blockquote>
+<div>generate_out_backlink_raster=True)</div></blockquote>
+<p>out_var = out_layer.save()
+then,
+out_var.output_distance_service -&gt; gives you the output distance imagery layer item
+out_var.output_backlink_service -&gt; gives you the output backlink raster imagery layer item</p>
+</li>
+<li><strong>generate_out_allocation_raster</strong> – <p>Boolean, determines whether out_allocation_raster should be generated or not.
+Set this parameter to True, in order to generate the out_backlink_raster.
+If set to true, the output will be a named tuple with name values being
+output_distance_service and output_allocation_service.
+eg,
+out_layer = calculate_travel_cost(in_source_data</p>
+<blockquote>
+<div>generate_out_allocation_raster=False)</div></blockquote>
+<p>out_var = out_layer.save()
+then,
+out_var.output_distance_service -&gt; gives you the output distance imagery layer item
+out_var.output_allocation_service -&gt; gives you the output allocation raster imagery layer item</p>
+</li>
+<li><strong>gis</strong> – Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster with function applied</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="calculate-distance">
+<h2>calculate_distance<a class="headerlink" href="#calculate-distance" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.gbl.calculate_distance">
+<code class="descclassname">gbl.</code><code class="descname">calculate_distance</code><span class="sig-paren">(</span><em>in_source_data</em>, <em>maximum_distance=None</em>, <em>output_cell_size=None</em>, <em>allocation_field=None</em>, <em>generate_out_allocation_raster=False</em>, <em>generate_out_direction_raster=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.gbl.calculate_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the Euclidean distance, direction, and allocation from a single source or set of sources.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>in_source_data</strong> – The layer that defines the sources to calculate the distance to. 
+The layer can be raster or feature. To use a raster input, it must 
+be of integer type.</li>
+<li><strong>maximum_distance</strong> – <p>Defines the threshold that the accumulative distance values 
+cannot exceed. If an accumulative Euclidean distance value exceeds 
+this value, the output value for the cell location will be NoData. 
+The default distance is to the edge of the output raster.</p>
+<p>Supported units: Meters | Kilometers | Feet | Miles</p>
+<p>Example:</p>
+<p>{“distance”:”60”,”units”:”Meters”}</p>
+</li>
+<li><strong>output_cell_size</strong> – <p>Specify the cell size to use for the output raster.</p>
+<p>Supported units: Meters | Kilometers | Feet | Miles</p>
+<p>Example:
+{“distance”:”60”,”units”:”Meters”}</p>
+</li>
+<li><strong>allocation_field</strong> – <p>A field on the input_source_data layer that holds the values that 
+defines each source.</p>
+<p>It can be an integer or a string field of the source dataset.</p>
+<p>The default for this parameter is ‘Value’.</p>
+</li>
+<li><strong>generate_out_direction_raster</strong> – <p>Boolean, determines whether out_direction_raster should be generated or not.
+Set this parameter to True, in order to generate the out_direction_raster.
+If set to true, the output will be a named tuple with name values being
+output_distance_service and output_direction_service.
+eg,
+out_layer = calculate_distance(in_source_data</p>
+<blockquote>
+<div>generate_out_direction_raster=True)</div></blockquote>
+<p>out_var = out_layer.save()
+then,
+out_var.output_distance_service -&gt; gives you the output distance imagery layer item
+out_var.output_direction_service -&gt; gives you the output backlink raster imagery layer item</p>
+<p>The output direction raster is in degrees, and indicates the 
+direction to return to the closest source from each cell center. 
+The values on the direction raster are based on compass directions, 
+with 0 degrees reserved for the source cells. Thus, a value of 90 
+means 90 degrees to the East, 180 is to the South, 270 is to the west,
+and 360 is to the North.</p>
+</li>
+<li><strong>generate_out_allocation_raster</strong> – <p>Boolean, determines whether out_allocation_raster should be generated or not.
+Set this parameter to True, in order to generate the out_backlink_raster.
+If set to true, the output will be a named tuple with name values being
+output_distance_service and output_allocation_service.
+eg,
+out_layer = calculate_distance(in_source_data</p>
+<blockquote>
+<div>generate_out_allocation_raster=False)</div></blockquote>
+<p>out_var = out_layer.save()
+then,
+out_var.output_distance_service -&gt; gives you the output distance imagery layer item
+out_var.output_allocation_service -&gt; gives you the output allocation raster imagery layer item</p>
+<p>This parameter calculates, for each cell, the nearest source based 
+on Euclidean distance.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster with function applied</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="cost-allocation">
 <h2>cost_allocation<a class="headerlink" href="#cost-allocation" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
@@ -326,6 +481,76 @@ of travel for each source. That field must contain the string From Source or To 
 </dd></dl>
 
 </div>
+<div class="section" id="cost-backlink">
+<h2>cost_backlink<a class="headerlink" href="#cost-backlink" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.gbl.cost_backlink">
+<code class="descclassname">gbl.</code><code class="descname">cost_backlink</code><span class="sig-paren">(</span><em>in_source_data</em>, <em>in_cost_raster</em>, <em>max_distance=None</em>, <em>source_cost_multiplier=None</em>, <em>source_start_cost=None</em>, <em>source_resistance_rate=None</em>, <em>source_capacity=None</em>, <em>source_direction=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.gbl.cost_backlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the least accumulative cost distance for each cell from or to the least-cost
+source over a cost surface.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>in_source_data</strong> – The input raster that identifies the pixels or locations to which the
+least accumulated cost distance for every output pixel location is 
+calculated. The Source Raster can be an integer or a floating-point value.</li>
+<li><strong>in_cost_raster</strong> – A raster defining the cost or impedance to move planimetrically through each pixel.
+The value at each pixel location represents the cost-per-unit distance for moving 
+through it. Each pixel location value is multiplied by the pixel resolution, while 
+also compensating for diagonal movement to obtain the total cost of passing through 
+the pixel.</li>
+<li><strong>max_distance</strong> – The threshold that the accumulative cost values cannot exceed. If an accumulative cost
+distance exceeds this value, the output value for the pixel location will be NoData. 
+The maximum distance defines the extent for which the accumulative cost distances are
+calculated. The default distance is to the edge of the output raster.</li>
+<li><strong>source_cost_multiplier</strong> – The threshold that the accumulative cost values cannot exceed. If an accumulative
+cost distance exceeds this value, the output value for the pixel location will be 
+NoData. The maximum distance defines the extent for which the accumulative cost 
+distances are calculated. The default distance is to the edge of the output raster.</li>
+<li><strong>source_start_cost</strong> – The starting cost from which to begin the cost calculations. This parameter allows
+for the specification of the fixed cost associated with a source. Instead of starting
+at a cost of 0, the cost algorithm will begin with the value set here.
+The default is 0. The value must be 0 or greater. A numeric (double) value or a field
+from the Source Raster can be used for this parameter.</li>
+<li><strong>source_resistance_rate</strong> – This parameter simulates the increase in the effort to overcome costs as the
+accumulative cost increases. It is used to model fatigue of the traveler. The growing
+accumulative cost to reach a pixel is multiplied by the resistance rate and added to 
+the cost to move into the subsequent pixel.
+It is a modified version of a compound interest rate formula that is used to calculate
+the apparent cost of moving through a pixel. As the value of the resistance rate increases,
+it increases the cost of the pixels that are visited later. The greater the resistance rate, 
+the higher the cost to reach the next pixel, which is compounded for each subsequent movement. 
+Since the resistance rate is similar to a compound rate and generally the accumulative cost 
+values are very large, small resistance rates are suggested, such as 0.005 or even smaller, 
+depending on the accumulative cost values.
+The default is 0. The values must be 0 or greater. A numeric (double) value or a field from
+the Source Raster can be used for this parameter.</li>
+<li><strong>source_capacity</strong> – Defines the cost capacity for the traveler for a source. The cost calculations continue for
+each source until the specified capacity is reached.
+The default capacity is to the edge of the output raster. The values must be greater than 0. 
+A double numeric value or a field from the Source Raster can be used for this parameter.</li>
+<li><strong>source_direction</strong> – Defines the direction of the traveler when applying the source resistance rate and the source
+starting cost.
+FROM_SOURCE - The source resistance rate and source starting cost will be applied beginning
+at the input source and moving out to the nonsource cells. This is the default.
+TO_SOURCE - The source resistance rate and source starting cost will be applied beginning at
+each nonsource cell and moving back to the input source.
+Either specify the From Source or To Source keyword, which will be applied to all sources,
+or specify a field in the Source Raster that contains the keywords to identify the direction
+of travel for each source. That field must contain the string From Source or To Source.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster with function applied</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="cost-distance">
 <h2>cost_distance<a class="headerlink" href="#cost-distance" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
@@ -387,6 +612,54 @@ each nonsource cell and moving back to the input source.
 Either specify the From Source or To Source keyword, which will be applied to all sources,
 or specify a field in the Source Raster that contains the keywords to identify the direction
 of travel for each source. That field must contain the string From Source or To Source.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster with function applied</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="cost-path">
+<h2>cost_path<a class="headerlink" href="#cost-path" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.gbl.cost_path">
+<code class="descclassname">gbl.</code><code class="descname">cost_path</code><span class="sig-paren">(</span><em>in_destination_data</em>, <em>in_cost_distance_raster</em>, <em>in_cost_backlink_raster</em>, <em>path_type='EACH_CELL'</em>, <em>destination_field=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.gbl.cost_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the least-cost path from a source to a destination.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>in_destination_data</strong> – A raster or feature dataset that identifies those cells from which the least-cost 
+path is determined to the least costly source. If the input is a raster, the input 
+consists of cells that have valid values (zero is a valid value), and the remaining 
+cells must be assigned NoData.</li>
+<li><strong>in_cost_distance_raster</strong> – The name of a cost distance raster to be used to determine the least-cost path from 
+the destination locations to a source. The cost distance raster is usually created 
+with the Cost Distance, Cost Allocation or Cost Back Link tools. The cost distance 
+raster stores, for each cell, the minimum accumulative cost distance over a cost 
+surface from each cell to a set of source cells.</li>
+<li><strong>in_cost_backlink_raster</strong> – The name of a cost back link raster used to determine the path to return to a source 
+via the least-cost path. For each cell in the back link raster, a value identifies 
+the neighbor that is the next cell on the least accumulative cost path from the cell
+to a single source cell or set of source cells.</li>
+<li><strong>path_type</strong> – A keyword defining the manner in which the values and zones on the input destination 
+data will be interpreted in the cost path calculations.
+EACH_CELL — For each cell with valid values on the input destination data, a least-cost
+path is determined and saved on the output raster. With this option, each cell of the 
+input destination data is treated separately, and a least-cost path is determined for 
+each from cell.
+EACH_ZONE — For each zone on the input destination data, a least-cost path is determined
+and saved on the output raster. With this option, the least-cost path for each zone 
+begins at the cell with the lowest cost distance weighting in the zone.
+BEST_SINGLE — For all cells on the input destination data, the least-cost path is derived 
+from the cell with the minimum of the least-cost paths to source cells.</li>
+<li><strong>destination_field</strong> – The field used to obtain values for the destination locations. Input feature data must 
+contain at least one valid field.</li>
 </ul>
 </td>
 </tr>
@@ -613,40 +886,94 @@ with the values of the nearest neighbors.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>input_surface_raster</strong> – The input raster representing a continuous surface.</li>
 <li><strong>force_flow</strong> – NORMAL or FORCE, Specifies if edge cells will always flow outward or follow normal flow rules.</li>
 <li><strong>flow_direction_type</strong> – Specifies which flow direction type to use.
 D8 - Use the D8 method. This is the default.
 MFD - Use the Multi Flow Direction (MFD) method.
 DINF - Use the D-Infinity method.</li>
+<li><strong>generate_out_drop_raster</strong> – <p>Boolean, determines whether out_drop_raster should be generated or not.
+Set this parameter to True, in order to generate the out_drop_raster.
+If set to true, the output will be a named tuple with name values being
+output_flow_direction_service and output_drop_service.
+eg,</p>
+<dl class="docutils">
+<dt>flow_direction_output =  flow_direction(input_surface_raster,</dt>
+<dd>force_flow= “NORMAL”,
+flow_direction_type= “D8”,
+generate_out_drop_raster=True)</dd>
+</dl>
+<p>out_var = flow_direction_output.save()</p>
+<p>then,</p>
+<p>out_var.output_flow_direction_service -&gt; gives you the output flow direction imagery layer item</p>
+<p>out_var.output_drop_service -&gt; gives you the output drop raster imagery layer item</p>
+</li>
 </ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster with function applied</p>
 </td>
 </tr>
 </tbody>
 </table>
-<dl class="docutils">
-<dt>: param generate_out_drop_raster: Boolean, determines whether out_drop_raster should be generated or not.</dt>
-<dd><p class="first">Set this parameter to True, in order to generate the out_drop_raster.
-If set to true, the output will be a named tuple with name values being
-output_flow_direction_service and output_drop_service.
-eg,
-flow_direction_output =  flow_direction(input_surface_raster,</p>
-<blockquote>
-<div>force_flow= “NORMAL”,
-flow_direction_type= “D8”,
-generate_out_drop_raster=True)</div></blockquote>
-<p class="last">out_var = flow_direction_output.save()
-then,
-out_var.output_flow_direction_service -&gt; gives you the output flow direction imagery layer item
-out_var.output_drop_service -&gt; gives you the output drop raster imagery layer item</p>
-</dd>
-</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="kernel-density">
+<h2>kernel_density<a class="headerlink" href="#kernel-density" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.gbl.kernel_density">
+<code class="descclassname">gbl.</code><code class="descname">kernel_density</code><span class="sig-paren">(</span><em>in_features</em>, <em>population_field</em>, <em>cell_size=None</em>, <em>search_radius=None</em>, <em>area_unit_scale_factor='SQUARE_MAP_UNITS'</em>, <em>out_cell_values='DENSITIES'</em>, <em>method='PLANAR'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.gbl.kernel_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates a magnitude-per-unit area from point or polyline features using a kernel function to 
+fit a smoothly tapered surface to each point or polyline. 
+For more information, see 
+<a class="reference external" href="http://pro.arcgis.com/en/pro-app/help/data/imagery/kernel-density-global-function.htm">http://pro.arcgis.com/en/pro-app/help/data/imagery/kernel-density-global-function.htm</a></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">output raster with function applied</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>in_features</strong> – The input point or line features for which to calculate the density</li>
+<li><strong>population_field</strong> – Field denoting population values for each feature. The Population 
+Field is the count or quantity to be spread across the landscape to 
+create a continuous surface. Values in the population field may be 
+integer or floating point.</li>
+<li><strong>cell_size</strong> – The pixel size for the output raster dataset. If the Cellsize has 
+been set in the geoprocessing Environments it will be the default.</li>
+<li><strong>search_radius</strong> – The search radius within which to calculate density. Units are 
+based on the linear unit of the projection.</li>
+<li><strong>area_unit_scale_factor</strong> – <p>The desired area units of the output density values.
+-SQUARE_MAP_UNITS-For the square of the linear units of the output spatial reference.</p>
+<p>-SQUARE_MILES-For (U.S.) miles.</p>
+<p>-SQUARE_KILOMETERS-For kilometers.</p>
+<p>-ACRES For (U.S.) acres.</p>
+<p>-HECTARES-For hectares.</p>
+<p>-SQUARE_METERS-For meters.</p>
+<p>-SQUARE_YARDS-For (U.S.) yards.</p>
+<p>-SQUARE_FEET-For (U.S.) feet.</p>
+<p>-SQUARE_INCHES-For (U.S.) inches.</p>
+<p>-SQUARE_CENTIMETERS-For centimeters.</p>
+<p>-SQUARE_MILLIMETERS-For millimeters.</p>
+</li>
+<li><strong>out_cell_values</strong> – <p>Determines what the values in the output raster represent.</p>
+<p>-DENSITIES-The output values represent the predicted density value. This is the default.</p>
+<dl class="docutils">
+<dt>-EXPECTED_COUNTS-The output values represent the predicted amount of the phenomenon within each </dt>
+<dd>pixel. Since the pixel value is linked to the specified Cellsize, the resulting raster cannot be 
+resampled to a different pixel size and still represent the amount of the phenomenon.</dd>
+</dl>
+</li>
+<li><strong>method</strong> – <p>Determines whether to use a shortest path on a spheroid (geodesic) or a flat earth (planar) method.</p>
+<p>-PLANAR-Uses planar distances between the features. This is the default.</p>
+<p>-GEODESIC-Uses geodesic distances between features. This method takes into account the curvature 
+of the spheroid and correctly deals with data near the poles and the International dateline.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -918,14 +1245,12 @@ Possible values - FOUR, EIGHT. Default is FOUR</li>
 Possible values - WITHIN, CROSS. Default is WITHIN</li>
 <li><strong>add_link</strong> – Optional, Specifies whether a link field is added to the table of the output.
 Possible values - ADD_LINK, NO_LINK. Default is ADD_LINK</li>
-<li><strong>excluded_value</strong> – <dl class="docutils">
-<dt>Identifies a value such that if a cell location contains the value, no spatial </dt>
-<dd>connectivity will be evaluated regardless how the number of neighbors is specified (FOUR or EIGHT).<p class="last">Cells with the excluded value will be treated as NoData and are eliminated from calculations. 
+<li><strong>excluded_value</strong> – <p>Identifies a value such that if a cell location contains the value, no spatial
+connectivity will be evaluated regardless how the number of neighbors is specified (FOUR or EIGHT).</p>
+<p>Cells with the excluded value will be treated as NoData and are eliminated from calculations.
 Cell locations that contain the excluded value will receive 0 on the output raster.</p>
-</dd>
-</dl>
-<p>The excluded value is similar to the concept of a background value, 
-or setting a mask in the environment for a single run of the tool. 
+<p>The excluded value is similar to the concept of a background value,
+or setting a mask in the environment for a single run of the tool.
 A value must be specified for this parameter if the CROSS keyword is specified</p>
 </li>
 </ul>
@@ -974,60 +1299,61 @@ such as cost_distance or path_distance.</li>
 <code class="descclassname">gbl.</code><code class="descname">path_distance</code><span class="sig-paren">(</span><em>in_source_data</em>, <em>in_cost_raster=None</em>, <em>in_surface_raster=None</em>, <em>in_horizontal_raster=None</em>, <em>in_vertical_raster=None</em>, <em>horizontal_factor='BINARY'</em>, <em>vertical_factor='BINARY'</em>, <em>maximum_distance=None</em>, <em>source_cost_multiplier=None</em>, <em>source_start_cost=None</em>, <em>source_resistance_rate=None</em>, <em>source_capacity=None</em>, <em>source_direction=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.gbl.path_distance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates, for each cell, the least accumulative cost distance from or to the least-cost source, 
 while accounting for surface distance along with horizontal and vertical cost factors</p>
-<dl class="docutils">
-<dt>:param in_source_data <span class="classifier-delimiter">:</span> <span class="classifier">The input source locations. </span></dt>
-<dd><p class="first">This is a raster that identifies the cells or locations from or to which the 
-least accumulated cost distance for every output cell location is calculated.</p>
-<p class="last">The raster input type can be integer or floating point.</p>
-</dd>
-<dt>:param in_cost_raster <span class="classifier-delimiter">:</span> <span class="classifier">A raster defining the impedance or cost to move planimetrically through each cell.</span></dt>
-<dd>The value at each cell location represents the cost-per-unit distance for moving through the cell. 
-Each cell location value is multiplied by the cell resolution while also 
-compensating for diagonal movement to obtain the total cost of passing through the cell. 
-The values of the cost raster can be integer or floating point, 
-but they cannot be negative or zero (you cannot have a negative or zero cost).</dd>
-<dt>:param in_surface_raster <span class="classifier-delimiter">:</span> <span class="classifier">A raster defining the elevation values at each cell location.</span></dt>
-<dd>The values are used to calculate the actual surface distance covered when 
-passing between cells.</dd>
-<dt>:param in_horizontal_raster <span class="classifier-delimiter">:</span> <span class="classifier">A raster defining the horizontal direction at each cell.</span></dt>
-<dd>The values on the raster must be integers ranging from 0 to 360, with 0 degrees being north, 
-or toward the top of the screen, and increasing clockwise. Flat areas should be given a value of -1. 
-The values at each location will be used in conjunction with the {horizontal_factor} to determine 
-the horizontal cost incurred when moving from a cell to its neighbors.</dd>
-<dt>:param in_vertical_raster <span class="classifier-delimiter">:</span> <span class="classifier">A raster defining the vertical (z) value for each cell. The values are used for calculating the slope </span></dt>
-<dd>used to identify the vertical factor incurred when moving from one cell to another.</dd>
-<dt>:param horizontal_factor <span class="classifier-delimiter">:</span> <span class="classifier">The Horizontal Factor defines the relationship between the horizontal cost </span></dt>
-<dd>factor and the horizontal relative moving angle.
-Possible values are: “BINARY”, “LINEAR”, “FORWARD”, “INVERSE_LINEAR”</dd>
-<dt>:param vertical_factor <span class="classifier-delimiter">:</span> <span class="classifier">The Vertical Factor defines the relationship between the vertical cost factor and </span></dt>
-<dd>the vertical relative moving angle (VRMA)
-Possible values are: “BINARY”, “LINEAR”, “SYMMETRIC_LINEAR”, “INVERSE_LINEAR”,
-“SYMMETRIC_INVERSE_LINEAR”, “COS”, “SEC”, “COS_SEC”, “SEC_COS”</dd>
-<dt>:param maximum_distance <span class="classifier-delimiter">:</span> <span class="classifier">Defines the threshold that the accumulative cost values cannot exceed. </span></dt>
-<dd><p class="first">If an accumulative cost distance value exceeds this value, the output value for the cell 
-location will be NoData. The maximum distance defines the extent for which the accumulative cost distances are calculated.</p>
-<p class="last">The default distance is to the edge of the output raster.</p>
-</dd>
-</dl>
-<p>:param source_cost_multiplier : Multiplier to apply to the cost values.</p>
-<p>:param source_start_cost : The starting cost from which to begin the cost calculations.</p>
-<dl class="docutils">
-<dt>:param source_resistance_rate <span class="classifier-delimiter">:</span> <span class="classifier">This parameter simulates the increase in the effort to overcome costs </span></dt>
-<dd>as the accumulative cost increases.  It is used to model fatigue of the traveler. 
-The growing accumulative cost to reach a cell is multiplied by the resistance rate 
-and added to the cost to move into the subsequent cell.</dd>
-<dt>:param source_capacity <span class="classifier-delimiter">:</span> <span class="classifier">Defines the cost capacity for the traveler for a source. </span></dt>
-<dd>The cost calculations continue for each source until the specified capacity is reached.
-The values must be greater than zero. The default capacity is to the edge of the output raster.</dd>
-<dt>:param source_direction <span class="classifier-delimiter">:</span> <span class="classifier">Defines the direction of the traveler when applying horizontal and vertical factors, </span></dt>
-<dd>the source resistance rate, and the source starting cost.
-Possible values: FROM_SOURCE, TO_SOURCE</dd>
-</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">output_raster : output raster with function applied</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>in_source_data</strong> – <p>The input source locations. 
+This is a raster that identifies the cells or locations from or to which the 
+least accumulated cost distance for every output cell location is calculated.</p>
+<p>The raster input type can be integer or floating point.</p>
+</li>
+<li><strong>in_cost_raster</strong> – A raster defining the impedance or cost to move planimetrically through each cell.
+The value at each cell location represents the cost-per-unit distance for moving through the cell. 
+Each cell location value is multiplied by the cell resolution while also 
+compensating for diagonal movement to obtain the total cost of passing through the cell. 
+The values of the cost raster can be integer or floating point, 
+but they cannot be negative or zero (you cannot have a negative or zero cost).</li>
+<li><strong>in_surface_raster</strong> – A raster defining the elevation values at each cell location.
+The values are used to calculate the actual surface distance covered when 
+passing between cells.</li>
+<li><strong>in_horizontal_raster</strong> – A raster defining the horizontal direction at each cell.
+The values on the raster must be integers ranging from 0 to 360, with 0 degrees being north, 
+or toward the top of the screen, and increasing clockwise. Flat areas should be given a value of -1. 
+The values at each location will be used in conjunction with the {horizontal_factor} to determine 
+the horizontal cost incurred when moving from a cell to its neighbors.</li>
+<li><strong>in_vertical_raster</strong> – A raster defining the vertical (z) value for each cell. The values are used for calculating the slope 
+used to identify the vertical factor incurred when moving from one cell to another.</li>
+<li><strong>horizontal_factor</strong> – The Horizontal Factor defines the relationship between the horizontal cost 
+factor and the horizontal relative moving angle.
+Possible values are: “BINARY”, “LINEAR”, “FORWARD”, “INVERSE_LINEAR”</li>
+<li><strong>vertical_factor</strong> – The Vertical Factor defines the relationship between the vertical cost factor and 
+the vertical relative moving angle (VRMA)
+Possible values are: “BINARY”, “LINEAR”, “SYMMETRIC_LINEAR”, “INVERSE_LINEAR”,
+“SYMMETRIC_INVERSE_LINEAR”, “COS”, “SEC”, “COS_SEC”, “SEC_COS”</li>
+<li><strong>maximum_distance</strong> – <p>Defines the threshold that the accumulative cost values cannot exceed. 
+If an accumulative cost distance value exceeds this value, the output value for the cell 
+location will be NoData. The maximum distance defines the extent for which the accumulative cost distances are calculated.</p>
+<p>The default distance is to the edge of the output raster.</p>
+</li>
+<li><strong>source_cost_multiplier</strong> – Multiplier to apply to the cost values.</li>
+<li><strong>source_start_cost</strong> – The starting cost from which to begin the cost calculations.</li>
+<li><strong>source_resistance_rate</strong> – This parameter simulates the increase in the effort to overcome costs 
+as the accumulative cost increases.  It is used to model fatigue of the traveler. 
+The growing accumulative cost to reach a cell is multiplied by the resistance rate 
+and added to the cost to move into the subsequent cell.</li>
+<li><strong>source_capacity</strong> – Defines the cost capacity for the traveler for a source. 
+The cost calculations continue for each source until the specified capacity is reached.
+The values must be greater than zero. The default capacity is to the edge of the output raster.</li>
+<li><strong>source_direction</strong> – Defines the direction of the traveler when applying horizontal and vertical factors, 
+the source resistance rate, and the source starting cost.
+Possible values: FROM_SOURCE, TO_SOURCE</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster with function applied</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1041,63 +1367,62 @@ Possible values: FROM_SOURCE, TO_SOURCE</dd>
 <code class="descclassname">gbl.</code><code class="descname">path_distance_allocation</code><span class="sig-paren">(</span><em>in_source_data</em>, <em>in_cost_raster=None</em>, <em>in_surface_raster=None</em>, <em>in_horizontal_raster=None</em>, <em>in_vertical_raster=None</em>, <em>horizontal_factor='BINARY'</em>, <em>vertical_factor='BINARY'</em>, <em>maximum_distance=None</em>, <em>in_value_raster=None</em>, <em>source_field=None</em>, <em>source_cost_multiplier=None</em>, <em>source_start_cost=None</em>, <em>source_resistance_rate=None</em>, <em>source_capacity=None</em>, <em>source_direction=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.gbl.path_distance_allocation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the least-cost source for each cell based on the least accumulative cost over a cost surface, 
 while accounting for surface distance along with horizontal and vertical cost factors.</p>
-<dl class="docutils">
-<dt>:param in_source_data <span class="classifier-delimiter">:</span> <span class="classifier">The input source locations.</span></dt>
-<dd><p class="first">This is a raster or feature dataset that identifies the cells or locations from or to which 
-the least accumulated cost distance for every output cell location is calculated.</p>
-<p>For rasters, the input type can be integer or floating point.</p>
-<p class="last">If the input source raster is floating point, the {in_value_raster} must be set, and it must be of integer type. 
-The value raster will take precedence over any setting of the {source_field}.</p>
-</dd>
-</dl>
-<p>:param in_cost_raster  : A raster defining the impedance or cost to move planimetrically through each cell.</p>
-<p>:param in_surface_raster : A raster defining the elevation values at each cell location.</p>
-<p>:param in_horizontal_raster : A raster defining the horizontal direction at each cell.</p>
-<p>:param in_vertical_raster : A raster defining the vertical (z) value for each cell.</p>
-<dl class="docutils">
-<dt>:param horizontal_factor <span class="classifier-delimiter">:</span> <span class="classifier">The Horizontal Factor defines the relationship between the horizontal cost </span></dt>
-<dd>factor and the horizontal relative moving angle.
-Possible values are: “BINARY”, “LINEAR”, “FORWARD”, “INVERSE_LINEAR”</dd>
-<dt>:param vertical_factor <span class="classifier-delimiter">:</span> <span class="classifier">The Vertical Factor defines the relationship between the vertical cost factor and </span></dt>
-<dd>the vertical relative moving angle (VRMA)
-Possible values are: “BINARY”, “LINEAR”, “SYMMETRIC_LINEAR”, “INVERSE_LINEAR”,
-“SYMMETRIC_INVERSE_LINEAR”, “COS”, “SEC”, “COS_SEC”, “SEC_COS”</dd>
-</dl>
-<p>:param maximum_distance : Defines the threshold that the accumulative cost values cannot exceed.</p>
-<dl class="docutils">
-<dt>:param in_value_raster <span class="classifier-delimiter">:</span> <span class="classifier">The input integer raster that identifies the zone values that should be </span></dt>
-<dd>used for each input source location.
-For each source location (cell or feature), the value defined by the {in_value_raster} will be 
-assigned to all cells allocated to the source location for the computation. 
-The value raster will take precedence over any setting for the {source_field}.</dd>
-<dt>:param source_field <span class="classifier-delimiter">:</span> <span class="classifier">The field used to assign values to the source locations. It must be of integer type.</span></dt>
-<dd>If the {in_value_raster} has been set, the values in that input will have precedence over any setting for the {source_field}.</dd>
-<dt>:param source_cost_multiplier <span class="classifier-delimiter">:</span> <span class="classifier">Multiplier to apply to the cost values.</span></dt>
-<dd><p class="first">Allows for control of the mode of travel or the magnitude at a source. The greater the multiplier, 
-the greater the cost to move through each cell.</p>
-<p class="last">The values must be greater than zero. The default is 1.</p>
-</dd>
-<dt>:param source_start_cost <span class="classifier-delimiter">:</span> <span class="classifier">The starting cost from which to begin the cost calculations. </span></dt>
-<dd><p class="first">Allows for the specification of the fixed cost associated with a source. Instead of starting at a cost of zero, 
-the cost algorithm will begin with the value set by source_start_cost.</p>
-<p class="last">The values must be zero or greater. The default is 0.</p>
-</dd>
-<dt>:param source_resistance_rate <span class="classifier-delimiter">:</span> <span class="classifier">This parameter simulates the increase in the effort to overcome costs as the accumulative cost increases. </span></dt>
-<dd>It is used to model fatigue of the traveler. The growing accumulative cost to reach a cell is multiplied by 
-the resistance rate and added to the cost to move into the subsequent cell.</dd>
-<dt>:param source_capacity <span class="classifier-delimiter">:</span> <span class="classifier">Defines the cost capacity for the traveler for a source. </span></dt>
-<dd><p class="first">The cost calculations continue for each source until the specified capacity is reached.</p>
-<p class="last">The values must be greater than zero. The default capacity is to the edge of the output raster.</p>
-</dd>
-<dt>:param source_direction <span class="classifier-delimiter">:</span> <span class="classifier">Defines the direction of the traveler when applying horizontal and vertical factors, </span></dt>
-<dd>the source resistance rate, and the source starting cost.
-Possible values: FROM_SOURCE, TO_SOURCE</dd>
-</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">output_raster : output raster with function applied</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>in_source_data</strong> – <p>The input source locations.
+This is a raster or feature dataset that identifies the cells or locations from or to which 
+the least accumulated cost distance for every output cell location is calculated.</p>
+<p>For rasters, the input type can be integer or floating point.</p>
+<p>If the input source raster is floating point, the {in_value_raster} must be set, and it must be of integer type. 
+The value raster will take precedence over any setting of the {source_field}.</p>
+</li>
+<li><strong>in_cost_raster</strong> – A raster defining the impedance or cost to move planimetrically through each cell.</li>
+<li><strong>in_surface_raster</strong> – A raster defining the elevation values at each cell location.</li>
+<li><strong>in_horizontal_raster</strong> – A raster defining the horizontal direction at each cell.</li>
+<li><strong>in_vertical_raster</strong> – A raster defining the vertical (z) value for each cell.</li>
+<li><strong>horizontal_factor</strong> – The Horizontal Factor defines the relationship between the horizontal cost 
+factor and the horizontal relative moving angle.
+Possible values are: “BINARY”, “LINEAR”, “FORWARD”, “INVERSE_LINEAR”</li>
+<li><strong>vertical_factor</strong> – The Vertical Factor defines the relationship between the vertical cost factor and 
+the vertical relative moving angle (VRMA)
+Possible values are: “BINARY”, “LINEAR”, “SYMMETRIC_LINEAR”, “INVERSE_LINEAR”,
+“SYMMETRIC_INVERSE_LINEAR”, “COS”, “SEC”, “COS_SEC”, “SEC_COS”</li>
+<li><strong>maximum_distance</strong> – Defines the threshold that the accumulative cost values cannot exceed.</li>
+<li><strong>in_value_raster</strong> – The input integer raster that identifies the zone values that should be 
+used for each input source location.
+For each source location (cell or feature), the value defined by the {in_value_raster} will be 
+assigned to all cells allocated to the source location for the computation. 
+The value raster will take precedence over any setting for the {source_field}.</li>
+<li><strong>source_field</strong> – The field used to assign values to the source locations. It must be of integer type.
+If the {in_value_raster} has been set, the values in that input will have precedence over any setting for the {source_field}.</li>
+<li><strong>source_cost_multiplier</strong> – <p>Multiplier to apply to the cost values.
+Allows for control of the mode of travel or the magnitude at a source. The greater the multiplier, 
+the greater the cost to move through each cell.</p>
+<p>The values must be greater than zero. The default is 1.</p>
+</li>
+<li><strong>source_start_cost</strong> – <p>The starting cost from which to begin the cost calculations. 
+Allows for the specification of the fixed cost associated with a source. Instead of starting at a cost of zero, 
+the cost algorithm will begin with the value set by source_start_cost.</p>
+<p>The values must be zero or greater. The default is 0.</p>
+</li>
+<li><strong>source_resistance_rate</strong> – This parameter simulates the increase in the effort to overcome costs as the accumulative cost increases. 
+It is used to model fatigue of the traveler. The growing accumulative cost to reach a cell is multiplied by 
+the resistance rate and added to the cost to move into the subsequent cell.</li>
+<li><strong>source_capacity</strong> – <p>Defines the cost capacity for the traveler for a source. 
+The cost calculations continue for each source until the specified capacity is reached.</p>
+<p>The values must be greater than zero. The default capacity is to the edge of the output raster.</p>
+</li>
+<li><strong>source_direction</strong> – Defines the direction of the traveler when applying horizontal and vertical factors, 
+the source resistance rate, and the source starting cost.
+Possible values: FROM_SOURCE, TO_SOURCE</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster with function applied</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1111,66 +1436,66 @@ Possible values: FROM_SOURCE, TO_SOURCE</dd>
 <code class="descclassname">gbl.</code><code class="descname">path_distance_back_link</code><span class="sig-paren">(</span><em>in_source_data</em>, <em>in_cost_raster=None</em>, <em>in_surface_raster=None</em>, <em>in_horizontal_raster=None</em>, <em>in_vertical_raster=None</em>, <em>horizontal_factor='BINARY'</em>, <em>vertical_factor='BINARY'</em>, <em>maximum_distance=None</em>, <em>source_cost_multiplier=None</em>, <em>source_start_cost=None</em>, <em>source_resistance_rate=None</em>, <em>source_capacity=None</em>, <em>source_direction=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.gbl.path_distance_back_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines the neighbor that is the next cell on the least accumulative cost path to the least-cost source, 
 while accounting for surface distance along with horizontal and vertical cost factors.</p>
-<p>:param in_source_data : The input source locations.</p>
-<blockquote>
-<div><p>This is a raster that identifies the cells or locations from 
-or to which the least accumulated cost distance for every output cell location is calculated.</p>
-<p>For rasters, the input type can be integer or floating point.</p>
-</div></blockquote>
-<p>:param in_cost_raster  : A raster defining the impedance or cost to move planimetrically through each cell.</p>
-<blockquote>
-<div><blockquote>
-<div>The value at each cell location represents the cost-per-unit distance for moving through the cell. 
-Each cell location value is multiplied by the cell resolution while also compensating for diagonal 
-movement to obtain the total cost of passing through the cell.</div></blockquote>
-<p>The values of the cost raster can be integer or floating point, but they cannot be negative or 
-zero (you cannot have a negative or zero cost).</p>
-</div></blockquote>
-<dl class="docutils">
-<dt>:param in_surface_raster <span class="classifier-delimiter">:</span> <span class="classifier">A raster defining the elevation values at each cell location. The values are used to calculate the actual </span></dt>
-<dd>surface distance covered when passing between cells.</dd>
-<dt>:param in_horizontal_raster <span class="classifier-delimiter">:</span> <span class="classifier">A raster defining the horizontal direction at each cell. </span></dt>
-<dd>The values on the raster must be integers ranging from 0 to 360, with 0 degrees being north, or toward 
-the top of the screen, and increasing clockwise. Flat areas should be given a value of -1. 
-The values at each location will be used in conjunction with the {horizontal_factor} to determine the 
-horizontal cost incurred when moving from a cell to its neighbors.</dd>
-<dt>:param in_vertical_raster <span class="classifier-delimiter">:</span> <span class="classifier">A raster defining the vertical (z) value for each cell. The values are used for calculating the slope </span></dt>
-<dd>used to identify the vertical factor incurred when moving from one cell to another.</dd>
-<dt>:param horizontal_factor <span class="classifier-delimiter">:</span> <span class="classifier">The Horizontal Factor defines the relationship between the horizontal cost </span></dt>
-<dd>factor and the horizontal relative moving angle.
-Possible values are: “BINARY”, “LINEAR”, “FORWARD”, “INVERSE_LINEAR”</dd>
-<dt>:param vertical_factor <span class="classifier-delimiter">:</span> <span class="classifier">The Vertical Factor defines the relationship between the vertical cost factor and </span></dt>
-<dd>the vertical relative moving angle (VRMA)
-Possible values are: “BINARY”, “LINEAR”, “SYMMETRIC_LINEAR”, “INVERSE_LINEAR”,
-“SYMMETRIC_INVERSE_LINEAR”, “COS”, “SEC”, “COS_SEC”, “SEC_COS”</dd>
-<dt>:param maximum_distance <span class="classifier-delimiter">:</span> <span class="classifier">Defines the threshold that the accumulative cost values cannot exceed. If an accumulative cost distance </span></dt>
-<dd><p class="first">value exceeds this value, the output value for the cell location will be NoData. The maximum distance 
-defines the extent for which the accumulative cost distances are calculated.</p>
-<p class="last">The default distance is to the edge of the output raster.</p>
-</dd>
-<dt>:param source_cost_multiplier <span class="classifier-delimiter">:</span> <span class="classifier">Multiplier to apply to the cost values. Allows for control of the mode of travel or the magnitude at a source. </span></dt>
-<dd>The greater the multiplier, the greater the cost to move through each cell. The values must be greater than zero. 
-The default is 1.</dd>
-<dt>:param source_start_cost <span class="classifier-delimiter">:</span> <span class="classifier">The starting cost from which to begin the cost calculations. Allows for the specification of the fixed cost associated with a source. </span></dt>
-<dd><p class="first">Instead of starting at a cost of zero, the cost algorithm will begin with the value set by source_start_cost.</p>
-<p class="last">The values must be zero or greater. The default is 0.</p>
-</dd>
-<dt>:param source_resistance_rate <span class="classifier-delimiter">:</span> <span class="classifier">This parameter simulates the increase in the effort to overcome costs as the accumulative cost increases. </span></dt>
-<dd>It is used to model fatigue of the traveler. The growing accumulative cost to reach a cell is multiplied 
-by the resistance rate and added to the cost to move into the subsequent cell.</dd>
-<dt>:param source_capacity <span class="classifier-delimiter">:</span> <span class="classifier">Defines the cost capacity for the traveler for a source. </span></dt>
-<dd><p class="first">The cost calculations continue for each source until the specified capacity is reached.</p>
-<p class="last">The values must be greater than zero. The default capacity is to the edge of the output raster.</p>
-</dd>
-<dt>:param source_direction <span class="classifier-delimiter">:</span> <span class="classifier">Defines the direction of the traveler when applying horizontal and vertical factors, </span></dt>
-<dd>the source resistance rate, and the source starting cost.
-Possible values: FROM_SOURCE, TO_SOURCE</dd>
-</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">output_raster : output raster with function applied</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>in_source_data</strong> – <p>The input source locations.</p>
+<p>This is a raster that identifies the cells or locations from 
+or to which the least accumulated cost distance for every output cell location is calculated.</p>
+<p>For rasters, the input type can be integer or floating point.</p>
+</li>
+<li><strong>in_cost_raster</strong> – <p>A raster defining the impedance or cost to move planimetrically through each cell.</p>
+<p>The value at each cell location represents the cost-per-unit distance for moving through the cell. 
+Each cell location value is multiplied by the cell resolution while also compensating for diagonal 
+movement to obtain the total cost of passing through the cell.</p>
+<p>The values of the cost raster can be integer or floating point, but they cannot be negative or 
+zero (you cannot have a negative or zero cost).</p>
+</li>
+<li><strong>in_surface_raster</strong> – A raster defining the elevation values at each cell location. The values are used to calculate the actual 
+surface distance covered when passing between cells.</li>
+<li><strong>in_horizontal_raster</strong> – A raster defining the horizontal direction at each cell. 
+The values on the raster must be integers ranging from 0 to 360, with 0 degrees being north, or toward 
+the top of the screen, and increasing clockwise. Flat areas should be given a value of -1. 
+The values at each location will be used in conjunction with the {horizontal_factor} to determine the 
+horizontal cost incurred when moving from a cell to its neighbors.</li>
+<li><strong>in_vertical_raster</strong> – A raster defining the vertical (z) value for each cell. The values are used for calculating the slope 
+used to identify the vertical factor incurred when moving from one cell to another.</li>
+<li><strong>horizontal_factor</strong> – The Horizontal Factor defines the relationship between the horizontal cost 
+factor and the horizontal relative moving angle.
+Possible values are: “BINARY”, “LINEAR”, “FORWARD”, “INVERSE_LINEAR”</li>
+<li><strong>vertical_factor</strong> – The Vertical Factor defines the relationship between the vertical cost factor and 
+the vertical relative moving angle (VRMA)
+Possible values are: “BINARY”, “LINEAR”, “SYMMETRIC_LINEAR”, “INVERSE_LINEAR”,
+“SYMMETRIC_INVERSE_LINEAR”, “COS”, “SEC”, “COS_SEC”, “SEC_COS”</li>
+<li><strong>maximum_distance</strong> – <p>Defines the threshold that the accumulative cost values cannot exceed. If an accumulative cost distance 
+value exceeds this value, the output value for the cell location will be NoData. The maximum distance 
+defines the extent for which the accumulative cost distances are calculated.</p>
+<p>The default distance is to the edge of the output raster.</p>
+</li>
+<li><strong>source_cost_multiplier</strong> – Multiplier to apply to the cost values. Allows for control of the mode of travel or the magnitude at a source. 
+The greater the multiplier, the greater the cost to move through each cell. The values must be greater than zero. 
+The default is 1.</li>
+<li><strong>source_start_cost</strong> – <p>The starting cost from which to begin the cost calculations. Allows for the specification of the fixed cost associated with a source. 
+Instead of starting at a cost of zero, the cost algorithm will begin with the value set by source_start_cost.</p>
+<p>The values must be zero or greater. The default is 0.</p>
+</li>
+<li><strong>source_resistance_rate</strong> – This parameter simulates the increase in the effort to overcome costs as the accumulative cost increases. 
+It is used to model fatigue of the traveler. The growing accumulative cost to reach a cell is multiplied 
+by the resistance rate and added to the cost to move into the subsequent cell.</li>
+<li><strong>source_capacity</strong> – <p>Defines the cost capacity for the traveler for a source. 
+The cost calculations continue for each source until the specified capacity is reached.</p>
+<p>The values must be greater than zero. The default capacity is to the edge of the output raster.</p>
+</li>
+<li><strong>source_direction</strong> – Defines the direction of the traveler when applying horizontal and vertical factors, 
+the source resistance rate, and the source starting cost.
+Possible values: FROM_SOURCE, TO_SOURCE</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster with function applied</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1224,7 +1549,7 @@ Possible values: FROM_SOURCE, TO_SOURCE</dd>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.geometry module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.geometry module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="next" title="arcgis.geometry.filters module" href="arcgis.geometry.filters.html"/>
         <link rel="prev" title="arcgis.geoenrichment module" href="arcgis.geoenrichment.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
@@ -82,7 +82,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -641,7 +641,8 @@ curves in the WKT string.</p>
 <dt id="arcgis.geometry.Geometry.angle_distance_to">
 <code class="descname">angle_distance_to</code><span class="sig-paren">(</span><em>second_geometry</em>, <em>method='GEODESIC'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.angle_distance_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a tuple of angle and distance to another point using a
-measurement type.</p>
+measurement type.  If <cite>ArcPy</cite> is not installed, none is returned.</p>
+<p><strong>Requires ArcPy</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="17%" />
@@ -701,7 +702,18 @@ The area is in the units of the spatial reference.</p>
 <dl class="attribute">
 <dt id="arcgis.geometry.Geometry.as_arcpy">
 <code class="descname">as_arcpy</code><a class="headerlink" href="#arcgis.geometry.Geometry.as_arcpy" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns the Geometry as an ArcPy Geometry.</p>
+<p>If <cite>ArcPy</cite> is not installed, none is returned.</p>
+<p><strong>Requires ArcPy</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">arcpy.Geometry</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="arcgis.geometry.Geometry.as_shapely">
@@ -727,6 +739,7 @@ The area is in the units of the spatial reference.</p>
 <dt id="arcgis.geometry.Geometry.buffer">
 <code class="descname">buffer</code><span class="sig-paren">(</span><em>distance</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.buffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a polygon at a specified distance from the geometry.</p>
+<p><strong>Requires ArcPy</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -757,6 +770,7 @@ A negative distance can only be specified against a polygon geometry.</td>
 <dt id="arcgis.geometry.Geometry.centroid">
 <code class="descname">centroid</code><a class="headerlink" href="#arcgis.geometry.Geometry.centroid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the center of the geometry</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">geom</span> <span class="o">=</span> <span class="n">Geometry</span><span class="p">({</span>
 <span class="go">  &quot;rings&quot; : [[[-97.06138,32.837],[-97.06133,32.836],[-97.06124,32.834],[-97.06127,32.832],</span>
 <span class="go">              [-97.06138,32.837]],[[-97.06326,32.759],[-97.06298,32.755],[-97.06153,32.749],</span>
@@ -780,7 +794,9 @@ A negative distance can only be specified against a polygon geometry.</td>
 <dl class="method">
 <dt id="arcgis.geometry.Geometry.clip">
 <code class="descname">clip</code><span class="sig-paren">(</span><em>envelope</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.clip" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs the intersection of the geometry and the specified extent.</p>
+<dd><p>Constructs the intersection of the geometry and the specified extent.
+If <cite>ArcPy</cite> is not installed, none is returned.</p>
+<p><strong>Requires ArcPy</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="17%" />
@@ -810,6 +826,7 @@ represents the lower left bound and upper right bound of the extent.</td>
 <dt id="arcgis.geometry.Geometry.contains">
 <code class="descname">contains</code><span class="sig-paren">(</span><em>second_geometry</em>, <em>relation=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.contains" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates if the base geometry contains the comparison geometry.</p>
+<p><strong>Requires ArcPy/Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="10%" />
@@ -855,6 +872,7 @@ that all outer angles are convex.</p>
 <code class="descname">crosses</code><span class="sig-paren">(</span><em>second_geometry</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.crosses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates if the two geometries intersect in a geometry of a lesser
 shape type.</p>
+<p><strong>Requires ArcPy/Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -884,6 +902,7 @@ shape type.</p>
 <code class="descname">cut</code><span class="sig-paren">(</span><em>cutter</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.cut" title="Permalink to this definition">¶</a></dt>
 <dd><p>Splits this geometry into a part left of the cutting polyline, and
 a part right of it.</p>
+<p><strong>Requires ArcPy</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -912,6 +931,7 @@ a part right of it.</p>
 <dt id="arcgis.geometry.Geometry.densify">
 <code class="descname">densify</code><span class="sig-paren">(</span><em>method</em>, <em>distance</em>, <em>deviation</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.densify" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new geometry with added vertices</p>
+<p><strong>Requires ArcPy</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="17%" />
@@ -959,6 +979,7 @@ be required to approximate the curve.</td>
 to the base geometry but not part of the other geometry. The
 following illustration shows the results when the red polygon is the
 source geometry.</p>
+<p><strong>Requires ArcPy/Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -988,6 +1009,7 @@ source geometry.</p>
 <code class="descname">disjoint</code><span class="sig-paren">(</span><em>second_geometry</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.disjoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates if the base and comparison geometries share no points in
 common.</p>
+<p><strong>Requires ArcPy/Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1018,6 +1040,7 @@ common.</p>
 <dd><p>Returns the minimum distance between two geometries. If the
 geometries intersect, the minimum distance is 0.
 Both geometries must have the same projection.</p>
+<p><strong>Requires ArcPy/Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1048,6 +1071,7 @@ Both geometries must have the same projection.</p>
 <dd><p>Indicates if the base and comparison geometries are of the same
 shape type and define the same set of points in the plane. This is
 a 2D comparison only; M and Z values are ignored.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1076,6 +1100,7 @@ a 2D comparison only; M and Z values are ignored.</p>
 <dt id="arcgis.geometry.Geometry.extent">
 <code class="descname">extent</code><a class="headerlink" href="#arcgis.geometry.Geometry.extent" title="Permalink to this definition">¶</a></dt>
 <dd><p>The extent of the geometry as a tuple containing xmin, ymin, xmax, ymax</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">geom</span> <span class="o">=</span> <span class="n">Geometry</span><span class="p">({</span>
 <span class="go">  &quot;rings&quot; : [[[-97.06138,32.837],[-97.06133,32.836],[-97.06124,32.834],[-97.06127,32.832],</span>
 <span class="go">              [-97.06138,32.837]],[[-97.06326,32.759],[-97.06298,32.755],[-97.06153,32.749],</span>
@@ -1147,6 +1172,7 @@ a 2D comparison only; M and Z values are ignored.</p>
 <code class="descname">generalize</code><span class="sig-paren">(</span><em>max_offset</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.generalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new simplified geometry using a specified maximum offset
 tolerance.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1218,6 +1244,7 @@ tolerance.</p>
 <dt id="arcgis.geometry.Geometry.get_area">
 <code class="descname">get_area</code><span class="sig-paren">(</span><em>method</em>, <em>units=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.get_area" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the area of the feature using a measurement type.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="17%" />
@@ -1256,6 +1283,7 @@ SQUAREMILLIMETERS | SQUAREYARDS</td>
 <dt id="arcgis.geometry.Geometry.get_length">
 <code class="descname">get_length</code><span class="sig-paren">(</span><em>method</em>, <em>units</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.get_length" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the length of the feature using a measurement type.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1294,6 +1322,7 @@ MILLIMETERS | NAUTICALMILES | YARDS</td>
 <code class="descname">get_part</code><span class="sig-paren">(</span><em>index=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.get_part" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an array of point objects for a particular part of geometry
 or an array containing a number of arrays, one for each part.</p>
+<p><strong>Requires ArcPy</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1323,6 +1352,7 @@ or an array containing a number of arrays, one for each part.</p>
 <code class="descname">hull_rectangle</code><a class="headerlink" href="#arcgis.geometry.Geometry.hull_rectangle" title="Permalink to this definition">¶</a></dt>
 <dd><p>A space-delimited string of the coordinate pairs of the convex hull
 rectangle.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">geom</span> <span class="o">=</span> <span class="n">Geometry</span><span class="p">({</span>
 <span class="go">  &quot;rings&quot; : [[[-97.06138,32.837],[-97.06133,32.836],[-97.06124,32.834],[-97.06127,32.832],</span>
 <span class="go">              [-97.06138,32.837]],[[-97.06326,32.759],[-97.06298,32.755],[-97.06153,32.749],</span>
@@ -1351,6 +1381,7 @@ input geometries. Different dimension values can be used to create
 different shape types. The intersection of two geometries of the
 same shape type is a geometry containing only the regions of overlap
 between the original geometries.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1395,6 +1426,7 @@ resulting geometry.</p>
 <dt id="arcgis.geometry.Geometry.is_multipart">
 <code class="descname">is_multipart</code><a class="headerlink" href="#arcgis.geometry.Geometry.is_multipart" title="Permalink to this definition">¶</a></dt>
 <dd><p>True, if the number of parts for this geometry is more than one.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">geom</span> <span class="o">=</span> <span class="n">Geometry</span><span class="p">({</span>
 <span class="go">  &quot;rings&quot; : [[[-97.06138,32.837],[-97.06133,32.836],[-97.06124,32.834],[-97.06127,32.832],</span>
 <span class="go">              [-97.06138,32.837]],[[-97.06326,32.759],[-97.06298,32.755],[-97.06153,32.749],</span>
@@ -1420,6 +1452,7 @@ resulting geometry.</p>
 <code class="descname">label_point</code><a class="headerlink" href="#arcgis.geometry.Geometry.label_point" title="Permalink to this definition">¶</a></dt>
 <dd><p>The point at which the label is located. The label_point is always
 located within or on a feature.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">geom</span> <span class="o">=</span> <span class="n">Geometry</span><span class="p">({</span>
 <span class="go">  &quot;rings&quot; : [[[-97.06138,32.837],[-97.06133,32.836],[-97.06124,32.834],[-97.06127,32.832],</span>
 <span class="go">              [-97.06138,32.837]],[[-97.06326,32.759],[-97.06298,32.755],[-97.06153,32.749],</span>
@@ -1469,6 +1502,7 @@ located within or on a feature.</p>
 <code class="descname">length</code><a class="headerlink" href="#arcgis.geometry.Geometry.length" title="Permalink to this definition">¶</a></dt>
 <dd><p>The length of the linear feature. Zero for point and multipoint feature types.
 The length units is the same as the spatial reference.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">geom</span> <span class="o">=</span> <span class="n">Geometry</span><span class="p">({</span>
 <span class="go">  &quot;rings&quot; : [[[-97.06138,32.837],[-97.06133,32.836],[-97.06124,32.834],[-97.06127,32.832],</span>
 <span class="go">              [-97.06138,32.837]],[[-97.06326,32.759],[-97.06298,32.755],[-97.06153,32.749],</span>
@@ -1495,6 +1529,7 @@ The length units is the same as the spatial reference.</p>
 <dd><p>The 3D length of the linear feature. Zero for point and multipoint
 feature types. The length units is the same as the spatial
 reference.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">geom</span> <span class="o">=</span> <span class="n">Geometry</span><span class="p">({</span>
 <span class="go">  &quot;rings&quot; : [[[-97.06138,32.837],[-97.06133,32.836],[-97.06124,32.834],[-97.06127,32.832],</span>
 <span class="go">              [-97.06138,32.837]],[[-97.06326,32.759],[-97.06298,32.755],[-97.06153,32.749],</span>
@@ -1519,6 +1554,7 @@ reference.</p>
 <dt id="arcgis.geometry.Geometry.measure_on_line">
 <code class="descname">measure_on_line</code><span class="sig-paren">(</span><em>second_geometry</em>, <em>as_percentage=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.measure_on_line" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a measure from the start point of this line to the in_point.</p>
+<p><strong>Requires ArcPy</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1553,6 +1589,7 @@ distance; if True, the measure will be returned as a percentage.</td>
 <dd><p>Indicates if the intersection of the two geometries has the same
 shape type as one of the input geometries and is not equivalent to
 either of the input geometries.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1630,6 +1667,7 @@ either of the input geometries.</p>
 <code class="descname">point_from_angle_and_distance</code><span class="sig-paren">(</span><em>angle</em>, <em>distance</em>, <em>method='GEODESCIC'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.point_from_angle_and_distance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a point at a given angle and distance in degrees and meters
 using the specified measurement type.</p>
+<p><strong>Requires ArcPy</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="17%" />
@@ -1669,6 +1707,7 @@ an alternative, if desired.</td>
 <code class="descname">position_along_line</code><span class="sig-paren">(</span><em>value</em>, <em>use_percentage=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.position_along_line" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a point on a line at a specified distance from the beginning
 of the line.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1704,6 +1743,7 @@ For percentages, the value should be expressed as a double from
 <dt id="arcgis.geometry.Geometry.project_as">
 <code class="descname">project_as</code><span class="sig-paren">(</span><em>spatial_reference</em>, <em>transformation_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.project_as" title="Permalink to this definition">¶</a></dt>
 <dd><p>Projects a geometry and optionally applies a geotransformation.</p>
+<p><strong>Requires ArcPy or pyproj&gt;=1.9 and PROJ.4</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="23%" />
@@ -1754,6 +1794,7 @@ SpatialReference object or the coordinate system name.</td>
 distance between those points. Also returns information about the
 side of the line the in_point is on as well as the distance along
 the line where the nearest point occurs.</p>
+<p><strong>Requires ArcPy</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1855,6 +1896,7 @@ creates a new object</td>
 <dd><p>Returns a Polyline between start and end measures. Similar to
 Polyline.positionAlongLine but will return a polyline segment between
 two points on the polyline instead of a single point.</p>
+<p><strong>Requires ArcPy</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1921,6 +1963,7 @@ creates a new object</td>
 <dt id="arcgis.geometry.Geometry.snap_to_line">
 <code class="descname">snap_to_line</code><span class="sig-paren">(</span><em>second_geometry</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.snap_to_line" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a new point based on in_point snapped to this geometry.</p>
+<p><strong>Requires ArcPy</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -1975,6 +2018,7 @@ creates a new object</td>
 <dd><p>Constructs the geometry that is the union of two geometries minus the
 instersection of those geometries.</p>
 <p>The two input geometries must be the same shape type.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -2003,6 +2047,7 @@ instersection of those geometries.</p>
 <dt id="arcgis.geometry.Geometry.touches">
 <code class="descname">touches</code><span class="sig-paren">(</span><em>second_geometry</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.touches" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates if the boundaries of the geometries intersect.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -2066,6 +2111,7 @@ creates a new Geometry object</td>
 <dt id="arcgis.geometry.Geometry.true_centroid">
 <code class="descname">true_centroid</code><a class="headerlink" href="#arcgis.geometry.Geometry.true_centroid" title="Permalink to this definition">¶</a></dt>
 <dd><p>The center of gravity for a feature.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">geom</span> <span class="o">=</span> <span class="n">Geometry</span><span class="p">({</span>
 <span class="go">  &quot;rings&quot; : [[[-97.06138,32.837],[-97.06133,32.836],[-97.06124,32.834],[-97.06127,32.832],</span>
 <span class="go">              [-97.06138,32.837]],[[-97.06326,32.759],[-97.06298,32.755],[-97.06153,32.749],</span>
@@ -2091,6 +2137,7 @@ creates a new Geometry object</td>
 <code class="descname">union</code><span class="sig-paren">(</span><em>second_geometry</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.union" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs the geometry that is the set-theoretic union of the input
 geometries.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="18%" />
@@ -2119,6 +2166,7 @@ geometries.</p>
 <dt id="arcgis.geometry.Geometry.within">
 <code class="descname">within</code><span class="sig-paren">(</span><em>second_geometry</em>, <em>relation=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.Geometry.within" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates if the base geometry is within the comparison geometry.</p>
+<p><strong>Requires ArcPy or Shapely</strong></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="10%" />
@@ -3023,7 +3071,7 @@ spatial_ref - The well-known ID of the spatial reference or a spatial</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

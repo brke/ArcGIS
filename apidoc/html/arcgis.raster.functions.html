@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.raster.functions module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.raster.functions module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="up" title="arcgis.raster module" href="arcgis.raster.toc.html"/>
         <link rel="next" title="arcgis.raster.functions.gbl module" href="arcgis.raster.functions.gbl.html"/>
         <link rel="prev" title="arcgis.raster.analytics module" href="arcgis.raster.analytics.html"/>
@@ -83,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -146,7 +146,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#boolean-not">boolean_not</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#boolean-or">boolean_or</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#boolean-xor">boolean_xor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cire">cire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cig">cig</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#classify">classify</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clay-minerals">clay_minerals</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#clip">clip</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#colormap">colormap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#colormap-to-rgb">colormap_to_rgb</a></li>
@@ -163,17 +166,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#duration">duration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#elevation-void-fill">elevation_void_fill</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#equal-to">equal_to</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#evi">evi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#exp">exp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#exp10">exp10</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#exp2">exp2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#expression">expression</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#extract-band">extract_band</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ferrous-minerals">ferrous_minerals</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#float">FLOAT</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#float-divide">float_divide</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#floor-divide">floor_divide</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#focal-stats">focal_stats</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#gemi">gemi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#geometric">geometric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gndvi">gndvi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#grayscale">grayscale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#greater-than">greater_than</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#greater-than-equal">greater_than_equal</a></li>
@@ -181,6 +187,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#hillshade">hillshade</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#identity">identity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#int">INT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iron-oxide">iron_oxide</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#is-null">is_null</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#less-than">less_than</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#less-than-equal">less_than_equal</a></li>
@@ -199,8 +206,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#minus">minus</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ml-classify">ml_classify</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#mod">mod</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#monitor-vegetation">monitor_vegetation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#msavi">msavi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mtvi2">mtvi2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ndvi">ndvi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ndvire">ndvire</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">NDVI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ndwi">ndwi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#negate">negate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#not-equal">not_equal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pansharpen">pansharpen</a></li>
@@ -209,10 +221,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#pvi">pvi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cellstats-range">cellstats_range</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#raster-calculator">raster_calculator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#raster-collection-function">raster_collection_function</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#remap">remap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#resample">resample</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#round-down">round_down</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#round-up">round_up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rtvi-core">rtvi_core</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#savi">savi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#segment-mean-shift">segment_mean_shift</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#set-null">set_null</a></li>
@@ -224,6 +238,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#speckle">speckle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sqrt">sqrt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#square">square</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sr">sr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#srre">srre</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#focal-statistics">focal_statistics</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#statistics-histogram">statistics_histogram</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#std">std</a></li>
@@ -238,6 +254,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#transpose-bits">transpose_bits</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tsavi">tsavi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#unit-conversion">unit_conversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vari">vari</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#variety">variety</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#vector-field">vector_field</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#vector-field-renderer">vector_field_renderer</a></li>
@@ -247,6 +264,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.gbl.html">arcgis.raster.functions.gbl module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.orthomapping.html">arcgis.raster.orthomapping module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.RFT.html">arcgis.raster.functions.RFT</a></li>
 </ul>
 </li>
 </ul>
@@ -766,7 +784,31 @@ see Band Arithmetic function at <a class="reference external" href="http://deskt
 <li><strong>raster</strong> – the input raster / imagery layer</li>
 <li><strong>band_indexes</strong> – band indexes or expression</li>
 <li><strong>astype</strong> – output pixel type</li>
-<li><strong>method</strong> – int (0 = UserDefined, 1 = NDVI, 2 = SAVI, 3 = TSAVI, 4 = MSAVI, 5 = GEMI, 6 = PVI, 7 = GVITM, 8 = Sultan)</li>
+<li><strong>method</strong> – int. The type of band arithmetic algorithm you want to deploy. 
+You can define your custom algorithm, or choose a predefined index.
+0 = UserDefined, 
+1 = NDVI,
+2 = SAVI,
+3 = TSAVI,
+4 = MSAVI,
+5 = GEMI,
+6 = PVI,
+7 = GVITM,
+8 = Sultan,
+9 = VARI,
+10 = GNDVI,
+11 = SR,
+12 = NDVIre,
+13 = SRre,
+14 = MTVI2,
+15 = RTVICore,
+16 = CIre,
+17 = CIg,
+18 = NDWI,
+19 = EVI,
+20 = IronOxide,
+21 = FerrousMinerals,
+22 = ClayMinerals</li>
 </ul>
 </td>
 </tr>
@@ -1048,6 +1090,62 @@ see Band Arithmetic function at <a class="reference external" href="http://deskt
 </dd></dl>
 
 </div>
+<div class="section" id="cire">
+<h2>cire<a class="headerlink" href="#cire" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.cire">
+<code class="descclassname">functions.</code><code class="descname">cire</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='7 6'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.cire" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Chlorophyll Index - Red-Edge (CIre) is a vegetation index for estimating 
+the chlorophyll content in leaves using the ratio of reflectivity in the 
+near-infrared (NIR) and red-edge bands.</p>
+<p>CIre = [(NIR / RedEdge)-1]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “NIR RedEdge”, e.g., “3 2 1”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="cig">
+<h2>cig<a class="headerlink" href="#cig" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.cig">
+<code class="descclassname">functions.</code><code class="descname">cig</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='7 3'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.cig" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Chlorophyll Index - Green (CIg) is a vegetation index for estimating 
+the chlorophyll content in leaves using the ratio of reflectivity in 
+the near-infrared (NIR) and green bands.</p>
+<p>CIg = [(NIR / Green)-1]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “NIR Green”, e.g., “7 3”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="classify">
 <h2>classify<a class="headerlink" href="#classify" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
@@ -1067,6 +1165,34 @@ imagery layers filtered by where clause, spatial and temporal filters</li>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster with this function applied to it</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="clay-minerals">
+<h2>clay_minerals<a class="headerlink" href="#clay-minerals" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.clay_minerals">
+<code class="descclassname">functions.</code><code class="descname">clay_minerals</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='6 7'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.clay_minerals" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Clay Minerals (CM) ratio is a geological index for identifying 
+mineral features containing clay and alunite using two shortwave 
+infrared (SWIR) bands. CM is used in mineral composite mapping.</p>
+<p>CM = SWIR1 / SWIR2</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “SWIR1 SWIR2”, e.g., “6 7”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
 </td>
 </tr>
 </tbody>
@@ -1517,6 +1643,35 @@ this conceptual help&lt;/a&gt; on how it works. The arguments for the elevation_
 </dd></dl>
 
 </div>
+<div class="section" id="evi">
+<h2>evi<a class="headerlink" href="#evi" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.evi">
+<code class="descclassname">functions.</code><code class="descname">evi</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='5 4 2'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.evi" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Enhanced Vegetation Index (EVI) is an optimized vegetation index that accounts 
+for atmospheric influences and vegetation background signal. It’s similar to NDVI, 
+but is less sensitive to background and atmospheric noise, and it does not become 
+saturated NDVI when viewing areas with very dense green vegetation.</p>
+<p>EVI =  2.5 * [(NIR - Red)/(NIR + (6*Red) - (7.5*Blue) + 1)]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “NIR Red Blue”, e.g., “5 4 2”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="exp">
 <h2>exp<a class="headerlink" href="#exp" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
@@ -1657,6 +1812,35 @@ multiband image. The arguments for the extract_band function are as follows:</p>
 </dd></dl>
 
 </div>
+<div class="section" id="ferrous-minerals">
+<h2>ferrous_minerals<a class="headerlink" href="#ferrous-minerals" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.ferrous_minerals">
+<code class="descclassname">functions.</code><code class="descname">ferrous_minerals</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='6 5'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.ferrous_minerals" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Ferrous Minerals (FM) ratio is a geological index for identifying 
+rock features containing some quantity of iron-bearing minerals using
+the shortwave infrared (SWIR) and near-infrared (NIR) bands. FM is used
+in mineral composite mapping.</p>
+<p>FM = SWIR / NIR</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “SWIR NIR”, e.g., “6 5”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="float">
 <h2>FLOAT<a class="headerlink" href="#float" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
@@ -1742,11 +1926,11 @@ multiband image. The arguments for the extract_band function are as follows:</p>
 <h2>focal_stats<a class="headerlink" href="#focal-stats" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.raster.functions.focal_stats">
-<code class="descclassname">functions.</code><code class="descname">focal_stats</code><span class="sig-paren">(</span><em>raster</em>, <em>percentile=50</em>, <em>neighborhood_type=1</em>, <em>width=3</em>, <em>height=3</em>, <em>inner_radius=1</em>, <em>outer_radius=3</em>, <em>radius=3</em>, <em>start_angle=0</em>, <em>end_angle=90</em>, <em>neighborhood_values=None</em>, <em>stat_type=3</em>, <em>ignore_no_data=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.focal_stats" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">functions.</code><code class="descname">focal_stats</code><span class="sig-paren">(</span><em>raster</em>, <em>neighborhood_type=1</em>, <em>width=3</em>, <em>height=3</em>, <em>inner_radius=1</em>, <em>outer_radius=3</em>, <em>radius=3</em>, <em>start_angle=0</em>, <em>end_angle=90</em>, <em>neighborhood_values=None</em>, <em>stat_type=3</em>, <em>percentile_value=90</em>, <em>ignore_no_data=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.focal_stats" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates for each input cell location a statistic of the values within a specified neighborhood around it.
 For more information see, <a class="reference external" href="https://pro.arcgis.com/en/pro-app/help/data/imagery/focal-statistics-function.htm">https://pro.arcgis.com/en/pro-app/help/data/imagery/focal-statistics-function.htm</a></p>
 <p>The focal_stats() is different from focal_statistics() in the following aspects:</p>
-<p>focal_stats() supports Mean, Majority, Maximum, Median, Minimum, Minority, Range, Standard deviation, Sum, Variety,
+<p>focal_stats() supports Mean, Majority, Maximum, Median, Minimum, Minority, Percentile, Range, Standard deviation, Sum, Variety,
 while the focal_statistics() supports only Minimum, Maximum, Mean and Standard Deviation.</p>
 <p>focal_stats() supports Rectangle, Circle, Annulus, Wedge, Irregular, Weight neighbourhoods, focal_statistics() supports only Rectangle.</p>
 <p>Option to determine whether NoData values are ignored or not is available in focal_stats() by setting bool value for ignore_no_data param.
@@ -1757,9 +1941,8 @@ This option is not present in focal_stats()</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>raster</strong> – input raster</li>
-<li><strong>percentile</strong> – int, default is 50.</li>
 <li><strong>neighborhood_type</strong> – int, default is 1. The shape of the area around each cell used to calculate the statistic.
 1 = Rectangle
 2 = Circle
@@ -1770,21 +1953,18 @@ This option is not present in focal_stats()</p>
 <li><strong>width</strong> – int, default is 3 - specified when neighborhood_type is Rectangle</li>
 <li><strong>height</strong> – int, default is 3 - specified when neighborhood_type is Rectangle</li>
 <li><strong>inner_radius</strong> – int, default is 1 - specified when neighborhood_type is Annulus</li>
+<li><strong>outer_radius</strong> – int, default is 3 - specified when neighborhood_type is Annulus</li>
+<li><strong>radius</strong> – int default is 3 - specified when neighborhood_type is Circle or Wedge</li>
+<li><strong>start_angle</strong> – float, default is 0</li>
+<li><strong>end_angle</strong> – float, default is 90</li>
+<li><strong>neighborhood_values</strong> – <ul>
+<li>specified when neighborhood_type is Irregular or Weight</li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param outer_radius:int, default is 3 - specified when neighborhood_type is Annulus
-:param radius:int default is 3 - specified when neighborhood_type is Circle
-:param start_angle: int, default is 0
-:param end_angle:int, default is 90
-:param neighborhood_values: - specified when neighborhood_type is Irregular or Weight
-:param stat_type: int</p>
-<blockquote>
-<div><p>There are 10 types of focal statistical functions:
+</li>
+<li><strong>stat_type</strong> – <p>int
+There are 11 types of focal statistical functions:
 1=Majority, 2=Maximum, 3=Mean , 4=Median, 5= Minimum, 6 = Minority,
-7=Range, 8=Standard deviation, 9=Sum, 10=Variety
+7=Range, 8=Standard deviation, 9=Sum, 10=Variety, 12=Percentile
 Majority = Calculates the majority (value that occurs most often) of the cells in the neighborhood.
 Maximum = Calculates the maximum (largest value) of the cells in the neighborhood.
 Mean = Calculates the mean (average value) of the cells in the neighborhood.
@@ -1794,22 +1974,23 @@ Minority = Calculates the minority (value that occurs least often) of the cells 
 Range = Calculates the range (difference between largest and smallest value) of the cells in the neighborhood.
 Standard deviation =  Calculates the standard deviation of the cells in the neighborhood.
 Sum = Calculates the sum (total of all values) of the cells in the neighborhood.
-Variety = Calculates the variety (the number of unique values) of the cells in the neighborhood.</p>
+Variety = Calculates the variety (the number of unique values) of the cells in the neighborhood.
+Percentile = Calculates a specified percentile of the cells in the neighborhood.</p>
 <p>Default is 3(Mean)</p>
-</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ignore_no_data</strong> – boolean
+</li>
+<li><strong>ignore_no_data</strong> – boolean
 True. Specifies that if a NoData value exists within a neighborhood, 
 the NoData value will be ignored. Only cells within the neighborhood 
 that have data values will be used in determining the output value. 
 This is the default.
 False - Specifies that if any cell in a neighborhood has a value of 
-NoData, the output for the processing cell will be NoData</td>
+NoData, the output for the processing cell will be NoData</li>
+<li><strong>percentile_value</strong> – float, default is 90.</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the output raster</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1862,6 +2043,32 @@ terrain model.This function was added at 10.1.The arguments for the geometric fu
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="gndvi">
+<h2>gndvi<a class="headerlink" href="#gndvi" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.gndvi">
+<code class="descclassname">functions.</code><code class="descname">gndvi</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='4 2'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.gndvi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Green Normalized Difference Vegetation Index</p>
+<p>GNDVI = (NIR-Green)/(NIR+Green)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “Red Green Blue”, e.g., “3 2 1”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
 </td>
 </tr>
 </tbody>
@@ -2050,6 +2257,35 @@ and takes no arguments except a raster. For more information, see
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="iron-oxide">
+<h2>iron_oxide<a class="headerlink" href="#iron-oxide" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.iron_oxide">
+<code class="descclassname">functions.</code><code class="descname">iron_oxide</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='4 2'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.iron_oxide" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Iron Oxide (IO) ratio is a geological index for identifying rock 
+features that have experienced oxidation of iron-bearing sulfides 
+using the red and blue bands. IO is useful in identifying iron oxide 
+features below vegetation canopies, and is used in mineral composite mapping.</p>
+<p>IronOxide = Red / Blue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “Red Blue”, e.g., “4 2”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
 </td>
 </tr>
 </tbody>
@@ -2559,6 +2795,39 @@ The arguments for the ml_classify function are as follows:</dd>
 </dd></dl>
 
 </div>
+<div class="section" id="monitor-vegetation">
+<h2>monitor_vegetation<a class="headerlink" href="#monitor-vegetation" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.monitor_vegetation">
+<code class="descclassname">functions.</code><code class="descname">monitor_vegetation</code><span class="sig-paren">(</span><em>raster</em>, <em>method='NDVI'</em>, <em>band_indexes=None</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.monitor_vegetation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The monitor_vegetation function performs an arithmetic operation on the bands 
+of a performs an arithmetic operation on the bands of a multiband raster layer 
+to reveal vegetation coverage information of the study area.
+see Band Arithmetic function at <a class="reference external" href="http://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/band-arithmetic-function.htm">http://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/band-arithmetic-function.htm</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>method</strong> – String. The method to create the vegetation index layer. 
+The different vegetation indexes can help highlight certain features or reduce various noise. 
+NDVI, SAVI, TSAVI, MSAVI, GEMI, PVI, GVITM, Sultan, VARI, GNDVI, SR, NDVIre, SRre, MTVI2,
+RTVICore, CIre, CIg, NDWI, EVI
+Default is NDVI.</li>
+<li><strong>band_indexes</strong> – band indexes</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="msavi">
 <h2>msavi<a class="headerlink" href="#msavi" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
@@ -2573,6 +2842,35 @@ MSAVI2 = (1/2)*(2(NIR+1)-sqrt((2*NIR+1)^2-8(NIR-Red)))</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>raster</strong> – the input raster / imagery layer</li>
 <li><strong>band_indexes</strong> – “NIR Red”, e.g., “4 3”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="mtvi2">
+<h2>mtvi2<a class="headerlink" href="#mtvi2" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.mtvi2">
+<code class="descclassname">functions.</code><code class="descname">mtvi2</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='7 5 3'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.mtvi2" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Modified Triangular Vegetation Index (MTVI2) is a vegetation index 
+for detecting leaf chlorophyll content at the canopy scale while being 
+relatively insensitive to leaf area index. It uses reflectance in the green, 
+red, and near-infrared (NIR) bands</p>
+<p>MTVI2 = (1.5*(1.2*(NIR-Green)-2.5*(Red-Green))/sqrt((2*NIR+1)^2-(6*NIR-5*sqrt(Red))-0.5))</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “NIR Red Green”, e.g., “7 5 3”</li>
 <li><strong>astype</strong> – output pixel type</li>
 </ul>
 </td>
@@ -2604,6 +2902,99 @@ NDVI = ((NIR - Red)/(NIR + Red))</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Normalized Difference Vegetation Index raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="ndvire">
+<h2>ndvire<a class="headerlink" href="#ndvire" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.ndvire">
+<code class="descclassname">functions.</code><code class="descname">ndvire</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='7 6'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.ndvire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Red-Edge NDVI (NDVIre)
+The Red-Edge NDVI (NDVIre) is a vegetation index for estimating 
+vegetation health using the red-edge band. It is especially useful 
+for estimating crop health in the mid to late stages of growth where 
+the chlorophyll concentration is relatively higher. Also, NDVIre can
+be used to map the within-field variability of nitrogen foliage to 
+understand the fertilizer requirements of crops.</p>
+<p>NDVIre = (NIR-RedEdge)/(NIR+RedEdge)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “NIR RedEdge”, e.g., “7 6”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id3">
+<h2>NDVI<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.NDVI">
+<code class="descclassname">functions.</code><code class="descname">NDVI</code><span class="sig-paren">(</span><em>raster</em>, <em>visible_band=2</em>, <em>ir_band=1</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.NDVI" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Normalized Difference Vegetation Index (ndvi) is a standardized index that allows you to generate an image
+displaying greenness (relative biomass). This index takes advantage of the contrast of the characteristics of
+two bands from a multispectral raster dataset the chlorophyll pigment absorptions in the red band and the
+high reflectivity of plant materials in the near-infrared (NIR) band. For more information, see ndvi function.
+The arguments for the ndvi function are as follows:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – input raster</li>
+<li><strong>visible_band_id</strong> – int (zero-based band id, e.g. 2)</li>
+<li><strong>infrared_band_id</strong> – int (zero-based band id, e.g. 1)</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The following equation is used by the NDVI function to generate a 0 200 range 8 bit result:
+NDVI = ((IR - R)/(IR + R)) * 100 + 100
+If you need the specific pixel values (-1.0 to 1.0), use the lowercase ndvi method.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ndwi">
+<h2>ndwi<a class="headerlink" href="#ndwi" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.ndwi">
+<code class="descclassname">functions.</code><code class="descname">ndwi</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='5 3'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.ndwi" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Normalized Difference Water Index (NDWI) is an index for delineating and 
+monitoring content changes in surface water. It is computed with the near-infrared 
+(NIR) and green bands.</p>
+<p>NDWI = (Green - NIR)/(Green +NIR)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “NIR Green”, e.g., “5 3”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
 </td>
 </tr>
 </tbody>
@@ -2834,6 +3225,38 @@ For more info including operators supported, see Calculator function
 </dd></dl>
 
 </div>
+<div class="section" id="raster-collection-function">
+<h2>raster_collection_function<a class="headerlink" href="#raster-collection-function" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.raster_collection_function">
+<code class="descclassname">functions.</code><code class="descname">raster_collection_function</code><span class="sig-paren">(</span><em>raster</em>, <em>item_function</em>, <em>aggregation_function</em>, <em>processing_function</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.raster_collection_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new raster by applying item, aggregation and processing function</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – Input Imagery Layer. The image service the layer is based on should be a mosaic dataset</li>
+<li><strong>item_function</strong> – The raster function template to be applied on each item of the mosaic dataset. 
+Create an RFT object out of the raster function template item on the portal and 
+specify that as the input to item_function</li>
+<li><strong>aggregation_function</strong> – The aggregation function to be applied on the mosaic dataset.
+Create an RFT object out of the raster function template item on the portal and 
+specify that as the input to aggregation_function</li>
+<li><strong>processing_function</strong> – The processing template to be applied on the imagery layer.
+Create an RFT object out of the raster function template item on the portal and 
+specify that as the input to processing_function</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster with function applied on it</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="remap">
 <h2>remap<a class="headerlink" href="#remap" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
@@ -2941,6 +3364,34 @@ BilinearGaussBlurPlus, Average, Minimum, Maximum,VectorAverage(require two bands
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="rtvi-core">
+<h2>rtvi_core<a class="headerlink" href="#rtvi-core" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.rtvi_core">
+<code class="descclassname">functions.</code><code class="descname">rtvi_core</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='7 6 3'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.rtvi_core" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Red-Edge Triangulated Vegetation Index (RTVICore) is a vegetation index 
+for estimating leaf area index and biomass. This index uses reflectance 
+in the NIR, red-edge, and green spectral bands</p>
+<p>RTVICore = [100(NIR-RedEdge)-10(NIR-Green)]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “NIR RedEdge Green”, e.g., “7 6 3”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
 </td>
 </tr>
 </tbody>
@@ -3273,6 +3724,64 @@ the default parameter values, see Speckle function
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="sr">
+<h2>sr<a class="headerlink" href="#sr" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.sr">
+<code class="descclassname">functions.</code><code class="descname">sr</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='4 3'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.sr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple Ratio (SR)</p>
+<p>SR = NIR / Red</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “NIR Red”, e.g., “3 2 1”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="srre">
+<h2>srre<a class="headerlink" href="#srre" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.srre">
+<code class="descclassname">functions.</code><code class="descname">srre</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='7 6'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.srre" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Red-Edge Simple Ratio (SRre) is a vegetation index for estimating the 
+amount of healthy and stressed vegetation. It is the ratio of light scattered 
+in the NIR and red-edge bands, which reduces the effects of atmosphere and topography.</p>
+<p>Values are high for vegetation with high canopy closure and healthy vegetation, 
+lower for high canopy closure and stressed vegetation, and low for soil, water, 
+and nonvegetated features. The range of values is from 0 to about 30, where healthy 
+vegetation generally falls between values of 1 to 10.</p>
+<p>SRre = NIR / RedEdge</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “NIR RedEdge”, e.g., “7 6”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
 </td>
 </tr>
 </tbody>
@@ -3730,6 +4239,32 @@ Distance Units: str, one of Inches, Feet, Yards, Miles, NauticalMiles, Millimete
 </dd></dl>
 
 </div>
+<div class="section" id="vari">
+<h2>vari<a class="headerlink" href="#vari" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.functions.vari">
+<code class="descclassname">functions.</code><code class="descname">vari</code><span class="sig-paren">(</span><em>raster</em>, <em>band_indexes='3 2 1'</em>, <em>astype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.functions.vari" title="Permalink to this definition">¶</a></dt>
+<dd><p>Visible Atmospherically Resistant Index</p>
+<p>VARI = (Green - Red)/(Green + Red - Blue)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>raster</strong> – the input raster / imagery layer</li>
+<li><strong>band_indexes</strong> – “Red Green Blue”, e.g., “3 2 1”</li>
+<li><strong>astype</strong> – output pixel type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">output raster</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="variety">
 <h2>variety<a class="headerlink" href="#variety" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
@@ -3941,7 +4476,7 @@ It can be any positive or negative decimal value.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

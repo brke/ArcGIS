@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.features.elevation module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.features.elevation module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,10 +39,10 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="up" title="arcgis.features module" href="arcgis.features.toc.html"/>
-        <link rel="next" title="arcgis.features.managers module" href="arcgis.features.managers.html"/>
-        <link rel="prev" title="arcgis.features.use_proximity module" href="arcgis.features.use_proximity.html"/>
+        <link rel="next" title="arcgis.features.enrich_data module" href="arcgis.features.enrich_data.html"/>
+        <link rel="prev" title="arcgis.features.analyze_patterns module" href="arcgis.features.analyze_patterns.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -83,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -124,18 +124,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2 current"><a class="reference internal" href="arcgis.features.toc.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analysis.html">arcgis.features.analysis module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.features.manage_data.html">arcgis.features.manage_data module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.features.use_proximity.html">arcgis.features.use_proximity module</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.features.elevation module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#profile">profile</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#viewshed">viewshed</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#summarize-elevation">summarize_elevation</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.hydrology.html">arcgis.features.hydrology module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.manage_data.html">arcgis.features.manage_data module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.use_proximity.html">arcgis.features.use_proximity module</a></li>
 </ul>
 </li>
 </ul>
@@ -328,10 +329,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="arcgis.features.managers.html" class="btn btn-neutral float-right" title="arcgis.features.managers module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="arcgis.features.enrich_data.html" class="btn btn-neutral float-right" title="arcgis.features.enrich_data module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="arcgis.features.use_proximity.html" class="btn btn-neutral" title="arcgis.features.use_proximity module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="arcgis.features.analyze_patterns.html" class="btn btn-neutral" title="arcgis.features.analyze_patterns module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -362,7 +363,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

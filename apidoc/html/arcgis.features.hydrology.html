@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.features.enrich_data module &mdash; arcgis 1.6.1 documentation</title>
+  <title>arcgis.features.hydrology module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="up" title="arcgis.features module" href="arcgis.features.toc.html"/>
-        <link rel="next" title="arcgis.features.find_locations module" href="arcgis.features.find_locations.html"/>
-        <link rel="prev" title="arcgis.features.elevation module" href="arcgis.features.elevation.html"/>
+        <link rel="next" title="arcgis.features.manage_data module" href="arcgis.features.manage_data.html"/>
+        <link rel="prev" title="arcgis.features.find_locations module" href="arcgis.features.find_locations.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -125,12 +125,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analysis.html">arcgis.features.analysis module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.elevation.html">arcgis.features.elevation module</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.features.enrich_data module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#enrich-layer">enrich_layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.features.hydrology module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#trace-downstream">trace_downstream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#watershed">watershed</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arcgis.features.hydrology.html">arcgis.features.hydrology module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.manage_data.html">arcgis.features.manage_data module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.managers.html">arcgis.features.managers module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a></li>
@@ -198,7 +199,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           <li><a href="arcgis.features.toc.html">arcgis.features module</a> &raquo;</li>
         
-      <li>arcgis.features.enrich_data module</li>
+      <li>arcgis.features.hydrology module</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -220,49 +221,99 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJGGV5"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <div class="section" id="module-arcgis.features.enrich_data">
-<span id="arcgis-features-enrich-data-module"></span><h1>arcgis.features.enrich_data module<a class="headerlink" href="#module-arcgis.features.enrich_data" title="Permalink to this headline">¶</a></h1>
-<p>These functions help you explore the character of areas. Detailed demographic data and statistics are returned for your
-chosen areas.</p>
-<p>enrich_layer retrieves information about the people, places, and businesses in a specific area, or within a selected
-travel time or distance from a location.</p>
-<div class="section" id="enrich-layer">
-<h2>enrich_layer<a class="headerlink" href="#enrich-layer" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="module-arcgis.features.hydrology">
+<span id="arcgis-features-hydrology-module"></span><h1>arcgis.features.hydrology module<a class="headerlink" href="#module-arcgis.features.hydrology" title="Permalink to this headline">¶</a></h1>
+<p>These functions help you use hydrology analysis.</p>
+<div class="section" id="trace-downstream">
+<h2>trace_downstream<a class="headerlink" href="#trace-downstream" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
-<dt id="arcgis.features.enrich_data.enrich_layer">
-<code class="descclassname">enrich_data.</code><code class="descname">enrich_layer</code><span class="sig-paren">(</span><em>input_layer</em>, <em>data_collections=[]</em>, <em>analysis_variables=[]</em>, <em>country=None</em>, <em>buffer_type=None</em>, <em>distance=None</em>, <em>units=None</em>, <em>output_name=None</em>, <em>context=None</em>, <em>gis=None</em>, <em>estimate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.enrich_data.enrich_layer" title="Permalink to this definition">¶</a></dt>
-<dd><p>The enrich_layer function enriches your data by getting facts about the people, places, and businesses that surround
-your data locations. For example: What kind of people live here? What do people like to do in this area? What are
-their habits and lifestyles? What kind of businesses are there in this area?The result will be a new layer of input
-features that includes all demographic and geographic information from given data collections.</p>
-<dl class="docutils">
-<dt>input_layer <span class="classifier-delimiter">:</span> <span class="classifier">Required layer (see Feature Input in documentation)</span></dt>
-<dd>Feature layer to enrich with new data</dd>
-<dt>data_collections <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span></dt>
-<dd>Data collections you wish to add to your features.</dd>
-<dt>analysis_variables <span class="classifier-delimiter">:</span> <span class="classifier">Optional list of strings</span></dt>
-<dd>A subset of specific variables instead of dataCollections.</dd>
-<dt>country <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
-<dd>The two character country code that specifies the country of the input features. Eg. US (United States),
-FR (France), GB (United Kingdom) etc.</dd>
-<dt>buffer_type <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
-<dd>Area to be created around the point or line features for enrichment. Default is 1 Mile straight-line buffer
-radius.</dd>
-<dt>distance <span class="classifier-delimiter">:</span> <span class="classifier">Optional float</span></dt>
-<dd>A double value that defines the straight-line distance or time (when drivingTime is used).</dd>
-<dt>units <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
-<dd>The unit (eg. Miles, Minutes) to be used with the distance value(s) specified in the distance parameter to
-calculate the area.</dd>
-<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
-<dd>Additional properties such as output feature service name.</dd>
-<dt>context <span class="classifier-delimiter">:</span> <span class="classifier">Optional string</span></dt>
-<dd>Additional settings such as processing extent and output spatial reference.</dd>
-<dt>gis :</dt>
-<dd>Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</dd>
-<dt>estimate :</dt>
-<dd>Optional Boolean. If True, the number of credits to run the operation will be returned.</dd>
-</dl>
-<p>enriched_layer : layer (FeatureCollection)</p>
+<dt id="arcgis.features.hydrology.trace_downstream">
+<code class="descclassname">hydrology.</code><code class="descname">trace_downstream</code><span class="sig-paren">(</span><em>input_points</em>, <em>point_id_field=None</em>, <em>source_database='Finest'</em>, <em>generalize=False</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.hydrology.trace_downstream" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Trace Downstream method delineates the downstream path from a specified location. 
+Esri-curated elevation data is used to create an output polyline delineating the flow path 
+downstream from the specified input location. This method accesses a service using multiple 
+source databases which are available for different geographic areas and at different 
+spatial scales.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>input_points</td>
+<td>Required Feature Set or Spatially Enabled DataFrame
+Points delineating the starting location to calculate the downstream
+location from.</td>
+</tr>
+<tr class="row-odd"><td>point_id_field</td>
+<td>Optional String
+Field used to identify the feature from the source data. This is
+useful for relating the results back to the original source data.</td>
+</tr>
+<tr class="row-even"><td>source_database</td>
+<td><p class="first">Optional String - Default “Finest”
+Keyword indicating the source data that will be used in the
+analysis. This keyword is an approximation of the spatial resolution
+of the digital elevation model used to build the foundation
+hydrologic  database. Since many elevation sources are distributed
+with units of  arc seconds, this keyword is an approximation in
+meters for easier understanding.</p>
+<ul class="last simple">
+<li>Finest: Finest resolution available at each location from all
+possible data sources.</li>
+<li>10m: The hydrologic source was built from 1/3 arc second -
+approximately 10 meter resolution, elevation data.</li>
+<li>30m: The hydrologic source was built from 1 arc second -
+approximately 30 meter resolution, elevation data.</li>
+<li>90m: The hydrologic source was built from 3 arc second -
+approximately 90 meter resolution, elevation data.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>generalize</td>
+<td>Optional Boolean - Default False
+Determines if the output downstream trace lines will be smoothed
+into simpler lines.</td>
+</tr>
+<tr class="row-even"><td>gis</td>
+<td>Optional GIS Object instance
+If not provided as input, a GIS object instance logged into an
+active portal with elevation helper services defined must already
+be created in the active Python session. A GIS object instance can
+also be optionally explicitly passed in through this parameter.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">FeatureSet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="watershed">
+<h2>watershed<a class="headerlink" href="#watershed" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.features.hydrology.watershed">
+<code class="descclassname">hydrology.</code><code class="descname">watershed</code><span class="sig-paren">(</span><em>input_points</em>, <em>point_id_field=None</em>, <em>snap_distance=10</em>, <em>snap_distance_units='Meters'</em>, <em>source_database='Finest'</em>, <em>generalize=False</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.hydrology.watershed" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Watershed task is used to identify catchment areas based on a particular location you
+provide and ArcGIS Online Elevation data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Result object comprised of two FeatureSets - one for watershed_area, and another for
+snapped_points</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>
@@ -279,10 +330,10 @@ calculate the area.</dd>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="arcgis.features.find_locations.html" class="btn btn-neutral float-right" title="arcgis.features.find_locations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="arcgis.features.manage_data.html" class="btn btn-neutral float-right" title="arcgis.features.manage_data module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="arcgis.features.elevation.html" class="btn btn-neutral" title="arcgis.features.elevation module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="arcgis.features.find_locations.html" class="btn btn-neutral" title="arcgis.features.find_locations module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

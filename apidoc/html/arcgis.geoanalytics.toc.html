@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.geoanalytics module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.geoanalytics module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="next" title="arcgis.geoanalytics.analyze_patterns module" href="arcgis.geoanalytics.analyze_patterns.html"/>
         <link rel="prev" title="arcgis.network.analysis module" href="arcgis.network.analysis.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
@@ -82,7 +82,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -114,6 +114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l1"><a class="reference internal" href="arcgis.raster.toc.html">arcgis.raster module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.network.toc.html">arcgis.network module</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.geoanalytics module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#define-output-datastore">define_output_datastore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#get-datastores">get_datastores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#is-supported">is_supported</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
@@ -234,6 +235,47 @@ These GeoAnalytics tools work with big data registered in the GISs datastores as
 </tbody>
 </table>
 </div></blockquote>
+<div class="section" id="define-output-datastore">
+<h2>define_output_datastore<a class="headerlink" href="#define-output-datastore" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.geoanalytics.define_output_datastore">
+<code class="descclassname">geoanalytics.</code><code class="descname">define_output_datastore</code><span class="sig-paren">(</span><em>datastore=None</em>, <em>template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.define_output_datastore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the <cite>arcgis.env.output_datastore</cite> by providing the datastore and template name
+to this method. If datastore is None, the <cite>arcgis.env.output_datastore</cite> will reset
+to default.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>datastore</td>
+<td>Optional Datastore/String. This specifies the big data file
+share to save GeoAnalyticss results to. If specified as None the
+<cite>arcgis.env.output_datastore</cite> will reset to default.  Allowed
+string values are: <cite>spatiotemporal</cite> or <cite>relational</cite>.</td>
+</tr>
+<tr class="row-odd"><td>template</td>
+<td>Optional string. When specified, the <cite>template</cite> determines how
+GeoAnalytics result schema will be formatted. The output will
+be written to a file in the big data file share.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="get-datastores">
 <h2>get_datastores<a class="headerlink" href="#get-datastores" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
@@ -262,6 +304,8 @@ checks if arcgis.env.active_gis supports geoanalytics</p>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html#calculate-density">calculate_density</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html#create-space-time-cube">create_space_time_cube</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html#forest">forest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.analyze_patterns.html#glr">glr</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.data_enrichment.html">arcgis.geoanalytics.data_enrichment module</a><ul>
@@ -279,7 +323,6 @@ checks if arcgis.env.active_gis supports geoanalytics</p>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#calculate-fields">calculate_fields</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#clip-layer">clip_layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#copy-to-data-store">copy_to_data_store</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#describe-data">describe_data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#dissolve-boundaries">dissolve_boundaries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#merge-layers">merge_layers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html#overlay-data">overlay_data</a></li>
@@ -288,6 +331,7 @@ checks if arcgis.env.active_gis supports geoanalytics</p>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html">arcgis.geoanalytics.summarize_data module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html#aggregate-points">aggregate_points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html#build-multivariable-grid">build_multivariable_grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html#describe-dataset">describe_dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html#join-features">join_features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html#reconstruct-tracks">reconstruct_tracks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html#summarize-attributes">summarize_attributes</a></li>
@@ -348,7 +392,7 @@ checks if arcgis.env.active_gis supports geoanalytics</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

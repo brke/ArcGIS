@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.raster.analytics module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.raster.analytics module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="up" title="arcgis.raster module" href="arcgis.raster.toc.html"/>
         <link rel="next" title="arcgis.raster.functions module" href="arcgis.raster.functions.html"/>
         <link rel="prev" title="arcgis.raster module" href="arcgis.raster.toc.html"/>
@@ -83,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -136,15 +136,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#add-image">add_image</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#delete-image">delete_image</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#delete-image-collection">delete_image_collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#list-datastore-content">list_datastore_content</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#build-footprints">build_footprints</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#build-overview">build_overview</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#calculate-statistics">calculate_statistics</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#optimum-travel-cost-network">optimum_travel_cost_network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#determine-travel-costpath-as-polyline">determine_travel_costpath_as_polyline</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.html">arcgis.raster.functions module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.gbl.html">arcgis.raster.functions.gbl module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.orthomapping.html">arcgis.raster.orthomapping module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.RFT.html">arcgis.raster.functions.RFT</a></li>
 </ul>
 </li>
 </ul>
@@ -342,12 +345,8 @@ Alternatively, you can pass in the name of the output Image Service that should 
 A RuntimeError is raised if a service by that name already exists</dd>
 </dl>
 <p>gis: Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p>
-<dl class="docutils">
-<dt>dict with the following keys:</dt>
-<dd>“output_raster” : layer
-“output_error_raster” : layer
-“process_info” : layer</dd>
-</dl>
+<p>named tuple with name values being output_raster, output_error_raster and
+process_info</p>
 </dd></dl>
 
 </div>
@@ -517,21 +516,84 @@ A RuntimeError is raised if a service by that name already exists</dd>
 <h2>segment<a class="headerlink" href="#segment" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.raster.analytics.segment">
-<code class="descclassname">analytics.</code><code class="descname">segment</code><span class="sig-paren">(</span><em>input_raster</em>, <em>spectral_detail='15.5'</em>, <em>spatial_detail='15'</em>, <em>minimum_segment_size_in_pixels='20'</em>, <em>band_indexes='0</em>, <em>1</em>, <em>2'</em>, <em>remove_tiling_artifacts='false'</em>, <em>output_name=None</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.analytics.segment" title="Permalink to this definition">¶</a></dt>
-<dd><p>input_raster : Required string</p>
-<p>spectral_detail : Required string</p>
-<p>spatial_detail : Required string</p>
-<p>minimum_segment_size_in_pixels : Required string</p>
-<p>band_indexes : Required string</p>
-<p>remove_tiling_artifacts : Required string</p>
-<dl class="docutils">
-<dt>output_name <span class="classifier-delimiter">:</span> <span class="classifier">Optional. If not provided, an Image Service is created by the method and used as the output raster.</span></dt>
-<dd>You can pass in an existing Image Service Item from your GIS to use that instead.
-Alternatively, you can pass in the name of the output Image Service that should be created by this method to be used as the output for the tool.
-A RuntimeError is raised if a service by that name already exists</dd>
-</dl>
-<p>gis: Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p>
-<p>output_raster : Image layer item</p>
+<code class="descclassname">analytics.</code><code class="descname">segment</code><span class="sig-paren">(</span><em>input_raster, spectral_detail=15.5, spatial_detail=15, minimum_segment_size_in_pixels=20, band_indexes=[0, 1, 2], remove_tiling_artifacts=False, output_name=None, *, gis=None, **kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.analytics.segment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Groups together adjacent pixels having similar spectral and spatial characteristics into
+segments, known as objects.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>input_raster</td>
+<td>Required ImageryLayer object</td>
+</tr>
+<tr class="row-odd"><td>spectral_detail</td>
+<td><p class="first">Optional float. Default is 15.5.
+Set the level of importance given to the spectral differences of
+features in your imagery. Valid values range from 1.0 to 20.0. A high
+value is appropriate when you have features you want to classify
+separately but have somewhat similar spectral characteristics.
+Smaller values create spectrally smoother outputs.</p>
+<p class="last">For example, setting a higher spectral detail value for a forested
+scene, will preserve greater discrimination between the different tree
+species, resulting in more segments.</p>
+</td>
+</tr>
+<tr class="row-even"><td>spatial_detail</td>
+<td><p class="first">Optional float. Default is 15.
+Set the level of importance given to the proximity between features
+in your imagery. Valid values range from 1 to 20. A high value is
+appropriate for a scene where your features of interest are small
+and clustered together. Smaller values create spatially smoother
+outputs.</p>
+<p class="last">For example, in an urban scene, you could classify an impervious
+surface using a smaller spatial detail, or you could classify
+buildings and roads as separate classes using a higher spatial detail.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>minimum_segment_size_in_pixels</td>
+<td>Optional float. Default is 20.
+Merge segments smaller than this size with their best fitting
+neighbor segment. This is related to the minimum mapping unit for a
+mapping project. Units are in pixels.</td>
+</tr>
+<tr class="row-even"><td>band_indexes</td>
+<td>Optional List of integers. Default is [0,1,2]
+Define which 3 bands are used in segmentation. Choose the bands that
+visually discriminate your features of interest best.</td>
+</tr>
+<tr class="row-odd"><td>remove_tiling_artifacts</td>
+<td>Optional Bool. Default is False.
+If False, the tool will not run to remove tiling artifacts after
+segmentation. The result may seem blocky at some tiling boundaries.</td>
+</tr>
+<tr class="row-even"><td>output_name</td>
+<td>Optional String. If specified, an Imagery Layer of given name is
+created. Else, an Image Service is created by the method and used
+as the output raster. You can pass in an existing Image Service Item
+from your GIS to use that instead. Alternatively, you can pass in
+the name of the output Image Service that should be created by this
+method to be used as the output for the tool. A RuntimeError is raised
+if a service by that name already exists</td>
+</tr>
+<tr class="row-odd"><td>gis</td>
+<td>Optional GIS object. If not speficied, the currently active connection
+is used.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">output_raster : Imagery Layer item</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>
@@ -685,7 +747,9 @@ controlled by specifying additional raster type arguments.</p>
 <p class="last">The following additional parameters can be specified:
 - Spatial reference of the image_collection; The well-known ID of
 the spatial reference or a spatial reference dictionary object for the
-input geometries.</p>
+input geometries.
+If the raster type name is set to “UAV/UAS”, the spatial reference of the
+output image collection will be determined by the raster type parameters defined.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>context</td>
@@ -876,6 +940,51 @@ the source images that the image collection references.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="list-datastore-content">
+<h2>list_datastore_content<a class="headerlink" href="#list-datastore-content" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.analytics.list_datastore_content">
+<code class="descclassname">analytics.</code><code class="descname">list_datastore_content</code><span class="sig-paren">(</span><em>datastore</em>, <em>filter=None</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.analytics.list_datastore_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the contents of the datastore registered with the server (fileShares, cloudStores, rasterStores).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>datastore</td>
+<td>Required. fileshare, rasterstore or cloudstore datastore from which the contents are to be listed.
+It can be a string specifying the datastore path eg “/fileShares/SensorData”, “/cloudStores/testcloud”,
+“/rasterStores/rasterstore”
+or it can be a Datastore object containing a fileshare, rasterstore  or a cloudstore path.
+eg:
+ds=analytics.get_datastores()
+ds_items =ds.search()
+ds_items[1]
+ds_items[1] may be specified as input for datastore</td>
+</tr>
+<tr class="row-odd"><td>filter</td>
+<td>Optional. To filter out the raster contents to be displayed</td>
+</tr>
+<tr class="row-even"><td>gis</td>
+<td>Optional GIS. The GIS on which this tool runs. If not specified, the active GIS is used.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of contents in the datastore</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="build-footprints">
 <h2>build_footprints<a class="headerlink" href="#build-footprints" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
@@ -968,6 +1077,85 @@ A RuntimeError is raised if a service by that name already exists</dd>
 </dd></dl>
 
 </div>
+<div class="section" id="determine-travel-costpath-as-polyline">
+<h2>determine_travel_costpath_as_polyline<a class="headerlink" href="#determine-travel-costpath-as-polyline" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.raster.analytics.determine_travel_costpath_as_polyline">
+<code class="descclassname">analytics.</code><code class="descname">determine_travel_costpath_as_polyline</code><span class="sig-paren">(</span><em>input_source_data</em>, <em>input_cost_raster</em>, <em>input_destination_data</em>, <em>path_type='BEST_SINGLE'</em>, <em>output_polyline_name=None</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.analytics.determine_travel_costpath_as_polyline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the least cost polyline path between sources and known destinations.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>input_source_data</td>
+<td>The layer that identifies the cells to determine the least
+costly path from. This parameter can have either a raster input or
+a feature input.</td>
+</tr>
+<tr class="row-odd"><td>input_cost_raster</td>
+<td><p class="first">A raster defining the impedance or cost to move planimetrically through
+each cell.</p>
+<p>The value at each cell location represents the cost-per-unit distance for
+moving through the cell. Each cell location value is multiplied by the
+cell resolution while also compensating for diagonal movement to
+obtain the total cost of passing through the cell.</p>
+<p class="last">The values of the cost raster can be an integer or a floating point, but they
+cannot be negative or zero as you cannot have a negative or zero cost.</p>
+</td>
+</tr>
+<tr class="row-even"><td>input_destination_data</td>
+<td>The layer that defines the destinations used to calculate the distance.
+This parameter can have either a raster input or a feature input.</td>
+</tr>
+<tr class="row-odd"><td>path_type</td>
+<td><p class="first">A keyword defining the manner in which the values and zones on the
+input destination data will be interpreted in the cost path calculations.</p>
+<p>A string describing the path type, which can either be BEST_SINGLE,
+EACH_CELL, or EACH_ZONE.</p>
+<p>BEST_SINGLE: For all cells on the input destination data, the
+least-cost path is derived from the cell with the minimum of
+the least-cost paths to source cells. This is the default.</p>
+<p>EACH_CELL: For each cell with valid values on the input
+destination data, at least-cost path is determined and saved
+on the output raster. With this option, each cell of the input
+destination data is treated separately, and a least-cost path
+is determined for each from cell.</p>
+<p class="last">EACH_ZONE: For each zone on the input destination data,
+a least-cost path is determined and saved on the output raster.
+With this option, the least-cost path for each zone begins at
+the cell with the lowest cost distance weighting in the zone.</p>
+</td>
+</tr>
+<tr class="row-even"><td>output_polyline_name</td>
+<td><p class="first">Optional. If not provided, a feature layer is created by the method
+and used as the output.</p>
+<p>You can pass in an existing feature layer Item from your GIS to use
+that instead.</p>
+<p class="last">Alternatively, you can pass in the name of the output feature layer  that should be created by this method to be used as the output for the tool.
+A RuntimeError is raised if a service by that name already exists</p>
+</td>
+</tr>
+<tr class="row-odd"><td>gis</td>
+<td>Optional GIS. the GIS on which this tool runs. If not specified, the active GIS is used.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The imagery layer url</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 </div>
 
 
@@ -1015,7 +1203,7 @@ A RuntimeError is raised if a service by that name already exists</dd>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

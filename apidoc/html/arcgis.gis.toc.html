@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.gis module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.gis module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="next" title="arcgis.gis.admin module" href="arcgis.gis.admin.html"/>
         <link rel="prev" title="API Reference for the ArcGIS API for Python" href="index.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
@@ -82,7 +82,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -117,6 +117,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="#role">Role</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#layer">Layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#groupapplication">GroupApplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#categoryschemamanager">CategorySchemaManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#contentmanager">ContentManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#usermanager">UserManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#groupmanager">GroupManager</a></li>
@@ -371,9 +372,15 @@ is None and the security for the site uses BUILT-IN security.</td>
 <dd><p>The resource manager for GIS groups. See <a class="reference internal" href="#arcgis.gis.GroupManager" title="arcgis.gis.GroupManager"><code class="xref py py-class docutils literal"><span class="pre">GroupManager</span></code></a>.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="arcgis.gis.GIS.hub">
+<code class="descname">hub</code><a class="headerlink" href="#arcgis.gis.GIS.hub" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource manager for GIS hub. See <a class="reference internal" href="arcgis.apps.hub.toc.html#arcgis.apps.hub.Hub" title="arcgis.apps.hub.Hub"><code class="xref py py-class docutils literal"><span class="pre">Hub</span></code></a>.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="arcgis.gis.GIS.map">
-<code class="descname">map</code><span class="sig-paren">(</span><em>location=None</em>, <em>zoomlevel=None</em>, <em>mode='2D'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.GIS.map" title="Permalink to this definition">¶</a></dt>
+<code class="descname">map</code><span class="sig-paren">(</span><em>location=None</em>, <em>zoomlevel=None</em>, <em>mode='2D'</em>, <em>geocoder=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.GIS.map" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a map widget centered at the declared location with the specified
 zoom level. If an address is provided, it is geocoded
 using the GIS’s configured geocoders and if a match is found, the geographic
@@ -398,6 +405,9 @@ to the specified zoomlevel. See <a class="reference internal" href="arcgis.widge
 </tr>
 <tr class="row-even"><td>mode</td>
 <td>Optional string of either ‘2D’ or ‘3D’ to specify map mode. Defaults to ‘2D’.</td>
+</tr>
+<tr class="row-odd"><td>geocoder</td>
+<td>Optional Geocoder. Allows users to specify a geocoder to find a given location.</td>
 </tr>
 </tbody>
 </table>
@@ -964,7 +974,7 @@ is not yet available on ArcGIS Online. Currently it is available only with an Ar
 
 <dl class="method">
 <dt id="arcgis.gis.Item.download">
-<code class="descname">download</code><span class="sig-paren">(</span><em>save_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.download" title="Permalink to this definition">¶</a></dt>
+<code class="descname">download</code><span class="sig-paren">(</span><em>save_path=None</em>, <em>file_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.download" title="Permalink to this definition">¶</a></dt>
 <dd><p>Downloads the data to the specified folder or a temporary folder if a folder is not provided.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -977,6 +987,9 @@ is not yet available on ArcGIS Online. Currently it is available only with an Ar
 </tr>
 <tr class="row-even"><td>save_path</td>
 <td>Optional string. Folder location to download the file to.</td>
+</tr>
+<tr class="row-odd"><td>file_name</td>
+<td>Optional string. The name of the file.</td>
 </tr>
 </tbody>
 </table>
@@ -1494,7 +1507,7 @@ everyone.</td>
 the organization.</td>
 </tr>
 <tr class="row-even"><td>groups</td>
-<td>Optional list of group names as strings, or a list of
+<td>Optional list of group ids as strings, or a list of
 arcgis.gis.Group objects, or a comma-separated list of
 group IDs.</td>
 </tr>
@@ -2603,6 +2616,12 @@ administrators of the group or administrators of an organization if
 the group is part of one.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="arcgis.gis.Group.categories">
+<code class="descname">categories</code><a class="headerlink" href="#arcgis.gis.Group.categories" title="Permalink to this definition">¶</a></dt>
+<dd><p>The category manager for groups. See <a class="reference internal" href="#arcgis.gis.CategorySchemaManager" title="arcgis.gis.CategorySchemaManager"><code class="xref py py-class docutils literal"><span class="pre">CategorySchemaManager</span></code></a>.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="arcgis.gis.Group.content">
 <code class="descname">content</code><span class="sig-paren">(</span><em>max_items=1000</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Group.content" title="Permalink to this definition">¶</a></dt>
@@ -2866,6 +2885,57 @@ that the user be logged in.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A boolean indicating success (True) or failure (False).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.Group.notify">
+<code class="descname">notify</code><span class="sig-paren">(</span><em>users</em>, <em>subject</em>, <em>message</em>, <em>method='email'</em>, <em>client_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Group.notify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a group notification that sends a message to all users within
+the group.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>users</td>
+<td>Required List. A list of users or user names.</td>
+</tr>
+<tr class="row-odd"><td>subject</td>
+<td>Required String. The subject of the notification.</td>
+</tr>
+<tr class="row-even"><td>message</td>
+<td>Required String. The message body that will be sent to
+the group’s users.</td>
+</tr>
+<tr class="row-odd"><td>method</td>
+<td><p class="first">Optional String. This is the form for which users will be
+contacted.  The allowed values are: email, push, and
+builtin.</p>
+<ul class="last simple">
+<li>email - sent a message via smtp.</li>
+<li>push - pushes a message out.</li>
+<li>builtin - creates a user notification.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>client_id</td>
+<td>Optional String. The client id of the application for the
+push operation.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
 </tr>
 </tbody>
 </table>
@@ -3328,6 +3398,151 @@ group owners and admins.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="categoryschemamanager">
+<h2>CategorySchemaManager<a class="headerlink" href="#categoryschemamanager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.gis.CategorySchemaManager">
+<em class="property">class </em><code class="descclassname">arcgis.gis.</code><code class="descname">CategorySchemaManager</code><span class="sig-paren">(</span><em>base_url</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.CategorySchemaManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper class for managing category schemas. This class is not created
+by users directly. An instance of this class, called <cite>categories</cite>, is
+available as a property on <cite>gis.content</cite> or on <cite>gis.groups</cite>.</p>
+<dl class="method">
+<dt id="arcgis.gis.CategorySchemaManager.assign_to_items">
+<code class="descname">assign_to_items</code><span class="sig-paren">(</span><em>items</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.CategorySchemaManager.assign_to_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function adds group content categories to the portal items
+specified in the <cite>items</cite> argument (see below). For assigning categories
+to items in a group, you must be the group owner/manager. For assigning
+organization content categories on items, you must be the item owner
+or an administrator who has the <cite>portal:admin:updateItems</cite> privilege.
+A maximum of 100 items can be bulk updated per request.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>items</td>
+<td><p class="first">Required List. A JSON array of item objects. Each is
+specified with the item ID that consists of a categories
+object. categories is specified with an array that lists
+all content categories to update on the item, each with
+full hierarchical path prefixed with /.</p>
+<p>Each item can be categorized to a maximum of 20
+categories.</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Example:</th><td class="field-body"><dl class="first docutils">
+<dt>[{</dt>
+<dd><dl class="first docutils">
+<dt>“2678d3002eea4e4a825e3bdf10016e61”: {</dt>
+<dd><p class="first last">“categories”: [“/Categories/Geology”, “/Categories/Elevation”]</p>
+</dd>
+</dl>
+<p class="last">}</p>
+</dd>
+<dt>}, {</dt>
+<dd><dl class="first docutils">
+<dt>“c3ad4ed8bcf04d619537cfe252a1760d”: {</dt>
+<dd><p class="first last">“categories”: [“/Categories/Geology”, “/Categories/Land cover/Forest/Deciduous Forest”]</p>
+</dd>
+</dl>
+<p class="last">}</p>
+</dd>
+<dt>}, {</dt>
+<dd><dl class="first docutils">
+<dt>“9ced00fdce3e4b20bb4b05155acbe817”: {</dt>
+<dd><p class="first last">“categories”: []</p>
+</dd>
+</dl>
+<p class="last">}</p>
+</dd>
+</dl>
+<p class="last">}]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A <cite>dict</cite> of <cite>item_id</cite> : <cite>status</cite>, with <cite>status</cite> being</td>
+</tr>
+</tbody>
+</table>
+<p>whether the content categories were successfully added</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.CategorySchemaManager.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.CategorySchemaManager.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function allows group owner or managers to remove the
+category schema set on a group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.gis.CategorySchemaManager.properties">
+<code class="descname">properties</code><a class="headerlink" href="#arcgis.gis.CategorySchemaManager.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the properties of the schema.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.gis.CategorySchemaManager.schema">
+<code class="descname">schema</code><a class="headerlink" href="#arcgis.gis.CategorySchemaManager.schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>This property allows group owners/managers to manage the content
+categories for a group. These content categories are a hierarchical
+set of classes to help organize and browse group content.</p>
+<p>Each group can have a maximum of 5 category trees with each
+category schema can have up to 4 hierarchical levels. The maximum
+number of categories a group can have in total is 200 with each
+category of less than 100 characters title and 300 characters
+description.</p>
+<p>When getting this property, returns the content category schema
+set on a group.</p>
+<p>When setting this property, will update the group category schema
+based on the <cite>dict</cite> this property is set to. See below.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>categories</td>
+<td>Required Dict. A category schema object consists of an
+array of dict objects representing top level categories.
+Each object has title, description and categories
+properties where categories consists of an array of
+objects with each having the same properties and
+represents the descendant categories or subcategories and
+so on.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="contentmanager">
 <h2>ContentManager<a class="headerlink" href="#contentmanager" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
@@ -3562,9 +3777,15 @@ Values for Excel: coordinates | address | none</p>
 </table>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="arcgis.gis.ContentManager.categories">
+<code class="descname">categories</code><a class="headerlink" href="#arcgis.gis.ContentManager.categories" title="Permalink to this definition">¶</a></dt>
+<dd><p>The category manager for items. See <a class="reference internal" href="#arcgis.gis.CategorySchemaManager" title="arcgis.gis.CategorySchemaManager"><code class="xref py py-class docutils literal"><span class="pre">CategorySchemaManager</span></code></a>.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="arcgis.gis.ContentManager.clone_items">
-<code class="descname">clone_items</code><span class="sig-paren">(</span><em>items</em>, <em>folder=None</em>, <em>item_extent=None</em>, <em>use_org_basemap=False</em>, <em>copy_data=True</em>, <em>search_existing_items=True</em>, <em>item_mapping=None</em>, <em>group_mapping=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.clone_items" title="Permalink to this definition">¶</a></dt>
+<code class="descname">clone_items</code><span class="sig-paren">(</span><em>items</em>, <em>folder=None</em>, <em>item_extent=None</em>, <em>use_org_basemap=False</em>, <em>copy_data=True</em>, <em>search_existing_items=True</em>, <em>item_mapping=None</em>, <em>group_mapping=None</em>, <em>owner=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.clone_items" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clone content to the GIS by creating new items.</p>
 <p>Cloning an item will create a copy of the item and for certain
 item types a copy of the item dependencies in the GIS.</p>
@@ -3617,6 +3838,9 @@ be used rather than cloning the source item.</td>
 <td>Optional dictionary. Can be used to associate a group id in the source
 GIS (key) to a group id in the target GIS (value). The target group will
 be used rather than cloning the source group.</td>
+</tr>
+<tr class="row-even"><td>owner</td>
+<td>Optional string. Defaults to the logged in user.</td>
 </tr>
 </tbody>
 </table>
@@ -4074,6 +4298,41 @@ available for use or not.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="arcgis.gis.ContentManager.rename_folder">
+<code class="descname">rename_folder</code><span class="sig-paren">(</span><em>old_folder</em>, <em>new_folder</em>, <em>owner=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.rename_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renames an existing folder from it’s existing name to a new name.
+If owner is not specified, owner is set as the logged in user.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>old_folder</td>
+<td>Required string. The name of the folder to rename for the owner.</td>
+</tr>
+<tr class="row-odd"><td>new_folder</td>
+<td>Required string. The new name of the folder.</td>
+</tr>
+<tr class="row-even"><td>owner</td>
+<td>Optional string. User, folder owner, None for logged in user.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="arcgis.gis.ContentManager.replace_service">
 <code class="descname">replace_service</code><span class="sig-paren">(</span><em>replace_item</em>, <em>new_item</em>, <em>replaced_service_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.replace_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The replace_service operation allows you to replace your production vector tile layers with staging ones. This
@@ -4354,7 +4613,7 @@ it is returned as a list of dictionaries.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.UserManager.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>username</em>, <em>password</em>, <em>firstname</em>, <em>lastname</em>, <em>email</em>, <em>description=None</em>, <em>role='org_user'</em>, <em>provider='arcgis'</em>, <em>idp_username=None</em>, <em>level=2</em>, <em>thumbnail=None</em>, <em>user_type='creator'</em>, <em>credits=-1</em>, <em>groups=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.UserManager.create" title="Permalink to this definition">¶</a></dt>
+<code class="descname">create</code><span class="sig-paren">(</span><em>username</em>, <em>password</em>, <em>firstname</em>, <em>lastname</em>, <em>email</em>, <em>description=None</em>, <em>role=None</em>, <em>provider='arcgis'</em>, <em>idp_username=None</em>, <em>level=2</em>, <em>thumbnail=None</em>, <em>user_type=None</em>, <em>credits=-1</em>, <em>groups=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.UserManager.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation is used to pre-create built-in or enterprise accounts within the portal,
 or built-in users in an ArcGIS Online organization account. Only an administrator
 can call this method.</p>
@@ -4442,7 +4701,7 @@ user. (10.7+)</td>
 <code class="descname">disable_users</code><span class="sig-paren">(</span><em>users</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.UserManager.disable_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is a bulk disables user operation that allows administrators to quickly disable large
 number of users in a single call.  It is useful to do this operation if you have multiple
-users that need to be disabled.</p>
+users that need to be disabled.  Supported on ArcGIS REST API 6.4+.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="21%" />
@@ -4472,7 +4731,7 @@ users that need to be disabled.</p>
 <code class="descname">enable_users</code><span class="sig-paren">(</span><em>users</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.UserManager.enable_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is a bulk operation that allows administrators to quickly enable large number of users
 in a single call.  It is useful to do this operation if you have multiple users that need
-to be enabled.</p>
+to be enabled. Supported on ArcGIS REST API 6.4+.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="21%" />
@@ -4574,6 +4833,24 @@ is properly formatted. If false, no check will occur</td>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.gis.UserManager.license_types">
+<code class="descname">license_types</code><a class="headerlink" href="#arcgis.gis.UserManager.license_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of available licenses associated with a given GIS.
+The information returned can help administrators determine what type
+of a user should me based on the bundles associated with each user
+type.</p>
+<p><strong>This is only available on 10.7+.</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list</td>
 </tr>
 </tbody>
 </table>
@@ -5723,7 +6000,8 @@ used together with file_name.</td>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#enterprisegroups">EnterpriseGroups</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#site">Site</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#system">System</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#licenses">Licenses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#licenses-deprecated-10-7">Licenses (Deprecated 10.7+)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#portallicense">PortalLicense</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#directory">Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#webadaptor">WebAdaptor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.admin.html#webadaptors">WebAdaptors</a></li>
@@ -5807,7 +6085,7 @@ used together with file_name.</td>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

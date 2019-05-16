@@ -19,10 +19,6 @@ copy_to_data_store
 --------------
 .. automethod:: arcgis.geoanalytics.manage_data.copy_to_data_store
 
-describe_data
---------------
-.. automethod:: arcgis.geoanalytics.manage_data.describe_data
-
 dissolve_boundaries
 --------------
 .. automethod:: arcgis.geoanalytics.manage_data.dissolve_boundaries

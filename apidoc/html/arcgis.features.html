@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.features module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.features module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -80,7 +80,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -2465,7 +2465,7 @@ passed as inputs to feature analysis tools, and returned as results from feature
 if an output name for a feature layer is not specified when calling the tool.</p>
 <dl class="staticmethod">
 <dt id="arcgis.features.FeatureCollection.from_featureset">
-<em class="property">static </em><code class="descname">from_featureset</code><span class="sig-paren">(</span><em>fset</em>, <em>symbol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.FeatureCollection.from_featureset" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">from_featureset</code><span class="sig-paren">(</span><em>fset</em>, <em>symbol=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.FeatureCollection.from_featureset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a FeatureCollection object from a FeatureSet object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2546,6 +2546,40 @@ This includes visualization, spatial indexing, IO and dataset level properties.<
 <span class="go">(-14.23427, 39)</span>
 </pre></div>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.features.GeoAccessor.distance_matrix">
+<code class="descname">distance_matrix</code><span class="sig-paren">(</span><em>leaf_size=16</em>, <em>rebuild=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.GeoAccessor.distance_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a k-d tree to calculate the nearest-neighbor problem.</p>
+<p><strong>requires scipy</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>leafsize</td>
+<td>Optional Integer. The number of points at which the algorithm
+switches over to brute-force. Default: 16.</td>
+</tr>
+<tr class="row-odd"><td>rebuild</td>
+<td>Optional Boolean. If True, the current KDTree is erased. If false,
+any KD-Tree that exists will be returned.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">scipy’s KDTree class</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -2870,6 +2904,41 @@ the field.</td>
 <dt id="arcgis.features.GeoAccessor.name">
 <code class="descname">name</code><a class="headerlink" href="#arcgis.features.GeoAccessor.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the name of the geometry column</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.features.GeoAccessor.overlay">
+<code class="descname">overlay</code><span class="sig-paren">(</span><em>sdf</em>, <em>op='union'</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.GeoAccessor.overlay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs spatial operation operations on two spatially enabled dataframes.</p>
+<p><strong>requires ArcPy or Shapely</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>sdf</td>
+<td>Required Spatially Enabled DataFrame. The geometry to
+perform the operation from.</td>
+</tr>
+<tr class="row-odd"><td>op</td>
+<td>Optional String. The spatial operation to perform.  The
+allowed value are: union, erase, identity, intersection.
+<cite>union</cite> is the default operation.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Spatially enabled DataFrame (pd.DataFrame)</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -3645,6 +3714,83 @@ SpatialReference object or the coordinate system name.</td>
 </dd></dl>
 
 <dl class="method">
+<dt id="arcgis.features.GeoAccessor.relationship">
+<code class="descname">relationship</code><span class="sig-paren">(</span><em>other</em>, <em>op</em>, <em>relation=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.GeoAccessor.relationship" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method allows for dataframe to dataframe compairson using
+spatial relationships.  The return is a pd.DataFrame that meet the
+operations’ requirements.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>sdf</td>
+<td>Required Spatially Enabled DataFrame. The geometry to
+perform the operation from.</td>
+</tr>
+<tr class="row-odd"><td>op</td>
+<td><p class="first">Optional String. The spatial operation to perform.  The
+allowed value are: contains,crosses,disjoint,equals,
+overlaps,touches, or within.</p>
+<ul class="last simple">
+<li>contains - Indicates if the base geometry contains the comparison geometry.</li>
+<li>crosses -  Indicates if the two geometries intersect in a geometry of a lesser shape type.</li>
+<li>disjoint - Indicates if the base and comparison geometries share no points in common.</li>
+<li>equals - Indicates if the base and comparison geometries are of the same shape type and define the same set of points in the plane. This is a 2D comparison only; M and Z values are ignored.</li>
+<li>overlaps - Indicates if the intersection of the two geometries has the same shape type as one of the input geometries and is not equivalent to either of the input geometries.</li>
+<li>touches - Indicates if the boundaries of the geometries intersect.</li>
+<li>within - Indicates if the base geometry is within the comparison geometry.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>relation</td>
+<td><p class="first">Optional String.  The spatial relationship type.  The
+allowed values are: BOUNDARY, CLEMENTINI, and PROPER.</p>
+<ul class="simple">
+<li>BOUNDARY - Relationship has no restrictions for interiors or boundaries.</li>
+<li>CLEMENTINI - Interiors of geometries must intersect. This is the default.</li>
+<li>PROPER - Boundaries of geometries must not intersect.</li>
+</ul>
+<p class="last">This only applies to contains,</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Spatially enabled DataFrame (pd.DataFrame)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.features.GeoAccessor.select">
+<code class="descname">select</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.GeoAccessor.select" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation performs a dataset wide <strong>selection</strong> by geometric
+intersection. A geometry or another Spatially enabled DataFrame
+can be given and <cite>select</cite> will return all rows that intersect that
+input geometry.  The <cite>select</cite> operation uses a spatial index to
+complete the task, so if it is not built before the first run, the
+function will build a quadtree index on the fly.</p>
+<p><strong>requires ArcPy or Shapely</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">pd.DataFrame (spatially enabled)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="arcgis.features.GeoAccessor.set_geometry">
 <code class="descname">set_geometry</code><span class="sig-paren">(</span><em>col</em>, <em>sr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.GeoAccessor.set_geometry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Assigns the Geometry Column by Name or by List</p>
@@ -3812,6 +3958,24 @@ the table exists, and exception will be raised.</td>
 <dt id="arcgis.features.GeoAccessor.validate">
 <code class="descname">validate</code><span class="sig-paren">(</span><em>strict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.GeoAccessor.validate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determines if the Geo Accessor is Valid with Geometries in all values</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.features.GeoAccessor.voronoi">
+<code class="descname">voronoi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.GeoAccessor.voronoi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a voronoi diagram on the whole dataset.  If the geometry
+is not a <cite>Point</cite> then the centroid is used for the geometry.  The
+result is a polygon <cite>GeoArray</cite> Series that matches 1:1 to the original
+dataset.</p>
+<p><strong>requires scipy</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">pd.Series</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -20880,7 +21044,8 @@ it to false.</p>
 <dl class="docutils">
 <dt>path_or_buf <span class="classifier-delimiter">:</span> <span class="classifier">str or file handle, default None</span></dt>
 <dd><p class="first">File path or object, if None is provided the result is returned as
-a string.</p>
+a string.  If a file object is passed it should be opened with
+<cite>newline=’‘</cite>, disabling universal newlines.</p>
 <div class="last versionchanged">
 <p><span class="versionmodified">Changed in version 0.24.0: </span>Was previously named “path” for Series.</p>
 </div>
@@ -23688,7 +23853,7 @@ It is a superset of <cite>xs</cite> functionality, see
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

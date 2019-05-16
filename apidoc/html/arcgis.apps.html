@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.apps module &mdash; arcgis 1.6.0 documentation</title>
+  <title>arcgis.apps module &mdash; arcgis 1.6.1 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.0 documentation" href="index.html"/>
+    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
         <link rel="next" title="arcgis.apps.workforce module" href="arcgis.apps.workforce.html"/>
         <link rel="prev" title="arcgis.widgets module" href="arcgis.widgets.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
@@ -82,7 +82,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.0
+                1.6.1
               </div>
             
           
@@ -127,10 +127,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="#build-explorer-url">build_explorer_url</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#build-navigator-url">build_navigator_url</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#build-survey123-url">build_survey123_url</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-tracker-url">build_tracker_url</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.apps.workforce.html">arcgis.apps.workforce module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.apps.storymap.html">arcgis.apps.storymap module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.apps.survey123.html">arcgis.apps.survey123 module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.apps.tracker.html">arcgis.apps.tracker module</a></li>
 </ul>
 </li>
 </ul>
@@ -410,6 +412,38 @@ item representing the survey to open.</td>
 </dd></dl>
 
 </div>
+<div class="section" id="build-tracker-url">
+<h2>build_tracker_url<a class="headerlink" href="#build-tracker-url" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="arcgis.apps.build_tracker_url">
+<code class="descclassname">apps.</code><code class="descname">build_tracker_url</code><span class="sig-paren">(</span><em>portal_url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.build_tracker_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a url that can be used to open Tracker for ArcGIS</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>portal_url</td>
+<td>Optional <code class="xref py py-class docutils literal"><span class="pre">String</span></code> The portal that should be used when tracker
+is launched via the url scheme.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">String</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
@@ -435,6 +469,13 @@ item representing the survey to open.</td>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.apps.survey123.html">arcgis.apps.survey123 module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.apps.survey123.html#surveymanager">SurveyManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.apps.survey123.html#survey">Survey</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.apps.tracker.html">arcgis.apps.tracker module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.apps.tracker.html#locationtrackingmanager">LocationTrackingManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.apps.tracker.html#trackview">TrackView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.apps.tracker.html#trackviewermanager">TrackViewerManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.apps.tracker.html#mobileusermanager">MobileUserManager</a></li>
 </ul>
 </li>
 </ul>
@@ -487,7 +528,7 @@ item representing the survey to open.</td>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.0',
+            VERSION:'1.6.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
