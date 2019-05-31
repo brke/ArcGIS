@@ -26,23 +26,13 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
-        <link rel="up" title="arcgis.features module" href="arcgis.features.toc.html"/>
-        <link rel="next" title="arcgis.features.manage_data module" href="arcgis.features.manage_data.html"/>
-        <link rel="prev" title="arcgis.features.find_locations module" href="arcgis.features.find_locations.html"/>
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="arcgis.features.manage_data module" href="arcgis.features.manage_data.html" />
+    <link rel="prev" title="arcgis.features.find_locations module" href="arcgis.features.find_locations.html" />
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -58,7 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -75,7 +65,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           
             
-            <img src="_static/python_api_logo.png" class="logo" />
+            <img src="_static/python_api_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -164,7 +154,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">arcgis</a>
@@ -172,9 +162,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -228,7 +219,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>trace_downstream<a class="headerlink" href="#trace-downstream" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.features.hydrology.trace_downstream">
-<code class="descclassname">hydrology.</code><code class="descname">trace_downstream</code><span class="sig-paren">(</span><em>input_points</em>, <em>point_id_field=None</em>, <em>source_database='Finest'</em>, <em>generalize=False</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.hydrology.trace_downstream" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">hydrology.</code><code class="descname">trace_downstream</code><span class="sig-paren">(</span><em>point_id_field=None</em>, <em>source_database='Finest'</em>, <em>generalize=False</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.hydrology.trace_downstream" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Trace Downstream method delineates the downstream path from a specified location. 
 Esri-curated elevation data is used to create an output polyline delineating the flow path 
 downstream from the specified input location. This method accesses a service using multiple 
@@ -302,7 +293,7 @@ also be optionally explicitly passed in through this parameter.</td>
 <h2>watershed<a class="headerlink" href="#watershed" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.features.hydrology.watershed">
-<code class="descclassname">hydrology.</code><code class="descname">watershed</code><span class="sig-paren">(</span><em>input_points</em>, <em>point_id_field=None</em>, <em>snap_distance=10</em>, <em>snap_distance_units='Meters'</em>, <em>source_database='Finest'</em>, <em>generalize=False</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.hydrology.watershed" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">hydrology.</code><code class="descname">watershed</code><span class="sig-paren">(</span><em>point_id_field=None</em>, <em>snap_distance=10</em>, <em>snap_distance_units='Meters'</em>, <em>source_database='Finest'</em>, <em>generalize=False</em>, <em>gis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.hydrology.watershed" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Watershed task is used to identify catchment areas based on a particular location you
 provide and ArcGIS Online Elevation data.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -322,9 +313,7 @@ snapped_points</td>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -346,7 +335,7 @@ snapped_points</td>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -365,6 +354,7 @@ snapped_points</td>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.6.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -377,19 +367,13 @@ snapped_points</td>
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

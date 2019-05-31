@@ -26,22 +26,13 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
-        <link rel="next" title="arcgis.features.analysis module" href="arcgis.features.analysis.html"/>
-        <link rel="prev" title="arcgis.env module" href="arcgis.env.html"/>
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="arcgis.features.analysis module" href="arcgis.features.analysis.html" />
+    <link rel="prev" title="arcgis.env module" href="arcgis.env.html" />
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -57,7 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -74,7 +65,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           
             
-            <img src="_static/python_api_logo.png" class="logo" />
+            <img src="_static/python_api_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -159,7 +150,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">arcgis</a>
@@ -167,9 +158,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -237,7 +229,7 @@ representation and user experience - on a map, in a 3D scene, as entities with a
 <dt id="arcgis.features.Feature">
 <em class="property">class </em><code class="descclassname">arcgis.features.</code><code class="descname">Feature</code><span class="sig-paren">(</span><em>geometry=None</em>, <em>attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.Feature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Entities located in space with a set of properties can be represented as features.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Obtain a feature from a feature layer:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obtain a feature from a feature layer:</span>
 
 <span class="n">feat_set</span> <span class="o">=</span> <span class="n">feature_layer</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">where</span><span class="o">=</span><span class="s2">&quot;OBJECTID=1&quot;</span><span class="p">)</span>
 <span class="n">feat</span> <span class="o">=</span> <span class="n">feat_set</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -386,7 +378,7 @@ representation and user experience - on a map, in a 3D scene, as entities with a
 <td><div class="first last line-block">
 <div class="line">Required String. The name of the field to get the value for.</div>
 <div class="line"><br /></div>
-<div class="line"><code class="docutils literal"><span class="pre">feature.fields</span></code> will return a list of all field names.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">feature.fields</span></code> will return a list of all field names.</div>
 </div>
 </td>
 </tr>
@@ -593,13 +585,13 @@ Values: standard, native</td>
 </tbody>
 </table>
 </div></blockquote>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 1:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 1:</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">fl</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">where</span><span class="o">=</span><span class="s2">&quot;OBJECTID &lt; 2&quot;</span><span class="p">,</span>
                    <span class="n">calc_expression</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="s2">&quot;ZONE&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span> <span class="p">:</span> <span class="s2">&quot;R1&quot;</span><span class="p">}))</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 2:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 2:</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">fl</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">where</span><span class="o">=</span><span class="s2">&quot;OBJECTID &lt; 2001&quot;</span><span class="p">,</span>
                    <span class="n">calc_expression</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>  <span class="s2">&quot;sqlExpression&quot;</span> <span class="p">:</span> <span class="s2">&quot;B*3&quot;</span><span class="p">}))</span>
@@ -1438,13 +1430,13 @@ Values: standard, native</td>
 </tbody>
 </table>
 </div></blockquote>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 1:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 1:</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">fl</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">where</span><span class="o">=</span><span class="s2">&quot;OBJECTID &lt; 2&quot;</span><span class="p">,</span>
                    <span class="n">calc_expression</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="s2">&quot;ZONE&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span> <span class="p">:</span> <span class="s2">&quot;R1&quot;</span><span class="p">}))</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 2:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example 2:</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">fl</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">where</span><span class="o">=</span><span class="s2">&quot;OBJECTID &lt; 2001&quot;</span><span class="p">,</span>
                    <span class="n">calc_expression</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>  <span class="s2">&quot;sqlExpression&quot;</span> <span class="p">:</span> <span class="s2">&quot;B*3&quot;</span><span class="p">}))</span>
@@ -2158,9 +2150,9 @@ and tables in the service have the ChangeTracking capability, the
 <cite>extract_changes</cite> operation can be used to get changes.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="classmethod">
 <dt id="arcgis.features.FeatureLayerCollection.fromitem">
-<code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.FeatureLayerCollection.fromitem" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.FeatureLayerCollection.fromitem" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -2532,7 +2524,7 @@ This includes visualization, spatial indexing, IO and dataset level properties.<
 </tr>
 </tbody>
 </table>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">area</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">area</span>
 <span class="go">143.23427</span>
 </pre></div>
 </div>
@@ -2550,7 +2542,7 @@ This includes visualization, spatial indexing, IO and dataset level properties.<
 </tr>
 </tbody>
 </table>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">bbox</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">bbox</span>
 <span class="go">{&#39;rings&#39; : [[[1,2], [2,3], [3,3],....]], &#39;spatialReference&#39; {&#39;wkid&#39;: 4326}}</span>
 </pre></div>
 </div>
@@ -2568,7 +2560,7 @@ This includes visualization, spatial indexing, IO and dataset level properties.<
 </tr>
 </tbody>
 </table>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">centroid</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">centroid</span>
 <span class="go">(-14.23427, 39)</span>
 </pre></div>
 </div>
@@ -2703,7 +2695,7 @@ to a Spatially enabled DataFrame.</td>
 </tbody>
 </table>
 <p>Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">arcgis.features</span> <span class="k">import</span> <span class="n">FeatureLayer</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">arcgis.features</span> <span class="k">import</span> <span class="n">FeatureLayer</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mylayer</span> <span class="o">=</span> <span class="n">FeatureLayer</span><span class="p">((</span><span class="s2">&quot;https://sampleserver6.arcgisonline.com/arcgis/rest&quot;</span>
 <span class="go">                    &quot;/services/CommercialDamageAssessment/FeatureServer/0&quot;))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">from_layer</span><span class="p">(</span><span class="n">mylayer</span><span class="p">)</span>
@@ -2836,7 +2828,7 @@ from the input with a new value.</td>
 </tr>
 </tbody>
 </table>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">full_extent</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">full_extent</span>
 <span class="go">(-118, 32, -97, 33)</span>
 </pre></div>
 </div>
@@ -2920,7 +2912,7 @@ the field.</td>
 </tr>
 </tbody>
 </table>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">length</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">length</span>
 <span class="go">1.23427</span>
 </pre></div>
 </div>
@@ -3974,7 +3966,7 @@ the table exists, and exception will be raised.</td>
 </tr>
 </tbody>
 </table>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">true_centroid</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">true_centroid</span>
 <span class="go">(1.23427, 34)</span>
 </pre></div>
 </div>
@@ -6700,14 +6692,14 @@ key : string</p>
 <p>mode : optional, {‘a’, ‘w’, ‘r+’}, default ‘a’</p>
 <blockquote>
 <div><dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">'w'</span></code></dt>
+<dt><code class="docutils literal notranslate"><span class="pre">'w'</span></code></dt>
 <dd>Write; a new file is created (an existing file with the same
 name would be deleted).</dd>
-<dt><code class="docutils literal"><span class="pre">'a'</span></code></dt>
+<dt><code class="docutils literal notranslate"><span class="pre">'a'</span></code></dt>
 <dd>Append; an existing file is opened for reading and writing,
 and if the file does not exist it is created.</dd>
-<dt><code class="docutils literal"><span class="pre">'r+'</span></code></dt>
-<dd>It is similar to <code class="docutils literal"><span class="pre">'a'</span></code>, but the file must already exist.</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">'r+'</span></code></dt>
+<dd>It is similar to <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, but the file must already exist.</dd>
 </dl>
 </div></blockquote>
 <dl class="docutils">
@@ -6851,9 +6843,7 @@ in the store wherever possible</dd>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -6875,7 +6865,7 @@ in the store wherever possible</dd>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -6894,6 +6884,7 @@ in the store wherever possible</dd>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.6.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -6906,19 +6897,13 @@ in the store wherever possible</dd>
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

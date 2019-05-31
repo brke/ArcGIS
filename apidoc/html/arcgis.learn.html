@@ -26,21 +26,12 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
-        <link rel="prev" title="arcgis.apps.tracker module" href="arcgis.apps.tracker.html"/>
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="arcgis.apps.tracker module" href="arcgis.apps.tracker.html" />
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -56,7 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -73,7 +64,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           
             
-            <img src="_static/python_api_logo.png" class="logo" />
+            <img src="_static/python_api_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -144,7 +135,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">arcgis</a>
@@ -152,9 +143,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -206,7 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>detect_objects<a class="headerlink" href="#detect-objects" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.learn.detect_objects">
-<code class="descclassname">learn.</code><code class="descname">detect_objects</code><span class="sig-paren">(</span><em>input_raster</em>, <em>model</em>, <em>model_arguments=None</em>, <em>output_name=None</em>, <em>run_nms=False</em>, <em>confidence_score_field=None</em>, <em>class_value_field=None</em>, <em>max_overlap_ratio=0</em>, <em>context=None</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.learn.detect_objects" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">learn.</code><code class="descname">detect_objects</code><span class="sig-paren">(</span><em>model</em>, <em>model_arguments=None</em>, <em>output_name=None</em>, <em>run_nms=False</em>, <em>confidence_score_field=None</em>, <em>class_value_field=None</em>, <em>max_overlap_ratio=0</em>, <em>context=None</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.learn.detect_objects" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function can be used to generate feature service that contains polygons on detected objects
 found in the imagery data using the designated deep learning model. Note that the deep learning
 library needs to be installed separately, in addition to the server’s built in Python 3.x library.</p>
@@ -290,7 +282,7 @@ variable for this particular function.</p>
 <h2>classify_pixels<a class="headerlink" href="#classify-pixels" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.learn.classify_pixels">
-<code class="descclassname">learn.</code><code class="descname">classify_pixels</code><span class="sig-paren">(</span><em>input_raster</em>, <em>model</em>, <em>model_arguments=None</em>, <em>output_name=None</em>, <em>context=None</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.learn.classify_pixels" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">learn.</code><code class="descname">classify_pixels</code><span class="sig-paren">(</span><em>model</em>, <em>model_arguments=None</em>, <em>output_name=None</em>, <em>context=None</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.learn.classify_pixels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function to classify input imagery data using a deep learning model.
 Note that the deep learning library needs to be installed separately,
 in addition to the server’s built in Python 3.x library.</p>
@@ -357,7 +349,7 @@ variable for this particular function.</p>
 <h2>export_training_data<a class="headerlink" href="#export-training-data" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.learn.export_training_data">
-<code class="descclassname">learn.</code><code class="descname">export_training_data</code><span class="sig-paren">(</span><em>input_raster</em>, <em>input_class_data=None</em>, <em>chip_format=None</em>, <em>tile_size=None</em>, <em>stride_size=None</em>, <em>metadata_format=None</em>, <em>classvalue_field=None</em>, <em>buffer_radius=None</em>, <em>output_location=None</em>, <em>context=None</em>, <em>input_mask_polygons=None</em>, <em>rotation_angle=0</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.learn.export_training_data" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">learn.</code><code class="descname">export_training_data</code><span class="sig-paren">(</span><em>input_class_data=None</em>, <em>chip_format=None</em>, <em>tile_size=None</em>, <em>stride_size=None</em>, <em>metadata_format=None</em>, <em>classvalue_field=None</em>, <em>buffer_radius=None</em>, <em>output_location=None</em>, <em>context=None</em>, <em>input_mask_polygons=None</em>, <em>rotation_angle=0</em>, <em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.learn.export_training_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function is designed to generate training sample image chips from the input imagery data with
 labeled vector data or classified images. The output of this service tool is the data store string
 where the output image chips, labels and metadata files are going to be stored.</p>
@@ -376,7 +368,7 @@ where the output image chips, labels and metadata files are going to be stored.<
 <h2>list_models<a class="headerlink" href="#list-models" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.learn.list_models">
-<code class="descclassname">learn.</code><code class="descname">list_models</code><span class="sig-paren">(</span><em>*</em>, <em>gis=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.learn.list_models" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">learn.</code><code class="descname">list_models</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.learn.list_models" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function is used to list all the installed deep learning models.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -417,8 +409,8 @@ where the output image chips, labels and metadata files are going to be stored.<
 <dl class="docutils">
 <dt>model.from_json({“Framework” :”TensorFlow”,</dt>
 <dd><p class="first">“ModelConfiguration”:”DeepLab”,
-“InferenceFunction”:”<code class="docutils literal"><span class="pre">[functions]System\DeepLearning\ImageClassifier.py</span></code>”,
-“ModelFile”:”<code class="docutils literal"><span class="pre">\\folder_path_of_pb_file\frozen_inference_graph.pb</span></code>”,
+“InferenceFunction”:”<code class="docutils literal notranslate"><span class="pre">[functions]System\DeepLearning\ImageClassifier.py</span></code>”,
+“ModelFile”:”<code class="docutils literal notranslate"><span class="pre">\\folder_path_of_pb_file\frozen_inference_graph.pb</span></code>”,
 “ExtractBands”:[0,1,2],
 “ImageWidth”:513,
 “ImageHeight”:513,
@@ -442,7 +434,7 @@ eg usage:</p>
 <p>model.from_model_path(“<a class="reference external" href="https://xxxportal.esri.com/sharing/rest/content/items">https://xxxportal.esri.com/sharing/rest/content/items</a>/&lt;itemId&gt;”)</p>
 <p>or
 model = Model()</p>
-<p>model.from_model_path(<code class="docutils literal"><span class="pre">&quot;\\sharedstorage\sharefolder\findtrees.emd&quot;</span></code>)</p>
+<p>model.from_model_path(<code class="docutils literal notranslate"><span class="pre">&quot;\\sharedstorage\sharefolder\findtrees.emd&quot;</span></code>)</p>
 </dd></dl>
 
 <dl class="method">
@@ -538,7 +530,7 @@ This function will delete the named deep learning model from the server but not 
 <h2>prepare_data<a class="headerlink" href="#prepare-data" title="Permalink to this headline">¶</a></h2>
 <dl class="method">
 <dt id="arcgis.learn.prepare_data">
-<code class="descclassname">learn.</code><code class="descname">prepare_data</code><span class="sig-paren">(</span><em>path</em>, <em>class_mapping=None</em>, <em>chip_size=224</em>, <em>val_split_pct=0.1</em>, <em>batch_size=64</em>, <em>transforms=None</em>, <em>collate_fn=&lt;function _bb_pad_collate&gt;</em>, <em>seed=42</em>, <em>dataset_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.learn.prepare_data" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">learn.</code><code class="descname">prepare_data</code><span class="sig-paren">(</span><em>class_mapping=None</em>, <em>chip_size=224</em>, <em>val_split_pct=0.1</em>, <em>batch_size=64</em>, <em>transforms=None</em>, <em>collate_fn=&lt;function _bb_pad_collate&gt;</em>, <em>seed=42</em>, <em>dataset_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.learn.prepare_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Prepares a Fast.ai DataBunch from the exported Pascal VOC image chips
 exported by Export Training Data tool in ArcGIS Pro or Image Server.
 This DataBunch consists of training and validation DataLoaders with the
@@ -1009,9 +1001,7 @@ all the intermediate directories.</td>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -1031,7 +1021,7 @@ all the intermediate directories.</td>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -1050,6 +1040,7 @@ all the intermediate directories.</td>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.6.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -1062,19 +1053,13 @@ all the intermediate directories.</td>
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

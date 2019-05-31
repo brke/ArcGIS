@@ -26,20 +26,11 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.1 documentation" href="index.html"/>
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -55,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -72,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           
             
-            <img src="_static/python_api_logo.png" class="logo" />
+            <img src="_static/python_api_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -133,7 +124,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">arcgis</a>
@@ -141,9 +132,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -190,9 +182,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="section" id="module-arcgis.apps.hub">
 <span id="arcgis-apps-hub-module"></span><h1>arcgis.apps.hub module<a class="headerlink" href="#module-arcgis.apps.hub" title="Permalink to this headline">¶</a></h1>
-<p>The <a class="reference internal" href="#arcgis.apps.hub.Hub" title="arcgis.apps.hub.Hub"><code class="xref py py-class docutils literal"><span class="pre">Hub</span></code></a> is the main entry point into the Hub module.
+<p>The <a class="reference internal" href="#arcgis.apps.hub.Hub" title="arcgis.apps.hub.Hub"><code class="xref py py-class docutils literal notranslate"><span class="pre">Hub</span></code></a> is the main entry point into the Hub module.
 It can be used as shown in the following code example.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">arcgis.gis</span> <span class="kn">import</span> <span class="n">GIS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">arcgis.gis</span> <span class="kn">import</span> <span class="n">GIS</span>
 <span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="s2">&quot;https://arcgis.com&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;username&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;password&gt;&quot;</span><span class="p">)</span>
 <span class="n">myHub</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">hub</span>
 <span class="n">a_Initiative</span> <span class="o">=</span> <span class="n">myHub</span><span class="o">.</span><span class="n">initiatives</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">itemId</span><span class="p">)</span>
@@ -286,7 +278,7 @@ policy- or activity-oriented goals through workflows, tools and team collaborati
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Delete</span> <span class="n">an</span> <span class="n">initiative</span> <span class="n">successfully</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Delete</span> <span class="n">an</span> <span class="n">initiative</span> <span class="n">successfully</span>
 
 <span class="n">initiative1</span> <span class="o">=</span> <span class="n">myHub</span><span class="o">.</span><span class="n">initiatives</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;itemId12345&#39;</span><span class="p">)</span>
 <span class="n">initiative1</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
@@ -386,7 +378,7 @@ initiative’s description, then only provide the description argument in initia
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Update</span> <span class="n">an</span> <span class="n">initiative</span> <span class="n">successfully</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Update</span> <span class="n">an</span> <span class="n">initiative</span> <span class="n">successfully</span>
 
 <span class="n">initiative1</span> <span class="o">=</span> <span class="n">myHub</span><span class="o">.</span><span class="n">initiatives</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;itemId12345&#39;</span><span class="p">)</span>
 <span class="n">initiative1</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">initiative_properties</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;description&#39;</span><span class="p">:</span><span class="s1">&#39;Create your own initiative to organize people around a shared goal.&#39;</span><span class="p">})</span>
@@ -425,7 +417,7 @@ including features, calculated metrics, or quantified goals.</p>
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Delete</span> <span class="n">an</span> <span class="n">indicator</span> <span class="n">successfully</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Delete</span> <span class="n">an</span> <span class="n">indicator</span> <span class="n">successfully</span>
 
 <span class="n">indicator1</span> <span class="o">=</span> <span class="n">initiative1</span><span class="o">.</span><span class="n">indicators</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;streetCrashes&#39;</span><span class="p">)</span>
 <span class="n">indicator1</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
@@ -489,7 +481,7 @@ including features, calculated metrics, or quantified goals.</p>
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Update</span> <span class="n">an</span> <span class="n">indicator</span> <span class="n">successfully</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Update</span> <span class="n">an</span> <span class="n">indicator</span> <span class="n">successfully</span>
 
 <span class="n">indicator1_data</span> <span class="o">=</span> <span class="n">indicator1</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
 <span class="n">indicator1_data</span><span class="p">[</span><span class="s1">&#39;optional&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
@@ -657,7 +649,7 @@ call methods on this ‘initiatives’ object to manipulate (add, get, search, e
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Add</span> <span class="n">an</span> <span class="n">initiative</span> <span class="n">successfully</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Add</span> <span class="n">an</span> <span class="n">initiative</span> <span class="n">successfully</span>
 
 <span class="n">initiative1</span> <span class="o">=</span> <span class="n">myHub</span><span class="o">.</span><span class="n">initiatives</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Vision Zero Analysis&#39;</span><span class="p">)</span>
 <span class="n">initiative1</span><span class="o">.</span><span class="n">item</span>
@@ -691,7 +683,7 @@ call methods on this ‘initiatives’ object to manipulate (add, get, search, e
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Fetch</span> <span class="n">an</span> <span class="n">initiative</span> <span class="n">successfully</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Fetch</span> <span class="n">an</span> <span class="n">initiative</span> <span class="n">successfully</span>
 
 <span class="n">initiative1</span> <span class="o">=</span> <span class="n">myHub</span><span class="o">.</span><span class="n">initiatives</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;itemId12345&#39;</span><span class="p">)</span>
 <span class="n">initiative1</span><span class="o">.</span><span class="n">item</span>
@@ -800,7 +792,7 @@ with mapping between schemas</td>
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Add</span> <span class="n">an</span> <span class="n">indicator</span> <span class="n">successfully</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">Add</span> <span class="n">an</span> <span class="n">indicator</span> <span class="n">successfully</span>
 
 <span class="n">indicator1_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;streetCrashes&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Data&#39;</span><span class="p">,</span> <span class="s1">&#39;optional&#39;</span><span class="p">:</span><span class="bp">False</span><span class="p">}</span>
 <span class="n">initiative1</span><span class="o">.</span><span class="n">indicators</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">indicator_properties</span> <span class="o">=</span> <span class="n">indicator1_data</span><span class="p">)</span>
@@ -935,9 +927,7 @@ of a particular Hub.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -950,7 +940,7 @@ of a particular Hub.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -969,6 +959,7 @@ of a particular Hub.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'1.6.1',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -981,19 +972,13 @@ of a particular Hub.</p>
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
