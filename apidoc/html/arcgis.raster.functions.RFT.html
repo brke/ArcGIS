@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.raster.functions.RFT &mdash; arcgis 1.6.1 documentation</title>
+  <title>arcgis.raster.functions.RFT &mdash; arcgis 1.6.2 documentation</title>
   
 
   
@@ -26,13 +26,23 @@
 
   
 
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="arcgis.network module" href="arcgis.network.toc.html" />
-    <link rel="prev" title="arcgis.raster.orthomapping module" href="arcgis.raster.orthomapping.html" />
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="arcgis 1.6.2 documentation" href="index.html"/>
+        <link rel="up" title="arcgis.raster module" href="arcgis.raster.toc.html"/>
+        <link rel="next" title="arcgis.network module" href="arcgis.network.toc.html"/>
+        <link rel="prev" title="arcgis.raster.orthomapping module" href="arcgis.raster.orthomapping.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -48,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
@@ -65,7 +75,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           
             
-            <img src="_static/python_api_logo.png" class="logo" alt="Logo"/>
+            <img src="_static/python_api_logo.png" class="logo" />
           
           </a>
 
@@ -73,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.1
+                1.6.2
               </div>
             
           
@@ -140,7 +150,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">arcgis</a>
@@ -148,10 +158,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -217,7 +226,7 @@ an output Imagery Layer with function chain applied on it.</p>
 output dynamically.</p>
 <p class="last">Also, set the desired extent on the output Imagery Layer before viewing it</p>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># Usage Example 1
+<div class="highlight-python"><div class="highlight"><pre><span></span># Usage Example 1
 
 rft_item_object = RFT(rft_item)
 rft_item_object?
@@ -226,7 +235,7 @@ imagery_layer_output = rft_item_object(param1=&lt;ImageryLayer object&gt;, param
 imagery_layer_output #This would display a new ImageryLayer object with the RFT applied on it.
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># Usage Example 2
+<div class="highlight-python"><div class="highlight"><pre><span></span># Usage Example 2
 
 # If the RFT is capable of working with an array of rasters
 
@@ -334,7 +343,9 @@ that it fits within the given size.</td>
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -356,7 +367,7 @@ that it fits within the given size.</td>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -374,8 +385,7 @@ that it fits within the given size.</td>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.1',
-            LANGUAGE:'None',
+            VERSION:'1.6.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -388,13 +398,19 @@ that it fits within the given size.</td>
 
   
 
-  <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>

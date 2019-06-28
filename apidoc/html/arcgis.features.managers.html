@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.features.managers module &mdash; arcgis 1.6.1 documentation</title>
+  <title>arcgis.features.managers module &mdash; arcgis 1.6.2 documentation</title>
   
 
   
@@ -26,13 +26,23 @@
 
   
 
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="arcgis.features.summarize_data module" href="arcgis.features.summarize_data.html" />
-    <link rel="prev" title="arcgis.features.manage_data module" href="arcgis.features.manage_data.html" />
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="arcgis 1.6.2 documentation" href="index.html"/>
+        <link rel="up" title="arcgis.features module" href="arcgis.features.toc.html"/>
+        <link rel="next" title="arcgis.features.summarize_data module" href="arcgis.features.summarize_data.html"/>
+        <link rel="prev" title="arcgis.features.manage_data module" href="arcgis.features.manage_data.html"/>
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -48,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
@@ -65,7 +75,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           
             
-            <img src="_static/python_api_logo.png" class="logo" alt="Logo"/>
+            <img src="_static/python_api_logo.png" class="logo" />
           
           </a>
 
@@ -73,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.1
+                1.6.2
               </div>
             
           
@@ -160,7 +170,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">arcgis</a>
@@ -168,10 +178,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -778,9 +787,9 @@ FeatureService or layer.</dd>
 </dl>
 </dd></dl>
 
-<dl class="classmethod">
+<dl class="method">
 <dt id="arcgis.features.managers.FeatureLayerCollectionManager.fromitem">
-<em class="property">classmethod </em><code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureLayerCollectionManager.fromitem" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fromitem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.managers.FeatureLayerCollectionManager.fromitem" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1218,7 +1227,7 @@ when a user is using the <cite>Version</cite> with a <cite>with</cite> statement
 <dl class="method">
 <dt id="arcgis.features._version.Version.alter">
 <code class="descname">alter</code><span class="sig-paren">(</span><em>owner=None</em>, <em>version=None</em>, <em>description=None</em>, <em>permission=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features._version.Version.alter" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">`alter`</span></code> operation changes the geodatabase version’s name,
+<dd><p>The <code class="docutils literal"><span class="pre">`alter`</span></code> operation changes the geodatabase version’s name,
 description, and access permissions.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1258,7 +1267,7 @@ description, and access permissions.</p>
 <dl class="method">
 <dt id="arcgis.features._version.Version.conflicts">
 <code class="descname">conflicts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features._version.Version.conflicts" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">`conflicts`</span></code> operation allows you to view the conflicts by layer
+<dd><p>The <code class="docutils literal"><span class="pre">`conflicts`</span></code> operation allows you to view the conflicts by layer
 and type (update-update, update-delete, delete-update) that were
 identified during the last Reconcile operation. The features that
 are in conflicts will also be returned as they existed in the branch,
@@ -1319,7 +1328,7 @@ all forward moments will be trimmed.</td>
 <dl class="method">
 <dt id="arcgis.features._version.Version.differences">
 <code class="descname">differences</code><span class="sig-paren">(</span><em>result_type</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features._version.Version.differences" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">`differences`</span></code> operation allows you to view differences between
+<dd><p>The <code class="docutils literal"><span class="pre">`differences`</span></code> operation allows you to view differences between
 the current version and the default version. The two versions can
 be compared to check for the following conditions.</p>
 <ul class="simple">
@@ -1401,7 +1410,7 @@ value is true.</td>
 <dl class="method">
 <dt id="arcgis.features._version.Version.inspect">
 <code class="descname">inspect</code><span class="sig-paren">(</span><em>conflicts</em>, <em>inspect_all=False</em>, <em>set_inspected=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features._version.Version.inspect" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">`inspect`</span></code> operation allows the client to annotate conflicts
+<dd><p>The <code class="docutils literal"><span class="pre">`inspect`</span></code> operation allows the client to annotate conflicts
 from the conflict set that was obtained during the last reconcile
 operation. Users can mark the conflicts as being inspected;
 additionally, a description or note can be associated with the
@@ -1449,7 +1458,7 @@ as being inspected.</td>
 </tr>
 <tr class="row-even"><td>set_inspected</td>
 <td>Optional Boolean. If True, the examined values will be set to
-inspected. If <code class="docutils literal notranslate"><span class="pre">`inspect_all`</span></code> is True, this parameter is ignored.</td>
+inspected. If <code class="docutils literal"><span class="pre">`inspect_all`</span></code> is True, this parameter is ignored.</td>
 </tr>
 </tbody>
 </table>
@@ -2183,7 +2192,9 @@ is supported synchronously and asynchronously.</p>
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -2205,7 +2216,7 @@ is supported synchronously and asynchronously.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -2223,8 +2234,7 @@ is supported synchronously and asynchronously.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.6.1',
-            LANGUAGE:'None',
+            VERSION:'1.6.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -2237,13 +2247,19 @@ is supported synchronously and asynchronously.</p>
 
   
 
-  <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>
