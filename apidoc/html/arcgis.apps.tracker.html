@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.apps.tracker module &mdash; arcgis 1.6.2 documentation</title>
+  <title>arcgis.apps.tracker module &mdash; arcgis 1.7.0 documentation</title>
   
 
   
@@ -19,30 +19,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.7.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.2 documentation" href="index.html"/>
-        <link rel="up" title="arcgis.apps module" href="arcgis.apps.html"/>
-        <link rel="next" title="arcgis.learn module" href="arcgis.learn.html"/>
-        <link rel="prev" title="arcgis.apps.survey123 module" href="arcgis.apps.survey123.html"/>
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="arcgis.learn module" href="arcgis.learn.html" />
+    <link rel="prev" title="arcgis.apps.survey123 module" href="arcgis.apps.survey123.html" />
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -52,21 +58,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NJGGV5');</script>
  
 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -75,7 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           
             
-            <img src="_static/python_api_logo.png" class="logo" />
+            <img src="_static/python_api_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -83,7 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.2
+                1.7.0
               </div>
             
           
@@ -157,7 +158,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">arcgis</a>
@@ -165,9 +166,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -216,7 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="section" id="module-arcgis.apps.tracker">
 <span id="arcgis-apps-tracker-module"></span><h1>arcgis.apps.tracker module<a class="headerlink" href="#module-arcgis.apps.tracker" title="Permalink to this headline">¶</a></h1>
-<p>The <a class="reference internal" href="#arcgis.apps.tracker.LocationTrackingManager" title="arcgis.apps.tracker.LocationTrackingManager"><code class="xref py py-class docutils literal"><span class="pre">LocationTrackingManager</span></code></a> is the main entry point into the Workforce module.
+<p>The <a class="reference internal" href="#arcgis.apps.tracker.LocationTrackingManager" title="arcgis.apps.tracker.LocationTrackingManager"><code class="xref py py-class docutils literal"><span class="pre">LocationTrackingManager</span></code></a> is the main entry point into the Tracker module.
 It can be used as shown in the following code example.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Access the location tracking manager and check the status</span>
 
@@ -625,9 +627,7 @@ The list of usernames/users to remove as Mobile Users.</td>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -636,7 +636,7 @@ The list of usernames/users to remove as Mobile Users.</td>
         <a href="arcgis.learn.html" class="btn btn-neutral float-right" title="arcgis.learn module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="arcgis.apps.survey123.html" class="btn btn-neutral" title="arcgis.apps.survey123 module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="arcgis.apps.survey123.html" class="btn btn-neutral float-left" title="arcgis.apps.survey123 module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -645,11 +645,11 @@ The list of usernames/users to remove as Mobile Users.</td>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016-2019, Esri.
+        &copy; Copyright 2016-2019, Esri
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -662,36 +662,15 @@ The list of usernames/users to remove as Mobile Users.</td>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.6.2',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

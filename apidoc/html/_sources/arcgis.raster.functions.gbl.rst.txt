@@ -27,6 +27,14 @@ cost_path
 __________
 .. autofunction:: arcgis.raster.functions.gbl.cost_path
 
+distance_accumulation
+_____________________
+.. autofunction:: arcgis.raster.functions.gbl.distance_accumulation
+
+distance_allocation
+___________________
+.. autofunction:: arcgis.raster.functions.gbl.distance_allocation
+
 euclidean_allocation
 _______________
 .. autofunction:: arcgis.raster.functions.gbl.euclidean_allocation
@@ -39,8 +47,16 @@ euclidean_direction
 _______________
 .. autofunction:: arcgis.raster.functions.gbl.euclidean_direction
 
+euclidean_back_direction
+________________________
+.. autofunction:: arcgis.raster.functions.gbl.euclidean_back_direction
+
+expand
+______
+.. autofunction:: arcgis.raster.functions.gbl.expand
+
 fill
-_______________
+____
 .. autofunction:: arcgis.raster.functions.gbl.fill
 
 flow_accumulation
@@ -55,6 +71,10 @@ flow_direction
 _______________
 .. autofunction:: arcgis.raster.functions.gbl.flow_direction
 
+flow_length
+___________
+.. autofunction:: arcgis.raster.functions.gbl.flow_length
+
 kernel_density
 _______________
 .. autofunction:: arcgis.raster.functions.gbl.kernel_density
@@ -67,9 +87,25 @@ nibble
 _______________
 .. autofunction:: arcgis.raster.functions.gbl.nibble
 
+shrink
+______
+.. autofunction:: arcgis.raster.functions.gbl.shrink
+
+sink
+____
+.. autofunction:: arcgis.raster.functions.gbl.sink
+
 stream_link
-_______________
+___________
 .. autofunction:: arcgis.raster.functions.gbl.stream_link
+
+snap_pour_point
+_______________
+.. autofunction:: arcgis.raster.functions.gbl.snap_pour_point
+
+stream_order
+____________
+.. autofunction:: arcgis.raster.functions.gbl.stream_order
 
 watershed
 _______________

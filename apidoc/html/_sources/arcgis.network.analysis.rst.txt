@@ -3,6 +3,10 @@ arcgis.network.analysis module
 
 .. automodule:: arcgis.network.analysis
 
+edit_vehicle_routing_problem
+--------------
+.. autofunction:: arcgis.network.analysis.edit_vehicle_routing_problem
+
 solve_vehicle_routing_problem
 --------------
 .. autofunction:: arcgis.network.analysis.solve_vehicle_routing_problem

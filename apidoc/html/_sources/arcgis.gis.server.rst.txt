@@ -165,3 +165,10 @@ ServerProperties
     :members:
     :undoc-members:
     :show-inheritance:
+
+ItemInformationManager
+----------------
+.. autoclass:: arcgis.gis.server.admin.ItemInformationManager
+    :members:
+    :undoc-members:
+    :show-inheritance:

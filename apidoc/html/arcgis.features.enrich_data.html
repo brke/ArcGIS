@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.features.enrich_data module &mdash; arcgis 1.6.2 documentation</title>
+  <title>arcgis.features.enrich_data module &mdash; arcgis 1.7.0 documentation</title>
   
 
   
@@ -19,30 +19,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.7.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.2 documentation" href="index.html"/>
-        <link rel="up" title="arcgis.features module" href="arcgis.features.toc.html"/>
-        <link rel="next" title="arcgis.features.find_locations module" href="arcgis.features.find_locations.html"/>
-        <link rel="prev" title="arcgis.features.elevation module" href="arcgis.features.elevation.html"/>
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="arcgis.features.find_locations module" href="arcgis.features.find_locations.html" />
+    <link rel="prev" title="arcgis.features.elevation module" href="arcgis.features.elevation.html" />
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -52,21 +58,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NJGGV5');</script>
  
 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -75,7 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           
             
-            <img src="_static/python_api_logo.png" class="logo" />
+            <img src="_static/python_api_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -83,7 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.2
+                1.7.0
               </div>
             
           
@@ -163,7 +164,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">arcgis</a>
@@ -171,9 +172,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -230,7 +232,7 @@ travel time or distance from a location.</p>
 <h2>enrich_layer<a class="headerlink" href="#enrich-layer" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="arcgis.features.enrich_data.enrich_layer">
-<code class="descclassname">arcgis.features.enrich_data.</code><code class="descname">enrich_layer</code><span class="sig-paren">(</span><em>input_layer</em>, <em>data_collections=[]</em>, <em>analysis_variables=[]</em>, <em>country=None</em>, <em>buffer_type=None</em>, <em>distance=None</em>, <em>units=None</em>, <em>output_name=None</em>, <em>context=None</em>, <em>gis=None</em>, <em>estimate=False</em>, <em>return_boundaries=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.enrich_data.enrich_layer" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">arcgis.features.enrich_data.</code><code class="descname">enrich_layer</code><span class="sig-paren">(</span><em>input_layer</em>, <em>data_collections=[]</em>, <em>analysis_variables=[]</em>, <em>country=None</em>, <em>buffer_type=None</em>, <em>distance=None</em>, <em>units=None</em>, <em>output_name=None</em>, <em>context=None</em>, <em>gis=None</em>, <em>estimate=False</em>, <em>return_boundaries=False</em>, <em>future=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.enrich_data.enrich_layer" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/enrich_layer.png" src="_images/enrich_layer.png" />
 <p>The <code class="docutils literal"><span class="pre">enrich_layer</span></code> method enriches your data by getting facts about the people, places, and businesses that surround
 your data locations. For example: What kind of people live here? What do people like to do in this area? What are
@@ -246,7 +248,7 @@ their habits and lifestyles? What kind of businesses are there in this area?</p>
 <td><strong>Description</strong></td>
 </tr>
 <tr class="row-even"><td>input_layer</td>
-<td>Required layer. The features to enrich with new data. See <a class="reference internal" href="arcgis.features.analysis.html#featureinput"><span class="std std-ref">Feature Input</span></a>.</td>
+<td>Required layer. The features to enrich with new data. See <a class="reference internal" href="arcgis.geoanalytics.toc.html#featureinput"><span class="std std-ref">Feature Input</span></a>.</td>
 </tr>
 <tr class="row-odd"><td>data_collections</td>
 <td><p class="first">Optional list of strings. This optional parameter defines the collections of data you want to use to enrich your features.
@@ -293,7 +295,7 @@ You define the name of the service. If output_name is not supplied, the task wil
 <td><p class="first">Optional string. Context contains additional settings that affect task execution. For <code class="docutils literal"><span class="pre">enrich_layer</span></code> method, there are two settings.</p>
 <ol class="last arabic simple">
 <li>Extent (extent)-a bounding box that defines the analysis area. Only those features in the input_layer that intersect the bounding box will be analyzed.</li>
-<li>Output Spatial Reference (outSR)—the output features will be projected into the output spatial reference.</li>
+<li>Output Spatial Reference (outSR) the output features will be projected into the output spatial reference.</li>
 </ol>
 </td>
 </tr>
@@ -311,6 +313,9 @@ analysis_variables variables. If False, the resulting layer will return the same
 analysis_variables variables.</p>
 <p class="last">The default value is False.</p>
 </td>
+</tr>
+<tr class="row-even"><td>future</td>
+<td>Optional boolean. If True, the result will be a GPJob object and results will be returned asynchronously.</td>
 </tr>
 </tbody>
 </table>
@@ -330,9 +335,7 @@ analysis_variables variables.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -341,7 +344,7 @@ analysis_variables variables.</p>
         <a href="arcgis.features.find_locations.html" class="btn btn-neutral float-right" title="arcgis.features.find_locations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="arcgis.features.elevation.html" class="btn btn-neutral" title="arcgis.features.elevation module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="arcgis.features.elevation.html" class="btn btn-neutral float-left" title="arcgis.features.elevation module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -350,11 +353,11 @@ analysis_variables variables.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016-2019, Esri.
+        &copy; Copyright 2016-2019, Esri
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -367,36 +370,15 @@ analysis_variables variables.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.6.2',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

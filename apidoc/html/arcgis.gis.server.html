@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.gis.server module &mdash; arcgis 1.6.2 documentation</title>
+  <title>arcgis.gis.server module &mdash; arcgis 1.7.0 documentation</title>
   
 
   
@@ -19,30 +19,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.7.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.2 documentation" href="index.html"/>
-        <link rel="up" title="arcgis.gis module" href="arcgis.gis.toc.html"/>
-        <link rel="next" title="arcgis.env module" href="arcgis.env.html"/>
-        <link rel="prev" title="arcgis.gis.admin module" href="arcgis.gis.admin.html"/>
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="arcgis.env module" href="arcgis.env.html" />
+    <link rel="prev" title="arcgis.gis.admin module" href="arcgis.gis.admin.html" />
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -52,21 +58,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NJGGV5');</script>
  
 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -75,7 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           
             
-            <img src="_static/python_api_logo.png" class="logo" />
+            <img src="_static/python_api_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -83,7 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.2
+                1.7.0
               </div>
             
           
@@ -125,6 +126,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#datastoremanager">DatastoreManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#rolemanager">RoleManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#resourcemanager">ResourceManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#profilemanager">ProfileManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#invitationmanager">InvitationManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#certificatemanager">CertificateManager</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="arcgis.gis.toc.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="arcgis.gis.admin.html">arcgis.gis.admin module</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.gis.server module</a><ul>
@@ -151,6 +155,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#jobs">Jobs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#serverdirectory">ServerDirectory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#serverproperties">ServerProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iteminformationmanager">ItemInformationManager</a></li>
 </ul>
 </li>
 </ul>
@@ -183,7 +188,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">arcgis</a>
@@ -191,9 +196,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -640,6 +646,28 @@ that have invalid certificates.</td>
 <p>Represents a GIS administrative service</p>
 <p><strong>(This should not be created by a user)</strong></p>
 <dl class="method">
+<dt id="arcgis.gis.server.Service.change_provider">
+<code class="descname">change_provider</code><span class="sig-paren">(</span><em>provider</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.server.Service.change_provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows for the switching of the service provide and how it is hosted on the ArcGIS Server instance.</p>
+<p>Values:</p>
+<blockquote>
+<div><ul class="simple">
+<li>‘ArcObjects’ means the service is running under the ArcMap runtime i.e. published from ArcMap</li>
+<li>‘ArcObjects11’: means the service is running under the ArcGIS Pro runtime i.e. published from ArcGIS Pro</li>
+<li>‘DMaps’: means the service is running in the shared instance pool (and thus running under the ArcGIS Pro provider runtime)</li>
+</ul>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="arcgis.gis.server.Service.delete">
 <code class="descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.server.Service.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>deletes a service from arcgis server</p>
@@ -690,7 +718,7 @@ restarted with updated properties.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">ItemInforamtionManager</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">ItemInformationManager</td>
 </tr>
 </tbody>
 </table>
@@ -891,6 +919,23 @@ object that was created with method ssl_certificate.</p>
 </table>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="arcgis.gis.server.Machine.hardware">
+<code class="descname">hardware</code><a class="headerlink" href="#arcgis.gis.server.Machine.hardware" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource displays hardware information for the machine in your
+ArcGIS Server site. It updates the information when it detects any 
+change to the configuration of your machine, as well as each time 
+the machine is restarted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="method">
 <dt id="arcgis.gis.server.Machine.import_CA_signed_certificate">
 <code class="descname">import_CA_signed_certificate</code><span class="sig-paren">(</span><em>certificate</em>, <em>ca_signed_certificate</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.server.Machine.import_CA_signed_certificate" title="Permalink to this definition">¶</a></dt>
@@ -1074,6 +1119,32 @@ ability to host GIS services.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A boolean indicating success (True) or failure (False).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.server.Machine.synchronize">
+<code class="descname">synchronize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.server.Machine.synchronize" title="Permalink to this definition">¶</a></dt>
+<dd><p>On occasion, one or more machines in a server site might be 
+unavailable due to network issues or because they are down 
+(intentionally or unintentionally). Once these machines become 
+available again, they will need to synchronize with the site to 
+pick up any changes made to the site during that downtime. This 
+is done automatically by the site, but it is only a one-time 
+attempt. If there are any issues with this synchronizing effort, 
+a SEVERE message is logged.</p>
+<p>This operation allows administrators to manually synchronize specific
+machines with the site. Synchronizing a machine with the site will 
+reconfigure the machine and redeploy all services. This will take a 
+few minutes. During this time, all administrative operations on the 
+site will be blocked.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
 </tr>
 </tbody>
 </table>
@@ -2791,6 +2862,45 @@ published can reference data. Values: true | false</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="arcgis.gis.server.DataStoreManager.federate_data_item">
+<code class="descname">federate_data_item</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.server.DataStoreManager.federate_data_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation can be used to create a data store item in the portal
+for a data store that has been registered with one of the portal’s
+federated ArcGIS Server sites.</p>
+<p>Once the operation is complete, a data store item is created in the
+portal with which the ArcGIS Server site is federated. If the data
+store is registered with only this federated server, no further
+steps are required. However, if the data store is registered with
+multiple federated servers and you want any of those servers to
+access the data store item, you need to bind the data store item
+with an additional federated server or servers using the
+<cite>PortalDataStore.register</cite> method.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Argument</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>path</td>
+<td>Required string. The item path for the database, cloud, or file
+share data store for which you want to create a data store item.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="arcgis.gis.server.DataStoreManager.generate_connection_string">
 <code class="descname">generate_connection_string</code><span class="sig-paren">(</span><em>sde</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.server.DataStoreManager.generate_connection_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts an SDE connection file to a string with encrypted password.</p>
@@ -3311,7 +3421,7 @@ controlled with the max_results parameter.</p>
 <tr class="row-even"><td>username</td>
 <td>Required string. The user or users to find.</td>
 </tr>
-<tr class="row-odd"><td>max_count</td>
+<tr class="row-odd"><td>max_results</td>
 <td>Optional integer. The maximum number of users to return for this
 query. The default is 25.</td>
 </tr>
@@ -4698,14 +4808,15 @@ class description for all possible properties.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="iteminformationmanager">
+<h2>ItemInformationManager<a class="headerlink" href="#iteminformationmanager" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -4714,7 +4825,7 @@ class description for all possible properties.</p>
         <a href="arcgis.env.html" class="btn btn-neutral float-right" title="arcgis.env module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="arcgis.gis.admin.html" class="btn btn-neutral" title="arcgis.gis.admin module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="arcgis.gis.admin.html" class="btn btn-neutral float-left" title="arcgis.gis.admin module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -4723,11 +4834,11 @@ class description for all possible properties.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016-2019, Esri.
+        &copy; Copyright 2016-2019, Esri
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -4740,36 +4851,15 @@ class description for all possible properties.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.6.2',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

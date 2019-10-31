@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>arcgis.gis module &mdash; arcgis 1.6.2 documentation</title>
+  <title>arcgis.gis module &mdash; arcgis 1.7.0 documentation</title>
   
 
   
@@ -19,29 +19,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.7.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="arcgis 1.6.2 documentation" href="index.html"/>
-        <link rel="next" title="arcgis.gis.admin module" href="arcgis.gis.admin.html"/>
-        <link rel="prev" title="API Reference for the ArcGIS API for Python" href="index.html"/>
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="arcgis.gis.admin module" href="arcgis.gis.admin.html" />
+    <link rel="prev" title="API Reference for the ArcGIS API for Python" href="index.html" />
 <!-- This code block is inserted close near the <head> tag. See http://bit.ly/2BHUQzB -->
 <!-- The point of this code block is to send us google analytics on website views -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -51,21 +58,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NJGGV5');</script>
  
 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -74,7 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           
             
-            <img src="_static/python_api_logo.png" class="logo" />
+            <img src="_static/python_api_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -82,7 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                1.6.2
+                1.7.0
               </div>
             
           
@@ -124,6 +126,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="#datastoremanager">DatastoreManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rolemanager">RoleManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#resourcemanager">ResourceManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#profilemanager">ProfileManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#invitationmanager">InvitationManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#certificatemanager">CertificateManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.gis.admin.html">arcgis.gis.admin module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.gis.server.html">arcgis.gis.server module</a></li>
@@ -157,7 +162,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">arcgis</a>
@@ -165,9 +170,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -1067,7 +1073,7 @@ in their typeKeywords.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.Item.export">
-<code class="descname">export</code><span class="sig-paren">(</span><em>title</em>, <em>export_format</em>, <em>parameters=None</em>, <em>wait=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.export" title="Permalink to this definition">¶</a></dt>
+<code class="descname">export</code><span class="sig-paren">(</span><em>title</em>, <em>export_format</em>, <em>parameters=None</em>, <em>wait=True</em>, <em>enforce_fld_vis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.export" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exports a service item to the specified export format.
 Available only to users with an organizational subscription.
 Invokable only by the service item owner or an administrator.
@@ -1100,6 +1106,14 @@ for guidance.</td>
 <td>Optional boolean. Default is True, which forces a wait for the
 export to complete; use False for when it is okay to proceed while
 the export continues to completion.</td>
+</tr>
+<tr class="row-even"><td>enforce_fld_vis</td>
+<td>Optional boolean. Be default when you are the owner of an item and
+the <cite>export</cite> operation is called, the data provides all the columns.
+If the export is being perform on a view, to ensure the view’s
+column definition is honor, then set the value to True. When the
+owner of the service and the value is set to False, all data and
+columns will be exported.</td>
 </tr>
 </tbody>
 </table>
@@ -1752,7 +1766,7 @@ or not allowed (false).</td>
 <dl class="method">
 <dt id="arcgis.gis.Item.usage">
 <code class="descname">usage</code><span class="sig-paren">(</span><em>date_range='7D'</em>, <em>as_df=True</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Item.usage" title="Permalink to this definition">¶</a></dt>
-<dd><p>ArcGIS Enterprise 10.7+ and ArcGIS Online Only</p>
+<dd><p>ArcGIS Online Only</p>
 <p>For item owners and administrators, usage provides usage details about an item that help you
 gauge its popularity. Usage details show how many times the item has been used for the time
 period you select. Historical usage information is available for the past year. Depending on
@@ -2000,6 +2014,20 @@ that belong to the user being deleted.</td>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A boolean indicating success (True) or failure (False).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis.User.delete_thumbnail">
+<code class="descname">delete_thumbnail</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.User.delete_thumbnail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the thumbnail from the user’s profile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
 </tr>
 </tbody>
 </table>
@@ -2259,7 +2287,7 @@ items and groups from which these are being reassigned from.</td>
 
 <dl class="method">
 <dt id="arcgis.gis.User.reset">
-<code class="descname">reset</code><span class="sig-paren">(</span><em>password</em>, <em>new_password=None</em>, <em>new_security_question=None</em>, <em>new_security_answer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.User.reset" title="Permalink to this definition">¶</a></dt>
+<code class="descname">reset</code><span class="sig-paren">(</span><em>password=None</em>, <em>new_password=None</em>, <em>new_security_question=None</em>, <em>new_security_answer=None</em>, <em>reset_by_email=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.User.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets a user’s password, security question, and/or security answer.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -2269,10 +2297,15 @@ It only has an effect on built-in users.</p>
 <p class="last">If a new security question is specified, a new security answer should
 be provided.</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To reset the password by email, set <cite>reset_by_email</cite> to True and <cite>password</cite>
+to <cite>None</cite>.</p>
+</div>
 <table border="1" class="docutils">
 <colgroup>
-<col width="26%" />
-<col width="74%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Argument</strong></td>
@@ -2289,6 +2322,9 @@ be provided.</p>
 </tr>
 <tr class="row-odd"><td>new_security_answer</td>
 <td>Optional string. The new security question answer if desired.</td>
+</tr>
+<tr class="row-even"><td>reset_by_email</td>
+<td>Optional Boolean.  If True, the <cite>user</cite> will be reset by email. The default is False.</td>
 </tr>
 </tbody>
 </table>
@@ -2952,8 +2988,8 @@ push operation.</td>
 <dl class="attribute">
 <dt id="arcgis.gis.Group.protected">
 <code class="descname">protected</code><a class="headerlink" href="#arcgis.gis.Group.protected" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates if the group is protected from deletion.
-Default value is false.</p>
+<dd><p>Indicates if the group is protected from deletion. Set it to <cite>True</cite>
+to protect the group and <cite>False</cite> to unprotect it.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3014,7 +3050,7 @@ Default value is false.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.Group.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>title=None</em>, <em>tags=None</em>, <em>description=None</em>, <em>snippet=None</em>, <em>access=None</em>, <em>is_invitation_only=None</em>, <em>sort_field=None</em>, <em>sort_order=None</em>, <em>is_view_only=None</em>, <em>thumbnail=None</em>, <em>max_file_size=None</em>, <em>users_update_items=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Group.update" title="Permalink to this definition">¶</a></dt>
+<code class="descname">update</code><span class="sig-paren">(</span><em>title=None</em>, <em>tags=None</em>, <em>description=None</em>, <em>snippet=None</em>, <em>access=None</em>, <em>is_invitation_only=None</em>, <em>sort_field=None</em>, <em>sort_order=None</em>, <em>is_view_only=None</em>, <em>thumbnail=None</em>, <em>max_file_size=None</em>, <em>users_update_items=False</em>, <em>clear_empty_fields=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.Group.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates this group with only values supplied for particular arguments.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -3071,6 +3107,10 @@ group.  Updates to an item can include changes to the
 item’s description, tags, metadata, as well as content.
 This option can’t be disabled once the group has
 been created. Default is False.</td>
+</tr>
+<tr class="row-even"><td>clear_empty_fields</td>
+<td>Optional Boolean. If True, the user can set values to
+empty string, else, None values will be ignored.</td>
 </tr>
 </tbody>
 </table>
@@ -4272,7 +4312,7 @@ the current user’s content</td>
 
 <dl class="method">
 <dt id="arcgis.gis.ContentManager.import_data">
-<code class="descname">import_data</code><span class="sig-paren">(</span><em>df</em>, <em>address_fields=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.import_data" title="Permalink to this definition">¶</a></dt>
+<code class="descname">import_data</code><span class="sig-paren">(</span><em>df</em>, <em>address_fields=None</em>, <em>folder=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.import_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Imports a Pandas data frame (that has an address column), or an arcgis
 spatial dataframe into the GIS.</p>
 <p>Spatial dataframes are imported into the GIS and published as feature
@@ -4295,10 +4335,13 @@ dataframes. This limit isn’t there for spatial dataframes.</p>
 <tr class="row-odd"><td>address_fields</td>
 <td>Optional dictionary. Dictionary containing mapping of df columns to address fields, eg: { “CountryCode” : “Country”} or { “Address” : “Address” }.</td>
 </tr>
-<tr class="row-even"><td>title</td>
+<tr class="row-even"><td>folder</td>
+<td>Optional string. Name of the folder where imported data would be stored.</td>
+</tr>
+<tr class="row-odd"><td>title</td>
 <td>Optional string. Title of the item. This is used for spatial dataframe objects.</td>
 </tr>
-<tr class="row-odd"><td>tags</td>
+<tr class="row-even"><td>tags</td>
 <td>Optional string. Tags listed as comma-separated values, or a list of strings. Provide tags when publishing a spatial dataframe to the the GIS.</td>
 </tr>
 </tbody>
@@ -4497,7 +4540,7 @@ If owner is not specified, owner is set as the logged in user.</p>
 
 <dl class="method">
 <dt id="arcgis.gis.ContentManager.replace_service">
-<code class="descname">replace_service</code><span class="sig-paren">(</span><em>replace_item</em>, <em>new_item</em>, <em>replaced_service_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.replace_service" title="Permalink to this definition">¶</a></dt>
+<code class="descname">replace_service</code><span class="sig-paren">(</span><em>replace_item</em>, <em>new_item</em>, <em>replaced_service_name=None</em>, <em>replace_metadata=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis.ContentManager.replace_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The replace_service operation allows you to replace your production vector tile layers with staging ones. This
 operation allows you to perform quality control on a staging tile layer and to then replace the production tile
 layer with the staging with minimal downtime. This operation has the option to keep a backup of the production
@@ -4521,8 +4564,8 @@ the production service being replaced will be archived with a time stamp when re
 You can provide any name for the replaced service as long as it is not pre-existing on your portal content.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="24%" />
-<col width="76%" />
+<col width="23%" />
+<col width="77%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Argument</strong></td>
@@ -4536,6 +4579,12 @@ You can provide any name for the replaced service as long as it is not pre-exist
 </tr>
 <tr class="row-even"><td>replaced_service_name</td>
 <td>Optional string. The name of the replacement service.</td>
+</tr>
+<tr class="row-odd"><td>replace_metadata</td>
+<td>Optional Boolean. When set to <cite>True</cite>, the item info {“thumbnail”, “tag”,
+“description”, “summary”} of the current service is updated to that of
+the replacement service. The Credits, Terms of use, and Created from
+details will not be replaced. This option is set to <cite>False</cite> by default.</td>
 </tr>
 </tbody>
 </table>
@@ -4943,6 +4992,21 @@ user’s login name or the user’s ID.</td>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The user object if successfully found, None if unsuccessful.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.gis.UserManager.invitations">
+<code class="descname">invitations</code><a class="headerlink" href="#arcgis.gis.UserManager.invitations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides access to invitations sent to users using the <cite>invite</cite> method</p>
+<p><strong>Note</strong> : this is only supported by ArcGIS Online</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">InvitationManager</td>
 </tr>
 </tbody>
 </table>
@@ -6134,6 +6198,455 @@ used together with file_name.</td>
 </dd></dl>
 
 </div>
+<div class="section" id="profilemanager">
+<h2>ProfileManager<a class="headerlink" href="#profilemanager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.gis._impl._profile.ProfileManager">
+<em class="property">class </em><code class="descclassname">arcgis.gis._impl._profile.</code><code class="descname">ProfileManager</code><a class="headerlink" href="#arcgis.gis._impl._profile.ProfileManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Allows for the controls and management of the
+profiles stored on the local operating system.</p>
+<dl class="method">
+<dt id="arcgis.gis._impl._profile.ProfileManager.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>profile</em>, <em>url=None</em>, <em>username=None</em>, <em>password=None</em>, <em>key_file=None</em>, <em>cert_file=None</em>, <em>client_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl._profile.ProfileManager.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new entry into the Profile Store.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>profile</td>
+<td>Required String. The name of the profile to add.</td>
+</tr>
+<tr class="row-odd"><td>url</td>
+<td>Optional String.  The site url.</td>
+</tr>
+<tr class="row-even"><td>username</td>
+<td>Optional String.  The login user name.</td>
+</tr>
+<tr class="row-odd"><td>password</td>
+<td>Optional String.  The login user password.</td>
+</tr>
+<tr class="row-even"><td>key_file</td>
+<td>Optional String.  The key file for PKI security.</td>
+</tr>
+<tr class="row-odd"><td>cert_file</td>
+<td>Optional String.  The cert file for PKI security.</td>
+</tr>
+<tr class="row-even"><td>client_id</td>
+<td>Optional String.  The client ID for oauth login.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis._impl._profile.ProfileManager.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>profile</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl._profile.ProfileManager.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a profile from the .arcgisprofile file</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>profile</td>
+<td>Required String. The name of the profile to delete.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis._impl._profile.ProfileManager.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>profile</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl._profile.ProfileManager.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the profile information for a given entry.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>profile</td>
+<td>Required String. The name of the profile to get the information about.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis._impl._profile.ProfileManager.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>as_df=False</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl._profile.ProfileManager.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a list of profile names in the configuration file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List if <cite>as_df=False</cite> or Pandas DataFrame if <cite>as_df=True</cite></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis._impl._profile.ProfileManager.save_as">
+<code class="descname">save_as</code><span class="sig-paren">(</span><em>profile</em>, <em>gis</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl._profile.ProfileManager.save_as" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves and adds the provided <cite>GIS</cite> to the profile.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>name</td>
+<td>Required String. The name of the profile to save.</td>
+</tr>
+<tr class="row-odd"><td>gis</td>
+<td>Required GIS. The connection object to update the profile with.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis._impl._profile.ProfileManager.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>profile</em>, <em>url=None</em>, <em>username=None</em>, <em>password=None</em>, <em>key_file=None</em>, <em>cert_file=None</em>, <em>client_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl._profile.ProfileManager.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates an existing profile in the credential manager.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>profile</td>
+<td>Required String. The name of the profile to update.</td>
+</tr>
+<tr class="row-odd"><td>url</td>
+<td>Optional String.  The site url.</td>
+</tr>
+<tr class="row-even"><td>username</td>
+<td>Optional String.  The login user name.</td>
+</tr>
+<tr class="row-odd"><td>password</td>
+<td>Optional String.  The login user password.</td>
+</tr>
+<tr class="row-even"><td>key_file</td>
+<td>Optional String.  The key file for PKI security.</td>
+</tr>
+<tr class="row-odd"><td>cert_file</td>
+<td>Optional String.  The cert file for PKI security.</td>
+</tr>
+<tr class="row-even"><td>client_id</td>
+<td>Optional String.  The client ID for oauth login.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="invitationmanager">
+<h2>InvitationManager<a class="headerlink" href="#invitationmanager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.gis._impl._invitations.InvitationManager">
+<em class="property">class </em><code class="descclassname">arcgis.gis._impl._invitations.</code><code class="descname">InvitationManager</code><span class="sig-paren">(</span><em>url</em>, <em>gis</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl._invitations.InvitationManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>The <cite>InvitationManager</cite> provides functionality to see the existing invitations
+set out via email to your organization.  The manager has the ability to delete
+any invitation sent out by an organization.</p>
+<dl class="method">
+<dt id="arcgis.gis._impl._invitations.InvitationManager.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>invite_id</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl._invitations.InvitationManager.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>deletes an invitation by ID</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis._impl._invitations.InvitationManager.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>invite_id</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl._invitations.InvitationManager.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns information about a single invitation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis._impl._invitations.InvitationManager.list">
+<code class="descname">list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl._invitations.InvitationManager.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all the organizations invitations</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="certificatemanager">
+<h2>CertificateManager<a class="headerlink" href="#certificatemanager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="arcgis.gis._impl.CertificateManager">
+<em class="property">class </em><code class="descclassname">arcgis.gis._impl.</code><code class="descname">CertificateManager</code><span class="sig-paren">(</span><em>gis</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl.CertificateManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>The <cite>CertificateManager</cite> provides the administor the ability to
+register and unregister certficates with the <cite>GIS</cite>.  This resource is
+available via HTTPS only.</p>
+<dl class="method">
+<dt id="arcgis.gis._impl.CertificateManager.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>name</em>, <em>domain</em>, <em>certificate</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl.CertificateManager.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>The register HTTPS certificate operation allows administrator to
+register custom X.509 HTTPS certificates with their ArcGIS Online
+organizations. This will allow ArcGIS Online organization to trust
+the custom certificates used by a remote server when making HTTPS
+requests to it, i.e. store credentials required to access its
+resource and share with others.</p>
+<p>A maximum of 5 certificates can be registered with an organization.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="89%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>name</td>
+<td>Required String. The certificate name.</td>
+</tr>
+<tr class="row-odd"><td>domain</td>
+<td>Required String. Server domain that the certificate is used for.</td>
+</tr>
+<tr class="row-even"><td>certificate</td>
+<td>Required String. Base64-encoded certificate text, enclosed between <cite>—–BEGIN CERTIFICATE—–</cite> and <cite>—–END CERTIFICATE—–</cite>.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.gis._impl.CertificateManager.certificates">
+<code class="descname">certificates</code><a class="headerlink" href="#arcgis.gis._impl.CertificateManager.certificates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of certificates registered with the organization</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis._impl.CertificateManager.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>cert_id</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl.CertificateManager.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unregisters the certificate from the organization</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="83%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>cert_id</td>
+<td>Required String.  The ID of the certificate to delete.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis._impl.CertificateManager.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>cert_id</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl.CertificateManager.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the certificate information for a single certificate</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="83%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>cert_id</td>
+<td>Required String.  The ID of the certificate to delete.</td>
+</tr>
+</tbody>
+</table>
+<p>The dictionary contains the following information:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Key</strong></td>
+<td><strong>Value</strong></td>
+</tr>
+<tr class="row-even"><td>id</td>
+<td>The ID of the registered certificate.</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>The certificate name.</td>
+</tr>
+<tr class="row-even"><td>domain</td>
+<td>Server domain that the certificate is used for.</td>
+</tr>
+<tr class="row-odd"><td>sslCertificate</td>
+<td>Base64-encoded certificate text, enclosed between <cite>—–BEGIN CERTIFICATE—–</cite> and <cite>—–END CERTIFICATE—–</cite>.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Dictionary (if found), else None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="arcgis.gis._impl.CertificateManager.properties">
+<code class="descname">properties</code><a class="headerlink" href="#arcgis.gis._impl.CertificateManager.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the properties of the resource</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="arcgis.gis._impl.CertificateManager.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>cert_id</em>, <em>name=None</em>, <em>domain=None</em>, <em>certificate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.gis._impl.CertificateManager.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>The update HTTPS certificate operation allows organization
+administrators to update a registered custom X.509 HTTPS
+certificate.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="89%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="row-even"><td>cert_id</td>
+<td>Required String.  The ID of the certificate to delete.</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>Optional String. The certificate name.</td>
+</tr>
+<tr class="row-even"><td>domain</td>
+<td>Optional String. Server domain that the certificate is used for.</td>
+</tr>
+<tr class="row-odd"><td>certificate</td>
+<td>Optional String. Base64-encoded certificate text, enclosed between <cite>—–BEGIN CERTIFICATE—–</cite> and <cite>—–END CERTIFICATE—–</cite>.</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
@@ -6197,6 +6710,7 @@ used together with file_name.</td>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.server.html#jobs">Jobs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.server.html#serverdirectory">ServerDirectory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.server.html#serverproperties">ServerProperties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.server.html#iteminformationmanager">ItemInformationManager</a></li>
 </ul>
 </li>
 </ul>
@@ -6207,9 +6721,7 @@ used together with file_name.</td>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -6218,7 +6730,7 @@ used together with file_name.</td>
         <a href="arcgis.gis.admin.html" class="btn btn-neutral float-right" title="arcgis.gis.admin module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="API Reference for the ArcGIS API for Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="API Reference for the ArcGIS API for Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -6227,11 +6739,11 @@ used together with file_name.</td>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016-2019, Esri.
+        &copy; Copyright 2016-2019, Esri
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -6244,36 +6756,15 @@ used together with file_name.</td>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.6.2',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>
