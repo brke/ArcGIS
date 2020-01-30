@@ -1,0 +1,12 @@
+blacklist:
+    - "automate.*road.*surface.*investigation.*using.*deep.*learning"
+    - "detecting.*and.*categorizing.*brick.*kilns.*from.*satellite.*imagery"
+    - "extracting.*slums.*from.*satellite.*imagery"
+    - "extracting.*sinkholes.*from.*aerial.*imagery.*over.*deadsea"
+    - "detecting.*settlements.*using.*landsat.*8.*imagery"
+    - "how.*much.*green.*is.*Delhi.*as.*on.*15.*oct.*2017"
+    - "site.*maximizes.*fire.*protection.*coverage"
+    - "calculate.*impervious.*surfaces.*from.*multispectral.*imagery"
+    - "safe.*streets.*to.*schools"
+    - "spatial.*and.*temporal.*trends.*of.*service.*calls"
+    - "analyzing.*growth.*factors.*of.*airbnb.*properties.*in.*new.*york.*city"
