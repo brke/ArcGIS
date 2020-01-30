@@ -1,0 +1,13 @@
+https://esri.github.io/arcgis-python-api/apidoc/html/arcgis.geoanalytics.manage_data.html#arcgis.geoanalytics.manage_data.clip_layer
+
+https://esri.github.io/arcgis-python-api/apidoc/html/arcgis.geoanalytics.toc.html#get-datastores
+
+https://esri.github.io/arcgis-python-api/apidoc/html/arcgis.widgets.html#arcgis.widgets.MapView.export_to_html
+
+https://esri.github.io/arcgis-python-api/apidoc/html/arcgis.geocoding.html#arcgis.geocoding.reverse_geocode
+
+https://esri.github.io/arcgis-python-api/apidoc/html/arcgis.env.html#verbose
+
+https://esri.github.io/arcgis-python-api/apidoc/html/arcgis.gis.toc.html#groupmanager
+
+
